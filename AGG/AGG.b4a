@@ -1,0 +1,73 @@
+﻿Version=7.3
+NumberOfModules=9
+Module1=LoginScreen
+Module2=typeJudge
+Module3=InitialSettings
+Module4=ProgramData
+Module5=UISizes
+Module6=Version
+Module7=Starter
+Module8=HelperFunctions
+Module9=Translator
+Build1=Default,b4a.example
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
+IconFile=
+NumberOfFiles=6
+File1=dictionary.xml
+File2=exit_program_x.png
+File3=initial_options_icon.png
+File4=login_background.jpg
+File5=login_password_icon.png
+File6=login_username_icon.png
+NumberOfLibraries=5
+Library1=core
+Library2=randomaccessfile
+Library3=reflection
+Library4=customalertdialog
+Library5=xmlsax
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: True
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	Public translate As Translator
+	Public SelectedLanguage As String = "BG"
+	Public intFontTransfer As Int
+End Sub
+
+Sub Globals
+	Private Login As LoginScreen
+	Private typeJ As typeJudge
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	translate.Initialize
+	intFontTransfer = UISizes.DefaultFont
+
+	Login.Initialize
+
+	Activity.AddView(Login.asView, 0, 0, 100%x, 100%y)
+	Login.build_Screen
+	typeJ.Initialize
+	Activity.AddView(typeJ.asView, 0, 0, 100%x, 100%y)
+End Sub
+
+Public Sub LoginScreen_LoginClick
+	Login.asView.Visible = False
+	Login.asView.Enabled = False
+	
+	typeJ.asView.Visible = True
+	typeJ.asView.Enabled = True
+End Sub
+
