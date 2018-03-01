@@ -15,6 +15,7 @@ public static RemoteObject _typepanel = RemoteObject.declareNull("anywheresoftwa
 public static RemoteObject _btnav = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static RemoteObject _btntv = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static RemoteObject _btnexe = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
+public static RemoteObject _padding = RemoteObject.createImmutable(0);
 public static b4a.example.main _main = null;
 public static b4a.example.programdata _programdata = null;
 public static b4a.example.uisizes _uisizes = null;
@@ -22,6 +23,6 @@ public static b4a.example.version _version = null;
 public static b4a.example.starter _starter = null;
 public static b4a.example.helperfunctions _helperfunctions = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
-		return new Object[] {"btnAv",_ref.getField(false, "_btnav"),"btnExe",_ref.getField(false, "_btnexe"),"btnTv",_ref.getField(false, "_btntv"),"typePanel",_ref.getField(false, "_typepanel")};
+		return new Object[] {"btnAv",_ref.getField(false, "_btnav"),"btnExe",_ref.getField(false, "_btnexe"),"btnTv",_ref.getField(false, "_btntv"),"Padding",_ref.getField(false, "_padding"),"typePanel",_ref.getField(false, "_typepanel")};
 }
 }

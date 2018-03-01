@@ -45,23 +45,23 @@ RDebugUtils.currentModule="programdata";
 if (Debug.shouldDelegate(null, "initialize"))
 	return (String) Debug.delegate(null, "initialize", new Object[] {_ba});
 anywheresoftware.b4a.randomaccessfile.RandomAccessFile _raf = null;
-RDebugUtils.currentLine=2228224;
- //BA.debugLineNum = 2228224;BA.debugLine="Public Sub Initialize";
-RDebugUtils.currentLine=2228225;
- //BA.debugLineNum = 2228225;BA.debugLine="If File.Exists(File.DirDefaultExternal , \"token.c";
+RDebugUtils.currentLine=5832704;
+ //BA.debugLineNum = 5832704;BA.debugLine="Public Sub Initialize";
+RDebugUtils.currentLine=5832705;
+ //BA.debugLineNum = 5832705;BA.debugLine="If File.Exists(File.DirDefaultExternal , \"token.c";
 if (anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirDefaultExternal(),"token.config")==anywheresoftware.b4a.keywords.Common.True && anywheresoftware.b4a.keywords.Common.File.Size(anywheresoftware.b4a.keywords.Common.File.getDirDefaultExternal(),"token.config")>0) { 
-RDebugUtils.currentLine=2228226;
- //BA.debugLineNum = 2228226;BA.debugLine="Private raf As RandomAccessFile";
+RDebugUtils.currentLine=5832706;
+ //BA.debugLineNum = 5832706;BA.debugLine="Private raf As RandomAccessFile";
 _raf = new anywheresoftware.b4a.randomaccessfile.RandomAccessFile();
-RDebugUtils.currentLine=2228227;
- //BA.debugLineNum = 2228227;BA.debugLine="raf.Initialize(File.DirDefaultExternal, \"token.c";
+RDebugUtils.currentLine=5832707;
+ //BA.debugLineNum = 5832707;BA.debugLine="raf.Initialize(File.DirDefaultExternal, \"token.c";
 _raf.Initialize(anywheresoftware.b4a.keywords.Common.File.getDirDefaultExternal(),"token.config",anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=2228228;
- //BA.debugLineNum = 2228228;BA.debugLine="raf.Close";
+RDebugUtils.currentLine=5832708;
+ //BA.debugLineNum = 5832708;BA.debugLine="raf.Close";
 _raf.Close();
  };
-RDebugUtils.currentLine=2228230;
- //BA.debugLineNum = 2228230;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5832710;
+ //BA.debugLineNum = 5832710;BA.debugLine="End Sub";
 return "";
 }
 public static String  _read_saveduser(anywheresoftware.b4a.BA _ba) throws Exception{
@@ -69,29 +69,29 @@ RDebugUtils.currentModule="programdata";
 if (Debug.shouldDelegate(null, "read_saveduser"))
 	return (String) Debug.delegate(null, "read_saveduser", new Object[] {_ba});
 anywheresoftware.b4a.randomaccessfile.RandomAccessFile _raf = null;
-RDebugUtils.currentLine=2293760;
- //BA.debugLineNum = 2293760;BA.debugLine="Private Sub Read_SavedUser";
-RDebugUtils.currentLine=2293761;
- //BA.debugLineNum = 2293761;BA.debugLine="Private raf As RandomAccessFile";
+RDebugUtils.currentLine=5898240;
+ //BA.debugLineNum = 5898240;BA.debugLine="Private Sub Read_SavedUser";
+RDebugUtils.currentLine=5898241;
+ //BA.debugLineNum = 5898241;BA.debugLine="Private raf As RandomAccessFile";
 _raf = new anywheresoftware.b4a.randomaccessfile.RandomAccessFile();
-RDebugUtils.currentLine=2293762;
- //BA.debugLineNum = 2293762;BA.debugLine="If File.Exists(File.DirDefaultExternal , \"users.c";
+RDebugUtils.currentLine=5898242;
+ //BA.debugLineNum = 5898242;BA.debugLine="If File.Exists(File.DirDefaultExternal , \"users.c";
 if (anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirDefaultExternal(),"users.config")==anywheresoftware.b4a.keywords.Common.True && anywheresoftware.b4a.keywords.Common.File.Size(anywheresoftware.b4a.keywords.Common.File.getDirDefaultExternal(),"users.config")>0) { 
-RDebugUtils.currentLine=2293763;
- //BA.debugLineNum = 2293763;BA.debugLine="raf.Initialize(File.DirDefaultExternal, \"users.c";
+RDebugUtils.currentLine=5898243;
+ //BA.debugLineNum = 5898243;BA.debugLine="raf.Initialize(File.DirDefaultExternal, \"users.c";
 _raf.Initialize(anywheresoftware.b4a.keywords.Common.File.getDirDefaultExternal(),"users.config",anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=2293764;
- //BA.debugLineNum = 2293764;BA.debugLine="strUser = raf.ReadEncryptedObject(rafEncPass, ra";
+RDebugUtils.currentLine=5898244;
+ //BA.debugLineNum = 5898244;BA.debugLine="strUser = raf.ReadEncryptedObject(rafEncPass, ra";
 _struser = BA.ObjectToString(_raf.ReadEncryptedObject(BA.NumberToString(_rafencpass),_raf.CurrentPosition));
-RDebugUtils.currentLine=2293765;
- //BA.debugLineNum = 2293765;BA.debugLine="strPass = raf.ReadEncryptedObject(rafEncPass, ra";
+RDebugUtils.currentLine=5898245;
+ //BA.debugLineNum = 5898245;BA.debugLine="strPass = raf.ReadEncryptedObject(rafEncPass, ra";
 _strpass = BA.ObjectToString(_raf.ReadEncryptedObject(BA.NumberToString(_rafencpass),_raf.CurrentPosition));
-RDebugUtils.currentLine=2293766;
- //BA.debugLineNum = 2293766;BA.debugLine="raf.Close";
+RDebugUtils.currentLine=5898246;
+ //BA.debugLineNum = 5898246;BA.debugLine="raf.Close";
 _raf.Close();
  };
-RDebugUtils.currentLine=2293768;
- //BA.debugLineNum = 2293768;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5898248;
+ //BA.debugLineNum = 5898248;BA.debugLine="End Sub";
 return "";
 }
 }

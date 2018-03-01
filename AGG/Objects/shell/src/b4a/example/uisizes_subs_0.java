@@ -8,14 +8,14 @@ public class uisizes_subs_0 {
 
 public static RemoteObject  _initialize(RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (uisizes) ","uisizes",5,_ba,uisizes.mostCurrent,10);
+		Debug.PushSubsStack("Initialize (uisizes) ","uisizes",9,_ba,uisizes.mostCurrent,10);
 if (RapidSub.canDelegate("initialize")) return b4a.example.uisizes.remoteMe.runUserSub(false, "uisizes","initialize", _ba);
 ;
  BA.debugLineNum = 10;BA.debugLine="Public Sub Initialize";
 Debug.ShouldStop(512);
- BA.debugLineNum = 11;BA.debugLine="DefaultFont = 18";
+ BA.debugLineNum = 11;BA.debugLine="DefaultFont = 16";
 Debug.ShouldStop(1024);
-uisizes._defaultfont = BA.numberCast(int.class, 18);
+uisizes._defaultfont = BA.numberCast(int.class, 16);
  BA.debugLineNum = 12;BA.debugLine="initSettingsWidth = 70%x";
 Debug.ShouldStop(2048);
 uisizes._initsettingswidth = uisizes.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 70)),_ba);

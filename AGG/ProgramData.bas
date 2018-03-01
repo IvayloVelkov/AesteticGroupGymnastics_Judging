@@ -12,7 +12,7 @@ Private Sub Process_Globals
 
 
 	'Размер на текст
-	Public DefaultFont As Int = 18
+	Public DefaultFont As Int = 14
 	Public Tile_Small As Int
 	Public Tile_Large As Int
 	Public TextSize_ExtraLarge As Int

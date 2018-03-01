@@ -8,7 +8,7 @@ public class version_subs_0 {
 
 public static RemoteObject  _path(RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("Path (version) ","version",6,_ba,version.mostCurrent,8);
+		Debug.PushSubsStack("Path (version) ","version",10,_ba,version.mostCurrent,8);
 if (RapidSub.canDelegate("path")) return b4a.example.version.remoteMe.runUserSub(false, "version","path", _ba);
 ;
  BA.debugLineNum = 8;BA.debugLine="Public Sub Path As String";

@@ -13,7 +13,7 @@ End Sub
 
 'Инициализиране на обекта / Initializes the object
 Public Sub Initialize
-	DefaultFont = 18
+	DefaultFont = 16
 	initSettingsWidth = 70%x
 	keyboardWidth = 100%x
 	HeaderHeight = 8%y

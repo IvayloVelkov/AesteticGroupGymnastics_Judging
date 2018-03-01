@@ -8,7 +8,7 @@ public class helperfunctions_subs_0 {
 
 public static RemoteObject  _apply_viewstyle(RemoteObject _ba,RemoteObject _control,RemoteObject _textcolor,RemoteObject _colora,RemoteObject _colorb,RemoteObject _colorpresseda,RemoteObject _colorpressedb,RemoteObject _colordisableda,RemoteObject _colordisabledb,RemoteObject _cornerround) throws Exception{
 try {
-		Debug.PushSubsStack("Apply_ViewStyle (helperfunctions) ","helperfunctions",8,_ba,helperfunctions.mostCurrent,4);
+		Debug.PushSubsStack("Apply_ViewStyle (helperfunctions) ","helperfunctions",12,_ba,helperfunctions.mostCurrent,4);
 if (RapidSub.canDelegate("apply_viewstyle")) return b4a.example.helperfunctions.remoteMe.runUserSub(false, "helperfunctions","apply_viewstyle", _ba, _control, _textcolor, _colora, _colorb, _colorpresseda, _colorpressedb, _colordisableda, _colordisabledb, _cornerround);
 RemoteObject _btn = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 RemoteObject _txt = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
@@ -76,7 +76,7 @@ finally {
 		}}
 public static RemoteObject  _helper_gradient(RemoteObject _ba,RemoteObject _colora,RemoteObject _colorb,RemoteObject _colorpresseda,RemoteObject _colorpressedb,RemoteObject _colordisableda,RemoteObject _colordisabledb,RemoteObject _cornerround) throws Exception{
 try {
-		Debug.PushSubsStack("Helper_Gradient (helperfunctions) ","helperfunctions",8,_ba,helperfunctions.mostCurrent,21);
+		Debug.PushSubsStack("Helper_Gradient (helperfunctions) ","helperfunctions",12,_ba,helperfunctions.mostCurrent,21);
 if (RapidSub.canDelegate("helper_gradient")) return b4a.example.helperfunctions.remoteMe.runUserSub(false, "helperfunctions","helper_gradient", _ba, _colora, _colorb, _colorpresseda, _colorpressedb, _colordisableda, _colordisabledb, _cornerround);
 RemoteObject _colsenabled = null;
 RemoteObject _gdwenabled = RemoteObject.declareNull("anywheresoftware.b4a.objects.drawable.GradientDrawable");
@@ -206,7 +206,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _remove_padding(RemoteObject _ba,RemoteObject _obj) throws Exception{
 try {
-		Debug.PushSubsStack("Remove_Padding (helperfunctions) ","helperfunctions",8,_ba,helperfunctions.mostCurrent,55);
+		Debug.PushSubsStack("Remove_Padding (helperfunctions) ","helperfunctions",12,_ba,helperfunctions.mostCurrent,55);
 if (RapidSub.canDelegate("remove_padding")) return b4a.example.helperfunctions.remoteMe.runUserSub(false, "helperfunctions","remove_padding", _ba, _obj);
 RemoteObject _pad = RemoteObject.createImmutable(0);
 RemoteObject _reflect = RemoteObject.declareNull("anywheresoftware.b4a.agraham.reflection.Reflection");

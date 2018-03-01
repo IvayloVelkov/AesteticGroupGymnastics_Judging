@@ -1,14 +1,20 @@
 ﻿Version=7.3
-NumberOfModules=9
+NumberOfModules=15
 Module1=LoginScreen
 Module2=typeJudge
-Module3=InitialSettings
-Module4=ProgramData
-Module5=UISizes
-Module6=Version
-Module7=Starter
-Module8=HelperFunctions
-Module9=Translator
+Module3=AV_judge
+Module4=SendScore
+Module5=InitialSettings
+Module6=Translator
+Module7=DBSQLConnector
+Module8=ProgramData
+Module9=UISizes
+Module10=Version
+Module11=Starter
+Module12=HelperFunctions
+Module13=TV_Judge
+Module14=EXE_Judging
+Module15=Config
 Build1=Default,b4a.example
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
 IconFile=
@@ -19,12 +25,17 @@ File3=initial_options_icon.png
 File4=login_background.jpg
 File5=login_password_icon.png
 File6=login_username_icon.png
-NumberOfLibraries=5
+NumberOfLibraries=10
 Library1=core
 Library2=randomaccessfile
 Library3=reflection
 Library4=customalertdialog
 Library5=xmlsax
+Library6=ahviewpager
+Library7=threading
+Library8=mysql2
+Library9=javaobject
+Library10=connector
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: B4A Example
@@ -44,11 +55,24 @@ Sub Process_Globals
 	Public translate As Translator
 	Public SelectedLanguage As String = "BG"
 	Public intFontTransfer As Int
+	Type Report(ChartType As String,Title As String,X As String,Y As String,Limit As Int,curveType As String,sliceText As String,Query As String, Data As List)
+	Public BaseNotAccessible As Boolean
+	Public DB As DBSQLConnector
+	Public Cfg As Config
+	Public PrimeCurrency As String
+
+
 End Sub
 
 Sub Globals
 	Private Login As LoginScreen
 	Private typeJ As typeJudge
+	Private avJ As AV_judge
+	Private tvJ As TV_Judge
+	Private exeJ As EXE_Judging
+	Private final As SendScore
+	Private insettings As InitialSettings
+	
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -56,11 +80,46 @@ Sub Activity_Create(FirstTime As Boolean)
 	intFontTransfer = UISizes.DefaultFont
 
 	Login.Initialize
-
 	Activity.AddView(Login.asView, 0, 0, 100%x, 100%y)
 	Login.build_Screen
+	
 	typeJ.Initialize
 	Activity.AddView(typeJ.asView, 0, 0, 100%x, 100%y)
+	typeJ.asView.Visible = False
+	typeJ.asView.Enabled = False
+	
+	avJ.Initialize
+	Activity.AddView(avJ.asView, 0, 0, 100%x, 100%y)
+	avJ.asView.Visible = False
+	avJ.asView.Enabled = False
+	avJ.BuildUi
+	
+	tvJ.Initialize
+	Activity.AddView(tvJ.asView, 0, 0, 100%x, 100%y)
+	tvJ.asView.Visible = False
+	tvJ.asView.Enabled = False
+	tvJ.BuildUi
+	
+	exeJ.Initialize
+	Activity.AddView(exeJ.asView, 0, 0, 100%x, 100%y)
+	exeJ.asView.Visible = False
+	exeJ.asView.Enabled = False
+	exeJ.BuildUi
+	
+	final.Initialize
+	Activity.AddView(final.asView, 0, 0, 100%x, 100%y)
+	final.asView.Visible = False
+	final.asView.Enabled = False
+	
+	insettings.Initialize
+	Activity.AddView(insettings.InitSetAsView, 0, 0, 40%x, 40%y)
+	insettings.InitSettingsBuildScreen
+'	ConnectToDatabase
+End Sub
+
+Public Sub ConnectToDatabase
+	Log("Database SET: " & Cfg.dbServerAddress & ", " & Cfg.dbBaseName & ", " & Cfg.dbUserName & ", " & Cfg.dbPassword)
+	DB.setDatabase(Cfg.dbServerAddress,Cfg.dbBaseName,Cfg.dbUserName,Cfg.dbPassword)
 End Sub
 
 Public Sub LoginScreen_LoginClick
@@ -71,3 +130,46 @@ Public Sub LoginScreen_LoginClick
 	typeJ.asView.Enabled = True
 End Sub
 
+Public Sub AV_Click
+	typeJ.asView.Visible = False
+	typeJ.asView.Enabled = False
+	
+	avJ.asView.Visible = True
+	avJ.asView.Enabled = True
+End Sub
+
+Public Sub TV_Click
+	typeJ.asView.Visible = False
+	typeJ.asView.Enabled = False
+	
+	tvJ.asView.Visible = True
+	tvJ.asView.Enabled = True
+End Sub
+
+Public Sub EXE_Click
+	typeJ.asView.Visible = False
+	typeJ.asView.Enabled = False
+	
+	exeJ.asView.Visible = True
+	exeJ.asView.Enabled = True
+End Sub
+
+Public Sub FinalClick
+	If avJ.asView.Visible = True Then
+		avJ.asView.Visible = False
+		avJ.asView.Enabled = False
+	Else If tvJ.asView.Visible = True Then
+		tvJ.asView.Visible = False
+		tvJ.asView.Enabled = False
+	Else If exeJ.asView.Visible = True Then
+		exeJ.asView.Visible = False
+		exeJ.asView.Enabled = False
+	End If
+
+	final.asView.Visible = True
+	final.asView.Enabled = True
+End Sub
+
+Public Sub showSettings
+	insettings.InitialSetShow
+End Sub

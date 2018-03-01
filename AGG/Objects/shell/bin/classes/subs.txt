@@ -1,26 +1,56 @@
 b4a.example
 0
-4
+10
 loginscreen
 typejudge
+av_judge
+sendscore
 initialsettings
 translator
-main,activity_create,1,0,26,36
-,translate,,intfonttransfer,uisizes,defaultfont,,login,,typej,version,productid,version,programname,uisizes,defaultpadding,programdata,textsize_extralarge,programdata,rafencpass,programdata,struser,programdata,strpass
+dbsqlconnector
+tv_judge
+exe_judging
+config
+main,activity_create,1,0,39,79
+,translate,,intfonttransfer,uisizes,defaultfont,,login,,typej,,avj,,tvj,,exej,,final,,insettings,version,productid,version,programname,uisizes,defaultpadding,programdata,rafencpass,programdata,struser,programdata,strpass,uisizes,initsettingswidth,,selectedlanguage
 ,intfonttransfer,programdata,struser,programdata,strpass
-translator,initialize,loginscreen,initialize,loginscreen,asview,loginscreen,build_screen,typejudge,initialize,typejudge,asview,version,path,translator,open_xml,translator,resetvariables,translator,parse_xml,translator,setproduct,translator,duplicate_map,loginscreen,loginpanel_configurations,loginscreen,start_up,helperfunctions,apply_viewstyle,translator,getstring,helperfunctions,helper_gradient,helperfunctions,remove_padding,translator,get_translation,translator,get_translatedstring,loginscreen,read_savedusrs
-main,globals,0,1,21,24
+translator,initialize,loginscreen,initialize,loginscreen,asview,loginscreen,build_screen,typejudge,initialize,typejudge,asview,av_judge,initialize,av_judge,asview,av_judge,buildui,tv_judge,initialize,tv_judge,asview,tv_judge,buildui,exe_judging,initialize,exe_judging,asview,exe_judging,buildui,sendscore,initialize,sendscore,asview,initialsettings,initialize,initialsettings,initsetasview,initialsettings,initsettingsbuildscreen,version,path,translator,open_xml,translator,resetvariables,translator,parse_xml,translator,setproduct,translator,duplicate_map,loginscreen,loginpanel_configurations,loginscreen,start_up,helperfunctions,apply_viewstyle,translator,getstring,helperfunctions,helper_gradient,helperfunctions,remove_padding,translator,get_translation,translator,get_translatedstring,loginscreen,read_savedusrs,initialsettings,initialsetaddlanguages,translator,get_languagelist,initialsettings,initialsetsignsrefresh
+main,av_click,0,0,94,100
+,typej,,avj
+
+typejudge,asview,av_judge,asview
+main,connecttodatabase,0,0,81,84
+,cfg,,db
+
+dbsqlconnector,setdatabase
+main,exe_click,0,0,110,116
+,typej,,exej
+
+typejudge,asview,exe_judging,asview
+main,finalclick,0,0,118,132
+,avj,,tvj,,exej,,final
+
+av_judge,asview,tv_judge,asview,exe_judging,asview,sendscore,asview
+main,globals,0,1,28,37
 
 
 
-main,loginscreen_loginclick,0,0,38,44
+main,loginscreen_loginclick,0,0,86,92
 ,login,,typej
 
 loginscreen,asview,typejudge,asview
-main,process_globals,0,1,15,19
+main,process_globals,0,1,15,26
 ,selectedlanguage
 ,selectedlanguage
 
+main,showsettings,0,0,134,136
+,insettings
+
+initialsettings,initialsetshow
+main,tv_click,0,0,102,108
+,typej,,tvj
+
+typejudge,asview,tv_judge,asview
 translator,initialize,1,0,27,45
 version,productid,version,programname
 
@@ -97,63 +127,271 @@ translator,xmlparser_startelement,0,0,74,90
 
 
 
-loginscreen,initialize,0,0,30,41
+loginscreen,initialize,0,0,29,38
 
 
 
-loginscreen,asview,0,0,191,193
+loginscreen,asview,0,0,187,189
 
 
 
-loginscreen,build_screen,1,1,44,80
-uisizes,defaultpadding,main,translate,programdata,textsize_extralarge,programdata,rafencpass,programdata,struser,programdata,strpass
+loginscreen,build_screen,1,0,41,76
+uisizes,defaultpadding,main,translate,programdata,rafencpass,programdata,struser,programdata,strpass
 programdata,struser,programdata,strpass
 ,loginpanel_configurations,,start_up,helperfunctions,apply_viewstyle,translator,getstring,helperfunctions,helper_gradient,helperfunctions,remove_padding,translator,get_translation,translator,get_translatedstring,,read_savedusrs
-loginscreen,loginpanel_configurations,0,0,83,116
-main,translate,programdata,textsize_extralarge
+loginscreen,loginpanel_configurations,0,0,79,107
+main,translate
 
 helperfunctions,apply_viewstyle,translator,getstring,helperfunctions,helper_gradient,helperfunctions,remove_padding,translator,get_translation,translator,get_translatedstring
-loginscreen,start_up,1,0,14,27
+loginscreen,start_up,1,0,13,26
 programdata,rafencpass,programdata,struser,programdata,strpass
 programdata,struser,programdata,strpass
 ,read_savedusrs
-loginscreen,buttonloginpanel_click,0,0,145,176
+loginscreen,buttonloginpanel_click,0,0,136,167
 programdata,struser,programdata,strpass,programdata,sameuser,programdata,rafencpass,main,login,main,typej
 programdata,sameuser,programdata,struser,programdata,strpass
 ,check_user,,check_pass,,write_usrs,main,loginscreen_loginclick,,asview,typejudge,asview
-loginscreen,check_user,0,0,179,184
+loginscreen,check_user,0,0,170,175
 
 
 
-loginscreen,check_pass,0,0,187,189
+loginscreen,check_pass,0,0,178,180
 
 
 
-loginscreen,write_usrs,0,0,126,131
+loginscreen,write_usrs,0,0,117,122
 programdata,rafencpass
 
 
-loginscreen,class_globals,0,0,1,11
+loginscreen,class_globals,0,0,1,10
 
 
 
-loginscreen,pass_focuschanged,1,0,119,123
+loginscreen,loginpanelsettings_click,0,0,183,185
+main,insettings
+
+main,showsettings,initialsettings,initialsetshow
+loginscreen,pass_focuschanged,1,0,110,114
 
 
 
-loginscreen,read_savedusrs,0,0,134,142
+loginscreen,read_savedusrs,0,0,125,133
 programdata,rafencpass,programdata,struser,programdata,strpass
 programdata,struser,programdata,strpass
 
-typejudge,initialize,0,0,9,14
+typejudge,initialize,0,0,12,40
+uisizes,defaultpadding,main,translate
+
+helperfunctions,apply_viewstyle,translator,getstring,helperfunctions,helper_gradient,helperfunctions,remove_padding,translator,get_translation,translator,get_translatedstring
+typejudge,asview,0,0,42,44
 
 
 
-typejudge,asview,0,0,16,18
+typejudge,avtypebtn_click,0,0,46,48
+main,typej,main,avj
+
+main,av_click,,asview,av_judge,asview
+typejudge,class_globals,0,0,1,9
 
 
 
-typejudge,class_globals,0,0,1,6
+typejudge,exetypebtn_click,0,0,54,56
+main,typej,main,exej
+
+main,exe_click,,asview,exe_judging,asview
+typejudge,tvtypebtn_click,0,0,50,52
+main,typej,main,tvj
+
+main,tv_click,,asview,tv_judge,asview
+av_judge,initialize,0,0,16,29
+
+
+
+av_judge,asview,0,0,141,143
+
+
+
+av_judge,buildui,0,1,31,135
+main,translate
+
+translator,getstring,translator,get_translation,translator,get_translatedstring
+av_judge,class_globals,0,0,1,13
+
+
+
+av_judge,ready_click,0,0,137,139
+main,avj,main,tvj,main,exej,main,final
+
+main,finalclick,,asview,tv_judge,asview,exe_judging,asview,sendscore,asview
+tv_judge,initialize,0,0,15,25
+
+
+
+tv_judge,asview,0,0,89,91
+
+
+
+tv_judge,buildui,0,0,27,83
+main,translate
+
+translator,getstring,translator,get_translation,translator,get_translatedstring
+tv_judge,class_globals,0,0,1,12
+
+
+
+tv_judge,ready_click,0,0,85,87
+main,avj,main,tvj,main,exej,main,final
+
+main,finalclick,av_judge,asview,,asview,exe_judging,asview,sendscore,asview
+exe_judging,initialize,0,0,15,25
+
+
+
+exe_judging,asview,0,0,89,91
+
+
+
+exe_judging,buildui,0,0,27,83
+main,translate
+
+translator,getstring,translator,get_translation,translator,get_translatedstring
+exe_judging,class_globals,0,0,1,12
+
+
+
+exe_judging,ready_click,0,0,85,87
+main,avj,main,tvj,main,exej,main,final
+
+main,finalclick,av_judge,asview,tv_judge,asview,,asview,sendscore,asview
+sendscore,initialize,0,0,10,27
+
+
+
+sendscore,asview,0,0,29,31
+
+
+
+sendscore,class_globals,0,0,1,7
+
+
+
+sendscore,send_click,0,0,33,35
+
+
+
+initialsettings,initialize,0,0,9,16
+main,translate
+
+,initialsetaddlanguages,translator,get_languagelist
+initialsettings,initsetasview,0,0,19,21
+
+
+
+initialsettings,initsettingsbuildscreen,0,0,29,51
+uisizes,initsettingswidth,uisizes,defaultpadding,main,intfonttransfer,main,selectedlanguage,uisizes,defaultfont,main,translate
+
+helperfunctions,remove_padding,,initialsetsignsrefresh,translator,getstring,translator,get_translation,translator,get_translatedstring
+initialsettings,initialsetshow,0,0,23,27
+
+
+
+initialsettings,class_globals,0,0,1,7
+
+
+
+initialsettings,hiding_click,0,0,66,68
+main,selectedlanguage,programdata,rafencpass
+
+,initsettingshide,,writeinitialsettings
+initialsettings,initsettingshide,0,0,53,58
+main,selectedlanguage,programdata,rafencpass
+
+,writeinitialsettings
+initialsettings,initialsetaddlanguages,0,0,78,81
+main,translate
+
+translator,get_languagelist
+initialsettings,initialsetmenufake_click,0,0,91,93
+
+
+
+initialsettings,initialsetsignsrefresh,0,0,70,76
+uisizes,defaultfont,main,translate
+
+translator,getstring,translator,get_translation,translator,get_translatedstring
+initialsettings,writeinitialsettings,0,0,60,64
+main,selectedlanguage,programdata,rafencpass
+
+
+initialsettings,spnlang_itemclick,0,0,84,89
+main,selectedlanguage,main,translate,uisizes,defaultfont
+main,selectedlanguage
+translator,setlanguage,,initialsetsignsrefresh,translator,getstring,translator,get_translation,translator,get_translatedstring
+dbsqlconnector,setdatabase,0,0,27,36
+
+
+
+dbsqlconnector,class_globals,0,0,1,11
+
+
+
+dbsqlconnector,currencythread_ended,0,0,210,212
+
+
+
+dbsqlconnector,datareportthread_ended,0,0,145,163
+
+
+
+dbsqlconnector,datathread_ended,0,0,127,131
+
+
+
+dbsqlconnector,disablestrictmode,0,0,167,179
+
+
+
+dbsqlconnector,exec_query,1,0,76,112
+main,translate
+
+translator,getstring,translator,get_translation,translator,get_translatedstring
+dbsqlconnector,get_currency,0,0,182,200
+main,basenotaccessible,main,cfg
+main,basenotaccessible
+
+dbsqlconnector,get_currencythread,0,0,202,208
+
+
+
+dbsqlconnector,getdatabase,0,0,43,45
+
+
+
+dbsqlconnector,getpassword,0,0,51,53
+
+
+
+dbsqlconnector,getserveraddress,0,0,39,41
+
+
+
+dbsqlconnector,getusername,0,0,47,49
+
+
+
+dbsqlconnector,initialize,0,0,13,18
+
+
+,disablestrictmode
+dbsqlconnector,queryreportthread,0,0,133,143
+main,translate
+
+translator,getstring,translator,get_translation,translator,get_translatedstring
+dbsqlconnector,querythread,0,0,120,125
+main,translate
+
+translator,getstring,translator,get_translation,translator,get_translatedstring
+dbsqlconnector,setdbengine,0,0,21,24
 
 
 
@@ -173,62 +411,14 @@ helperfunctions,process_globals,0,1,1,2
 
 
 
-initialsettings,calculatefontsizesinitialsettings,0,0,103,109
-programdata,tile_small,uisizes,defaultfont,programdata,tile_large,programdata,textsize_small,programdata,textsize_large,programdata,textsize_extralarge
-programdata,tile_small,programdata,tile_large,programdata,textsize_small,programdata,textsize_large,programdata,textsize_extralarge
-
-initialsettings,class_globals,0,0,1,7
+version,path,0,0,8,10
+,programname
 
 
+version,process_globals,0,1,1,5
+,productid,,programname,,productindictionary
+,productid,,programname,,productindictionary
 
-initialsettings,hiding_click,0,0,66,68
-main,selectedlanguage,programdata,rafencpass
-
-,initsettingshide,,writeinitialsettings
-initialsettings,initsettingshide,0,0,53,58
-main,selectedlanguage,programdata,rafencpass
-
-,writeinitialsettings
-initialsettings,initialize,0,0,9,16
-main,translate
-
-,initialsetaddlanguages,translator,get_languagelist
-initialsettings,initialsetaddlanguages,0,0,79,82
-main,translate
-
-translator,get_languagelist
-initialsettings,initialsetmenufake_click,0,0,111,113
-
-
-
-initialsettings,initialsetshow,0,0,23,27
-
-
-
-initialsettings,initialsetsignsrefresh,0,0,70,77
-uisizes,defaultfont,main,translate
-
-translator,getstring,translator,get_translation,translator,get_translatedstring
-initialsettings,initsetasview,0,0,19,21
-
-
-
-initialsettings,initsettingsbuildscreen,0,0,29,51
-uisizes,initsettingswidth,uisizes,defaultpadding,main,intfonttransfer,main,selectedlanguage,uisizes,defaultfont,main,translate
-
-helperfunctions,remove_padding,,initialsetsignsrefresh,translator,getstring,translator,get_translation,translator,get_translatedstring
-initialsettings,writeinitialsettings,0,0,60,64
-main,selectedlanguage,programdata,rafencpass
-
-
-initialsettings,spnfont_itemclick,0,0,93,100
-uisizes,defaultfont,programdata,tile_small,programdata,tile_large,programdata,textsize_small,programdata,textsize_large,programdata,textsize_extralarge,main,translate
-uisizes,defaultfont,programdata,tile_small,programdata,tile_large,programdata,textsize_small,programdata,textsize_large,programdata,textsize_extralarge
-,calculatefontsizesinitialsettings,,initialsetaddlanguages,,initialsetsignsrefresh,translator,get_languagelist,translator,getstring,translator,get_translation,translator,get_translatedstring
-initialsettings,spnlang_itemclick,0,0,85,90
-main,selectedlanguage,main,translate,uisizes,defaultfont
-main,selectedlanguage
-translator,setlanguage,,initialsetsignsrefresh,translator,getstring,translator,get_translation,translator,get_translatedstring
 programdata,initialize,0,0,35,41
 
 
@@ -241,21 +431,13 @@ programdata,read_saveduser,0,0,44,52
 ,struser,,rafencpass,,strpass
 ,struser,,strpass
 
-uisizes,initialize,0,1,10,26
+uisizes,initialize,0,0,10,26
 ,defaultfont,,initsettingswidth,,keyboardwidth,,headerheight,,footerheight,,groupscroller,,defaultpadding,,leftpart,,settingswidth,,groupbuttonheight,,groupcolor_normal,,groupcolor_pressed,,pressedtextcolor,,buttonleft
 ,defaultfont,,initsettingswidth,,keyboardwidth,,headerheight,,footerheight,,groupscroller,,defaultpadding,,leftpart,,settingswidth,,groupbuttonheight,,groupcolor_normal,,groupcolor_pressed,,pressedtextcolor,,buttonleft
 
 uisizes,process_globals,0,1,2,7
 
 
-
-version,path,0,0,8,10
-,programname
-
-
-version,process_globals,0,1,1,5
-,productid,,programname,,productindictionary
-,productid,,programname,,productindictionary
 
 starter,application_error,0,0,27,29
 
@@ -281,3 +463,47 @@ starter,service_taskremoved,0,0,22,24
 
 
 
+config,class_globals,0,0,1,18
+
+
+
+config,debugconfig,0,0,121,133
+main,translate,version,programname
+
+,writeconfig,,savecurrentconfig,version,path,translator,getstring,translator,get_translation,translator,get_translatedstring
+config,writeconfig,0,0,148,156
+main,translate,version,programname
+
+,savecurrentconfig,version,path,translator,getstring,translator,get_translation,translator,get_translatedstring
+config,defaultconfig,0,0,106,119
+main,translate
+
+translator,setlanguage
+config,getreportsfolder,0,0,48,50
+version,programname
+
+version,path
+config,initialize,0,0,20,46
+version,programname,main,translate
+
+version,path,translator,getstring,translator,get_translation,translator,get_translatedstring
+config,loadconfig,0,0,53,77
+version,programname,main,db,main,translate
+
+version,path,,setconfigfrommap,,defaultconfig,,writeconfig,dbsqlconnector,setdbengine,translator,setlanguage,translator,getstring,translator,get_translation,translator,get_translatedstring,,savecurrentconfig
+config,setconfigfrommap,0,0,158,172
+main,db,main,translate
+
+dbsqlconnector,setdbengine,translator,setlanguage,translator,getstring,translator,get_translation,translator,get_translatedstring
+config,savecurrentconfig,0,0,89,104
+main,translate,version,programname
+
+version,path,translator,getstring,translator,get_translation,translator,get_translatedstring
+config,setupcurrency,0,0,79,87
+main,primecurrency,main,db,main,basenotaccessible,main,cfg
+main,primecurrency,main,basenotaccessible
+dbsqlconnector,get_currency
+config,writesettings,0,0,135,146
+main,translate,version,programname
+
+,writeconfig,,savecurrentconfig,version,path,translator,getstring,translator,get_translation,translator,get_translatedstring

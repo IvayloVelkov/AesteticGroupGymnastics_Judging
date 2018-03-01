@@ -13,90 +13,6 @@
 				<Language DisplayName="">EL</Language>
 				<Language DisplayName="">FI</Language>
 			</Languages>	
-			<Data Key="btnCameraScan">
-				<Values>
-					<Value Lang="EN">Scan</Value>
-					<Value Lang="RU">Сканирование</Value>
-					<Value Lang="BG">Сканиране</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>							
-			</Data>
-			<Data Key="strUIC">
-				<Values>
-					<Value Lang="EN">UIC</Value>
-					<Value Lang="RU">ИНН</Value>
-					<Value Lang="BG">ЕИК</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>							
-			</Data>
-			<Data Key="lblPortrait">
-				<Values>
-					<Value Lang="EN">Portrait</Value>
-					<Value Lang="RU">Портретная</Value>
-					<Value Lang="BG">Вертикално</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>							
-			</Data>
-			<Data Key="lblLandscape">
-				<Values>
-					<Value Lang="EN">Landscape</Value>
-					<Value Lang="RU">Пейзажная</Value>
-					<Value Lang="BG">Хоризонтално</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>							
-			</Data>
-			<Data Key="lblPhoneOrientation">
-				<Values>
-					<Value Lang="EN">Screen Orientation</Value>
-					<Value Lang="RU">Ориентация экрана</Value>
-					<Value Lang="BG">Ориентация на екрана</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>							
-			</Data>
-			<Data Key="btnFirstPage">
-				<Values>
-					<Value Lang="EN">&lt;&lt;</Value>
-					<Value Lang="RU">&lt;&lt;</Value>
-					<Value Lang="BG">&lt;&lt;</Value>
-					<Value Lang="RO">&lt;&lt;</Value>
-					<Value Lang="ES">&lt;&lt;</Value>
-					<Value Lang="KA">&lt;&lt;</Value>
-					<Value Lang="DE">&lt;&lt;</Value>
-					<Value Lang="KK">&lt;&lt;</Value>
-					<Value Lang="EL">&lt;&lt;</Value>
-					<Value Lang="FI">&lt;&lt;</Value>
-				</Values>							
-			</Data>
 			<Data Key="btnAccept">
 				<Values>
 					<Value Lang="EN">Accept</Value>
@@ -111,20 +27,6 @@
 					<Value Lang="FI"></Value>
 				</Values>							
 			</Data>				
-			<Data Key="msginsufficient">
-				<Values>
-					<Value Lang="EN">Insufficient funds. You have to pay</Value>
-					<Value Lang="RU">Недостаточно средств. Нужная сумма</Value>
-					<Value Lang="BG">Недостатъчно средства. Нужната сума е</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>							
-			</Data>
 			<Data Key="lblName">
 				<Values>
 					<Value Lang="EN">Name</Value>
@@ -139,133 +41,7 @@
 					<Value Lang="FI">Nimi</Value>
 				</Values>
 			</Data>
-			<Data Key="strSelectObject">
-				<Values>
-					<Value Lang="EN">Select store</Value>
-					<Value Lang="RU">Выбрать магазин</Value>
-					<Value Lang="BG">Избор на обект</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>
-			</Data>
-			<Data Key="msgTotal">
-				<Values>
-					<Value Lang="EN">Total</Value>
-					<Value Lang="RU">Итого</Value>
-					<Value Lang="BG">Общо</Value>
-					<Value Lang="RO">Total</Value>
-					<Value Lang="ES">Total</Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE">Gesamt</Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL">ΣΥΝΟΛΟ</Value>
-					<Value Lang="FI">Yhteensä</Value>
-				</Values>
-			</Data>
-			<!--Трябва да вземем това от micro.bg-->
-			<Data Key="lblCurrency">
-				<Values>
-					<Value Lang="EN">$</Value>
-					<Value Lang="RU">руб.</Value>
-					<Value Lang="BG">лв.</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>							
-			</Data>
-			<Data Key="btnClear">
-				<Values>
-					<Value Lang="EN">Del</Value>
-					<Value Lang="RU">Очистить</Value>
-					<Value Lang="BG">Изчистване</Value>
-					<Value Lang="RO">Sterge</Value>
-					<Value Lang="ES">Limpiar</Value>
-					<Value Lang="KA">წაშლა</Value>
-					<Value Lang="DE">Löschen</Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL">ΔΙΑΓΡΑΦΗ</Value>
-					<Value Lang="FI">Poista</Value>
-				</Values>
-			</Data>
-			<Data Key="btnSearch">
-				<Values>
-					<Value Lang="EN">Search</Value>
-					<Value Lang="RU">Поиск</Value>
-					<Value Lang="BG">Търсене</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL">ΑΝΑΖΗΤΗΣΗ</Value>
-					<Value Lang="FI">Hae</Value>
-				</Values>
-			</Data>
-			<Data Key="mistakenCode">
-				<Values>
-					<Value Lang="EN">No items found</Value>
-					<Value Lang="RU">Ничего не найдено</Value>
-					<Value Lang="BG">Не е намерена стока</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>
-			</Data>
-			<Data Key="lblSinglePrice">
-				<Values>
-					<Value Lang="EN">Price:</Value>
-					<Value Lang="RU">Цена:</Value>
-					<Value Lang="BG">Ед. цена:</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>
-			</Data>
-			<Data Key="lblDiscount">
-				<Values>
-					<Value Lang="EN">Discount:</Value>
-					<Value Lang="RU">Скидка:</Value>
-					<Value Lang="BG">Отстъпка:</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>
-			</Data>
-			<Data Key="enterCode">
-				<Values>
-					<Value Lang="EN">Enter code/barcode</Value>
-					<Value Lang="RU">Введите код/штрих-код</Value>
-					<Value Lang="BG">Въвеждане на код/баркод</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>
-			</Data>
+
 			<Data Key="lblUser">
 				<Values>
 					<Value Lang="EN">User</Value>
@@ -278,34 +54,6 @@
 					<Value Lang="KK"></Value>
 					<Value Lang="EL">ΧΡΗΣΤΗΣ</Value>
 					<Value Lang="FI">Käyttäjä</Value>
-				</Values>
-			</Data>
-			<Data Key="lblLocation">
-				<Values>
-					<Value Lang="EN">Location</Value>
-					<Value Lang="RU">Объект</Value>
-					<Value Lang="BG">Обект</Value>
-					<Value Lang="RO">Locatie</Value>
-					<Value Lang="ES">Ubicación</Value>
-					<Value Lang="KA">ადგილმდებარეობა</Value>
-					<Value Lang="DE">Lage</Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL">ΤΟΠΟΘΕΣΙΑ</Value>
-					<Value Lang="FI">Sijainti</Value>
-				</Values>
-			</Data>
-			<Data Key="lblPartnerInReportsTable">
-				<Values>
-					<Value Lang="EN">Partner</Value>
-					<Value Lang="RU">Партнер</Value>
-					<Value Lang="BG">Партньор</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL">ΣΥΝΕΤΑΙΡΟΣ</Value>
-					<Value Lang="FI">Partneri</Value>
 				</Values>
 			</Data>
 			<Data Key="msgEmptyCart">
@@ -322,63 +70,6 @@
 					<Value Lang="FI"></Value>
 				</Values>							
 			</Data>
-			<Data Key="msgErrorDownload">
-				<Values>
-					<Value Lang="EN">An error occurred while downloading data</Value>
-					<Value Lang="RU">Произошла ошибка при загрузке данных</Value>
-					<Value Lang="BG">Грешка при сваляне на данните</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>							
-			</Data>
-			<Data Key="msgErrorLoadingData">
-				<Values>
-					<Value Lang="EN">Еrror while loading data</Value>
-					<Value Lang="RU">Произошла ошибка при загрузке данных</Value>
-					<Value Lang="BG">Грешка при зареждане на данните</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>							
-			</Data>	
-			
-			<Data Key="msgInvalidDiscount">
-				<Values>
-					<Value Lang="EN">Invalid discount</Value>
-					<Value Lang="RU">Недействительная скидка</Value>
-					<Value Lang="BG">Невалидна отстъпка</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>							
-			</Data>	
-			<Data Key="msgAllowedUsers">
-				<Values>
-					<Value Lang="EN">Number of allowed users:</Value>
-					<Value Lang="RU">Количество разрешенных пользователей:</Value>
-					<Value Lang="BG">Позволен брой потребители:</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>							
-			</Data>	
 			<Data Key="msgYouAre">
 				<Values>
 					<Value Lang="EN">You are:</Value>
@@ -393,34 +84,6 @@
 					<Value Lang="FI"></Value>
 				</Values>							
 			</Data>	
-			<Data Key="lblGroupsAll">
-				<Values>
-					<Value Lang="EN">All</Value>
-					<Value Lang="RU">Все</Value>
-					<Value Lang="BG">Всички</Value>
-					<Value Lang="RO"></Value>
-					<Value Lang="ES"></Value>
-					<Value Lang="KA"></Value>
-					<Value Lang="DE"></Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL"></Value>
-					<Value Lang="FI"></Value>
-				</Values>							
-			</Data>	
-			<Data Key="msgNoTempDirTitle">
-				<Values>
-					<Value Lang="EN">Error</Value>
-					<Value Lang="RU">Ошибка</Value>
-					<Value Lang="BG">Грешка</Value>
-					<Value Lang="RO">Eroare</Value>
-					<Value Lang="ES">Error</Value>
-					<Value Lang="KA">შეცდომა</Value>
-					<Value Lang="DE">Fehler</Value>
-					<Value Lang="KK"></Value>
-					<Value Lang="EL">ΛΑΘΟΣ</Value>
-					<Value Lang="FI">Virhe</Value>
-				</Values>
-			</Data>
 			<Data Key="msgError">
 				<Values>
 					<Value Lang="EN">Error</Value>

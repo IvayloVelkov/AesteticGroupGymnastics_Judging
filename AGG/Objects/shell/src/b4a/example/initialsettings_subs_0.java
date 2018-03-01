@@ -6,37 +6,6 @@ import anywheresoftware.b4a.pc.*;
 public class initialsettings_subs_0 {
 
 
-public static RemoteObject  _calculatefontsizesinitialsettings(RemoteObject __ref) throws Exception{
-try {
-		Debug.PushSubsStack("CalculateFontSizesInitialSettings (initialsettings) ","initialsettings",3,__ref.getField(false, "ba"),__ref,103);
-if (RapidSub.canDelegate("calculatefontsizesinitialsettings")) return __ref.runUserSub(false, "initialsettings","calculatefontsizesinitialsettings", __ref);
- BA.debugLineNum = 103;BA.debugLine="Private Sub CalculateFontSizesInitialSettings";
-Debug.ShouldStop(64);
- BA.debugLineNum = 104;BA.debugLine="ProgramData.Tile_Small = UISizes.DefaultFont * 0.";
-Debug.ShouldStop(128);
-initialsettings._programdata._tile_small = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {initialsettings._uisizes._defaultfont,RemoteObject.createImmutable(0.71)}, "*",0, 0));
- BA.debugLineNum = 105;BA.debugLine="ProgramData.Tile_Large =  UISizes.DefaultFont * 0";
-Debug.ShouldStop(256);
-initialsettings._programdata._tile_large = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {initialsettings._uisizes._defaultfont,RemoteObject.createImmutable(0.83)}, "*",0, 0));
- BA.debugLineNum = 106;BA.debugLine="ProgramData.TextSize_Small = UISizes.DefaultFont";
-Debug.ShouldStop(512);
-initialsettings._programdata._textsize_small = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {initialsettings._uisizes._defaultfont,RemoteObject.createImmutable(0.71)}, "*",0, 0));
- BA.debugLineNum = 107;BA.debugLine="ProgramData.TextSize_Large = UISizes.DefaultFont";
-Debug.ShouldStop(1024);
-initialsettings._programdata._textsize_large = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {initialsettings._uisizes._defaultfont,RemoteObject.createImmutable(0.83)}, "*",0, 0));
- BA.debugLineNum = 108;BA.debugLine="ProgramData.TextSize_ExtraLarge = UISizes.Default";
-Debug.ShouldStop(2048);
-initialsettings._programdata._textsize_extralarge = initialsettings._uisizes._defaultfont;
- BA.debugLineNum = 109;BA.debugLine="End Sub";
-Debug.ShouldStop(4096);
-return RemoteObject.createImmutable("");
-}
-catch (Exception e) {
-			throw Debug.ErrorCaught(e);
-		} 
-finally {
-			Debug.PopSubsStack();
-		}}
 public static RemoteObject  _class_globals(RemoteObject __ref) throws Exception{
  //BA.debugLineNum = 1;BA.debugLine="Sub Class_Globals";
  //BA.debugLineNum = 2;BA.debugLine="Public pnlBase, pnlMenu As Panel";
@@ -56,7 +25,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _hiding_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("Hiding_Click (initialsettings) ","initialsettings",3,__ref.getField(false, "ba"),__ref,66);
+		Debug.PushSubsStack("Hiding_Click (initialsettings) ","initialsettings",5,__ref.getField(false, "ba"),__ref,66);
 if (RapidSub.canDelegate("hiding_click")) return __ref.runUserSub(false, "initialsettings","hiding_click", __ref);
  BA.debugLineNum = 66;BA.debugLine="Public Sub Hiding_Click					'Скриване на панела /";
 Debug.ShouldStop(2);
@@ -75,7 +44,7 @@ finally {
 		}}
 public static RemoteObject  _initialize(RemoteObject __ref,RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (initialsettings) ","initialsettings",3,__ref.getField(false, "ba"),__ref,9);
+		Debug.PushSubsStack("Initialize (initialsettings) ","initialsettings",5,__ref.getField(false, "ba"),__ref,9);
 if (RapidSub.canDelegate("initialize")) return __ref.runUserSub(false, "initialsettings","initialize", __ref, _ba);
 __ref.runVoidMethodAndSync("innerInitializeHelper", _ba);
 Debug.locals.put("ba", _ba);
@@ -111,18 +80,18 @@ finally {
 		}}
 public static RemoteObject  _initialsetaddlanguages(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("InitialSetAddLanguages (initialsettings) ","initialsettings",3,__ref.getField(false, "ba"),__ref,79);
+		Debug.PushSubsStack("InitialSetAddLanguages (initialsettings) ","initialsettings",5,__ref.getField(false, "ba"),__ref,78);
 if (RapidSub.canDelegate("initialsetaddlanguages")) return __ref.runUserSub(false, "initialsettings","initialsetaddlanguages", __ref);
- BA.debugLineNum = 79;BA.debugLine="Private Sub InitialSetAddLanguages		'Добавяне на е";
+ BA.debugLineNum = 78;BA.debugLine="Private Sub InitialSetAddLanguages		'Добавяне на е";
+Debug.ShouldStop(8192);
+ BA.debugLineNum = 79;BA.debugLine="SpnLanguage.Clear";
 Debug.ShouldStop(16384);
- BA.debugLineNum = 80;BA.debugLine="SpnLanguage.Clear";
-Debug.ShouldStop(32768);
 __ref.getField(false,"_spnlanguage").runVoidMethod ("Clear");
- BA.debugLineNum = 81;BA.debugLine="SpnLanguage.AddAll(Main.translate.Get_LanguageLis";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 80;BA.debugLine="SpnLanguage.AddAll(Main.translate.Get_LanguageLis";
+Debug.ShouldStop(32768);
 __ref.getField(false,"_spnlanguage").runVoidMethod ("AddAll",(Object)(initialsettings._main._translate.runClassMethod (b4a.example.translator.class, "_get_languagelist")));
- BA.debugLineNum = 82;BA.debugLine="End Sub";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 81;BA.debugLine="End Sub";
+Debug.ShouldStop(65536);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -133,15 +102,15 @@ finally {
 		}}
 public static RemoteObject  _initialsetmenufake_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("InitialSetMenuFake_Click (initialsettings) ","initialsettings",3,__ref.getField(false, "ba"),__ref,111);
+		Debug.PushSubsStack("InitialSetMenuFake_Click (initialsettings) ","initialsettings",5,__ref.getField(false, "ba"),__ref,91);
 if (RapidSub.canDelegate("initialsetmenufake_click")) return __ref.runUserSub(false, "initialsettings","initialsetmenufake_click", __ref);
- BA.debugLineNum = 111;BA.debugLine="Private Sub InitialSetMenuFake_Click As Boolean	'С";
-Debug.ShouldStop(16384);
- BA.debugLineNum = 112;BA.debugLine="Return True";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 91;BA.debugLine="Private Sub InitialSetMenuFake_Click As Boolean	'С";
+Debug.ShouldStop(67108864);
+ BA.debugLineNum = 92;BA.debugLine="Return True";
+Debug.ShouldStop(134217728);
 if (true) return initialsettings.__c.getField(true,"True");
- BA.debugLineNum = 113;BA.debugLine="End Sub";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 93;BA.debugLine="End Sub";
+Debug.ShouldStop(268435456);
 return RemoteObject.createImmutable(false);
 }
 catch (Exception e) {
@@ -152,7 +121,7 @@ finally {
 		}}
 public static RemoteObject  _initialsetshow(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("InitialSetShow (initialsettings) ","initialsettings",3,__ref.getField(false, "ba"),__ref,23);
+		Debug.PushSubsStack("InitialSetShow (initialsettings) ","initialsettings",5,__ref.getField(false, "ba"),__ref,23);
 if (RapidSub.canDelegate("initialsetshow")) return __ref.runUserSub(false, "initialsettings","initialsetshow", __ref);
  BA.debugLineNum = 23;BA.debugLine="Public Sub InitialSetShow			'Визуализира на началн";
 Debug.ShouldStop(4194304);
@@ -177,7 +146,7 @@ finally {
 		}}
 public static RemoteObject  _initialsetsignsrefresh(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("InitialSetSignsRefresh (initialsettings) ","initialsettings",3,__ref.getField(false, "ba"),__ref,70);
+		Debug.PushSubsStack("InitialSetSignsRefresh (initialsettings) ","initialsettings",5,__ref.getField(false, "ba"),__ref,70);
 if (RapidSub.canDelegate("initialsetsignsrefresh")) return __ref.runUserSub(false, "initialsettings","initialsetsignsrefresh", __ref);
  BA.debugLineNum = 70;BA.debugLine="Private Sub InitialSetSignsRefresh		'Опресняване н";
 Debug.ShouldStop(32);
@@ -196,11 +165,8 @@ __ref.getField(false,"_lbllanguage").runMethod(true,"setText",BA.ObjectToCharSeq
  BA.debugLineNum = 75;BA.debugLine="SpnLanguage.TextSize = UISizes.DefaultFont";
 Debug.ShouldStop(1024);
 __ref.getField(false,"_spnlanguage").runMethod(true,"setTextSize",BA.numberCast(float.class, initialsettings._uisizes._defaultfont));
- BA.debugLineNum = 76;BA.debugLine="CallSub(Main,\"Login_SignsRefresh\")	' Когато опрес";
+ BA.debugLineNum = 76;BA.debugLine="End Sub";
 Debug.ShouldStop(2048);
-initialsettings.__c.runMethodAndSync(false,"CallSubNew",__ref.getField(false, "ba"),(Object)((initialsettings._main.getObject())),(Object)(RemoteObject.createImmutable("Login_SignsRefresh")));
- BA.debugLineNum = 77;BA.debugLine="End Sub";
-Debug.ShouldStop(4096);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -211,13 +177,13 @@ finally {
 		}}
 public static RemoteObject  _initsetasview(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("InitSetAsView (initialsettings) ","initialsettings",3,__ref.getField(false, "ba"),__ref,19);
+		Debug.PushSubsStack("InitSetAsView (initialsettings) ","initialsettings",5,__ref.getField(false, "ba"),__ref,19);
 if (RapidSub.canDelegate("initsetasview")) return __ref.runUserSub(false, "initialsettings","initsetasview", __ref);
- BA.debugLineNum = 19;BA.debugLine="Public Sub InitSetAsView As View";
+ BA.debugLineNum = 19;BA.debugLine="Public Sub InitSetAsView As Panel";
 Debug.ShouldStop(262144);
  BA.debugLineNum = 20;BA.debugLine="Return pnlBase";
 Debug.ShouldStop(524288);
-if (true) return RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), __ref.getField(false,"_pnlbase").getObject());
+if (true) return __ref.getField(false,"_pnlbase");
  BA.debugLineNum = 21;BA.debugLine="End Sub";
 Debug.ShouldStop(1048576);
 return RemoteObject.createImmutable(null);
@@ -230,7 +196,7 @@ finally {
 		}}
 public static RemoteObject  _initsettingsbuildscreen(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("InitSettingsBuildScreen (initialsettings) ","initialsettings",3,__ref.getField(false, "ba"),__ref,29);
+		Debug.PushSubsStack("InitSettingsBuildScreen (initialsettings) ","initialsettings",5,__ref.getField(false, "ba"),__ref,29);
 if (RapidSub.canDelegate("initsettingsbuildscreen")) return __ref.runUserSub(false, "initialsettings","initsettingsbuildscreen", __ref);
 RemoteObject _labelwidth = RemoteObject.createImmutable(0);
 RemoteObject _labelheight = RemoteObject.createImmutable(0);
@@ -311,7 +277,7 @@ finally {
 		}}
 public static RemoteObject  _initsettingshide(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("InitSettingsHide (initialsettings) ","initialsettings",3,__ref.getField(false, "ba"),__ref,53);
+		Debug.PushSubsStack("InitSettingsHide (initialsettings) ","initialsettings",5,__ref.getField(false, "ba"),__ref,53);
 if (RapidSub.canDelegate("initsettingshide")) return __ref.runUserSub(false, "initialsettings","initsettingshide", __ref);
  BA.debugLineNum = 53;BA.debugLine="Public Sub InitSettingsHide			'Скриване на панел/м";
 Debug.ShouldStop(1048576);
@@ -338,61 +304,28 @@ catch (Exception e) {
 finally {
 			Debug.PopSubsStack();
 		}}
-public static RemoteObject  _spnfont_itemclick(RemoteObject __ref,RemoteObject _position,RemoteObject _value) throws Exception{
-try {
-		Debug.PushSubsStack("SpnFont_ItemClick (initialsettings) ","initialsettings",3,__ref.getField(false, "ba"),__ref,93);
-if (RapidSub.canDelegate("spnfont_itemclick")) return __ref.runUserSub(false, "initialsettings","spnfont_itemclick", __ref, _position, _value);
-Debug.locals.put("Position", _position);
-Debug.locals.put("Value", _value);
- BA.debugLineNum = 93;BA.debugLine="Private Sub SpnFont_ItemClick (Position As Int, Va";
-Debug.ShouldStop(268435456);
- BA.debugLineNum = 94;BA.debugLine="UISizes.DefaultFont = Value";
-Debug.ShouldStop(536870912);
-initialsettings._uisizes._defaultfont = BA.numberCast(int.class, _value);
- BA.debugLineNum = 95;BA.debugLine="CalculateFontSizesInitialSettings";
-Debug.ShouldStop(1073741824);
-__ref.runClassMethod (b4a.example.initialsettings.class, "_calculatefontsizesinitialsettings");
- BA.debugLineNum = 96;BA.debugLine="SpnLanguage.Clear";
-Debug.ShouldStop(-2147483648);
-__ref.getField(false,"_spnlanguage").runVoidMethod ("Clear");
- BA.debugLineNum = 98;BA.debugLine="InitialSetAddLanguages";
-Debug.ShouldStop(2);
-__ref.runClassMethod (b4a.example.initialsettings.class, "_initialsetaddlanguages");
- BA.debugLineNum = 99;BA.debugLine="InitialSetSignsRefresh";
-Debug.ShouldStop(4);
-__ref.runClassMethod (b4a.example.initialsettings.class, "_initialsetsignsrefresh");
- BA.debugLineNum = 100;BA.debugLine="End Sub";
-Debug.ShouldStop(8);
-return RemoteObject.createImmutable("");
-}
-catch (Exception e) {
-			throw Debug.ErrorCaught(e);
-		} 
-finally {
-			Debug.PopSubsStack();
-		}}
 public static RemoteObject  _spnlang_itemclick(RemoteObject __ref,RemoteObject _position,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("spnLang_ItemClick (initialsettings) ","initialsettings",3,__ref.getField(false, "ba"),__ref,85);
+		Debug.PushSubsStack("spnLang_ItemClick (initialsettings) ","initialsettings",5,__ref.getField(false, "ba"),__ref,84);
 if (RapidSub.canDelegate("spnlang_itemclick")) return __ref.runUserSub(false, "initialsettings","spnlang_itemclick", __ref, _position, _value);
 Debug.locals.put("Position", _position);
 Debug.locals.put("Value", _value);
- BA.debugLineNum = 85;BA.debugLine="Private Sub spnLang_ItemClick (Position As Int, Va";
+ BA.debugLineNum = 84;BA.debugLine="Private Sub spnLang_ItemClick (Position As Int, Va";
+Debug.ShouldStop(524288);
+ BA.debugLineNum = 85;BA.debugLine="intLanguageIndex = Position";
 Debug.ShouldStop(1048576);
- BA.debugLineNum = 86;BA.debugLine="intLanguageIndex = Position";
-Debug.ShouldStop(2097152);
 __ref.setField ("_intlanguageindex",_position);
- BA.debugLineNum = 87;BA.debugLine="Main.SelectedLanguage = Value";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 86;BA.debugLine="Main.SelectedLanguage = Value";
+Debug.ShouldStop(2097152);
 initialsettings._main._selectedlanguage = BA.ObjectToString(_value);
- BA.debugLineNum = 88;BA.debugLine="Main.translate.SetLanguage(Value)";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 87;BA.debugLine="Main.translate.SetLanguage(Value)";
+Debug.ShouldStop(4194304);
 initialsettings._main._translate.runClassMethod (b4a.example.translator.class, "_setlanguage",(Object)(BA.ObjectToString(_value)));
- BA.debugLineNum = 89;BA.debugLine="InitialSetSignsRefresh";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 88;BA.debugLine="InitialSetSignsRefresh";
+Debug.ShouldStop(8388608);
 __ref.runClassMethod (b4a.example.initialsettings.class, "_initialsetsignsrefresh");
- BA.debugLineNum = 90;BA.debugLine="End Sub";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 89;BA.debugLine="End Sub";
+Debug.ShouldStop(16777216);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -403,7 +336,7 @@ finally {
 		}}
 public static RemoteObject  _writeinitialsettings(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("WriteInitialSettings (initialsettings) ","initialsettings",3,__ref.getField(false, "ba"),__ref,60);
+		Debug.PushSubsStack("WriteInitialSettings (initialsettings) ","initialsettings",5,__ref.getField(false, "ba"),__ref,60);
 if (RapidSub.canDelegate("writeinitialsettings")) return __ref.runUserSub(false, "initialsettings","writeinitialsettings", __ref);
 RemoteObject _randomfile = RemoteObject.declareNull("anywheresoftware.b4a.randomaccessfile.RandomAccessFile");
  BA.debugLineNum = 60;BA.debugLine="Private Sub WriteInitialSettings	'Записва първонач";

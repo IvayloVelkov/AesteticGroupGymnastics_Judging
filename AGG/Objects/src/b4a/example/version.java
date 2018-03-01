@@ -24,13 +24,13 @@ public static String  _path(anywheresoftware.b4a.BA _ba) throws Exception{
 RDebugUtils.currentModule="version";
 if (Debug.shouldDelegate(null, "path"))
 	return (String) Debug.delegate(null, "path", new Object[] {_ba});
-RDebugUtils.currentLine=2555904;
- //BA.debugLineNum = 2555904;BA.debugLine="Public Sub Path As String";
-RDebugUtils.currentLine=2555905;
- //BA.debugLineNum = 2555905;BA.debugLine="Return \"/Microinvest/\"&ProgramName";
+RDebugUtils.currentLine=6160384;
+ //BA.debugLineNum = 6160384;BA.debugLine="Public Sub Path As String";
+RDebugUtils.currentLine=6160385;
+ //BA.debugLineNum = 6160385;BA.debugLine="Return \"/Microinvest/\"&ProgramName";
 if (true) return "/Microinvest/"+_programname;
-RDebugUtils.currentLine=2555906;
- //BA.debugLineNum = 2555906;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6160386;
+ //BA.debugLineNum = 6160386;BA.debugLine="End Sub";
 return "";
 }
 }

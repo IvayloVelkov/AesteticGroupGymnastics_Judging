@@ -21,7 +21,7 @@ Public Sub Initialize			'Инициализира обекта / Initializes the
 End Sub
 
 'Метод третиращ обекта, като панел / Makes the Initial settings object to be treated as panel
-Public Sub InitSetAsView As View
+Public Sub InitSetAsView As Panel
 	Return pnlBase
 End Sub
 
@@ -78,7 +78,6 @@ Private Sub InitialSetSignsRefresh		'Опресняване на надписи�
 	lblLanguage.TextSize = UISizes.DefaultFont
 	lblLanguage.Text = Main.translate.GetString("lblLanguage")
 	SpnLanguage.TextSize = UISizes.DefaultFont
-	CallSub(Main,"Login_SignsRefresh")	' Когато опресним надписите тук, ще се опресняват и надписите в другите модули
 End Sub
 
 Private Sub InitialSetAddLanguages		'Добавяне на езици в първоначалните езици / Adds languages to the initial settings
@@ -92,25 +91,6 @@ Private Sub spnLang_ItemClick (Position As Int, Value As Object)
 	Main.SelectedLanguage = Value
 	Main.translate.SetLanguage(Value)
 	InitialSetSignsRefresh
-End Sub
-
-'Самото падащо меню за големина на шрифта / The actual spinner for font size
-Private Sub SpnFont_ItemClick (Position As Int, Value As Object)
-	UISizes.DefaultFont = Value
-	CalculateFontSizesInitialSettings
-	SpnLanguage.Clear
-
-	InitialSetAddLanguages
-	InitialSetSignsRefresh
-End Sub
-
-'Изчисляване на размерите на шрифта / Calculates the size of the font
-Private Sub CalculateFontSizesInitialSettings
-	ProgramData.Tile_Small = UISizes.DefaultFont * 0.71
-	ProgramData.Tile_Large =  UISizes.DefaultFont * 0.83
-	ProgramData.TextSize_Small = UISizes.DefaultFont * 0.71
-	ProgramData.TextSize_Large = UISizes.DefaultFont * 0.83
-	ProgramData.TextSize_ExtraLarge = UISizes.DefaultFont
 End Sub
 
 Private Sub InitialSetMenuFake_Click As Boolean	'Спира преминаването на тъч през панел / Stops unwanted touch passing through layers of panel

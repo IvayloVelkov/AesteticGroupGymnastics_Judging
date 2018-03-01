@@ -6,11 +6,9 @@ B4A=true
 Sub Class_Globals
 	Public CONNECTION_MODE As Int
 	Public CONNECTION_MYSQL As Int = 0
-	Public CONNECTION_MSSQL As Int = 1
 	
 	Private IP, Database, UserName, Password As String
 	Private DBMySQL As MYSQL
-	Private DBMsSql As MSSQL
 	Private QueryResult As List
 	Private RepReference As Report
 	Private Currencies As List
@@ -38,12 +36,7 @@ Public Sub SetDatabase(address As String, base As String, user As String, pass A
 	UserName = user
 	Password = pass
 	
-	Select CONNECTION_MODE	
-		Case CONNECTION_MSSQL			
-			DBMsSql.setDatabase(IP,Database,UserName,Password,DatabaseTimeout)
-		Case CONNECTION_MYSQL
-			DBMySQL.setDatabase(IP,Database,UserName,Password,DatabaseTimeout)
-	End Select
+	DBMySQL.setDatabase(IP,Database,UserName,Password,DatabaseTimeout)
 	
 End Sub
 
@@ -65,75 +58,58 @@ public Sub GetPassword As String
 End Sub
 
 'Returns a list of all the tables in the database
-Public Sub TableList As List
-Dim result As List
+'Public Sub TableList As List
+'Dim result As List
+'
+'			result = DBMySQL.TableList
+'	
+'	If Not (result.IsInitialized) Then
+'		result.Initialize
+'		Log("Error! No tables found!")
+'	End If
+'	
+'	Return result
+'End Sub
 
-	Select CONNECTION_MODE	
-		Case CONNECTION_MSSQL			
-			result = DBMsSql.TableList	
-		Case CONNECTION_MYSQL
-			result = DBMySQL.TableList
-	End Select
-	
-	If Not (result.IsInitialized) Then
-		result.Initialize
-		Log("Error! No tables found!")
-	End If
-	
-	Return result
-End Sub
-
-'Executes a SQL NON-query (does not return results)
-Public Sub Exec_NonQuery(sql As String)
-	QueryResult.Clear
-	Select CONNECTION_MODE
-		Case CONNECTION_MSSQL			
-			DBMsSql.ExecuteNonQuery(sql,False)	
-		Case CONNECTION_MYSQL
-			DBMySQL.ExecuteNonQuery(sql)
-	End Select
-End Sub  
-
+''Executes a SQL NON-query (does not return results)
+'Public Sub Exec_NonQuery(sql As String)
+'	QueryResult.Clear
+'		DBMySQL.ExecuteNonQuery(sql)
+'End Sub  
+'
 'Executes a SQL query and returns the results as a list
 Public Sub Exec_Query(sql As String, SkipErrorMessage As Boolean) As List
 	QueryResult.Clear
-	Try
-		Main.RollbackFailed = False
-		Select CONNECTION_MODE
-			Case CONNECTION_MSSQL
-'				Log("Executing MSSQL: " & sql)
-				QueryResult = DBMsSql.Query(sql)
-			Case CONNECTION_MYSQL
+	Try		
 '				Log("Executing MYSQL: " & sql)
-				QueryResult = DBMySQL.Query(sql)
-		End Select
+		QueryResult = DBMySQL.Query(sql)
+
 
 		If QueryResult.Size = 0 Then
 			If Not (QueryResult.IsInitialized) Then QueryResult.Initialize
 			Log("Error! No data from query!")
 			Msgbox(Main.translate.GetString("errNoData"),Main.translate.GetString("errError"))
-			Support.SaveLog(Main.translate.GetString("errNoData"), LastException)
+'			Support.SaveLog(Main.translate.GetString("errNoData"), LastException)
 		End If
 		
 		Return QueryResult
 	Catch
 		Dim ex As String = LastException
 		Log("QUERY Exception (connection error?): " & LastException.Message)
-		Main.StopLoadingOnError = True
+'		Main.StopLoadingOnError = True
 		If ex.Contains("rollback") Then
-			Main.RollbackFailed = True
+'			Main.RollbackFailed = True
 		End If
 		If Not (SkipErrorMessage) Then
 			
 			If ex.Contains("sql") Then
 				Msgbox(Main.translate.GetString("errSQLError") & Chr(10) & Chr(10) & LastException, (Main.translate.GetString("lblSQL")&" "& Main.translate.GetString("lblError")))
-				Support.SaveLog(Main.translate.GetString("errSQLError"), LastException)
+'				Support.SaveLog(Main.translate.GetString("errSQLError"), LastException)
 			Else
 				Msgbox(Main.translate.GetString("errUnexpected"),Main.translate.GetString("errError"))
-				Support.SaveLog(Main.translate.GetString("errUnexpected"), LastException)
+'				Support.SaveLog(Main.translate.GetString("errUnexpected"), LastException)
 			End If
 			
-			If CallSub(Main,"GetScreenStackSize")>0 Then CallSubDelayed(Main,"ReturnToPreviousScreen")
 		End If
 		
 		Return QueryResult
@@ -141,10 +117,10 @@ Public Sub Exec_Query(sql As String, SkipErrorMessage As Boolean) As List
 End Sub
 
 
-Public Sub ExecuteNonQueryThread(sql As String)
-	'DataThread.Interrupt
-	'DataThread.Start(Me,"Exec_NonQuery",Array As Object(sql))
-End Sub
+'Public Sub ExecuteNonQueryThread(sql As String)
+'	'DataThread.Interrupt
+'	'DataThread.Start(Me,"Exec_NonQuery",Array As Object(sql))
+'End Sub
 
 Public Sub QueryThread(sql As String, skipErrors As Boolean)
 	Private DataThread As Thread
@@ -157,9 +133,6 @@ private Sub DataThread_Ended(endedOK As Boolean, error As String) 'The thread ha
 	ProgressDialogHide
 	If Not (QueryResult.IsInitialized) Then QueryResult.Initialize
 	Log("Inner query result: " & QueryResult.Size)
-	If SubExists(Main,"Handle_DBResults") Then
-		CallSub2(Main,"Handle_DBResults",QueryResult)
-	End If
 End Sub
 
 Public Sub QueryReportThread(pos As Int, rep As Report, skipErrors As Boolean)
@@ -191,8 +164,6 @@ private Sub DataReportThread_Ended(endedOK As Boolean, error As String) 'The thr
 		rep.Title = RepReference.Title
 		rep.X = RepReference.x
 		rep.y = RepReference.y
-		
-		CallSub2(Main,"Handle_DBReportResults",rep)
 	End If
 End Sub
 
@@ -216,7 +187,7 @@ End Sub
 Public Sub Get_Currency As String
 	Try
 		Currencies.Clear
-		Currencies = Exec_Query("SELECT Currency FROM Currencies where id = 1",True)
+'		Currencies = Exec_Query("SELECT Currency FROM Currencies where id = 1",True)
 		
 		Dim s As String = Currencies.Get(1)
 		
@@ -226,7 +197,7 @@ Public Sub Get_Currency As String
 		Return s
 		Log("Currency PRIME!: " & s)
 	Catch
-		Support.SaveLog("Failed to get currency from DB. Currency set to default: BGN", LastException)
+'		Support.SaveLog("Failed to get currency from DB. Currency set to default: BGN", LastException)
 		Main.BaseNotAccessible = True
 		Log("Failed to get currency from DB. Currency set to default: BGN")
 		Return Main.cfg.DEFAULT_CURRENCY

@@ -8,7 +8,7 @@ public class programdata_subs_0 {
 
 public static RemoteObject  _initialize(RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (programdata) ","programdata",4,_ba,programdata.mostCurrent,35);
+		Debug.PushSubsStack("Initialize (programdata) ","programdata",8,_ba,programdata.mostCurrent,35);
 if (RapidSub.canDelegate("initialize")) return b4a.example.programdata.remoteMe.runUserSub(false, "programdata","initialize", _ba);
 RemoteObject _raf = RemoteObject.declareNull("anywheresoftware.b4a.randomaccessfile.RandomAccessFile");
 ;
@@ -47,8 +47,8 @@ programdata._strpass = BA.ObjectToString("");
 programdata._rafencpass = BA.numberCast(int.class, 6380);
  //BA.debugLineNum = 6;BA.debugLine="Public sameUser As Boolean";
 programdata._sameuser = RemoteObject.createImmutable(false);
- //BA.debugLineNum = 10;BA.debugLine="Public DefaultFont As Int = 18";
-programdata._defaultfont = BA.numberCast(int.class, 18);
+ //BA.debugLineNum = 10;BA.debugLine="Public DefaultFont As Int = 14";
+programdata._defaultfont = BA.numberCast(int.class, 14);
  //BA.debugLineNum = 11;BA.debugLine="Public Tile_Small As Int";
 programdata._tile_small = RemoteObject.createImmutable(0);
  //BA.debugLineNum = 12;BA.debugLine="Public Tile_Large As Int";
@@ -89,7 +89,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _read_saveduser(RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("Read_SavedUser (programdata) ","programdata",4,_ba,programdata.mostCurrent,44);
+		Debug.PushSubsStack("Read_SavedUser (programdata) ","programdata",8,_ba,programdata.mostCurrent,44);
 if (RapidSub.canDelegate("read_saveduser")) return b4a.example.programdata.remoteMe.runUserSub(false, "programdata","read_saveduser", _ba);
 RemoteObject _raf = RemoteObject.declareNull("anywheresoftware.b4a.randomaccessfile.RandomAccessFile");
 ;

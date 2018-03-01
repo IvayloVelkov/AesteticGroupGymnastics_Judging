@@ -11,7 +11,6 @@ Private Sub Class_Globals
 	Public CAD As CustomAlertDialog
 	Private checkloginPanel As CheckBox
 	Private usrString, passString As String
-	Private userIcon,passIcon As ImageView
 	Private btnloginPanelTimer As Timer
 End Sub
 
@@ -40,8 +39,6 @@ Public Sub Initialize
 	btnloginPanel.Initialize("ButtonloginPanel")
 	btnSettings.Initialize("loginPanelSettings")	'Бутон за начални настройки на програмата
 	btnExit.Initialize("loginPanelExit")
-	userIcon.Initialize("")
-	passIcon.Initialize("")
 	btnloginPanelTimer.Initialize("btnloginPanelTimer",200)
 End Sub
 
@@ -55,24 +52,23 @@ Public Sub build_Screen
 	Private settingsWidth,settingsHeight As Int
 	Private Padding,left As Int
 	
-	Padding = UISizes.DefaultPadding
-	edtWidth = loginPanel.Width*0.7
-	edtHeight = loginPanel.Height*0.08
-	btnHeight = loginPanel.Height*0.08
-	btnWidth = edtWidth/2 - Padding
-	left = (loginPanel.Width - edtWidth)/2
-	settingsWidth = loginPanel.Width*0.06
-	settingsHeight = settingsWidth' loginPanel.Height * 0.05
+
+		Padding = UISizes.DefaultPadding
+		edtWidth = loginPanel.Width*0.7
+		edtHeight = loginPanel.Height*0.08
+		btnHeight = loginPanel.Height*0.08
+		btnWidth = edtWidth/2 - Padding
+		left = (loginPanel.Width - edtWidth)/2
+		settingsWidth = loginPanel.Width*0.06
+		settingsHeight = settingsWidth' loginPanel.Height * 0.05
 	
 	
-	loginPanel.AddView(user,left, loginPanel.Height*(0.4),edtWidth, edtHeight)
-	loginPanel.AddView(pass, left, user.Top + user.Height * 1.5 + Padding, edtWidth, edtHeight)
-	
-	loginPanel.AddView(userIcon,left - edtHeight + Padding ,user.Top,edtHeight, edtHeight)
-	loginPanel.AddView(passIcon,left - edtHeight + Padding, pass.Top, edtHeight, edtHeight)
-	
-	loginPanel.AddView(checkloginPanel, passIcon.Left + Padding, passIcon.Top + edtHeight * 1.1 + Padding, btnWidth, btnHeight)
+	loginPanel.AddView(user,left, loginPanel.Height*(0.3),edtWidth, edtHeight)
+	loginPanel.AddView(pass, left, user.Top+user.Height*1.5+Padding, edtWidth, edtHeight)
+		
+	loginPanel.AddView(checkloginPanel, left + Padding, pass.Top + edtHeight * 1.5, btnWidth, btnHeight)
 	loginPanel.AddView(btnloginPanel, checkloginPanel.Left + checkloginPanel.Width + Padding, checkloginPanel.Top, btnWidth, btnHeight)
+
 
 	btnSettings.SetBackgroundImage(LoadBitmap(File.DirAssets, "initial_options_icon.png"))
 	loginPanel.AddView(btnSettings, loginPanel.Width * 0.01,loginPanel.Height * 0.01, settingsWidth, settingsHeight)
@@ -88,33 +84,28 @@ End Sub
 Private Sub loginPanel_Configurations
 	loginPanel.SetBackgroundImage(LoadBitmap(File.DirAssets,"login_background.jpg"))
 	
-	userIcon.SetBackgroundImage(LoadBitmap(File.DirAssets,"login_username_icon.png"))
-	userIcon.Gravity=Gravity.FILL
-	
-	passIcon.SetBackgroundImage(LoadBitmap(File.DirAssets,"login_password_icon.png"))
-	passIcon.Gravity=Gravity.FILL
-	
+		
 	HelperFunctions.Apply_ViewStyle(user,Colors.Black,Colors.White,Colors.White,Colors.White,Colors.White,Colors.White,Colors.White,60)
 	user.Padding = Array As Int(15,0,0,0)
 	user.SingleLine = True
 	user.Hint = Main.translate.GetString("hintMail")
-	user.TextSize = ProgramData.TextSize_ExtraLarge
+	user.TextSize = 14
 	
 	HelperFunctions.Apply_ViewStyle(pass,Colors.Black,Colors.White,Colors.White,Colors.White,Colors.White,Colors.White,Colors.White,60)
 	pass.Padding = Array As Int(15,0,0,0)
 	pass.SingleLine = True
 	pass.PasswordMode = True
 	pass.Hint = Main.translate.GetString("lblPassword")
-	pass.TextSize = ProgramData.TextSize_ExtraLarge
+	pass.TextSize = 14
 
 	checkloginPanel.TextColor=Colors.White
-	checkloginPanel.TextSize = ProgramData.TextSize_ExtraLarge
+	checkloginPanel.TextSize = 14
 	checkloginPanel.Gravity = Gravity.CENTER_VERTICAL
 	checkloginPanel.Text = Main.translate.GetString("rememberMe")
 
 
 	HelperFunctions.Apply_ViewStyle(btnloginPanel,Colors.White,0xff4ac2ff,0xff149be0,0xff2cb7ff,0xff2cb7ff,0x66040509,0x66040509,60)
-	btnloginPanel.TextSize = ProgramData.TextSize_ExtraLarge + 2
+	btnloginPanel.TextSize = 14
 	btnloginPanel.Gravity = Gravity.CENTER
 	btnloginPanel.Text = Main.translate.GetString("btnloginPanel")
 
@@ -191,6 +182,11 @@ End Sub
 'Проверява паролата / Checks the pass
 Private Sub check_Pass(text As String) As Boolean
 	Return True
+End Sub
+
+	
+Public Sub loginPanelSettings_Click
+	CallSub(Main, "showSettings")
 End Sub
 
 Public Sub asView As Panel
