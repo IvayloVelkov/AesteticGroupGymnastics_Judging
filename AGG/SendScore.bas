@@ -1,13 +1,13 @@
-﻿Type=Class
-Version=7.3
+﻿B4A=true
+Group=Default Group
 ModulesStructureVersion=1
-B4A=true
+Type=Class
+Version=7.3
 @EndOfDesignText@
 Sub Class_Globals
 	Public finalPanel As Panel
 	Private teamname As EditText
 	Private teamscore As Label
-	Private score As Double
 	Private SendBtn As Button
 End Sub
 
@@ -23,7 +23,6 @@ Public Sub Initialize
 	teamname.SingleLine = True
 	
 	finalPanel.AddView(teamscore, 20%x, 35%y, 60%x, 10%y)
-	teamscore.Text = "0.00"
 	teamscore.Gravity = Gravity.CENTER
 	
 	finalPanel.AddView(SendBtn, 20%x, 55%y, 60%x, 10%y)
@@ -31,10 +30,19 @@ Public Sub Initialize
 	SendBtn.Gravity = Gravity.CENTER
 End Sub
 
+Public Sub finalScore
+	teamscore.Text = CallSub(Main, "finalScore")
+
+	Log("FINAL"&teamscore.Text)
+End Sub
+
 Public Sub asView As Panel
 	Return finalPanel
 End Sub
 
 Private Sub send_Click
-'	Main.DB.Exec_Query("")
+	If teamname.Text = "" Then
+		Msgbox("Добавате име на отбора.","Липсва име.")
+	End If
+	
 End Sub

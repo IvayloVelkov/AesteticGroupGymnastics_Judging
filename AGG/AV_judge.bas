@@ -1,7 +1,8 @@
-﻿Type=Class
-Version=7.3
+﻿B4A=true
+Group=Default Group
 ModulesStructureVersion=1
-B4A=true
+Type=Class
+Version=7.3
 @EndOfDesignText@
 Sub Class_Globals
 	Public avPanel As Panel
@@ -15,6 +16,7 @@ Sub Class_Globals
 	Dim Line2 As Panel
 	Dim downPanel As Panel
 	Dim btnready As Button
+	Public avScore As Double
 End Sub
 
 'Initializes the object. You can add parameters to this method if needed.
@@ -27,7 +29,7 @@ Public Sub Initialize
 		label(i).Initialize("")
 	Next
 	For i = 0 To 34
-		chekpointbox(i).Initialize("")
+		chekpointbox(i).Initialize("check")
 	Next
 	downPanel.Initialize("")
 	btnready.Initialize("ready")
@@ -87,7 +89,7 @@ Public Sub BuildUi
 		label(i).Text = Main.translate.GetString("AVlabal" & i)
 		label(i).TextColor = Colors.White
 		page(0).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 30%x, 10%y)
-		chekpointbox(i).Text = Main.translate.GetString("Checkl" & i)
+		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
 
 	Next
 	
@@ -103,7 +105,7 @@ Public Sub BuildUi
 		label(i).Text = Main.translate.GetString("AVlabal" & i)
 		label(i).TextColor = Colors.White
 		page(1).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 30%x, 10%y)
-		chekpointbox(i).Text = Main.translate.GetString("Checkl" & i)
+		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
 
 	Next
 	
@@ -119,7 +121,7 @@ Public Sub BuildUi
 		label(i).Text = Main.translate.GetString("AVlabal" & i)
 		label(i).TextColor = Colors.White
 		page(2).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 30%x, 10%y)
-		chekpointbox(i).Text = Main.translate.GetString("Checkl" & i)
+		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
 
 	Next
 	
@@ -134,13 +136,28 @@ Public Sub BuildUi
 		label(i).Text = Main.translate.GetString("AVlabal" & i)
 		label(i).TextColor = Colors.White
 		page(3).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 30%x, 10%y)
-		chekpointbox(i).Text = Main.translate.GetString("Checkl" & i)
+		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
 	Next
 	
 End Sub
 
+Private Sub check_CheckedChange(Checked As Boolean)
+	If Checked = True Then
+		avScore = avScore + 0.1
+		Log(avScore)
+	Else 
+		avScore = avScore - 0.1
+	End If
+End Sub
+
+Public Sub finaAVscore As Double
+	Log("AVSCORE:"&avScore)
+	Return avScore
+End Sub
+
 Private Sub ready_Click
 	CallSub(Main, "FinalClick")
+	finaAVscore
 End Sub
 
 Public Sub asView As Panel

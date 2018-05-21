@@ -1,49 +1,46 @@
-﻿Version=7.3
-NumberOfModules=15
-Module1=LoginScreen
-Module2=typeJudge
-Module3=AV_judge
-Module4=SendScore
-Module5=InitialSettings
-Module6=Translator
-Module7=DBSQLConnector
-Module8=ProgramData
-Module9=UISizes
-Module10=Version
-Module11=Starter
-Module12=HelperFunctions
-Module13=TV_Judge
-Module14=EXE_Judging
-Module15=Config
-Build1=Default,b4a.example
-ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
-IconFile=
-NumberOfFiles=6
+﻿Build1=Default,agg.agg
 File1=dictionary.xml
-File2=exit_program_x.png
-File3=initial_options_icon.png
-File4=login_background.jpg
-File5=login_password_icon.png
-File6=login_username_icon.png
-NumberOfLibraries=10
+File2=login_background.jpg
+FileGroup1=Default Group
+FileGroup2=Default Group
+Group=Default Group
+IconFile=
 Library1=core
 Library2=randomaccessfile
 Library3=reflection
 Library4=customalertdialog
 Library5=xmlsax
 Library6=ahviewpager
-Library7=threading
-Library8=mysql2
-Library9=javaobject
-Library10=connector
+Library7=javaobject
+Library8=connector
+Library9=jdbcsql
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
+Module1=TV_Judge
+Module10=UISizes
+Module11=Version
+Module12=HelperFunctions
+Module2=AV_judge
+Module3=EXE_Judging
+Module4=SendScore
+Module5=Translator
+Module6=Starter
+Module7=LoginScreen
+Module8=typeJudge
+Module9=ProgramData
+NumberOfFiles=2
+NumberOfLibraries=9
+NumberOfModules=12
+Version=8
 @EndOfDesignText@
+
 #Region  Project Attributes 
-	#ApplicationLabel: B4A Example
+	#ApplicationLabel: AGG
 	#VersionCode: 1
-	#VersionName: 
-	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#VersionName: AGG
 	#SupportedOrientations: portrait
 	#CanInstallToExternalStorage: False
+	#AdditionalJar: mysql-connector-java-5.1.34-bin
+	#BridgeLogger: true
 #End Region
 
 #Region  Activity Attributes 
@@ -57,11 +54,7 @@ Sub Process_Globals
 	Public intFontTransfer As Int
 	Type Report(ChartType As String,Title As String,X As String,Y As String,Limit As Int,curveType As String,sliceText As String,Query As String, Data As List)
 	Public BaseNotAccessible As Boolean
-	Public DB As DBSQLConnector
-	Public Cfg As Config
 	Public PrimeCurrency As String
-
-
 End Sub
 
 Sub Globals
@@ -70,9 +63,9 @@ Sub Globals
 	Private avJ As AV_judge
 	Private tvJ As TV_Judge
 	Private exeJ As EXE_Judging
-	Private final As SendScore
-	Private insettings As InitialSettings
-	
+	Private final As SendScore	
+	Public score As Double
+
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -111,15 +104,12 @@ Sub Activity_Create(FirstTime As Boolean)
 	final.asView.Visible = False
 	final.asView.Enabled = False
 	
-	insettings.Initialize
-	Activity.AddView(insettings.InitSetAsView, 0, 0, 40%x, 40%y)
-	insettings.InitSettingsBuildScreen
 '	ConnectToDatabase
 End Sub
 
-Public Sub ConnectToDatabase
-	Log("Database SET: " & Cfg.dbServerAddress & ", " & Cfg.dbBaseName & ", " & Cfg.dbUserName & ", " & Cfg.dbPassword)
-	DB.setDatabase(Cfg.dbServerAddress,Cfg.dbBaseName,Cfg.dbUserName,Cfg.dbPassword)
+Public Sub finalScore As Double
+	score = avJ.finaAVscore
+	Return score
 End Sub
 
 Public Sub LoginScreen_LoginClick
@@ -168,8 +158,22 @@ Public Sub FinalClick
 
 	final.asView.Visible = True
 	final.asView.Enabled = True
+	final.finalScore
 End Sub
 
-Public Sub showSettings
-	insettings.InitialSetShow
+Sub Activity_KeyPress (KeyCode As Int) As Boolean
+	If KeyCode = KeyCodes.KEYCODE_BACK Then
+		If avJ.asView.Visible = True Then
+			Login.asView.Visible = True
+			avJ.asView.Visible = False
+		Else If tvJ.asView.Visible = True Then
+			tvJ.asView.Visible = False
+			Login.asView.Visible = True
+		Else If exeJ.asView.Visible = True Then
+			exeJ.asView.Visible = False
+			Login.asView.Visible = True
+		Else If final.asView.Visible = True Then
+			
+		End If
+	End If
 End Sub

@@ -1,17 +1,17 @@
-﻿Type=Class
-Version=7.3
+﻿B4A=true
+Group=Default Group
 ModulesStructureVersion=1
-B4A=true
+Type=Class
+Version=7.3
 @EndOfDesignText@
 Private Sub Class_Globals
 	Private raf As RandomAccessFile
 	Private loginPanel As Panel
 	Private user, pass As EditText
-	Public btnloginPanel, btnSettings, btnExit As Button
+	Public btnloginPanel As Button
 	Public CAD As CustomAlertDialog
 	Private checkloginPanel As CheckBox
 	Private usrString, passString As String
-	Private btnloginPanelTimer As Timer
 End Sub
 
 'Проверка за съществуване на директории и фаилове / Folder and file check on start up
@@ -37,9 +37,6 @@ Public Sub Initialize
 	pass.Initialize("Pass")
 	checkloginPanel.Initialize("Remember")
 	btnloginPanel.Initialize("ButtonloginPanel")
-	btnSettings.Initialize("loginPanelSettings")	'Бутон за начални настройки на програмата
-	btnExit.Initialize("loginPanelExit")
-	btnloginPanelTimer.Initialize("btnloginPanelTimer",200)
 End Sub
 
 ' Построяване на екрана / Builds the UI of the screen
@@ -49,7 +46,6 @@ Public Sub build_Screen
 	
 	Private edtWidth,edtHeight As Int
 	Private btnWidth,btnHeight As Int
-	Private settingsWidth,settingsHeight As Int
 	Private Padding,left As Int
 	
 
@@ -58,10 +54,7 @@ Public Sub build_Screen
 		edtHeight = loginPanel.Height*0.08
 		btnHeight = loginPanel.Height*0.08
 		btnWidth = edtWidth/2 - Padding
-		left = (loginPanel.Width - edtWidth)/2
-		settingsWidth = loginPanel.Width*0.06
-		settingsHeight = settingsWidth' loginPanel.Height * 0.05
-	
+		left = (loginPanel.Width - edtWidth)/2	
 	
 	loginPanel.AddView(user,left, loginPanel.Height*(0.3),edtWidth, edtHeight)
 	loginPanel.AddView(pass, left, user.Top+user.Height*1.5+Padding, edtWidth, edtHeight)
@@ -70,11 +63,6 @@ Public Sub build_Screen
 	loginPanel.AddView(btnloginPanel, checkloginPanel.Left + checkloginPanel.Width + Padding, checkloginPanel.Top, btnWidth, btnHeight)
 
 
-	btnSettings.SetBackgroundImage(LoadBitmap(File.DirAssets, "initial_options_icon.png"))
-	loginPanel.AddView(btnSettings, loginPanel.Width * 0.01,loginPanel.Height * 0.01, settingsWidth, settingsHeight)
-
-	btnExit.SetBackgroundImage(LoadBitmap(File.DirAssets,"exit_program_x.png"))
-	loginPanel.AddView(btnExit, loginPanel.width - settingsWidth - loginPanel.Width * 0.01,loginPanel.Height * 0.01, settingsWidth, settingsHeight)
 	
 	btnloginPanel.Enabled=True
 '	refreshloginPanel_Labels
@@ -89,6 +77,7 @@ Private Sub loginPanel_Configurations
 	user.Padding = Array As Int(15,0,0,0)
 	user.SingleLine = True
 	user.Hint = Main.translate.GetString("hintMail")
+	user.HintColor = Colors.Gray
 	user.TextSize = 14
 	
 	HelperFunctions.Apply_ViewStyle(pass,Colors.Black,Colors.White,Colors.White,Colors.White,Colors.White,Colors.White,Colors.White,60)
@@ -96,6 +85,7 @@ Private Sub loginPanel_Configurations
 	pass.SingleLine = True
 	pass.PasswordMode = True
 	pass.Hint = Main.translate.GetString("lblPassword")
+	pass.HintColor = Colors.Gray
 	pass.TextSize = 14
 
 	checkloginPanel.TextColor=Colors.White
@@ -168,7 +158,6 @@ Private Sub ButtonloginPanel_Click
 			
 	CallSub(Main, "LoginScreen_LoginClick")
 			
-	btnloginPanelTimer.Enabled = True
 End Sub
 
 'Проверя, чрез Regex дали е въведен e-mail / Regex check if email is used
@@ -182,11 +171,6 @@ End Sub
 'Проверява паролата / Checks the pass
 Private Sub check_Pass(text As String) As Boolean
 	Return True
-End Sub
-
-	
-Public Sub loginPanelSettings_Click
-	CallSub(Main, "showSettings")
 End Sub
 
 Public Sub asView As Panel

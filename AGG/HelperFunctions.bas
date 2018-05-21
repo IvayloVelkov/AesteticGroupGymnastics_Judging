@@ -1,9 +1,11 @@
-﻿Type=StaticCode
-Version=7.3
+﻿B4A=true
+Group=Default Group
 ModulesStructureVersion=1
-B4A=true
+Type=StaticCode
+Version=7.3
 @EndOfDesignText@
 Sub Process_Globals
+	
 End Sub
 
 Public Sub Apply_ViewStyle (Control As View, TextColor As Int, ColorA As Int, ColorB As Int, ColorPressedA As Int, ColorPressedB As Int, ColorDisabledA As Int, ColorDisabledB As Int, CornerRound As Int)

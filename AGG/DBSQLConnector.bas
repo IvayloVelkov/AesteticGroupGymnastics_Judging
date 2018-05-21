@@ -1,7 +1,8 @@
-﻿Type=Class
-Version=7.3
+﻿B4A=true
+Group=Default Group
 ModulesStructureVersion=1
-B4A=true
+Type=Class
+Version=7.3
 @EndOfDesignText@
 Sub Class_Globals
 	Public CONNECTION_MODE As Int

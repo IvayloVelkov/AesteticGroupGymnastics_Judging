@@ -1,0 +1,213 @@
+package agg.agg;
+
+
+import anywheresoftware.b4a.BA;
+import anywheresoftware.b4a.BALayout;
+import anywheresoftware.b4a.debug.*;
+
+public class helperfunctions {
+private static helperfunctions mostCurrent = new helperfunctions();
+public static Object getObject() {
+    throw new RuntimeException("Code module does not support this method.");
+}
+ 
+public anywheresoftware.b4a.keywords.Common __c = null;
+public agg.agg.main _main = null;
+public agg.agg.starter _starter = null;
+public agg.agg.programdata _programdata = null;
+public agg.agg.uisizes _uisizes = null;
+public agg.agg.version _version = null;
+public static String  _apply_viewstyle(anywheresoftware.b4a.BA _ba,anywheresoftware.b4a.objects.ConcreteViewWrapper _control,int _textcolor,int _colora,int _colorb,int _colorpresseda,int _colorpressedb,int _colordisableda,int _colordisabledb,int _cornerround) throws Exception{
+RDebugUtils.currentModule="helperfunctions";
+if (Debug.shouldDelegate(null, "apply_viewstyle"))
+	return (String) Debug.delegate(null, "apply_viewstyle", new Object[] {_ba,_control,_textcolor,_colora,_colorb,_colorpresseda,_colorpressedb,_colordisableda,_colordisabledb,_cornerround});
+anywheresoftware.b4a.objects.ButtonWrapper _btn = null;
+anywheresoftware.b4a.objects.EditTextWrapper _txt = null;
+anywheresoftware.b4a.objects.SpinnerWrapper _sp = null;
+RDebugUtils.currentLine=5505024;
+ //BA.debugLineNum = 5505024;BA.debugLine="Public Sub Apply_ViewStyle (Control As View, TextC";
+RDebugUtils.currentLine=5505025;
+ //BA.debugLineNum = 5505025;BA.debugLine="If Control Is Button Then			'Handle controls with";
+if (_control.getObjectOrNull() instanceof android.widget.Button) { 
+RDebugUtils.currentLine=5505026;
+ //BA.debugLineNum = 5505026;BA.debugLine="Private btn As Button = Control";
+_btn = new anywheresoftware.b4a.objects.ButtonWrapper();
+_btn.setObject((android.widget.Button)(_control.getObject()));
+RDebugUtils.currentLine=5505027;
+ //BA.debugLineNum = 5505027;BA.debugLine="btn.TextColor = TextColor";
+_btn.setTextColor(_textcolor);
+ };
+RDebugUtils.currentLine=5505029;
+ //BA.debugLineNum = 5505029;BA.debugLine="If Control Is EditText Then";
+if (_control.getObjectOrNull() instanceof android.widget.EditText) { 
+RDebugUtils.currentLine=5505030;
+ //BA.debugLineNum = 5505030;BA.debugLine="Private txt As EditText = Control";
+_txt = new anywheresoftware.b4a.objects.EditTextWrapper();
+_txt.setObject((android.widget.EditText)(_control.getObject()));
+RDebugUtils.currentLine=5505031;
+ //BA.debugLineNum = 5505031;BA.debugLine="txt.TextColor = TextColor";
+_txt.setTextColor(_textcolor);
+ };
+RDebugUtils.currentLine=5505033;
+ //BA.debugLineNum = 5505033;BA.debugLine="If Control Is Spinner Then";
+if (_control.getObjectOrNull() instanceof anywheresoftware.b4a.objects.SpinnerWrapper.B4ASpinner) { 
+RDebugUtils.currentLine=5505034;
+ //BA.debugLineNum = 5505034;BA.debugLine="Private sp As Spinner = Control";
+_sp = new anywheresoftware.b4a.objects.SpinnerWrapper();
+_sp.setObject((anywheresoftware.b4a.objects.SpinnerWrapper.B4ASpinner)(_control.getObject()));
+RDebugUtils.currentLine=5505035;
+ //BA.debugLineNum = 5505035;BA.debugLine="sp.TextColor = TextColor";
+_sp.setTextColor(_textcolor);
+ };
+RDebugUtils.currentLine=5505038;
+ //BA.debugLineNum = 5505038;BA.debugLine="Control.Background = Helper_Gradient(ColorA, Colo";
+_control.setBackground((android.graphics.drawable.Drawable)(_helper_gradient(_ba,_colora,_colorb,_colorpresseda,_colorpressedb,_colordisableda,_colordisabledb,_cornerround).getObject()));
+RDebugUtils.currentLine=5505039;
+ //BA.debugLineNum = 5505039;BA.debugLine="Remove_Padding(Control)";
+_remove_padding(_ba,(Object)(_control.getObject()));
+RDebugUtils.currentLine=5505040;
+ //BA.debugLineNum = 5505040;BA.debugLine="End Sub";
+return "";
+}
+public static anywheresoftware.b4a.objects.drawable.StateListDrawable  _helper_gradient(anywheresoftware.b4a.BA _ba,int _colora,int _colorb,int _colorpresseda,int _colorpressedb,int _colordisableda,int _colordisabledb,int _cornerround) throws Exception{
+RDebugUtils.currentModule="helperfunctions";
+if (Debug.shouldDelegate(null, "helper_gradient"))
+	return (anywheresoftware.b4a.objects.drawable.StateListDrawable) Debug.delegate(null, "helper_gradient", new Object[] {_ba,_colora,_colorb,_colorpresseda,_colorpressedb,_colordisableda,_colordisabledb,_cornerround});
+int[] _colsenabled = null;
+anywheresoftware.b4a.objects.drawable.GradientDrawable _gdwenabled = null;
+int[] _colspressed = null;
+anywheresoftware.b4a.objects.drawable.GradientDrawable _gdwpressed = null;
+int[] _colsdisabled = null;
+anywheresoftware.b4a.objects.drawable.GradientDrawable _gdwdisabled = null;
+anywheresoftware.b4a.objects.drawable.StateListDrawable _stdgradient = null;
+int[] _states = null;
+RDebugUtils.currentLine=5570560;
+ //BA.debugLineNum = 5570560;BA.debugLine="Private Sub Helper_Gradient(ColorA As Int, ColorB";
+RDebugUtils.currentLine=5570561;
+ //BA.debugLineNum = 5570561;BA.debugLine="Private colsEnabled(2) As Int				'Дефинира два цв";
+_colsenabled = new int[(int) (2)];
+;
+RDebugUtils.currentLine=5570562;
+ //BA.debugLineNum = 5570562;BA.debugLine="colsEnabled(0) = ColorA";
+_colsenabled[(int) (0)] = _colora;
+RDebugUtils.currentLine=5570563;
+ //BA.debugLineNum = 5570563;BA.debugLine="colsEnabled(1) = ColorB";
+_colsenabled[(int) (1)] = _colorb;
+RDebugUtils.currentLine=5570564;
+ //BA.debugLineNum = 5570564;BA.debugLine="Private gdwEnabled As GradientDrawable		'Дефинира";
+_gdwenabled = new anywheresoftware.b4a.objects.drawable.GradientDrawable();
+RDebugUtils.currentLine=5570565;
+ //BA.debugLineNum = 5570565;BA.debugLine="gdwEnabled.Initialize(\"TOP_BOTTOM\", colsEnabled)";
+_gdwenabled.Initialize(BA.getEnumFromString(android.graphics.drawable.GradientDrawable.Orientation.class,"TOP_BOTTOM"),_colsenabled);
+RDebugUtils.currentLine=5570566;
+ //BA.debugLineNum = 5570566;BA.debugLine="gdwEnabled.CornerRadius = CornerRound";
+_gdwenabled.setCornerRadius((float) (_cornerround));
+RDebugUtils.currentLine=5570567;
+ //BA.debugLineNum = 5570567;BA.debugLine="Private colsPressed(2) As Int				'Дефинира два цв";
+_colspressed = new int[(int) (2)];
+;
+RDebugUtils.currentLine=5570568;
+ //BA.debugLineNum = 5570568;BA.debugLine="colsPressed(0) = ColorPressedA";
+_colspressed[(int) (0)] = _colorpresseda;
+RDebugUtils.currentLine=5570569;
+ //BA.debugLineNum = 5570569;BA.debugLine="colsPressed(1) = ColorPressedB";
+_colspressed[(int) (1)] = _colorpressedb;
+RDebugUtils.currentLine=5570570;
+ //BA.debugLineNum = 5570570;BA.debugLine="Private gdwPressed As GradientDrawable		'Дефинира";
+_gdwpressed = new anywheresoftware.b4a.objects.drawable.GradientDrawable();
+RDebugUtils.currentLine=5570571;
+ //BA.debugLineNum = 5570571;BA.debugLine="gdwPressed.Initialize(\"TOP_BOTTOM\", colsPressed)";
+_gdwpressed.Initialize(BA.getEnumFromString(android.graphics.drawable.GradientDrawable.Orientation.class,"TOP_BOTTOM"),_colspressed);
+RDebugUtils.currentLine=5570572;
+ //BA.debugLineNum = 5570572;BA.debugLine="gdwPressed.CornerRadius = CornerRound";
+_gdwpressed.setCornerRadius((float) (_cornerround));
+RDebugUtils.currentLine=5570573;
+ //BA.debugLineNum = 5570573;BA.debugLine="Private colsDisabled(2) As Int				'Дефинира два ц";
+_colsdisabled = new int[(int) (2)];
+;
+RDebugUtils.currentLine=5570574;
+ //BA.debugLineNum = 5570574;BA.debugLine="colsDisabled(0) = ColorDisabledA";
+_colsdisabled[(int) (0)] = _colordisableda;
+RDebugUtils.currentLine=5570575;
+ //BA.debugLineNum = 5570575;BA.debugLine="colsDisabled(1) = ColorDisabledB";
+_colsdisabled[(int) (1)] = _colordisabledb;
+RDebugUtils.currentLine=5570576;
+ //BA.debugLineNum = 5570576;BA.debugLine="Private gdwDisabled As GradientDrawable		'Дефинир";
+_gdwdisabled = new anywheresoftware.b4a.objects.drawable.GradientDrawable();
+RDebugUtils.currentLine=5570577;
+ //BA.debugLineNum = 5570577;BA.debugLine="gdwDisabled.Initialize(\"TOP_BOTTOM\", colsDisabled";
+_gdwdisabled.Initialize(BA.getEnumFromString(android.graphics.drawable.GradientDrawable.Orientation.class,"TOP_BOTTOM"),_colsdisabled);
+RDebugUtils.currentLine=5570578;
+ //BA.debugLineNum = 5570578;BA.debugLine="gdwDisabled.CornerRadius = CornerRound";
+_gdwdisabled.setCornerRadius((float) (_cornerround));
+RDebugUtils.currentLine=5570579;
+ //BA.debugLineNum = 5570579;BA.debugLine="Private stdGradient As StateListDrawable	'Дефинир";
+_stdgradient = new anywheresoftware.b4a.objects.drawable.StateListDrawable();
+RDebugUtils.currentLine=5570580;
+ //BA.debugLineNum = 5570580;BA.debugLine="stdGradient.Initialize";
+_stdgradient.Initialize();
+RDebugUtils.currentLine=5570581;
+ //BA.debugLineNum = 5570581;BA.debugLine="Private states(2) As Int";
+_states = new int[(int) (2)];
+;
+RDebugUtils.currentLine=5570582;
+ //BA.debugLineNum = 5570582;BA.debugLine="states(0) = stdGradient.State_Enabled";
+_states[(int) (0)] = _stdgradient.State_Enabled;
+RDebugUtils.currentLine=5570583;
+ //BA.debugLineNum = 5570583;BA.debugLine="states(1) = -stdGradient.State_Pressed";
+_states[(int) (1)] = (int) (-_stdgradient.State_Pressed);
+RDebugUtils.currentLine=5570584;
+ //BA.debugLineNum = 5570584;BA.debugLine="stdGradient.addState2(states, gdwEnabled)";
+_stdgradient.AddState2(_states,(android.graphics.drawable.Drawable)(_gdwenabled.getObject()));
+RDebugUtils.currentLine=5570585;
+ //BA.debugLineNum = 5570585;BA.debugLine="Private states(1) As Int";
+_states = new int[(int) (1)];
+;
+RDebugUtils.currentLine=5570586;
+ //BA.debugLineNum = 5570586;BA.debugLine="states(0) = stdGradient.State_Pressed";
+_states[(int) (0)] = _stdgradient.State_Pressed;
+RDebugUtils.currentLine=5570587;
+ //BA.debugLineNum = 5570587;BA.debugLine="stdGradient.addState2(states, gdwPressed)";
+_stdgradient.AddState2(_states,(android.graphics.drawable.Drawable)(_gdwpressed.getObject()));
+RDebugUtils.currentLine=5570588;
+ //BA.debugLineNum = 5570588;BA.debugLine="Private states(1) As Int";
+_states = new int[(int) (1)];
+;
+RDebugUtils.currentLine=5570589;
+ //BA.debugLineNum = 5570589;BA.debugLine="states(0) = stdGradient.State_Disabled";
+_states[(int) (0)] = _stdgradient.State_Disabled;
+RDebugUtils.currentLine=5570590;
+ //BA.debugLineNum = 5570590;BA.debugLine="stdGradient.addState2(states, gdwDisabled)";
+_stdgradient.AddState2(_states,(android.graphics.drawable.Drawable)(_gdwdisabled.getObject()));
+RDebugUtils.currentLine=5570591;
+ //BA.debugLineNum = 5570591;BA.debugLine="Return stdGradient							'Връща градиента като па";
+if (true) return _stdgradient;
+RDebugUtils.currentLine=5570592;
+ //BA.debugLineNum = 5570592;BA.debugLine="End Sub";
+return null;
+}
+public static String  _remove_padding(anywheresoftware.b4a.BA _ba,Object _obj) throws Exception{
+RDebugUtils.currentModule="helperfunctions";
+if (Debug.shouldDelegate(null, "remove_padding"))
+	return (String) Debug.delegate(null, "remove_padding", new Object[] {_ba,_obj});
+int _pad = 0;
+anywheresoftware.b4a.agraham.reflection.Reflection _reflect = null;
+RDebugUtils.currentLine=5636096;
+ //BA.debugLineNum = 5636096;BA.debugLine="Public Sub Remove_Padding (obj As Object)		'Премах";
+RDebugUtils.currentLine=5636097;
+ //BA.debugLineNum = 5636097;BA.debugLine="Private pad = 0dip As Int";
+_pad = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0));
+RDebugUtils.currentLine=5636098;
+ //BA.debugLineNum = 5636098;BA.debugLine="Private reflect As Reflector";
+_reflect = new anywheresoftware.b4a.agraham.reflection.Reflection();
+RDebugUtils.currentLine=5636099;
+ //BA.debugLineNum = 5636099;BA.debugLine="reflect.Target = obj";
+_reflect.Target = _obj;
+RDebugUtils.currentLine=5636100;
+ //BA.debugLineNum = 5636100;BA.debugLine="reflect.RunMethod4(\"setPadding\", Array As Object(";
+_reflect.RunMethod4("setPadding",new Object[]{(Object)(_pad),(Object)(_pad),(Object)(_pad),(Object)(_pad)},new String[]{"java.lang.int","java.lang.int","java.lang.int","java.lang.int"});
+RDebugUtils.currentLine=5636101;
+ //BA.debugLineNum = 5636101;BA.debugLine="End Sub";
+return "";
+}
+}

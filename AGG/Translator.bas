@@ -1,7 +1,8 @@
-﻿Type=Class
-Version=7.3
+﻿B4A=true
+Group=Default Group
 ModulesStructureVersion=1
-B4A=true
+Type=Class
+Version=7.3
 @EndOfDesignText@
 'Това е оптимизиран транслатор.
 'Премахнат е част от кода който се отнася за Translation Tool и не е нужен за работа

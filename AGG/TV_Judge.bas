@@ -1,30 +1,37 @@
-﻿Type=Class
-Version=7.3
+﻿B4A=true
+Group=Default Group
 ModulesStructureVersion=1
-B4A=true
+Type=Class
+Version=7.3
 @EndOfDesignText@
 Sub Class_Globals
 	Public tvPanel As Panel
 	Public Pager As AHViewPager
 	Public Container As AHPageContainer
-	Private page(4) As Panel
-	Private label(35) As Label
+	Private page(2) As Panel
+	Private label(12) As Label
 	Dim Tabs As AHViewPagerTabs
 	Dim Line As Panel
 	Dim Line2 As Panel
 	Dim downPanel As Panel
 	Dim btnready As Button
+	Private chekpointbox(30) As CheckBox
+
 End Sub
 
 'Initializes the object. You can add parameters to this method if needed.
 Public Sub Initialize
 	tvPanel.Initialize("")
-	For i = 0 To 3
+	For i = 0 To 1
 		page(i).Initialize("")
 	Next
-	For i = 0 To 34
+	For i = 0 To 11
 		label(i).Initialize("")
 	Next
+	For i = 0 To 29
+		chekpointbox(i).Initialize("check")
+	Next
+
 	downPanel.Initialize("")
 	btnready.Initialize("ready")
 End Sub
@@ -34,8 +41,6 @@ Public Sub BuildUi
 		
 	Container.AddPage(page(0), Main.translate.GetString("AvPage0"))
 	Container.AddPage(page(1), Main.translate.GetString("AvPage1"))
-	Container.AddPage(page(2), Main.translate.GetString("AvPage2"))
-	Container.AddPage(page(3), Main.translate.GetString("AvPage3"))
 
 	Pager.Initialize(Container, "MPager")
 	
@@ -69,21 +74,64 @@ Public Sub BuildUi
 	downPanel.AddView(btnready, downPanel.Width - 12%x, 0, 10%x, 33dip)
 	
 	
-	page(0).AddView(label(0), 0, 11%y, 50%x, 15%y)
-	label(0).Text = Main.translate.GetString("AVlabal1")
+	page(0).AddView(label(0), 2%x, 5%y, 50%x, 10%y)
+	label(0).Text = Main.translate.GetString("TVlabel0")
 	label(0).TextColor = Colors.White
 	
-	page(1).AddView(label(1), 0, 11%y, 50%x, 15%y)
-	label(1).Text = Main.translate.GetString("AVlabal1")
-	label(1).TextColor = Colors.White
+	page(0).AddView(chekpointbox(0), label(0).left + label(0).Width, label(0).Top, 30%x, 10%y)
+	chekpointbox(0).Text = Main.translate.GetString("Check0")
+	page(0).AddView(chekpointbox(13), chekpointbox(0).left + chekpointbox(0).Width, chekpointbox(0).Top, 30%x, 10%y)
+	chekpointbox(13).Text = Main.translate.GetString("Check14")
+
 	
-	page(2).AddView(label(2), 0, 11%y, 50%x, 15%y)
-	label(2).Text = Main.translate.GetString("AVlabal1")
-	label(2).TextColor = Colors.White
+	For i = 1 To 5
+		page(0).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
+		label(i).Text = Main.translate.GetString("TVlabel" & i)
+		label(i).TextColor = Colors.White
+		page(0).AddView(chekpointbox(i), label(i).left + label(i).Width, label(i).Top, 30%x, 10%y)
+		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+	Next
 	
-	page(3).AddView(label(3), 0, 11%y, 50%x, 15%y)
-	label(3).Text = Main.translate.GetString("AVlabal1")
-	label(3).TextColor = Colors.White
+	page(0).AddView(chekpointbox(6), chekpointbox(5).left + chekpointbox(5).Width, chekpointbox(5).Top, 30%x, 10%y)
+	chekpointbox(7).Text = Main.translate.GetString("Check6")
+	page(0).AddView(chekpointbox(7), chekpointbox(6).left + chekpointbox(6).Width, chekpointbox(6).Top, 30%x, 10%y)
+	chekpointbox(7).Text = Main.translate.GetString("Check12")
+
+	For i = 8 To 12
+		page(0).AddView(chekpointbox(i), chekpointbox(i - 7).left + chekpointbox(i - 7).Width, chekpointbox(i - 7).Top, 30%x, 10%y)
+		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+	Next
+	
+	
+	
+	
+	
+	page(1).AddView(label(6), 2%x, 5%y, 50%x, 10%y)
+	label(6).Text = Main.translate.GetString("TVlabel6")
+	label(6).TextColor = Colors.White
+	
+	page(1).AddView(chekpointbox(14), label(6).left + label(6).Width, label(6).Top, 30%x, 10%y)
+	chekpointbox(14).Text = Main.translate.GetString("Checkl6")
+	page(1).AddView(chekpointbox(15), chekpointbox(14).left + chekpointbox(14).Width, chekpointbox(14).Top, 30%x, 10%y)
+	chekpointbox(15).Text = Main.translate.GetString("Checkl6")
+	
+	For i = 7 To 11
+		page(1).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
+		label(i).Text = Main.translate.GetString("TVlabel" & i)
+		label(i).TextColor = Colors.White
+	Next
+	
+	For i = 16 To 20
+		page(1).AddView(chekpointbox(i),label(i - 9).left + label(i - 9).Width, label(i - 9).Top, 30%x, 10%y)
+		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+	Next
+	
+	For i = 21 To 25
+		page(1).AddView(chekpointbox(i), chekpointbox(i - 5).left + chekpointbox(i - 5).Width, chekpointbox(i - 5).Top, 30%x, 10%y)
+		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+	Next
+	
+	
 	
 End Sub
 

@@ -1,7 +1,8 @@
-﻿Type=Class
-Version=7.3
+﻿B4A=true
+Group=Default Group
 ModulesStructureVersion=1
-B4A=true
+Type=Class
+Version=7.3
 @EndOfDesignText@
 Sub Class_Globals
 	Public exePanel As Panel
@@ -14,6 +15,8 @@ Sub Class_Globals
 	Dim Line2 As Panel
 	Dim downPanel As Panel
 	Dim btnready As Button
+	Private chekpointbox(35) As CheckBox
+
 End Sub
 
 'Initializes the object. You can add parameters to this method if needed.
@@ -25,6 +28,10 @@ Public Sub Initialize
 	For i = 0 To 34
 		label(i).Initialize("")
 	Next
+	For i = 0 To 34
+		chekpointbox(i).Initialize("check")
+	Next
+
 	downPanel.Initialize("")
 	btnready.Initialize("ready")
 End Sub
@@ -69,22 +76,60 @@ Public Sub BuildUi
 	downPanel.AddView(btnready, downPanel.Width - 12%x, 0, 10%x, 33dip)
 	
 	
-	page(0).AddView(label(0), 0, 11%y, 50%x, 15%y)
-	label(0).Text = Main.translate.GetString("AVlabal1")
-	label(0).TextColor = Colors.White
+	For i = 1 To 7
+		page(0).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
+		label(i).Text = Main.translate.GetString("AVlabal" & i)
+		label(i).TextColor = Colors.White
+		page(0).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 30%x, 10%y)
+		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+
+	Next
 	
-	page(1).AddView(label(1), 0, 11%y, 50%x, 15%y)
-	label(1).Text = Main.translate.GetString("AVlabal1")
-	label(1).TextColor = Colors.White
+	page(1).AddView(label(8), 2%x, 5%y, 50%x, 10%y)
+	label(8).Text = Main.translate.GetString("AVlabal8")
+	label(8).TextColor = Colors.White
 	
-	page(2).AddView(label(2), 0, 11%y, 50%x, 15%y)
-	label(2).Text = Main.translate.GetString("AVlabal1")
-	label(2).TextColor = Colors.White
+	page(1).AddView(chekpointbox(8), label(8).left + label(8).Width + 10%x, label(8).Top, 30%x, 10%y)
+	chekpointbox(8).Text = Main.translate.GetString("Checkl8")
 	
-	page(3).AddView(label(3), 0, 11%y, 50%x, 15%y)
-	label(3).Text = Main.translate.GetString("AVlabal1")
-	label(3).TextColor = Colors.White
+	For i = 9 To 15
+		page(1).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
+		label(i).Text = Main.translate.GetString("AVlabal" & i)
+		label(i).TextColor = Colors.White
+		page(1).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 30%x, 10%y)
+		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+
+	Next
 	
+	page(2).AddView(label(16),2%x, 5%y, 50%x, 10%y)
+	label(16).Text = Main.translate.GetString("AVlabal17")
+	label(16).TextColor = Colors.White
+	page(2).AddView(chekpointbox(16), label(16).left + label(16).Width + 10%x, label(16).Top, 30%x, 10%y)
+	chekpointbox(16).Text = Main.translate.GetString("Checkl8")
+	
+	
+	For i = 17 To 23
+		page(2).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
+		label(i).Text = Main.translate.GetString("AVlabal" & i)
+		label(i).TextColor = Colors.White
+		page(2).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 30%x, 10%y)
+		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+
+	Next
+	
+	page(3).AddView(label(24), 2%x, 5%y, 50%x, 10%y)
+	label(24).Text = Main.translate.GetString("AVlabal26")
+	label(24).TextColor = Colors.White
+	page(3).AddView(chekpointbox(24), label(24).left + label(24).Width + 10%x, label(24).Top, 30%x, 10%y)
+	chekpointbox(24).Text = Main.translate.GetString("Checkl8")
+	
+	For i = 25 To 31
+		page(3).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
+		label(i).Text = Main.translate.GetString("AVlabal" & i)
+		label(i).TextColor = Colors.White
+		page(3).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 30%x, 10%y)
+		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+	Next
 End Sub
 
 Private Sub ready_Click
