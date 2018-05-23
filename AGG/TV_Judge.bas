@@ -15,8 +15,10 @@ Sub Class_Globals
 	Dim Line2 As Panel
 	Dim downPanel As Panel
 	Dim btnready As Button
-	Private chekpointbox(30) As CheckBox
-
+	Private chekpointbox1(12) As CheckBox
+	Private chekpointbox2(12) As CheckBox
+	Private chekpointbox3(12) As CheckBox
+	Public tvScore As Double
 End Sub
 
 'Initializes the object. You can add parameters to this method if needed.
@@ -28,8 +30,14 @@ Public Sub Initialize
 	For i = 0 To 11
 		label(i).Initialize("")
 	Next
-	For i = 0 To 29
-		chekpointbox(i).Initialize("check")
+	For i = 0 To 11
+		chekpointbox1(i).Initialize("check1")
+	Next
+	For i = 0 To 11
+		chekpointbox2(i).Initialize("check2")
+	Next
+	For i = 0 To 11
+		chekpointbox3(i).Initialize("check3")
 	Next
 
 	downPanel.Initialize("")
@@ -78,42 +86,53 @@ Public Sub BuildUi
 	label(0).Text = Main.translate.GetString("TVlabel0")
 	label(0).TextColor = Colors.White
 	
-	page(0).AddView(chekpointbox(0), label(0).left + label(0).Width, label(0).Top, 30%x, 10%y)
-	chekpointbox(0).Text = Main.translate.GetString("Check0")
-	page(0).AddView(chekpointbox(13), chekpointbox(0).left + chekpointbox(0).Width, chekpointbox(0).Top, 30%x, 10%y)
-	chekpointbox(13).Text = Main.translate.GetString("Check14")
+	page(0).AddView(chekpointbox1(0), label(0).left + label(0).Width, label(0).Top, 30%x, 10%y)
+'	chekpointbox(0).Text = Main.translate.GetString("Check0")
+	chekpointbox1(0).Text = "001" 
+	chekpointbox1(0).Tag = 0 
+	page(0).AddView(chekpointbox2(0), chekpointbox1(0).left + chekpointbox1(0).Width, chekpointbox1(0).Top, 30%x, 10%y)
+'	chekpointbox(13).Text = Main.translate.GetString("Check14")
+	chekpointbox2(0).Tag = 0
+	chekpointbox2(0).Text = "002"
 
-	
 	For i = 1 To 5
 		page(0).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
 		label(i).Text = Main.translate.GetString("TVlabel" & i)
 		label(i).TextColor = Colors.White
-		page(0).AddView(chekpointbox(i), label(i).left + label(i).Width, label(i).Top, 30%x, 10%y)
-		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
-	Next
-	
-	page(0).AddView(chekpointbox(6), chekpointbox(5).left + chekpointbox(5).Width, chekpointbox(5).Top, 30%x, 10%y)
-	chekpointbox(7).Text = Main.translate.GetString("Check6")
-	page(0).AddView(chekpointbox(7), chekpointbox(6).left + chekpointbox(6).Width, chekpointbox(6).Top, 30%x, 10%y)
-	chekpointbox(7).Text = Main.translate.GetString("Check12")
+		
+		page(0).AddView(chekpointbox1(i), label(i).left + label(i).Width, label(i).Top, 30%x, 10%y)
+'		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+		chekpointbox1(i).Text = i & "1"
+		chekpointbox1(i).Tag = i
 
-	For i = 8 To 12
-		page(0).AddView(chekpointbox(i), chekpointbox(i - 7).left + chekpointbox(i - 7).Width, chekpointbox(i - 7).Top, 30%x, 10%y)
-		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+		page(0).AddView(chekpointbox2(i), chekpointbox1(i).left + chekpointbox1(i).Width, chekpointbox1(i).Top, 30%x, 10%y)
+'		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+		chekpointbox2(i).Text = i & "2"
+		chekpointbox2(i).Tag = i
+
+
 	Next
-	
-	
-	
-	
 	
 	page(1).AddView(label(6), 2%x, 5%y, 50%x, 10%y)
 	label(6).Text = Main.translate.GetString("TVlabel6")
 	label(6).TextColor = Colors.White
 	
-	page(1).AddView(chekpointbox(14), label(6).left + label(6).Width, label(6).Top, 30%x, 10%y)
-	chekpointbox(14).Text = Main.translate.GetString("Checkl6")
-	page(1).AddView(chekpointbox(15), chekpointbox(14).left + chekpointbox(14).Width, chekpointbox(14).Top, 30%x, 10%y)
-	chekpointbox(15).Text = Main.translate.GetString("Checkl6")
+	page(1).AddView(chekpointbox1(6), label(6).left + label(6).Width, label(6).Top, 15%x, 10%y)
+'	chekpointbox(0).Text = Main.translate.GetString("Check0")
+	chekpointbox1(6).Text = "001"
+	chekpointbox1(6).Tag = 6
+
+	page(1).AddView(chekpointbox2(6), chekpointbox1(6).left + chekpointbox1(6).Width, chekpointbox1(6).Top, 15%x, 10%y)
+'	chekpointbox(13).Text = Main.translate.GetString("Check14")
+	chekpointbox2(6).Text = "002"
+	chekpointbox2(6).Tag = 6
+
+	
+	page(1).AddView(chekpointbox3(6), chekpointbox2(6).left + chekpointbox2(6).Width, chekpointbox2(6).Top, 15%x, 10%y)
+'	chekpointbox(13).Text = Main.translate.GetString("Check14")
+	chekpointbox3(6).Text = "003"
+	chekpointbox3(6).Tag = 6
+
 	
 	For i = 7 To 11
 		page(1).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
@@ -121,22 +140,75 @@ Public Sub BuildUi
 		label(i).TextColor = Colors.White
 	Next
 	
-	For i = 16 To 20
-		page(1).AddView(chekpointbox(i),label(i - 9).left + label(i - 9).Width, label(i - 9).Top, 30%x, 10%y)
-		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+	For i = 7 To 11
+		page(1).AddView(chekpointbox1(i),label(i).left + label(i).Width, label(i).Top, 15%x, 10%y)
+		'chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+		chekpointbox1(i).Text = i & "1"
+		chekpointbox1(i).Tag = i
+
+		page(1).AddView(chekpointbox2(i),chekpointbox1(i).left + chekpointbox1(i).Width, chekpointbox1(i).Top, 15%x, 10%y)
+		'chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+		chekpointbox2(i).Text = i & "2"
+		chekpointbox2(i).Tag = i
+
+		page(1).AddView(chekpointbox3(i), chekpointbox2(i).left + chekpointbox2(i).Width, chekpointbox2(i).Top, 15%x, 10%y)
+		'chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+		chekpointbox3(i).Text = i & "3"
+		chekpointbox3(i).Tag = i
+
 	Next
-	
-	For i = 21 To 25
-		page(1).AddView(chekpointbox(i), chekpointbox(i - 5).left + chekpointbox(i - 5).Width, chekpointbox(i - 5).Top, 30%x, 10%y)
-		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
-	Next
-	
-	
-	
+
+End Sub
+
+Private Sub check1_CheckedChange(Checked As Boolean)
+	Private chek1, chek2, chek3 As CheckBox = Sender
+	chek1 = Sender
+	chek2 = Sender
+	chek3 = Sender
+	If chek1.Checked = True Then
+		tvScore = tvScore + 0.1
+		chek2.Checked = False
+		chek3.Checked = False
+	Else
+		tvScore = tvScore - 0.1
+	End If
+End Sub
+
+Private Sub check2_CheckedChange(Checked As Boolean)	
+	Private chek1, chek2, chek3 As CheckBox
+	chek1 = Sender
+	chek2 = Sender
+	chek3 = Sender
+	If chek2.Checked = True Then
+		tvScore = tvScore + 0.2
+		chek1.Checked = False
+		chek3.Checked = False
+	Else
+		tvScore = tvScore - 0.2
+	End If
+End Sub
+
+Private Sub check3_CheckedChange(Checked As Boolean)
+	Private chek1, chek2, chek3 As CheckBox = Sender
+	chek1 = Sender
+	chek2 = Sender
+	chek3 = Sender
+	 If chek3.Checked = True Then
+		tvScore = tvScore + 0.3
+		chek2.Checked = False
+		chek1.Checked = False
+	Else
+		tvScore = tvScore - 0.3
+	End If
+End Sub
+Public Sub finalTVscore As Double
+	Log("AVSCORE:"&tvScore)
+	Return tvScore
 End Sub
 
 Private Sub ready_Click
 	CallSub(Main, "FinalClick")
+	finalTVscore
 End Sub
 
 Public Sub asView As Panel

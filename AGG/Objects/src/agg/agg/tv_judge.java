@@ -41,7 +41,10 @@ public anywheresoftware.b4a.objects.PanelWrapper _line = null;
 public anywheresoftware.b4a.objects.PanelWrapper _line2 = null;
 public anywheresoftware.b4a.objects.PanelWrapper _downpanel = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _btnready = null;
-public anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper[] _chekpointbox = null;
+public anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper[] _chekpointbox1 = null;
+public anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper[] _chekpointbox2 = null;
+public anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper[] _chekpointbox3 = null;
+public double _tvscore = 0;
 public agg.agg.main _main = null;
 public agg.agg.starter _starter = null;
 public agg.agg.programdata _programdata = null;
@@ -85,25 +88,49 @@ __ref._label[_i].Initialize(ba,"");
  }
 };
 RDebugUtils.currentLine=1245192;
- //BA.debugLineNum = 1245192;BA.debugLine="For i = 0 To 29";
+ //BA.debugLineNum = 1245192;BA.debugLine="For i = 0 To 11";
 {
 final int step8 = 1;
-final int limit8 = (int) (29);
+final int limit8 = (int) (11);
 _i = (int) (0) ;
 for (;(step8 > 0 && _i <= limit8) || (step8 < 0 && _i >= limit8) ;_i = ((int)(0 + _i + step8))  ) {
 RDebugUtils.currentLine=1245193;
- //BA.debugLineNum = 1245193;BA.debugLine="chekpointbox(i).Initialize(\"check\")";
-__ref._chekpointbox[_i].Initialize(ba,"check");
+ //BA.debugLineNum = 1245193;BA.debugLine="chekpointbox1(i).Initialize(\"check1\")";
+__ref._chekpointbox1[_i].Initialize(ba,"check1");
  }
 };
+RDebugUtils.currentLine=1245195;
+ //BA.debugLineNum = 1245195;BA.debugLine="For i = 0 To 11";
+{
+final int step11 = 1;
+final int limit11 = (int) (11);
+_i = (int) (0) ;
+for (;(step11 > 0 && _i <= limit11) || (step11 < 0 && _i >= limit11) ;_i = ((int)(0 + _i + step11))  ) {
 RDebugUtils.currentLine=1245196;
- //BA.debugLineNum = 1245196;BA.debugLine="downPanel.Initialize(\"\")";
-__ref._downpanel.Initialize(ba,"");
-RDebugUtils.currentLine=1245197;
- //BA.debugLineNum = 1245197;BA.debugLine="btnready.Initialize(\"ready\")";
-__ref._btnready.Initialize(ba,"ready");
+ //BA.debugLineNum = 1245196;BA.debugLine="chekpointbox2(i).Initialize(\"check2\")";
+__ref._chekpointbox2[_i].Initialize(ba,"check2");
+ }
+};
 RDebugUtils.currentLine=1245198;
- //BA.debugLineNum = 1245198;BA.debugLine="End Sub";
+ //BA.debugLineNum = 1245198;BA.debugLine="For i = 0 To 11";
+{
+final int step14 = 1;
+final int limit14 = (int) (11);
+_i = (int) (0) ;
+for (;(step14 > 0 && _i <= limit14) || (step14 < 0 && _i >= limit14) ;_i = ((int)(0 + _i + step14))  ) {
+RDebugUtils.currentLine=1245199;
+ //BA.debugLineNum = 1245199;BA.debugLine="chekpointbox3(i).Initialize(\"check3\")";
+__ref._chekpointbox3[_i].Initialize(ba,"check3");
+ }
+};
+RDebugUtils.currentLine=1245202;
+ //BA.debugLineNum = 1245202;BA.debugLine="downPanel.Initialize(\"\")";
+__ref._downpanel.Initialize(ba,"");
+RDebugUtils.currentLine=1245203;
+ //BA.debugLineNum = 1245203;BA.debugLine="btnready.Initialize(\"ready\")";
+__ref._btnready.Initialize(ba,"ready");
+RDebugUtils.currentLine=1245204;
+ //BA.debugLineNum = 1245204;BA.debugLine="End Sub";
 return "";
 }
 public anywheresoftware.b4a.objects.PanelWrapper  _asview(agg.agg.tv_judge __ref) throws Exception{
@@ -111,13 +138,13 @@ __ref = this;
 RDebugUtils.currentModule="tv_judge";
 if (Debug.shouldDelegate(ba, "asview"))
 	return (anywheresoftware.b4a.objects.PanelWrapper) Debug.delegate(ba, "asview", null);
-RDebugUtils.currentLine=1441792;
- //BA.debugLineNum = 1441792;BA.debugLine="Public Sub asView As Panel";
-RDebugUtils.currentLine=1441793;
- //BA.debugLineNum = 1441793;BA.debugLine="Return tvPanel";
+RDebugUtils.currentLine=1638400;
+ //BA.debugLineNum = 1638400;BA.debugLine="Public Sub asView As Panel";
+RDebugUtils.currentLine=1638401;
+ //BA.debugLineNum = 1638401;BA.debugLine="Return tvPanel";
 if (true) return __ref._tvpanel;
-RDebugUtils.currentLine=1441794;
- //BA.debugLineNum = 1441794;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1638402;
+ //BA.debugLineNum = 1638402;BA.debugLine="End Sub";
 return null;
 }
 public String  _buildui(agg.agg.tv_judge __ref) throws Exception{
@@ -202,139 +229,287 @@ RDebugUtils.currentLine=1310760;
  //BA.debugLineNum = 1310760;BA.debugLine="label(0).TextColor = Colors.White";
 __ref._label[(int) (0)].setTextColor(__c.Colors.White);
 RDebugUtils.currentLine=1310762;
- //BA.debugLineNum = 1310762;BA.debugLine="page(0).AddView(chekpointbox(0), label(0).left +";
-__ref._page[(int) (0)].AddView((android.view.View)(__ref._chekpointbox[(int) (0)].getObject()),(int) (__ref._label[(int) (0)].getLeft()+__ref._label[(int) (0)].getWidth()),__ref._label[(int) (0)].getTop(),__c.PerXToCurrent((float) (30),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=1310763;
- //BA.debugLineNum = 1310763;BA.debugLine="chekpointbox(0).Text = Main.translate.GetString(\"";
-__ref._chekpointbox[(int) (0)].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"Check0")));
+ //BA.debugLineNum = 1310762;BA.debugLine="page(0).AddView(chekpointbox1(0), label(0).left +";
+__ref._page[(int) (0)].AddView((android.view.View)(__ref._chekpointbox1[(int) (0)].getObject()),(int) (__ref._label[(int) (0)].getLeft()+__ref._label[(int) (0)].getWidth()),__ref._label[(int) (0)].getTop(),__c.PerXToCurrent((float) (30),ba),__c.PerYToCurrent((float) (10),ba));
 RDebugUtils.currentLine=1310764;
- //BA.debugLineNum = 1310764;BA.debugLine="page(0).AddView(chekpointbox(13), chekpointbox(0)";
-__ref._page[(int) (0)].AddView((android.view.View)(__ref._chekpointbox[(int) (13)].getObject()),(int) (__ref._chekpointbox[(int) (0)].getLeft()+__ref._chekpointbox[(int) (0)].getWidth()),__ref._chekpointbox[(int) (0)].getTop(),__c.PerXToCurrent((float) (30),ba),__c.PerYToCurrent((float) (10),ba));
+ //BA.debugLineNum = 1310764;BA.debugLine="chekpointbox1(0).Text = \"001\"";
+__ref._chekpointbox1[(int) (0)].setText(BA.ObjectToCharSequence("001"));
 RDebugUtils.currentLine=1310765;
- //BA.debugLineNum = 1310765;BA.debugLine="chekpointbox(13).Text = Main.translate.GetString(";
-__ref._chekpointbox[(int) (13)].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"Check14")));
+ //BA.debugLineNum = 1310765;BA.debugLine="chekpointbox1(0).Tag = 0";
+__ref._chekpointbox1[(int) (0)].setTag((Object)(0));
+RDebugUtils.currentLine=1310766;
+ //BA.debugLineNum = 1310766;BA.debugLine="page(0).AddView(chekpointbox2(0), chekpointbox1(0";
+__ref._page[(int) (0)].AddView((android.view.View)(__ref._chekpointbox2[(int) (0)].getObject()),(int) (__ref._chekpointbox1[(int) (0)].getLeft()+__ref._chekpointbox1[(int) (0)].getWidth()),__ref._chekpointbox1[(int) (0)].getTop(),__c.PerXToCurrent((float) (30),ba),__c.PerYToCurrent((float) (10),ba));
 RDebugUtils.currentLine=1310768;
- //BA.debugLineNum = 1310768;BA.debugLine="For i = 1 To 5";
-{
-final int step29 = 1;
-final int limit29 = (int) (5);
-_i = (int) (1) ;
-for (;(step29 > 0 && _i <= limit29) || (step29 < 0 && _i >= limit29) ;_i = ((int)(0 + _i + step29))  ) {
+ //BA.debugLineNum = 1310768;BA.debugLine="chekpointbox2(0).Tag = 0";
+__ref._chekpointbox2[(int) (0)].setTag((Object)(0));
 RDebugUtils.currentLine=1310769;
- //BA.debugLineNum = 1310769;BA.debugLine="page(0).AddView(label(i), 2%x, label(i - 1).Top";
-__ref._page[(int) (0)].AddView((android.view.View)(__ref._label[_i].getObject()),__c.PerXToCurrent((float) (2),ba),(int) (__ref._label[(int) (_i-1)].getTop()+__ref._label[(int) (_i-1)].getHeight()+__c.DipToCurrent((int) (3))),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=1310770;
- //BA.debugLineNum = 1310770;BA.debugLine="label(i).Text = Main.translate.GetString(\"TVlabe";
-__ref._label[_i].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"TVlabel"+BA.NumberToString(_i))));
+ //BA.debugLineNum = 1310769;BA.debugLine="chekpointbox2(0).Text = \"002\"";
+__ref._chekpointbox2[(int) (0)].setText(BA.ObjectToCharSequence("002"));
 RDebugUtils.currentLine=1310771;
- //BA.debugLineNum = 1310771;BA.debugLine="label(i).TextColor = Colors.White";
-__ref._label[_i].setTextColor(__c.Colors.White);
+ //BA.debugLineNum = 1310771;BA.debugLine="For i = 1 To 5";
+{
+final int step31 = 1;
+final int limit31 = (int) (5);
+_i = (int) (1) ;
+for (;(step31 > 0 && _i <= limit31) || (step31 < 0 && _i >= limit31) ;_i = ((int)(0 + _i + step31))  ) {
 RDebugUtils.currentLine=1310772;
- //BA.debugLineNum = 1310772;BA.debugLine="page(0).AddView(chekpointbox(i), label(i).left +";
-__ref._page[(int) (0)].AddView((android.view.View)(__ref._chekpointbox[_i].getObject()),(int) (__ref._label[_i].getLeft()+__ref._label[_i].getWidth()),__ref._label[_i].getTop(),__c.PerXToCurrent((float) (30),ba),__c.PerYToCurrent((float) (10),ba));
+ //BA.debugLineNum = 1310772;BA.debugLine="page(0).AddView(label(i), 2%x, label(i - 1).Top";
+__ref._page[(int) (0)].AddView((android.view.View)(__ref._label[_i].getObject()),__c.PerXToCurrent((float) (2),ba),(int) (__ref._label[(int) (_i-1)].getTop()+__ref._label[(int) (_i-1)].getHeight()+__c.DipToCurrent((int) (3))),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (10),ba));
 RDebugUtils.currentLine=1310773;
- //BA.debugLineNum = 1310773;BA.debugLine="chekpointbox(i).Text = Main.translate.GetString(";
-__ref._chekpointbox[_i].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"Check"+BA.NumberToString(_i))));
- }
-};
-RDebugUtils.currentLine=1310776;
- //BA.debugLineNum = 1310776;BA.debugLine="page(0).AddView(chekpointbox(6), chekpointbox(5).";
-__ref._page[(int) (0)].AddView((android.view.View)(__ref._chekpointbox[(int) (6)].getObject()),(int) (__ref._chekpointbox[(int) (5)].getLeft()+__ref._chekpointbox[(int) (5)].getWidth()),__ref._chekpointbox[(int) (5)].getTop(),__c.PerXToCurrent((float) (30),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=1310777;
- //BA.debugLineNum = 1310777;BA.debugLine="chekpointbox(7).Text = Main.translate.GetString(\"";
-__ref._chekpointbox[(int) (7)].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"Check6")));
-RDebugUtils.currentLine=1310778;
- //BA.debugLineNum = 1310778;BA.debugLine="page(0).AddView(chekpointbox(7), chekpointbox(6).";
-__ref._page[(int) (0)].AddView((android.view.View)(__ref._chekpointbox[(int) (7)].getObject()),(int) (__ref._chekpointbox[(int) (6)].getLeft()+__ref._chekpointbox[(int) (6)].getWidth()),__ref._chekpointbox[(int) (6)].getTop(),__c.PerXToCurrent((float) (30),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=1310779;
- //BA.debugLineNum = 1310779;BA.debugLine="chekpointbox(7).Text = Main.translate.GetString(\"";
-__ref._chekpointbox[(int) (7)].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"Check12")));
-RDebugUtils.currentLine=1310781;
- //BA.debugLineNum = 1310781;BA.debugLine="For i = 8 To 12";
-{
-final int step40 = 1;
-final int limit40 = (int) (12);
-_i = (int) (8) ;
-for (;(step40 > 0 && _i <= limit40) || (step40 < 0 && _i >= limit40) ;_i = ((int)(0 + _i + step40))  ) {
-RDebugUtils.currentLine=1310782;
- //BA.debugLineNum = 1310782;BA.debugLine="page(0).AddView(chekpointbox(i), chekpointbox(i";
-__ref._page[(int) (0)].AddView((android.view.View)(__ref._chekpointbox[_i].getObject()),(int) (__ref._chekpointbox[(int) (_i-7)].getLeft()+__ref._chekpointbox[(int) (_i-7)].getWidth()),__ref._chekpointbox[(int) (_i-7)].getTop(),__c.PerXToCurrent((float) (30),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=1310783;
- //BA.debugLineNum = 1310783;BA.debugLine="chekpointbox(i).Text = Main.translate.GetString(";
-__ref._chekpointbox[_i].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"Check"+BA.NumberToString(_i))));
- }
-};
-RDebugUtils.currentLine=1310790;
- //BA.debugLineNum = 1310790;BA.debugLine="page(1).AddView(label(6), 2%x, 5%y, 50%x, 10%y)";
-__ref._page[(int) (1)].AddView((android.view.View)(__ref._label[(int) (6)].getObject()),__c.PerXToCurrent((float) (2),ba),__c.PerYToCurrent((float) (5),ba),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=1310791;
- //BA.debugLineNum = 1310791;BA.debugLine="label(6).Text = Main.translate.GetString(\"TVlabel";
-__ref._label[(int) (6)].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"TVlabel6")));
-RDebugUtils.currentLine=1310792;
- //BA.debugLineNum = 1310792;BA.debugLine="label(6).TextColor = Colors.White";
-__ref._label[(int) (6)].setTextColor(__c.Colors.White);
-RDebugUtils.currentLine=1310794;
- //BA.debugLineNum = 1310794;BA.debugLine="page(1).AddView(chekpointbox(14), label(6).left +";
-__ref._page[(int) (1)].AddView((android.view.View)(__ref._chekpointbox[(int) (14)].getObject()),(int) (__ref._label[(int) (6)].getLeft()+__ref._label[(int) (6)].getWidth()),__ref._label[(int) (6)].getTop(),__c.PerXToCurrent((float) (30),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=1310795;
- //BA.debugLineNum = 1310795;BA.debugLine="chekpointbox(14).Text = Main.translate.GetString(";
-__ref._chekpointbox[(int) (14)].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"Checkl6")));
-RDebugUtils.currentLine=1310796;
- //BA.debugLineNum = 1310796;BA.debugLine="page(1).AddView(chekpointbox(15), chekpointbox(14";
-__ref._page[(int) (1)].AddView((android.view.View)(__ref._chekpointbox[(int) (15)].getObject()),(int) (__ref._chekpointbox[(int) (14)].getLeft()+__ref._chekpointbox[(int) (14)].getWidth()),__ref._chekpointbox[(int) (14)].getTop(),__c.PerXToCurrent((float) (30),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=1310797;
- //BA.debugLineNum = 1310797;BA.debugLine="chekpointbox(15).Text = Main.translate.GetString(";
-__ref._chekpointbox[(int) (15)].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"Checkl6")));
-RDebugUtils.currentLine=1310799;
- //BA.debugLineNum = 1310799;BA.debugLine="For i = 7 To 11";
-{
-final int step51 = 1;
-final int limit51 = (int) (11);
-_i = (int) (7) ;
-for (;(step51 > 0 && _i <= limit51) || (step51 < 0 && _i >= limit51) ;_i = ((int)(0 + _i + step51))  ) {
-RDebugUtils.currentLine=1310800;
- //BA.debugLineNum = 1310800;BA.debugLine="page(1).AddView(label(i), 2%x, label(i - 1).Top";
-__ref._page[(int) (1)].AddView((android.view.View)(__ref._label[_i].getObject()),__c.PerXToCurrent((float) (2),ba),(int) (__ref._label[(int) (_i-1)].getTop()+__ref._label[(int) (_i-1)].getHeight()+__c.DipToCurrent((int) (3))),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=1310801;
- //BA.debugLineNum = 1310801;BA.debugLine="label(i).Text = Main.translate.GetString(\"TVlabe";
+ //BA.debugLineNum = 1310773;BA.debugLine="label(i).Text = Main.translate.GetString(\"TVlabe";
 __ref._label[_i].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"TVlabel"+BA.NumberToString(_i))));
-RDebugUtils.currentLine=1310802;
- //BA.debugLineNum = 1310802;BA.debugLine="label(i).TextColor = Colors.White";
+RDebugUtils.currentLine=1310774;
+ //BA.debugLineNum = 1310774;BA.debugLine="label(i).TextColor = Colors.White";
+__ref._label[_i].setTextColor(__c.Colors.White);
+RDebugUtils.currentLine=1310776;
+ //BA.debugLineNum = 1310776;BA.debugLine="page(0).AddView(chekpointbox1(i), label(i).left";
+__ref._page[(int) (0)].AddView((android.view.View)(__ref._chekpointbox1[_i].getObject()),(int) (__ref._label[_i].getLeft()+__ref._label[_i].getWidth()),__ref._label[_i].getTop(),__c.PerXToCurrent((float) (30),ba),__c.PerYToCurrent((float) (10),ba));
+RDebugUtils.currentLine=1310778;
+ //BA.debugLineNum = 1310778;BA.debugLine="chekpointbox1(i).Text = i & \"1\"";
+__ref._chekpointbox1[_i].setText(BA.ObjectToCharSequence(BA.NumberToString(_i)+"1"));
+RDebugUtils.currentLine=1310779;
+ //BA.debugLineNum = 1310779;BA.debugLine="chekpointbox1(i).Tag = i";
+__ref._chekpointbox1[_i].setTag((Object)(_i));
+RDebugUtils.currentLine=1310781;
+ //BA.debugLineNum = 1310781;BA.debugLine="page(0).AddView(chekpointbox2(i), chekpointbox1(";
+__ref._page[(int) (0)].AddView((android.view.View)(__ref._chekpointbox2[_i].getObject()),(int) (__ref._chekpointbox1[_i].getLeft()+__ref._chekpointbox1[_i].getWidth()),__ref._chekpointbox1[_i].getTop(),__c.PerXToCurrent((float) (30),ba),__c.PerYToCurrent((float) (10),ba));
+RDebugUtils.currentLine=1310783;
+ //BA.debugLineNum = 1310783;BA.debugLine="chekpointbox2(i).Text = i & \"2\"";
+__ref._chekpointbox2[_i].setText(BA.ObjectToCharSequence(BA.NumberToString(_i)+"2"));
+RDebugUtils.currentLine=1310784;
+ //BA.debugLineNum = 1310784;BA.debugLine="chekpointbox2(i).Tag = i";
+__ref._chekpointbox2[_i].setTag((Object)(_i));
+ }
+};
+RDebugUtils.currentLine=1310789;
+ //BA.debugLineNum = 1310789;BA.debugLine="page(1).AddView(label(6), 2%x, 5%y, 50%x, 10%y)";
+__ref._page[(int) (1)].AddView((android.view.View)(__ref._label[(int) (6)].getObject()),__c.PerXToCurrent((float) (2),ba),__c.PerYToCurrent((float) (5),ba),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (10),ba));
+RDebugUtils.currentLine=1310790;
+ //BA.debugLineNum = 1310790;BA.debugLine="label(6).Text = Main.translate.GetString(\"TVlabel";
+__ref._label[(int) (6)].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"TVlabel6")));
+RDebugUtils.currentLine=1310791;
+ //BA.debugLineNum = 1310791;BA.debugLine="label(6).TextColor = Colors.White";
+__ref._label[(int) (6)].setTextColor(__c.Colors.White);
+RDebugUtils.currentLine=1310793;
+ //BA.debugLineNum = 1310793;BA.debugLine="page(1).AddView(chekpointbox1(6), label(6).left +";
+__ref._page[(int) (1)].AddView((android.view.View)(__ref._chekpointbox1[(int) (6)].getObject()),(int) (__ref._label[(int) (6)].getLeft()+__ref._label[(int) (6)].getWidth()),__ref._label[(int) (6)].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (10),ba));
+RDebugUtils.currentLine=1310795;
+ //BA.debugLineNum = 1310795;BA.debugLine="chekpointbox1(6).Text = \"001\"";
+__ref._chekpointbox1[(int) (6)].setText(BA.ObjectToCharSequence("001"));
+RDebugUtils.currentLine=1310796;
+ //BA.debugLineNum = 1310796;BA.debugLine="chekpointbox1(6).Tag = 6";
+__ref._chekpointbox1[(int) (6)].setTag((Object)(6));
+RDebugUtils.currentLine=1310798;
+ //BA.debugLineNum = 1310798;BA.debugLine="page(1).AddView(chekpointbox2(6), chekpointbox1(6";
+__ref._page[(int) (1)].AddView((android.view.View)(__ref._chekpointbox2[(int) (6)].getObject()),(int) (__ref._chekpointbox1[(int) (6)].getLeft()+__ref._chekpointbox1[(int) (6)].getWidth()),__ref._chekpointbox1[(int) (6)].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (10),ba));
+RDebugUtils.currentLine=1310800;
+ //BA.debugLineNum = 1310800;BA.debugLine="chekpointbox2(6).Text = \"002\"";
+__ref._chekpointbox2[(int) (6)].setText(BA.ObjectToCharSequence("002"));
+RDebugUtils.currentLine=1310801;
+ //BA.debugLineNum = 1310801;BA.debugLine="chekpointbox2(6).Tag = 6";
+__ref._chekpointbox2[(int) (6)].setTag((Object)(6));
+RDebugUtils.currentLine=1310804;
+ //BA.debugLineNum = 1310804;BA.debugLine="page(1).AddView(chekpointbox3(6), chekpointbox2(6";
+__ref._page[(int) (1)].AddView((android.view.View)(__ref._chekpointbox3[(int) (6)].getObject()),(int) (__ref._chekpointbox2[(int) (6)].getLeft()+__ref._chekpointbox2[(int) (6)].getWidth()),__ref._chekpointbox2[(int) (6)].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (10),ba));
+RDebugUtils.currentLine=1310806;
+ //BA.debugLineNum = 1310806;BA.debugLine="chekpointbox3(6).Text = \"003\"";
+__ref._chekpointbox3[(int) (6)].setText(BA.ObjectToCharSequence("003"));
+RDebugUtils.currentLine=1310807;
+ //BA.debugLineNum = 1310807;BA.debugLine="chekpointbox3(6).Tag = 6";
+__ref._chekpointbox3[(int) (6)].setTag((Object)(6));
+RDebugUtils.currentLine=1310810;
+ //BA.debugLineNum = 1310810;BA.debugLine="For i = 7 To 11";
+{
+final int step54 = 1;
+final int limit54 = (int) (11);
+_i = (int) (7) ;
+for (;(step54 > 0 && _i <= limit54) || (step54 < 0 && _i >= limit54) ;_i = ((int)(0 + _i + step54))  ) {
+RDebugUtils.currentLine=1310811;
+ //BA.debugLineNum = 1310811;BA.debugLine="page(1).AddView(label(i), 2%x, label(i - 1).Top";
+__ref._page[(int) (1)].AddView((android.view.View)(__ref._label[_i].getObject()),__c.PerXToCurrent((float) (2),ba),(int) (__ref._label[(int) (_i-1)].getTop()+__ref._label[(int) (_i-1)].getHeight()+__c.DipToCurrent((int) (3))),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (10),ba));
+RDebugUtils.currentLine=1310812;
+ //BA.debugLineNum = 1310812;BA.debugLine="label(i).Text = Main.translate.GetString(\"TVlabe";
+__ref._label[_i].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"TVlabel"+BA.NumberToString(_i))));
+RDebugUtils.currentLine=1310813;
+ //BA.debugLineNum = 1310813;BA.debugLine="label(i).TextColor = Colors.White";
 __ref._label[_i].setTextColor(__c.Colors.White);
  }
 };
-RDebugUtils.currentLine=1310805;
- //BA.debugLineNum = 1310805;BA.debugLine="For i = 16 To 20";
+RDebugUtils.currentLine=1310816;
+ //BA.debugLineNum = 1310816;BA.debugLine="For i = 7 To 11";
 {
-final int step56 = 1;
-final int limit56 = (int) (20);
-_i = (int) (16) ;
-for (;(step56 > 0 && _i <= limit56) || (step56 < 0 && _i >= limit56) ;_i = ((int)(0 + _i + step56))  ) {
-RDebugUtils.currentLine=1310806;
- //BA.debugLineNum = 1310806;BA.debugLine="page(1).AddView(chekpointbox(i),label(i - 9).lef";
-__ref._page[(int) (1)].AddView((android.view.View)(__ref._chekpointbox[_i].getObject()),(int) (__ref._label[(int) (_i-9)].getLeft()+__ref._label[(int) (_i-9)].getWidth()),__ref._label[(int) (_i-9)].getTop(),__c.PerXToCurrent((float) (30),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=1310807;
- //BA.debugLineNum = 1310807;BA.debugLine="chekpointbox(i).Text = Main.translate.GetString(";
-__ref._chekpointbox[_i].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"Check"+BA.NumberToString(_i))));
- }
-};
-RDebugUtils.currentLine=1310810;
- //BA.debugLineNum = 1310810;BA.debugLine="For i = 21 To 25";
-{
-final int step60 = 1;
-final int limit60 = (int) (25);
-_i = (int) (21) ;
-for (;(step60 > 0 && _i <= limit60) || (step60 < 0 && _i >= limit60) ;_i = ((int)(0 + _i + step60))  ) {
-RDebugUtils.currentLine=1310811;
- //BA.debugLineNum = 1310811;BA.debugLine="page(1).AddView(chekpointbox(i), chekpointbox(i";
-__ref._page[(int) (1)].AddView((android.view.View)(__ref._chekpointbox[_i].getObject()),(int) (__ref._chekpointbox[(int) (_i-5)].getLeft()+__ref._chekpointbox[(int) (_i-5)].getWidth()),__ref._chekpointbox[(int) (_i-5)].getTop(),__c.PerXToCurrent((float) (30),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=1310812;
- //BA.debugLineNum = 1310812;BA.debugLine="chekpointbox(i).Text = Main.translate.GetString(";
-__ref._chekpointbox[_i].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"Check"+BA.NumberToString(_i))));
- }
-};
+final int step59 = 1;
+final int limit59 = (int) (11);
+_i = (int) (7) ;
+for (;(step59 > 0 && _i <= limit59) || (step59 < 0 && _i >= limit59) ;_i = ((int)(0 + _i + step59))  ) {
 RDebugUtils.currentLine=1310817;
- //BA.debugLineNum = 1310817;BA.debugLine="End Sub";
+ //BA.debugLineNum = 1310817;BA.debugLine="page(1).AddView(chekpointbox1(i),label(i).left +";
+__ref._page[(int) (1)].AddView((android.view.View)(__ref._chekpointbox1[_i].getObject()),(int) (__ref._label[_i].getLeft()+__ref._label[_i].getWidth()),__ref._label[_i].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (10),ba));
+RDebugUtils.currentLine=1310819;
+ //BA.debugLineNum = 1310819;BA.debugLine="chekpointbox1(i).Text = i & \"1\"";
+__ref._chekpointbox1[_i].setText(BA.ObjectToCharSequence(BA.NumberToString(_i)+"1"));
+RDebugUtils.currentLine=1310820;
+ //BA.debugLineNum = 1310820;BA.debugLine="chekpointbox1(i).Tag = i";
+__ref._chekpointbox1[_i].setTag((Object)(_i));
+RDebugUtils.currentLine=1310822;
+ //BA.debugLineNum = 1310822;BA.debugLine="page(1).AddView(chekpointbox2(i),chekpointbox1(i";
+__ref._page[(int) (1)].AddView((android.view.View)(__ref._chekpointbox2[_i].getObject()),(int) (__ref._chekpointbox1[_i].getLeft()+__ref._chekpointbox1[_i].getWidth()),__ref._chekpointbox1[_i].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (10),ba));
+RDebugUtils.currentLine=1310824;
+ //BA.debugLineNum = 1310824;BA.debugLine="chekpointbox2(i).Text = i & \"2\"";
+__ref._chekpointbox2[_i].setText(BA.ObjectToCharSequence(BA.NumberToString(_i)+"2"));
+RDebugUtils.currentLine=1310825;
+ //BA.debugLineNum = 1310825;BA.debugLine="chekpointbox2(i).Tag = i";
+__ref._chekpointbox2[_i].setTag((Object)(_i));
+RDebugUtils.currentLine=1310827;
+ //BA.debugLineNum = 1310827;BA.debugLine="page(1).AddView(chekpointbox3(i), chekpointbox2(";
+__ref._page[(int) (1)].AddView((android.view.View)(__ref._chekpointbox3[_i].getObject()),(int) (__ref._chekpointbox2[_i].getLeft()+__ref._chekpointbox2[_i].getWidth()),__ref._chekpointbox2[_i].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (10),ba));
+RDebugUtils.currentLine=1310829;
+ //BA.debugLineNum = 1310829;BA.debugLine="chekpointbox3(i).Text = i & \"3\"";
+__ref._chekpointbox3[_i].setText(BA.ObjectToCharSequence(BA.NumberToString(_i)+"3"));
+RDebugUtils.currentLine=1310830;
+ //BA.debugLineNum = 1310830;BA.debugLine="chekpointbox3(i).Tag = i";
+__ref._chekpointbox3[_i].setTag((Object)(_i));
+ }
+};
+RDebugUtils.currentLine=1310834;
+ //BA.debugLineNum = 1310834;BA.debugLine="End Sub";
+return "";
+}
+public double  _finaltvscore(agg.agg.tv_judge __ref) throws Exception{
+__ref = this;
+RDebugUtils.currentModule="tv_judge";
+if (Debug.shouldDelegate(ba, "finaltvscore"))
+	return (Double) Debug.delegate(ba, "finaltvscore", null);
+RDebugUtils.currentLine=6553600;
+ //BA.debugLineNum = 6553600;BA.debugLine="Public Sub finalTVscore As Double";
+RDebugUtils.currentLine=6553601;
+ //BA.debugLineNum = 6553601;BA.debugLine="Log(\"AVSCORE:\"&tvScore)";
+__c.Log("AVSCORE:"+BA.NumberToString(__ref._tvscore));
+RDebugUtils.currentLine=6553602;
+ //BA.debugLineNum = 6553602;BA.debugLine="Return tvScore";
+if (true) return __ref._tvscore;
+RDebugUtils.currentLine=6553603;
+ //BA.debugLineNum = 6553603;BA.debugLine="End Sub";
+return 0;
+}
+public String  _check1_checkedchange(agg.agg.tv_judge __ref,boolean _checked) throws Exception{
+__ref = this;
+RDebugUtils.currentModule="tv_judge";
+if (Debug.shouldDelegate(ba, "check1_checkedchange"))
+	return (String) Debug.delegate(ba, "check1_checkedchange", new Object[] {_checked});
+anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _chek1 = null;
+int _chek = 0;
+RDebugUtils.currentLine=1376256;
+ //BA.debugLineNum = 1376256;BA.debugLine="Private Sub check1_CheckedChange(Checked As Boolea";
+RDebugUtils.currentLine=1376257;
+ //BA.debugLineNum = 1376257;BA.debugLine="Private chek1 As CheckBox = Sender";
+_chek1 = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
+_chek1.setObject((android.widget.CheckBox)(__c.Sender(ba)));
+RDebugUtils.currentLine=1376258;
+ //BA.debugLineNum = 1376258;BA.debugLine="Private chek As Int = Sender";
+_chek = (int)(BA.ObjectToNumber(__c.Sender(ba)));
+RDebugUtils.currentLine=1376259;
+ //BA.debugLineNum = 1376259;BA.debugLine="chek1 = Sender";
+_chek1.setObject((android.widget.CheckBox)(__c.Sender(ba)));
+RDebugUtils.currentLine=1376260;
+ //BA.debugLineNum = 1376260;BA.debugLine="If chek1.Checked = True Then";
+if (_chek1.getChecked()==__c.True) { 
+RDebugUtils.currentLine=1376261;
+ //BA.debugLineNum = 1376261;BA.debugLine="tvScore = tvScore + 0.1";
+__ref._tvscore = __ref._tvscore+0.1;
+RDebugUtils.currentLine=1376262;
+ //BA.debugLineNum = 1376262;BA.debugLine="chekpointbox2(chek).Checked = False";
+__ref._chekpointbox2[_chek].setChecked(__c.False);
+RDebugUtils.currentLine=1376263;
+ //BA.debugLineNum = 1376263;BA.debugLine="chekpointbox3(chek).Checked = False";
+__ref._chekpointbox3[_chek].setChecked(__c.False);
+ }else {
+RDebugUtils.currentLine=1376265;
+ //BA.debugLineNum = 1376265;BA.debugLine="tvScore = tvScore - 0.1";
+__ref._tvscore = __ref._tvscore-0.1;
+ };
+RDebugUtils.currentLine=1376267;
+ //BA.debugLineNum = 1376267;BA.debugLine="End Sub";
+return "";
+}
+public String  _check2_checkedchange(agg.agg.tv_judge __ref,boolean _checked) throws Exception{
+__ref = this;
+RDebugUtils.currentModule="tv_judge";
+if (Debug.shouldDelegate(ba, "check2_checkedchange"))
+	return (String) Debug.delegate(ba, "check2_checkedchange", new Object[] {_checked});
+int _chek = 0;
+anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _chek2 = null;
+RDebugUtils.currentLine=1441792;
+ //BA.debugLineNum = 1441792;BA.debugLine="Private Sub check2_CheckedChange(Checked As Boolea";
+RDebugUtils.currentLine=1441793;
+ //BA.debugLineNum = 1441793;BA.debugLine="Private chek As Int = Sender";
+_chek = (int)(BA.ObjectToNumber(__c.Sender(ba)));
+RDebugUtils.currentLine=1441795;
+ //BA.debugLineNum = 1441795;BA.debugLine="Private chek2 As CheckBox";
+_chek2 = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
+RDebugUtils.currentLine=1441796;
+ //BA.debugLineNum = 1441796;BA.debugLine="chek2 = Sender";
+_chek2.setObject((android.widget.CheckBox)(__c.Sender(ba)));
+RDebugUtils.currentLine=1441797;
+ //BA.debugLineNum = 1441797;BA.debugLine="If chek2.Checked = True Then";
+if (_chek2.getChecked()==__c.True) { 
+RDebugUtils.currentLine=1441798;
+ //BA.debugLineNum = 1441798;BA.debugLine="tvScore = tvScore + 0.2";
+__ref._tvscore = __ref._tvscore+0.2;
+RDebugUtils.currentLine=1441799;
+ //BA.debugLineNum = 1441799;BA.debugLine="chekpointbox3(chek).Checked = False";
+__ref._chekpointbox3[_chek].setChecked(__c.False);
+RDebugUtils.currentLine=1441800;
+ //BA.debugLineNum = 1441800;BA.debugLine="chekpointbox1(chek).Checked = False";
+__ref._chekpointbox1[_chek].setChecked(__c.False);
+ }else {
+RDebugUtils.currentLine=1441802;
+ //BA.debugLineNum = 1441802;BA.debugLine="tvScore = tvScore - 0.2";
+__ref._tvscore = __ref._tvscore-0.2;
+ };
+RDebugUtils.currentLine=1441804;
+ //BA.debugLineNum = 1441804;BA.debugLine="End Sub";
+return "";
+}
+public String  _check3_checkedchange(agg.agg.tv_judge __ref,boolean _checked) throws Exception{
+__ref = this;
+RDebugUtils.currentModule="tv_judge";
+if (Debug.shouldDelegate(ba, "check3_checkedchange"))
+	return (String) Debug.delegate(ba, "check3_checkedchange", new Object[] {_checked});
+anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _chek3 = null;
+int _chek = 0;
+RDebugUtils.currentLine=1507328;
+ //BA.debugLineNum = 1507328;BA.debugLine="Private Sub check3_CheckedChange(Checked As Boolea";
+RDebugUtils.currentLine=1507329;
+ //BA.debugLineNum = 1507329;BA.debugLine="Private chek3 As CheckBox = Sender";
+_chek3 = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
+_chek3.setObject((android.widget.CheckBox)(__c.Sender(ba)));
+RDebugUtils.currentLine=1507330;
+ //BA.debugLineNum = 1507330;BA.debugLine="Private chek As Int = Sender";
+_chek = (int)(BA.ObjectToNumber(__c.Sender(ba)));
+RDebugUtils.currentLine=1507332;
+ //BA.debugLineNum = 1507332;BA.debugLine="chek3 = Sender";
+_chek3.setObject((android.widget.CheckBox)(__c.Sender(ba)));
+RDebugUtils.currentLine=1507333;
+ //BA.debugLineNum = 1507333;BA.debugLine="If chek3.Checked = True Then";
+if (_chek3.getChecked()==__c.True) { 
+RDebugUtils.currentLine=1507334;
+ //BA.debugLineNum = 1507334;BA.debugLine="tvScore = tvScore + 0.3";
+__ref._tvscore = __ref._tvscore+0.3;
+RDebugUtils.currentLine=1507335;
+ //BA.debugLineNum = 1507335;BA.debugLine="chekpointbox2(chek).Checked = False";
+__ref._chekpointbox2[_chek].setChecked(__c.False);
+RDebugUtils.currentLine=1507336;
+ //BA.debugLineNum = 1507336;BA.debugLine="chekpointbox1(chek).Checked = False";
+__ref._chekpointbox1[_chek].setChecked(__c.False);
+ }else {
+RDebugUtils.currentLine=1507338;
+ //BA.debugLineNum = 1507338;BA.debugLine="tvScore = tvScore - 0.3";
+__ref._tvscore = __ref._tvscore-0.3;
+ };
+RDebugUtils.currentLine=1507340;
+ //BA.debugLineNum = 1507340;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals(agg.agg.tv_judge __ref) throws Exception{
@@ -387,17 +562,40 @@ RDebugUtils.currentLine=1179658;
  //BA.debugLineNum = 1179658;BA.debugLine="Dim btnready As Button";
 _btnready = new anywheresoftware.b4a.objects.ButtonWrapper();
 RDebugUtils.currentLine=1179659;
- //BA.debugLineNum = 1179659;BA.debugLine="Private chekpointbox(30) As CheckBox";
-_chekpointbox = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper[(int) (30)];
+ //BA.debugLineNum = 1179659;BA.debugLine="Private chekpointbox1(12) As CheckBox";
+_chekpointbox1 = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper[(int) (12)];
 {
-int d0 = _chekpointbox.length;
+int d0 = _chekpointbox1.length;
 for (int i0 = 0;i0 < d0;i0++) {
-_chekpointbox[i0] = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
+_chekpointbox1[i0] = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
+}
+}
+;
+RDebugUtils.currentLine=1179660;
+ //BA.debugLineNum = 1179660;BA.debugLine="Private chekpointbox2(12) As CheckBox";
+_chekpointbox2 = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper[(int) (12)];
+{
+int d0 = _chekpointbox2.length;
+for (int i0 = 0;i0 < d0;i0++) {
+_chekpointbox2[i0] = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
 }
 }
 ;
 RDebugUtils.currentLine=1179661;
- //BA.debugLineNum = 1179661;BA.debugLine="End Sub";
+ //BA.debugLineNum = 1179661;BA.debugLine="Private chekpointbox3(12) As CheckBox";
+_chekpointbox3 = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper[(int) (12)];
+{
+int d0 = _chekpointbox3.length;
+for (int i0 = 0;i0 < d0;i0++) {
+_chekpointbox3[i0] = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
+}
+}
+;
+RDebugUtils.currentLine=1179662;
+ //BA.debugLineNum = 1179662;BA.debugLine="Public tvScore As Double";
+_tvscore = 0;
+RDebugUtils.currentLine=1179663;
+ //BA.debugLineNum = 1179663;BA.debugLine="End Sub";
 return "";
 }
 public String  _ready_click(agg.agg.tv_judge __ref) throws Exception{
@@ -405,13 +603,16 @@ __ref = this;
 RDebugUtils.currentModule="tv_judge";
 if (Debug.shouldDelegate(ba, "ready_click"))
 	return (String) Debug.delegate(ba, "ready_click", null);
-RDebugUtils.currentLine=1376256;
- //BA.debugLineNum = 1376256;BA.debugLine="Private Sub ready_Click";
-RDebugUtils.currentLine=1376257;
- //BA.debugLineNum = 1376257;BA.debugLine="CallSub(Main, \"FinalClick\")";
+RDebugUtils.currentLine=1572864;
+ //BA.debugLineNum = 1572864;BA.debugLine="Private Sub ready_Click";
+RDebugUtils.currentLine=1572865;
+ //BA.debugLineNum = 1572865;BA.debugLine="CallSub(Main, \"FinalClick\")";
 __c.CallSubDebug(ba,(Object)(_main.getObject()),"FinalClick");
-RDebugUtils.currentLine=1376258;
- //BA.debugLineNum = 1376258;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1572866;
+ //BA.debugLineNum = 1572866;BA.debugLine="finalTVscore";
+__ref._finaltvscore(null);
+RDebugUtils.currentLine=1572867;
+ //BA.debugLineNum = 1572867;BA.debugLine="End Sub";
 return "";
 }
 }

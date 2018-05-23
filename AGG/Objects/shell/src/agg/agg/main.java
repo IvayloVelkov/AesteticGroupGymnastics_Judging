@@ -67,12 +67,13 @@ public static RemoteObject _tvj = RemoteObject.declareNull("agg.agg.tv_judge");
 public static RemoteObject _exej = RemoteObject.declareNull("agg.agg.exe_judging");
 public static RemoteObject _final = RemoteObject.declareNull("agg.agg.sendscore");
 public static RemoteObject _score = RemoteObject.createImmutable(0);
+public static RemoteObject _scactive = RemoteObject.createImmutable(0);
 public static agg.agg.starter _starter = null;
 public static agg.agg.programdata _programdata = null;
 public static agg.agg.uisizes _uisizes = null;
 public static agg.agg.version _version = null;
 public static agg.agg.helperfunctions _helperfunctions = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",main.mostCurrent._activity,"avJ",main.mostCurrent._avj,"BaseNotAccessible",main._basenotaccessible,"exeJ",main.mostCurrent._exej,"final",main.mostCurrent._final,"HelperFunctions",Debug.moduleToString(agg.agg.helperfunctions.class),"intFontTransfer",main._intfonttransfer,"Login",main.mostCurrent._login,"PrimeCurrency",main._primecurrency,"ProgramData",Debug.moduleToString(agg.agg.programdata.class),"score",main._score,"SelectedLanguage",main._selectedlanguage,"Starter",Debug.moduleToString(agg.agg.starter.class),"translate",main._translate,"tvJ",main.mostCurrent._tvj,"typeJ",main.mostCurrent._typej,"UISizes",Debug.moduleToString(agg.agg.uisizes.class),"Version",Debug.moduleToString(agg.agg.version.class)};
+		return new Object[] {"Activity",main.mostCurrent._activity,"avJ",main.mostCurrent._avj,"BaseNotAccessible",main._basenotaccessible,"exeJ",main.mostCurrent._exej,"final",main.mostCurrent._final,"HelperFunctions",Debug.moduleToString(agg.agg.helperfunctions.class),"intFontTransfer",main._intfonttransfer,"Login",main.mostCurrent._login,"PrimeCurrency",main._primecurrency,"ProgramData",Debug.moduleToString(agg.agg.programdata.class),"scActive",main._scactive,"score",main._score,"SelectedLanguage",main._selectedlanguage,"Starter",Debug.moduleToString(agg.agg.starter.class),"translate",main._translate,"tvJ",main.mostCurrent._tvj,"typeJ",main.mostCurrent._typej,"UISizes",Debug.moduleToString(agg.agg.uisizes.class),"Version",Debug.moduleToString(agg.agg.version.class)};
 }
 }

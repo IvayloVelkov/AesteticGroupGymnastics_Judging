@@ -32,7 +32,6 @@ NumberOfLibraries=9
 NumberOfModules=12
 Version=8
 @EndOfDesignText@
-
 #Region  Project Attributes 
 	#ApplicationLabel: AGG
 	#VersionCode: 1
@@ -65,7 +64,7 @@ Sub Globals
 	Private exeJ As EXE_Judging
 	Private final As SendScore	
 	Public score As Double
-
+	Private scActive as int
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -108,14 +107,21 @@ Sub Activity_Create(FirstTime As Boolean)
 End Sub
 
 Public Sub finalScore As Double
-	score = avJ.finaAVscore
+	Select scActive
+		Case 1
+			score = avJ.finalAVscore
+		Case 2
+			score = tvJ.finalTVscore
+		Case 3
+			score = exeJ.finalEXEscore
+	End Select
 	Return score
 End Sub
 
 Public Sub LoginScreen_LoginClick
 	Login.asView.Visible = False
 	Login.asView.Enabled = False
-	
+
 	typeJ.asView.Visible = True
 	typeJ.asView.Enabled = True
 End Sub
@@ -126,6 +132,7 @@ Public Sub AV_Click
 	
 	avJ.asView.Visible = True
 	avJ.asView.Enabled = True
+	scActive = 1
 End Sub
 
 Public Sub TV_Click
@@ -134,6 +141,7 @@ Public Sub TV_Click
 	
 	tvJ.asView.Visible = True
 	tvJ.asView.Enabled = True
+	scActive = 2
 End Sub
 
 Public Sub EXE_Click
@@ -142,6 +150,7 @@ Public Sub EXE_Click
 	
 	exeJ.asView.Visible = True
 	exeJ.asView.Enabled = True
+	scActive = 3
 End Sub
 
 Public Sub FinalClick
@@ -166,14 +175,30 @@ Sub Activity_KeyPress (KeyCode As Int) As Boolean
 		If avJ.asView.Visible = True Then
 			Login.asView.Visible = True
 			avJ.asView.Visible = False
+			Login.btnloginPanel.Enabled = True
 		Else If tvJ.asView.Visible = True Then
 			tvJ.asView.Visible = False
 			Login.asView.Visible = True
+			Login.btnloginPanel.Enabled = True
 		Else If exeJ.asView.Visible = True Then
 			exeJ.asView.Visible = False
 			Login.asView.Visible = True
+			Login.btnloginPanel.Enabled = True
 		Else If final.asView.Visible = True Then
-			
+			Select scActive
+				Case 1 
+					avJ.asView.Visible = True
+					final.asView.Visible = False
+				Case 2
+					tvJ.asView.Visible = True
+					final.asView.Visible = False
+				Case 3
+					exeJ.asView.Visible = True
+					final.asView.Visible = False
+			End Select
 		End If
+		Return True
+	Else
+		Return False
 	End If
 End Sub

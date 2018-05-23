@@ -80,7 +80,7 @@ Public Sub BuildUi
 	label(0).Text = Main.translate.GetString("AVlabal0")
 	label(0).TextColor = Colors.White
 	
-	page(0).AddView(chekpointbox(0), label(0).left + label(0).Width + 10%x, label(0).Top, 30%x, 10%y)
+	page(0).AddView(chekpointbox(0), label(0).left + label(0).Width + 10%x, label(0).Top, 15%x, 10%y)
 	chekpointbox(0).Text = Main.translate.GetString("Checkl0")
 
 	
@@ -88,7 +88,7 @@ Public Sub BuildUi
 		page(0).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
 		label(i).Text = Main.translate.GetString("AVlabal" & i)
 		label(i).TextColor = Colors.White
-		page(0).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 30%x, 10%y)
+		page(0).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 15%x, 10%y)
 		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
 
 	Next
@@ -97,14 +97,14 @@ Public Sub BuildUi
 	label(8).Text = Main.translate.GetString("AVlabal8")
 	label(8).TextColor = Colors.White
 	
-	page(1).AddView(chekpointbox(8), label(8).left + label(8).Width + 10%x, label(8).Top, 30%x, 10%y)
+	page(1).AddView(chekpointbox(8), label(8).left + label(8).Width + 10%x, label(8).Top, 15%x, 10%y)
 	chekpointbox(8).Text = Main.translate.GetString("Checkl8")
 	
 	For i = 9 To 15
 		page(1).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
 		label(i).Text = Main.translate.GetString("AVlabal" & i)
 		label(i).TextColor = Colors.White
-		page(1).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 30%x, 10%y)
+		page(1).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 15%x, 10%y)
 		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
 
 	Next
@@ -112,7 +112,7 @@ Public Sub BuildUi
 	page(2).AddView(label(16),2%x, 5%y, 50%x, 10%y)
 	label(16).Text = Main.translate.GetString("AVlabal17")
 	label(16).TextColor = Colors.White
-	page(2).AddView(chekpointbox(16), label(16).left + label(16).Width + 10%x, label(16).Top, 30%x, 10%y)
+	page(2).AddView(chekpointbox(16), label(16).left + label(16).Width + 10%x, label(16).Top, 15%x, 10%y)
 	chekpointbox(16).Text = Main.translate.GetString("Checkl8")
 	
 	
@@ -120,7 +120,7 @@ Public Sub BuildUi
 		page(2).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
 		label(i).Text = Main.translate.GetString("AVlabal" & i)
 		label(i).TextColor = Colors.White
-		page(2).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 30%x, 10%y)
+		page(2).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 15%x, 10%y)
 		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
 
 	Next
@@ -128,14 +128,14 @@ Public Sub BuildUi
 	page(3).AddView(label(24), 2%x, 5%y, 50%x, 10%y)
 	label(24).Text = Main.translate.GetString("AVlabal26")
 	label(24).TextColor = Colors.White
-	page(3).AddView(chekpointbox(24), label(24).left + label(24).Width + 10%x, label(24).Top, 30%x, 10%y)
+	page(3).AddView(chekpointbox(24), label(24).left + label(24).Width + 10%x, label(24).Top, 15%x, 10%y)
 	chekpointbox(24).Text = Main.translate.GetString("Checkl8")
 	
 	For i = 25 To 31
 		page(3).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
 		label(i).Text = Main.translate.GetString("AVlabal" & i)
 		label(i).TextColor = Colors.White
-		page(3).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 30%x, 10%y)
+		page(3).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 15%x, 10%y)
 		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
 	Next
 	
@@ -150,14 +150,14 @@ Private Sub check_CheckedChange(Checked As Boolean)
 	End If
 End Sub
 
-Public Sub finaAVscore As Double
+Public Sub finalAVscore As Double
 	Log("AVSCORE:"&avScore)
 	Return avScore
 End Sub
 
 Private Sub ready_Click
 	CallSub(Main, "FinalClick")
-	finaAVscore
+	finalAVscore
 End Sub
 
 Public Sub asView As Panel

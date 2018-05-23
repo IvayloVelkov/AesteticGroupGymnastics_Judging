@@ -12,7 +12,7 @@ Version=7.3
 Sub Process_Globals
 '	Public mysql As JdbcSQL
 '	Private driver As String = "com.mysql.jdbc.Driver"
-'	Private jdbcUrl As String = "jdbc:mysql://192.168.0.6/test"
+'	Private jdbcUrl As String = "jdbc:mysql://192.168.1.1/results"
 '	Private Username As String = "username"
 '	Private Password As String = "password"
 End Sub

@@ -406,6 +406,7 @@ public agg.agg.tv_judge _tvj = null;
 public agg.agg.exe_judging _exej = null;
 public agg.agg.sendscore _final = null;
 public static double _score = 0;
+public static int _scactive = 0;
 public agg.agg.starter _starter = null;
 public agg.agg.programdata _programdata = null;
 public agg.agg.uisizes _uisizes = null;
@@ -523,35 +524,80 @@ mostCurrent._login._asview(null).setVisible(anywheresoftware.b4a.keywords.Common
 RDebugUtils.currentLine=1114116;
  //BA.debugLineNum = 1114116;BA.debugLine="avJ.asView.Visible = False";
 mostCurrent._avj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=1114117;
+ //BA.debugLineNum = 1114117;BA.debugLine="Login.btnloginPanel.Enabled = True";
+mostCurrent._login._btnloginpanel.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  }else 
-{RDebugUtils.currentLine=1114117;
- //BA.debugLineNum = 1114117;BA.debugLine="Else If tvJ.asView.Visible = True Then";
+{RDebugUtils.currentLine=1114118;
+ //BA.debugLineNum = 1114118;BA.debugLine="Else If tvJ.asView.Visible = True Then";
 if (mostCurrent._tvj._asview(null).getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
-RDebugUtils.currentLine=1114118;
- //BA.debugLineNum = 1114118;BA.debugLine="tvJ.asView.Visible = False";
-mostCurrent._tvj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
 RDebugUtils.currentLine=1114119;
- //BA.debugLineNum = 1114119;BA.debugLine="Login.asView.Visible = True";
+ //BA.debugLineNum = 1114119;BA.debugLine="tvJ.asView.Visible = False";
+mostCurrent._tvj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=1114120;
+ //BA.debugLineNum = 1114120;BA.debugLine="Login.asView.Visible = True";
 mostCurrent._login._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
- }else 
-{RDebugUtils.currentLine=1114120;
- //BA.debugLineNum = 1114120;BA.debugLine="Else If exeJ.asView.Visible = True Then";
-if (mostCurrent._exej._asview(null).getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
 RDebugUtils.currentLine=1114121;
- //BA.debugLineNum = 1114121;BA.debugLine="exeJ.asView.Visible = False";
-mostCurrent._exej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=1114122;
- //BA.debugLineNum = 1114122;BA.debugLine="Login.asView.Visible = True";
-mostCurrent._login._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 1114121;BA.debugLine="Login.btnloginPanel.Enabled = True";
+mostCurrent._login._btnloginpanel.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  }else 
-{RDebugUtils.currentLine=1114123;
- //BA.debugLineNum = 1114123;BA.debugLine="Else If final.asView.Visible = True Then";
+{RDebugUtils.currentLine=1114122;
+ //BA.debugLineNum = 1114122;BA.debugLine="Else If exeJ.asView.Visible = True Then";
+if (mostCurrent._exej._asview(null).getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
+RDebugUtils.currentLine=1114123;
+ //BA.debugLineNum = 1114123;BA.debugLine="exeJ.asView.Visible = False";
+mostCurrent._exej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=1114124;
+ //BA.debugLineNum = 1114124;BA.debugLine="Login.asView.Visible = True";
+mostCurrent._login._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=1114125;
+ //BA.debugLineNum = 1114125;BA.debugLine="Login.btnloginPanel.Enabled = True";
+mostCurrent._login._btnloginpanel.setEnabled(anywheresoftware.b4a.keywords.Common.True);
+ }else 
+{RDebugUtils.currentLine=1114126;
+ //BA.debugLineNum = 1114126;BA.debugLine="Else If final.asView.Visible = True Then";
 if (mostCurrent._final._asview(null).getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
+RDebugUtils.currentLine=1114127;
+ //BA.debugLineNum = 1114127;BA.debugLine="Select scActive";
+switch (_scactive) {
+case 1: {
+RDebugUtils.currentLine=1114129;
+ //BA.debugLineNum = 1114129;BA.debugLine="avJ.asView.Visible = True";
+mostCurrent._avj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=1114130;
+ //BA.debugLineNum = 1114130;BA.debugLine="final.asView.Visible = False";
+mostCurrent._final._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
+ break; }
+case 2: {
+RDebugUtils.currentLine=1114132;
+ //BA.debugLineNum = 1114132;BA.debugLine="tvJ.asView.Visible = True";
+mostCurrent._tvj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=1114133;
+ //BA.debugLineNum = 1114133;BA.debugLine="final.asView.Visible = False";
+mostCurrent._final._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
+ break; }
+case 3: {
+RDebugUtils.currentLine=1114135;
+ //BA.debugLineNum = 1114135;BA.debugLine="exeJ.asView.Visible = True";
+mostCurrent._exej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=1114136;
+ //BA.debugLineNum = 1114136;BA.debugLine="final.asView.Visible = False";
+mostCurrent._final._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
+ break; }
+}
+;
  }}}}
 ;
+RDebugUtils.currentLine=1114139;
+ //BA.debugLineNum = 1114139;BA.debugLine="Return True";
+if (true) return anywheresoftware.b4a.keywords.Common.True;
+ }else {
+RDebugUtils.currentLine=1114141;
+ //BA.debugLineNum = 1114141;BA.debugLine="Return False";
+if (true) return anywheresoftware.b4a.keywords.Common.False;
  };
-RDebugUtils.currentLine=1114127;
- //BA.debugLineNum = 1114127;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1114143;
+ //BA.debugLineNum = 1114143;BA.debugLine="End Sub";
 return false;
 }
 public static String  _av_click() throws Exception{
@@ -573,7 +619,10 @@ RDebugUtils.currentLine=851973;
  //BA.debugLineNum = 851973;BA.debugLine="avJ.asView.Enabled = True";
 mostCurrent._avj._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.True);
 RDebugUtils.currentLine=851974;
- //BA.debugLineNum = 851974;BA.debugLine="End Sub";
+ //BA.debugLineNum = 851974;BA.debugLine="scActive = 1";
+_scactive = (int) (1);
+RDebugUtils.currentLine=851975;
+ //BA.debugLineNum = 851975;BA.debugLine="End Sub";
 return "";
 }
 public static String  _exe_click() throws Exception{
@@ -595,7 +644,10 @@ RDebugUtils.currentLine=983045;
  //BA.debugLineNum = 983045;BA.debugLine="exeJ.asView.Enabled = True";
 mostCurrent._exej._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.True);
 RDebugUtils.currentLine=983046;
- //BA.debugLineNum = 983046;BA.debugLine="End Sub";
+ //BA.debugLineNum = 983046;BA.debugLine="scActive = 3";
+_scactive = (int) (3);
+RDebugUtils.currentLine=983047;
+ //BA.debugLineNum = 983047;BA.debugLine="End Sub";
 return "";
 }
 public static String  _finalclick() throws Exception{
@@ -655,13 +707,30 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "finalscore"))
 RDebugUtils.currentLine=720896;
  //BA.debugLineNum = 720896;BA.debugLine="Public Sub finalScore As Double";
 RDebugUtils.currentLine=720897;
- //BA.debugLineNum = 720897;BA.debugLine="score = avJ.finaAVscore";
-_score = mostCurrent._avj._finaavscore(null);
-RDebugUtils.currentLine=720898;
- //BA.debugLineNum = 720898;BA.debugLine="Return score";
-if (true) return _score;
+ //BA.debugLineNum = 720897;BA.debugLine="Select scActive";
+switch (_scactive) {
+case 1: {
 RDebugUtils.currentLine=720899;
- //BA.debugLineNum = 720899;BA.debugLine="End Sub";
+ //BA.debugLineNum = 720899;BA.debugLine="score = avJ.finalAVscore";
+_score = mostCurrent._avj._finalavscore(null);
+ break; }
+case 2: {
+RDebugUtils.currentLine=720901;
+ //BA.debugLineNum = 720901;BA.debugLine="score = tvJ.finalTVscore";
+_score = mostCurrent._tvj._finaltvscore(null);
+ break; }
+case 3: {
+RDebugUtils.currentLine=720903;
+ //BA.debugLineNum = 720903;BA.debugLine="score = exeJ.finalEXEscore";
+_score = mostCurrent._exej._finalexescore(null);
+ break; }
+}
+;
+RDebugUtils.currentLine=720905;
+ //BA.debugLineNum = 720905;BA.debugLine="Return score";
+if (true) return _score;
+RDebugUtils.currentLine=720906;
+ //BA.debugLineNum = 720906;BA.debugLine="End Sub";
 return 0;
 }
 public static String  _loginscreen_loginclick() throws Exception{
@@ -705,7 +774,10 @@ RDebugUtils.currentLine=917509;
  //BA.debugLineNum = 917509;BA.debugLine="tvJ.asView.Enabled = True";
 mostCurrent._tvj._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.True);
 RDebugUtils.currentLine=917510;
- //BA.debugLineNum = 917510;BA.debugLine="End Sub";
+ //BA.debugLineNum = 917510;BA.debugLine="scActive = 2";
+_scactive = (int) (2);
+RDebugUtils.currentLine=917511;
+ //BA.debugLineNum = 917511;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -8,45 +8,45 @@ sendscore
 translator
 loginscreen
 typejudge
-main,activity_create,1,0,37,74
+main,activity_create,1,0,36,73
 ,translate,,intfonttransfer,uisizes,defaultfont,,login,,typej,,avj,,tvj,,exej,,final,version,productid,version,programname,uisizes,defaultpadding,programdata,rafencpass,programdata,struser,programdata,strpass
 ,intfonttransfer,programdata,struser,programdata,strpass
 translator,initialize,loginscreen,initialize,loginscreen,asview,loginscreen,build_screen,typejudge,initialize,typejudge,asview,av_judge,initialize,av_judge,asview,av_judge,buildui,tv_judge,initialize,tv_judge,asview,tv_judge,buildui,exe_judging,initialize,exe_judging,asview,exe_judging,buildui,sendscore,initialize,sendscore,asview,version,path,translator,open_xml,translator,resetvariables,translator,parse_xml,translator,setproduct,translator,duplicate_map,loginscreen,loginpanel_configurations,loginscreen,start_up,helperfunctions,apply_viewstyle,translator,getstring,helperfunctions,helper_gradient,helperfunctions,remove_padding,translator,get_translation,translator,get_translatedstring,loginscreen,read_savedusrs
-main,activity_keypress,0,0,130,145
-,avj,,login,,tvj,,exej,,final
+main,activity_keypress,0,0,139,170
+,avj,,login,,tvj,,exej,,final,,scactive
 
 av_judge,asview,loginscreen,asview,tv_judge,asview,exe_judging,asview,sendscore,asview
-main,av_click,0,0,89,95
-,typej,,avj
-
+main,av_click,0,0,95,102
+,typej,,avj,,scactive
+,scactive
 typejudge,asview,av_judge,asview
-main,exe_click,0,0,105,111
-,typej,,exej
-
+main,exe_click,0,0,113,120
+,typej,,exej,,scactive
+,scactive
 typejudge,asview,exe_judging,asview
-main,finalclick,0,0,113,128
-,avj,,tvj,,exej,,final,,score
+main,finalclick,0,0,122,137
+,avj,,tvj,,exej,,final,,scactive,,score
 ,score
-av_judge,asview,tv_judge,asview,exe_judging,asview,sendscore,asview,sendscore,finalscore,,finalscore,av_judge,finaavscore
-main,finalscore,0,0,76,79
-,score,,avj
+av_judge,asview,tv_judge,asview,exe_judging,asview,sendscore,asview,sendscore,finalscore,,finalscore,av_judge,finalavscore,tv_judge,finaltvscore,exe_judging,finalexescore
+main,finalscore,0,0,75,85
+,scactive,,score,,avj,,tvj,,exej
 ,score
-av_judge,finaavscore
-main,globals,0,1,26,35
+av_judge,finalavscore,tv_judge,finaltvscore,exe_judging,finalexescore
+main,globals,0,1,25,34
 
 
 
-main,loginscreen_loginclick,0,0,81,87
+main,loginscreen_loginclick,0,0,87,93
 ,login,,typej
 
 loginscreen,asview,typejudge,asview
-main,process_globals,0,1,17,24
+main,process_globals,0,1,16,23
 ,selectedlanguage
 ,selectedlanguage
 
-main,tv_click,0,0,97,103
-,typej,,tvj
-
+main,tv_click,0,0,104,111
+,typej,,tvj,,scactive
+,scactive
 typejudge,asview,tv_judge,asview
 translator,initialize,1,0,27,45
 version,productid,version,programname
@@ -181,20 +181,20 @@ typejudge,asview,0,0,42,44
 
 
 typejudge,avtypebtn_click,0,0,46,48
-main,typej,main,avj
-
+main,typej,main,avj,main,scactive
+main,scactive
 main,av_click,,asview,av_judge,asview
 typejudge,class_globals,0,0,1,9
 
 
 
 typejudge,exetypebtn_click,0,0,54,56
-main,typej,main,exej
-
+main,typej,main,exej,main,scactive
+main,scactive
 main,exe_click,,asview,exe_judging,asview
 typejudge,tvtypebtn_click,0,0,50,52
-main,typej,main,tvj
-
+main,typej,main,tvj,main,scactive
+main,scactive
 main,tv_click,,asview,tv_judge,asview
 av_judge,initialize,0,0,17,30
 
@@ -208,7 +208,7 @@ av_judge,buildui,0,0,32,136
 main,translate
 
 translator,getstring,translator,get_translation,translator,get_translatedstring
-av_judge,finaavscore,0,0,147,150
+av_judge,finalavscore,0,0,147,150
 
 
 
@@ -221,49 +221,77 @@ av_judge,class_globals,0,0,1,14
 
 
 av_judge,ready_click,0,0,152,155
-main,avj,main,tvj,main,exej,main,final,main,score
+main,avj,main,tvj,main,exej,main,final,main,scactive,main,score
 main,score
-main,finalclick,,finaavscore,,asview,tv_judge,asview,exe_judging,asview,sendscore,asview,sendscore,finalscore,main,finalscore
-tv_judge,initialize,0,0,17,31
+main,finalclick,,finalavscore,,asview,tv_judge,asview,exe_judging,asview,sendscore,asview,sendscore,finalscore,main,finalscore,tv_judge,finaltvscore,exe_judging,finalexescore
+tv_judge,initialize,0,0,19,39
 
 
 
-tv_judge,asview,0,0,136,138
+tv_judge,asview,0,0,207,209
 
 
 
-tv_judge,buildui,0,1,33,130
+tv_judge,buildui,0,0,41,155
 main,translate
 
 translator,getstring,translator,get_translation,translator,get_translatedstring
-tv_judge,class_globals,0,0,1,14
+tv_judge,finaltvscore,0,0,197,200
 
 
 
-tv_judge,ready_click,0,0,132,134
-main,avj,main,tvj,main,exej,main,final,main,score
+tv_judge,check1_checkedchange,1,0,157,168
+
+
+
+tv_judge,check2_checkedchange,1,0,170,182
+
+
+
+tv_judge,check3_checkedchange,1,0,184,196
+
+
+
+tv_judge,class_globals,0,0,1,16
+
+
+
+tv_judge,ready_click,0,0,202,205
+main,avj,main,tvj,main,exej,main,final,main,scactive,main,score
 main,score
-main,finalclick,av_judge,asview,,asview,exe_judging,asview,sendscore,asview,sendscore,finalscore,main,finalscore,av_judge,finaavscore
-exe_judging,initialize,0,0,17,31
+main,finalclick,,finaltvscore,av_judge,asview,,asview,exe_judging,asview,sendscore,asview,sendscore,finalscore,main,finalscore,av_judge,finalavscore,exe_judging,finalexescore
+exe_judging,initialize,0,0,19,31
 
 
 
-exe_judging,asview,0,0,133,135
+exe_judging,asview,0,0,116,118
 
 
 
-exe_judging,buildui,0,0,33,127
+exe_judging,buildui,0,0,33,89
 main,translate
 
 translator,getstring,translator,get_translation,translator,get_translatedstring
-exe_judging,class_globals,0,0,1,14
+exe_judging,finalexescore,0,0,105,109
 
 
 
-exe_judging,ready_click,0,0,129,131
-main,avj,main,tvj,main,exej,main,final,main,score
+exe_judging,addpan_click,0,0,91,94
+
+
+
+exe_judging,check_checkedchange,0,0,96,103
+
+
+
+exe_judging,class_globals,0,0,1,16
+
+
+
+exe_judging,ready_click,0,0,111,114
+main,avj,main,tvj,main,exej,main,final,main,scactive,main,score
 main,score
-main,finalclick,av_judge,asview,tv_judge,asview,,asview,sendscore,asview,sendscore,finalscore,main,finalscore,av_judge,finaavscore
+main,finalclick,,finalexescore,av_judge,asview,tv_judge,asview,,asview,sendscore,asview,sendscore,finalscore,main,finalscore,av_judge,finalavscore,tv_judge,finaltvscore
 sendscore,initialize,0,0,9,25
 
 
@@ -273,9 +301,9 @@ sendscore,asview,0,0,33,35
 
 
 sendscore,finalscore,0,0,27,31
-main,score,main,avj
+main,scactive,main,score,main,avj,main,tvj,main,exej
 main,score
-main,finalscore,,finalscore,av_judge,finaavscore
+main,finalscore,,finalscore,av_judge,finalavscore,tv_judge,finaltvscore,exe_judging,finalexescore
 sendscore,class_globals,0,0,1,6
 
 
