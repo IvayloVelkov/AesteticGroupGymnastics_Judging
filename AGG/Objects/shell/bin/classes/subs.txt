@@ -2,9 +2,9 @@ agg.agg
 0
 7
 tv_judge
-av_judge
 exe_judging
 sendscore
+av_judge
 translator
 loginscreen
 typejudge
@@ -128,7 +128,7 @@ loginscreen,initialize,0,0,28,34
 
 
 
-loginscreen,asview,0,0,170,172
+loginscreen,asview,0,0,171,173
 
 
 
@@ -136,7 +136,7 @@ loginscreen,build_screen,1,0,37,63
 uisizes,defaultpadding,main,translate,programdata,rafencpass,programdata,struser,programdata,strpass
 programdata,struser,programdata,strpass
 ,loginpanel_configurations,,start_up,helperfunctions,apply_viewstyle,translator,getstring,helperfunctions,helper_gradient,helperfunctions,remove_padding,translator,get_translation,translator,get_translatedstring,,read_savedusrs
-loginscreen,loginpanel_configurations,0,0,66,96
+loginscreen,loginpanel_configurations,0,1,66,97
 main,translate
 
 helperfunctions,apply_viewstyle,translator,getstring,helperfunctions,helper_gradient,helperfunctions,remove_padding,translator,get_translation,translator,get_translatedstring
@@ -144,19 +144,19 @@ loginscreen,start_up,1,0,12,25
 programdata,rafencpass,programdata,struser,programdata,strpass
 programdata,struser,programdata,strpass
 ,read_savedusrs
-loginscreen,buttonloginpanel_click,0,0,125,155
+loginscreen,buttonloginpanel_click,0,0,126,156
 programdata,struser,programdata,strpass,programdata,sameuser,programdata,rafencpass,main,login,main,typej
 programdata,sameuser,programdata,struser,programdata,strpass
 ,check_user,,check_pass,,write_usrs,main,loginscreen_loginclick,,asview,typejudge,asview
-loginscreen,check_user,0,0,158,163
+loginscreen,check_user,0,0,159,164
 
 
 
-loginscreen,check_pass,0,0,166,168
+loginscreen,check_pass,0,0,167,169
 
 
 
-loginscreen,write_usrs,0,0,106,111
+loginscreen,write_usrs,0,0,107,112
 programdata,rafencpass
 
 
@@ -164,11 +164,11 @@ loginscreen,class_globals,0,0,1,9
 
 
 
-loginscreen,pass_focuschanged,1,0,99,103
+loginscreen,pass_focuschanged,1,0,100,104
 
 
 
-loginscreen,read_savedusrs,0,0,114,122
+loginscreen,read_savedusrs,0,0,115,123
 programdata,rafencpass,programdata,struser,programdata,strpass
 programdata,struser,programdata,strpass
 
@@ -228,7 +228,7 @@ tv_judge,initialize,0,0,19,39
 
 
 
-tv_judge,asview,0,0,207,209
+tv_judge,asview,0,0,196,198
 
 
 
@@ -236,19 +236,19 @@ tv_judge,buildui,0,0,41,155
 main,translate
 
 translator,getstring,translator,get_translation,translator,get_translatedstring
-tv_judge,finaltvscore,0,0,197,200
+tv_judge,finaltvscore,0,0,186,189
 
 
 
-tv_judge,check1_checkedchange,1,0,157,168
+tv_judge,check1_checkedchange,0,0,157,165
 
 
 
-tv_judge,check2_checkedchange,1,0,170,182
+tv_judge,check2_checkedchange,0,0,167,175
 
 
 
-tv_judge,check3_checkedchange,1,0,184,196
+tv_judge,check3_checkedchange,0,0,177,185
 
 
 
@@ -256,7 +256,7 @@ tv_judge,class_globals,0,0,1,16
 
 
 
-tv_judge,ready_click,0,0,202,205
+tv_judge,ready_click,0,0,191,194
 main,avj,main,tvj,main,exej,main,final,main,scactive,main,score
 main,score
 main,finalclick,,finaltvscore,av_judge,asview,,asview,exe_judging,asview,sendscore,asview,sendscore,finalscore,main,finalscore,av_judge,finalavscore,exe_judging,finalexescore
@@ -312,6 +312,10 @@ sendscore,send_click,1,0,37,42
 
 
 
+starter,process_globals,0,1,6,12
+
+
+
 version,path,0,0,8,10
 ,programname
 
@@ -319,10 +323,6 @@ version,path,0,0,8,10
 version,process_globals,0,1,1,5
 ,productid,,programname,,productindictionary
 ,productid,,programname,,productindictionary
-
-starter,process_globals,0,1,6,12
-
-
 
 helperfunctions,apply_viewstyle,0,0,5,21
 

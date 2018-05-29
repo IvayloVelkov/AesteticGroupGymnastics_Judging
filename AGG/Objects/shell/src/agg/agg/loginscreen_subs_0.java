@@ -8,15 +8,15 @@ public class loginscreen_subs_0 {
 
 public static RemoteObject  _asview(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("asView (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,170);
+		Debug.PushSubsStack("asView (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,171);
 if (RapidSub.canDelegate("asview")) return __ref.runUserSub(false, "loginscreen","asview", __ref);
- BA.debugLineNum = 170;BA.debugLine="Public Sub asView As Panel";
-Debug.ShouldStop(512);
- BA.debugLineNum = 171;BA.debugLine="Return loginPanel";
+ BA.debugLineNum = 171;BA.debugLine="Public Sub asView As Panel";
 Debug.ShouldStop(1024);
-if (true) return __ref.getField(false,"_loginpanel");
- BA.debugLineNum = 172;BA.debugLine="End Sub";
+ BA.debugLineNum = 172;BA.debugLine="Return loginPanel";
 Debug.ShouldStop(2048);
+if (true) return __ref.getField(false,"_loginpanel");
+ BA.debugLineNum = 173;BA.debugLine="End Sub";
+Debug.ShouldStop(4096);
 return RemoteObject.createImmutable(null);
 }
 catch (Exception e) {
@@ -100,60 +100,60 @@ finally {
 		}}
 public static RemoteObject  _buttonloginpanel_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("ButtonloginPanel_Click (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,125);
+		Debug.PushSubsStack("ButtonloginPanel_Click (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,126);
 if (RapidSub.canDelegate("buttonloginpanel_click")) return __ref.runUserSub(false, "loginscreen","buttonloginpanel_click", __ref);
- BA.debugLineNum = 125;BA.debugLine="Private Sub ButtonloginPanel_Click";
-Debug.ShouldStop(268435456);
- BA.debugLineNum = 127;BA.debugLine="btnloginPanel.Enabled=False";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 126;BA.debugLine="Private Sub ButtonloginPanel_Click";
+Debug.ShouldStop(536870912);
+ BA.debugLineNum = 128;BA.debugLine="btnloginPanel.Enabled=False";
+Debug.ShouldStop(-2147483648);
 __ref.getField(false,"_btnloginpanel").runMethod(true,"setEnabled",loginscreen.__c.getField(true,"False"));
- BA.debugLineNum = 130;BA.debugLine="usrString = user.Text.ToLowerCase";
-Debug.ShouldStop(2);
-__ref.setField ("_usrstring",__ref.getField(false,"_user").runMethod(true,"getText").runMethod(true,"toLowerCase"));
- BA.debugLineNum = 131;BA.debugLine="passString = pass.Text";
+ BA.debugLineNum = 131;BA.debugLine="usrString = user.Text.ToLowerCase";
 Debug.ShouldStop(4);
+__ref.setField ("_usrstring",__ref.getField(false,"_user").runMethod(true,"getText").runMethod(true,"toLowerCase"));
+ BA.debugLineNum = 132;BA.debugLine="passString = pass.Text";
+Debug.ShouldStop(8);
 __ref.setField ("_passstring",__ref.getField(false,"_pass").runMethod(true,"getText"));
- BA.debugLineNum = 133;BA.debugLine="If check_User(usrString) And check_Pass(passStrin";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 134;BA.debugLine="If check_User(usrString) And check_Pass(passStrin";
+Debug.ShouldStop(32);
 if (RemoteObject.solveBoolean(".",__ref.runClassMethod (agg.agg.loginscreen.class, "_check_user",(Object)(__ref.getField(true,"_usrstring")))) && RemoteObject.solveBoolean(".",__ref.runClassMethod (agg.agg.loginscreen.class, "_check_pass",(Object)(__ref.getField(true,"_passstring"))))) { 
- BA.debugLineNum = 135;BA.debugLine="If checkloginPanel.Checked Then";
-Debug.ShouldStop(64);
-if (__ref.getField(false,"_checkloginpanel").runMethod(true,"getChecked").<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 136;BA.debugLine="write_Usrs";
+ BA.debugLineNum = 136;BA.debugLine="If checkloginPanel.Checked Then";
 Debug.ShouldStop(128);
+if (__ref.getField(false,"_checkloginpanel").runMethod(true,"getChecked").<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 137;BA.debugLine="write_Usrs";
+Debug.ShouldStop(256);
 __ref.runClassMethod (agg.agg.loginscreen.class, "_write_usrs");
  }else {
- BA.debugLineNum = 138;BA.debugLine="File.Delete(File.DirDefaultExternal, \"users.co";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 139;BA.debugLine="File.Delete(File.DirDefaultExternal, \"users.co";
+Debug.ShouldStop(1024);
 loginscreen.__c.getField(false,"File").runVoidMethod ("Delete",(Object)(loginscreen.__c.getField(false,"File").runMethod(true,"getDirDefaultExternal")),(Object)(RemoteObject.createImmutable("users.config")));
  };
- BA.debugLineNum = 141;BA.debugLine="If usrString = ProgramData.strUser And ProgramD";
-Debug.ShouldStop(4096);
-if (RemoteObject.solveBoolean("=",__ref.getField(true,"_usrstring"),loginscreen._programdata._struser) && RemoteObject.solveBoolean("=",loginscreen._programdata._strpass,__ref.getField(true,"_passstring"))) { 
- BA.debugLineNum = 142;BA.debugLine="ProgramData.sameUser = True";
+ BA.debugLineNum = 142;BA.debugLine="If usrString = ProgramData.strUser And ProgramD";
 Debug.ShouldStop(8192);
+if (RemoteObject.solveBoolean("=",__ref.getField(true,"_usrstring"),loginscreen._programdata._struser) && RemoteObject.solveBoolean("=",loginscreen._programdata._strpass,__ref.getField(true,"_passstring"))) { 
+ BA.debugLineNum = 143;BA.debugLine="ProgramData.sameUser = True";
+Debug.ShouldStop(16384);
 loginscreen._programdata._sameuser = loginscreen.__c.getField(true,"True");
  }else {
- BA.debugLineNum = 144;BA.debugLine="ProgramData.sameUser = False";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 145;BA.debugLine="ProgramData.sameUser = False";
+Debug.ShouldStop(65536);
 loginscreen._programdata._sameuser = loginscreen.__c.getField(true,"False");
  };
  }else {
- BA.debugLineNum = 147;BA.debugLine="ProgramData.sameUser = False";
-Debug.ShouldStop(262144);
+ BA.debugLineNum = 148;BA.debugLine="ProgramData.sameUser = False";
+Debug.ShouldStop(524288);
 loginscreen._programdata._sameuser = loginscreen.__c.getField(true,"False");
  };
- BA.debugLineNum = 150;BA.debugLine="ProgramData.strUser = usrString";
-Debug.ShouldStop(2097152);
-loginscreen._programdata._struser = __ref.getField(true,"_usrstring");
- BA.debugLineNum = 151;BA.debugLine="ProgramData.strPass = passString";
+ BA.debugLineNum = 151;BA.debugLine="ProgramData.strUser = usrString";
 Debug.ShouldStop(4194304);
+loginscreen._programdata._struser = __ref.getField(true,"_usrstring");
+ BA.debugLineNum = 152;BA.debugLine="ProgramData.strPass = passString";
+Debug.ShouldStop(8388608);
 loginscreen._programdata._strpass = __ref.getField(true,"_passstring");
- BA.debugLineNum = 153;BA.debugLine="CallSub(Main, \"LoginScreen_LoginClick\")";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 154;BA.debugLine="CallSub(Main, \"LoginScreen_LoginClick\")";
+Debug.ShouldStop(33554432);
 loginscreen.__c.runMethodAndSync(false,"CallSubNew",__ref.getField(false, "ba"),(Object)((loginscreen._main.getObject())),(Object)(RemoteObject.createImmutable("LoginScreen_LoginClick")));
- BA.debugLineNum = 155;BA.debugLine="End Sub";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 156;BA.debugLine="End Sub";
+Debug.ShouldStop(134217728);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -164,16 +164,16 @@ finally {
 		}}
 public static RemoteObject  _check_pass(RemoteObject __ref,RemoteObject _text) throws Exception{
 try {
-		Debug.PushSubsStack("check_Pass (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,166);
+		Debug.PushSubsStack("check_Pass (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,167);
 if (RapidSub.canDelegate("check_pass")) return __ref.runUserSub(false, "loginscreen","check_pass", __ref, _text);
 Debug.locals.put("text", _text);
- BA.debugLineNum = 166;BA.debugLine="Private Sub check_Pass(text As String) As Boolean";
-Debug.ShouldStop(32);
- BA.debugLineNum = 167;BA.debugLine="Return True";
+ BA.debugLineNum = 167;BA.debugLine="Private Sub check_Pass(text As String) As Boolean";
 Debug.ShouldStop(64);
-if (true) return loginscreen.__c.getField(true,"True");
- BA.debugLineNum = 168;BA.debugLine="End Sub";
+ BA.debugLineNum = 168;BA.debugLine="Return True";
 Debug.ShouldStop(128);
+if (true) return loginscreen.__c.getField(true,"True");
+ BA.debugLineNum = 169;BA.debugLine="End Sub";
+Debug.ShouldStop(256);
 return RemoteObject.createImmutable(false);
 }
 catch (Exception e) {
@@ -184,27 +184,27 @@ finally {
 		}}
 public static RemoteObject  _check_user(RemoteObject __ref,RemoteObject _text) throws Exception{
 try {
-		Debug.PushSubsStack("check_User (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,158);
+		Debug.PushSubsStack("check_User (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,159);
 if (RapidSub.canDelegate("check_user")) return __ref.runUserSub(false, "loginscreen","check_user", __ref, _text);
 RemoteObject _m = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Regex.MatcherWrapper");
 Debug.locals.put("text", _text);
- BA.debugLineNum = 158;BA.debugLine="Private Sub check_User(text As String) As Boolean";
-Debug.ShouldStop(536870912);
- BA.debugLineNum = 159;BA.debugLine="Private m As Matcher";
+ BA.debugLineNum = 159;BA.debugLine="Private Sub check_User(text As String) As Boolean";
 Debug.ShouldStop(1073741824);
-_m = RemoteObject.createNew ("anywheresoftware.b4a.keywords.Regex.MatcherWrapper");Debug.locals.put("m", _m);
- BA.debugLineNum = 160;BA.debugLine="m = Regex.Matcher(\"[a-z0-9]+[_a-z0-9\\.-]*[a-z0-9]";
+ BA.debugLineNum = 160;BA.debugLine="Private m As Matcher";
 Debug.ShouldStop(-2147483648);
-_m = loginscreen.__c.getField(false,"Regex").runMethod(false,"Matcher",(Object)(BA.ObjectToString("[a-z0-9]+[_a-z0-9\\.-]*[a-z0-9]+@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,4})")),(Object)(_text));Debug.locals.put("m", _m);
- BA.debugLineNum = 161;BA.debugLine="If m.Find Then Return True";
+_m = RemoteObject.createNew ("anywheresoftware.b4a.keywords.Regex.MatcherWrapper");Debug.locals.put("m", _m);
+ BA.debugLineNum = 161;BA.debugLine="m = Regex.Matcher(\"[a-z0-9]+[_a-z0-9\\.-]*[a-z0-9]";
 Debug.ShouldStop(1);
+_m = loginscreen.__c.getField(false,"Regex").runMethod(false,"Matcher",(Object)(BA.ObjectToString("[a-z0-9]+[_a-z0-9\\.-]*[a-z0-9]+@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,4})")),(Object)(_text));Debug.locals.put("m", _m);
+ BA.debugLineNum = 162;BA.debugLine="If m.Find Then Return True";
+Debug.ShouldStop(2);
 if (_m.runMethod(true,"Find").<Boolean>get().booleanValue()) { 
 if (true) return loginscreen.__c.getField(true,"True");};
- BA.debugLineNum = 162;BA.debugLine="Return False";
-Debug.ShouldStop(2);
-if (true) return loginscreen.__c.getField(true,"False");
- BA.debugLineNum = 163;BA.debugLine="End Sub";
+ BA.debugLineNum = 163;BA.debugLine="Return False";
 Debug.ShouldStop(4);
+if (true) return loginscreen.__c.getField(true,"False");
+ BA.debugLineNum = 164;BA.debugLine="End Sub";
+Debug.ShouldStop(8);
 return RemoteObject.createImmutable(false);
 }
 catch (Exception e) {
@@ -285,62 +285,62 @@ __ref.getField(false,"_user").runMethod(false,"setPadding",RemoteObject.createNe
  BA.debugLineNum = 72;BA.debugLine="user.SingleLine = True";
 Debug.ShouldStop(128);
 __ref.getField(false,"_user").runVoidMethod ("setSingleLine",loginscreen.__c.getField(true,"True"));
- BA.debugLineNum = 73;BA.debugLine="user.Hint = Main.translate.GetString(\"hintMail\")";
-Debug.ShouldStop(256);
-__ref.getField(false,"_user").runMethod(true,"setHint",loginscreen._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("hintMail"))));
- BA.debugLineNum = 74;BA.debugLine="user.HintColor = Colors.Gray";
+ BA.debugLineNum = 74;BA.debugLine="user.Hint = Main.translate.GetString(\"hintMail\")";
 Debug.ShouldStop(512);
-__ref.getField(false,"_user").runMethod(true,"setHintColor",loginscreen.__c.getField(false,"Colors").getField(true,"Gray"));
- BA.debugLineNum = 75;BA.debugLine="user.TextSize = 14";
+__ref.getField(false,"_user").runMethod(true,"setHint",loginscreen._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("hintMail"))));
+ BA.debugLineNum = 75;BA.debugLine="user.HintColor = Colors.Gray";
 Debug.ShouldStop(1024);
+__ref.getField(false,"_user").runMethod(true,"setHintColor",loginscreen.__c.getField(false,"Colors").getField(true,"Gray"));
+ BA.debugLineNum = 76;BA.debugLine="user.TextSize = 14";
+Debug.ShouldStop(2048);
 __ref.getField(false,"_user").runMethod(true,"setTextSize",BA.numberCast(float.class, 14));
- BA.debugLineNum = 77;BA.debugLine="HelperFunctions.Apply_ViewStyle(pass,Colors.Black";
-Debug.ShouldStop(4096);
-loginscreen._helperfunctions.runVoidMethod ("_apply_viewstyle",__ref.getField(false, "ba"),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), __ref.getField(false,"_pass").getObject()),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"Black")),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"White")),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"White")),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"White")),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"White")),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"White")),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"White")),(Object)(BA.numberCast(int.class, 60)));
- BA.debugLineNum = 78;BA.debugLine="pass.Padding = Array As Int(15,0,0,0)";
+ BA.debugLineNum = 78;BA.debugLine="HelperFunctions.Apply_ViewStyle(pass,Colors.Black";
 Debug.ShouldStop(8192);
-__ref.getField(false,"_pass").runMethod(false,"setPadding",RemoteObject.createNewArray("int",new int[] {4},new Object[] {BA.numberCast(int.class, 15),BA.numberCast(int.class, 0),BA.numberCast(int.class, 0),BA.numberCast(int.class, 0)}));
- BA.debugLineNum = 79;BA.debugLine="pass.SingleLine = True";
+loginscreen._helperfunctions.runVoidMethod ("_apply_viewstyle",__ref.getField(false, "ba"),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), __ref.getField(false,"_pass").getObject()),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"Black")),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"White")),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"White")),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"White")),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"White")),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"White")),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"White")),(Object)(BA.numberCast(int.class, 60)));
+ BA.debugLineNum = 79;BA.debugLine="pass.Padding = Array As Int(15,0,0,0)";
 Debug.ShouldStop(16384);
-__ref.getField(false,"_pass").runVoidMethod ("setSingleLine",loginscreen.__c.getField(true,"True"));
- BA.debugLineNum = 80;BA.debugLine="pass.PasswordMode = True";
+__ref.getField(false,"_pass").runMethod(false,"setPadding",RemoteObject.createNewArray("int",new int[] {4},new Object[] {BA.numberCast(int.class, 15),BA.numberCast(int.class, 0),BA.numberCast(int.class, 0),BA.numberCast(int.class, 0)}));
+ BA.debugLineNum = 80;BA.debugLine="pass.SingleLine = True";
 Debug.ShouldStop(32768);
-__ref.getField(false,"_pass").runVoidMethod ("setPasswordMode",loginscreen.__c.getField(true,"True"));
- BA.debugLineNum = 81;BA.debugLine="pass.Hint = Main.translate.GetString(\"lblPassword";
+__ref.getField(false,"_pass").runVoidMethod ("setSingleLine",loginscreen.__c.getField(true,"True"));
+ BA.debugLineNum = 81;BA.debugLine="pass.PasswordMode = True";
 Debug.ShouldStop(65536);
-__ref.getField(false,"_pass").runMethod(true,"setHint",loginscreen._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("lblPassword"))));
- BA.debugLineNum = 82;BA.debugLine="pass.HintColor = Colors.Gray";
+__ref.getField(false,"_pass").runVoidMethod ("setPasswordMode",loginscreen.__c.getField(true,"True"));
+ BA.debugLineNum = 82;BA.debugLine="pass.Hint = Main.translate.GetString(\"lblPassword";
 Debug.ShouldStop(131072);
-__ref.getField(false,"_pass").runMethod(true,"setHintColor",loginscreen.__c.getField(false,"Colors").getField(true,"Gray"));
- BA.debugLineNum = 83;BA.debugLine="pass.TextSize = 14";
+__ref.getField(false,"_pass").runMethod(true,"setHint",loginscreen._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("lblPassword"))));
+ BA.debugLineNum = 83;BA.debugLine="pass.HintColor = Colors.Gray";
 Debug.ShouldStop(262144);
+__ref.getField(false,"_pass").runMethod(true,"setHintColor",loginscreen.__c.getField(false,"Colors").getField(true,"Gray"));
+ BA.debugLineNum = 84;BA.debugLine="pass.TextSize = 14";
+Debug.ShouldStop(524288);
 __ref.getField(false,"_pass").runMethod(true,"setTextSize",BA.numberCast(float.class, 14));
- BA.debugLineNum = 85;BA.debugLine="checkloginPanel.TextColor=Colors.White";
-Debug.ShouldStop(1048576);
-__ref.getField(false,"_checkloginpanel").runMethod(true,"setTextColor",loginscreen.__c.getField(false,"Colors").getField(true,"White"));
- BA.debugLineNum = 86;BA.debugLine="checkloginPanel.TextSize = 14";
+ BA.debugLineNum = 86;BA.debugLine="checkloginPanel.TextColor=Colors.White";
 Debug.ShouldStop(2097152);
-__ref.getField(false,"_checkloginpanel").runMethod(true,"setTextSize",BA.numberCast(float.class, 14));
- BA.debugLineNum = 87;BA.debugLine="checkloginPanel.Gravity = Gravity.CENTER_VERTICAL";
+__ref.getField(false,"_checkloginpanel").runMethod(true,"setTextColor",loginscreen.__c.getField(false,"Colors").getField(true,"White"));
+ BA.debugLineNum = 87;BA.debugLine="checkloginPanel.TextSize = 14";
 Debug.ShouldStop(4194304);
-__ref.getField(false,"_checkloginpanel").runMethod(true,"setGravity",loginscreen.__c.getField(false,"Gravity").getField(true,"CENTER_VERTICAL"));
- BA.debugLineNum = 88;BA.debugLine="checkloginPanel.Text = Main.translate.GetString(\"";
+__ref.getField(false,"_checkloginpanel").runMethod(true,"setTextSize",BA.numberCast(float.class, 14));
+ BA.debugLineNum = 88;BA.debugLine="checkloginPanel.Gravity = Gravity.CENTER_VERTICAL";
 Debug.ShouldStop(8388608);
+__ref.getField(false,"_checkloginpanel").runMethod(true,"setGravity",loginscreen.__c.getField(false,"Gravity").getField(true,"CENTER_VERTICAL"));
+ BA.debugLineNum = 89;BA.debugLine="checkloginPanel.Text = Main.translate.GetString(\"";
+Debug.ShouldStop(16777216);
 __ref.getField(false,"_checkloginpanel").runMethod(true,"setText",BA.ObjectToCharSequence(loginscreen._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("rememberMe")))));
- BA.debugLineNum = 91;BA.debugLine="HelperFunctions.Apply_ViewStyle(btnloginPanel,Col";
-Debug.ShouldStop(67108864);
-loginscreen._helperfunctions.runVoidMethod ("_apply_viewstyle",__ref.getField(false, "ba"),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), __ref.getField(false,"_btnloginpanel").getObject()),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"White")),(Object)(BA.numberCast(int.class, 0xff4ac2ff)),(Object)(BA.numberCast(int.class, 0xff149be0)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 60)));
- BA.debugLineNum = 92;BA.debugLine="btnloginPanel.TextSize = 14";
+ BA.debugLineNum = 92;BA.debugLine="HelperFunctions.Apply_ViewStyle(btnloginPanel,Col";
 Debug.ShouldStop(134217728);
-__ref.getField(false,"_btnloginpanel").runMethod(true,"setTextSize",BA.numberCast(float.class, 14));
- BA.debugLineNum = 93;BA.debugLine="btnloginPanel.Gravity = Gravity.CENTER";
+loginscreen._helperfunctions.runVoidMethod ("_apply_viewstyle",__ref.getField(false, "ba"),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), __ref.getField(false,"_btnloginpanel").getObject()),(Object)(loginscreen.__c.getField(false,"Colors").getField(true,"White")),(Object)(BA.numberCast(int.class, 0xff4ac2ff)),(Object)(BA.numberCast(int.class, 0xff149be0)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 60)));
+ BA.debugLineNum = 93;BA.debugLine="btnloginPanel.TextSize = 14";
 Debug.ShouldStop(268435456);
-__ref.getField(false,"_btnloginpanel").runMethod(true,"setGravity",loginscreen.__c.getField(false,"Gravity").getField(true,"CENTER"));
- BA.debugLineNum = 94;BA.debugLine="btnloginPanel.Text = Main.translate.GetString(\"bt";
+__ref.getField(false,"_btnloginpanel").runMethod(true,"setTextSize",BA.numberCast(float.class, 14));
+ BA.debugLineNum = 94;BA.debugLine="btnloginPanel.Gravity = Gravity.CENTER";
 Debug.ShouldStop(536870912);
+__ref.getField(false,"_btnloginpanel").runMethod(true,"setGravity",loginscreen.__c.getField(false,"Gravity").getField(true,"CENTER"));
+ BA.debugLineNum = 95;BA.debugLine="btnloginPanel.Text = Main.translate.GetString(\"bt";
+Debug.ShouldStop(1073741824);
 __ref.getField(false,"_btnloginpanel").runMethod(true,"setText",BA.ObjectToCharSequence(loginscreen._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("btnloginPanel")))));
- BA.debugLineNum = 96;BA.debugLine="End Sub";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 97;BA.debugLine="End Sub";
+Debug.ShouldStop(1);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -351,20 +351,20 @@ finally {
 		}}
 public static RemoteObject  _pass_focuschanged(RemoteObject __ref,RemoteObject _hasfocus) throws Exception{
 try {
-		Debug.PushSubsStack("pass_FocusChanged (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,99);
+		Debug.PushSubsStack("pass_FocusChanged (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,100);
 if (RapidSub.canDelegate("pass_focuschanged")) return __ref.runUserSub(false, "loginscreen","pass_focuschanged", __ref, _hasfocus);
 Debug.locals.put("HasFocus", _hasfocus);
- BA.debugLineNum = 99;BA.debugLine="Private Sub pass_FocusChanged (HasFocus As Boolean";
-Debug.ShouldStop(4);
- BA.debugLineNum = 100;BA.debugLine="If HasFocus Then";
+ BA.debugLineNum = 100;BA.debugLine="Private Sub pass_FocusChanged (HasFocus As Boolean";
 Debug.ShouldStop(8);
-if (_hasfocus.<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 101;BA.debugLine="pass.Text=\"\"";
+ BA.debugLineNum = 101;BA.debugLine="If HasFocus Then";
 Debug.ShouldStop(16);
+if (_hasfocus.<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 102;BA.debugLine="pass.Text=\"\"";
+Debug.ShouldStop(32);
 __ref.getField(false,"_pass").runMethodAndSync(true,"setText",BA.ObjectToCharSequence(""));
  };
- BA.debugLineNum = 103;BA.debugLine="End Sub";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 104;BA.debugLine="End Sub";
+Debug.ShouldStop(128);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -375,30 +375,30 @@ finally {
 		}}
 public static RemoteObject  _read_savedusrs(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("Read_SavedUsrs (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,114);
+		Debug.PushSubsStack("Read_SavedUsrs (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,115);
 if (RapidSub.canDelegate("read_savedusrs")) return __ref.runUserSub(false, "loginscreen","read_savedusrs", __ref);
- BA.debugLineNum = 114;BA.debugLine="Private Sub Read_SavedUsrs";
-Debug.ShouldStop(131072);
- BA.debugLineNum = 115;BA.debugLine="raf.Initialize(File.DirDefaultExternal, \"users.co";
+ BA.debugLineNum = 115;BA.debugLine="Private Sub Read_SavedUsrs";
 Debug.ShouldStop(262144);
-__ref.getField(false,"_raf").runVoidMethod ("Initialize",(Object)(loginscreen.__c.getField(false,"File").runMethod(true,"getDirDefaultExternal")),(Object)(BA.ObjectToString("users.config")),(Object)(loginscreen.__c.getField(true,"False")));
- BA.debugLineNum = 116;BA.debugLine="usrString = raf.ReadEncryptedObject(ProgramData.r";
+ BA.debugLineNum = 116;BA.debugLine="raf.Initialize(File.DirDefaultExternal, \"users.co";
 Debug.ShouldStop(524288);
-__ref.setField ("_usrstring",BA.ObjectToString(__ref.getField(false,"_raf").runMethod(false,"ReadEncryptedObject",(Object)(BA.NumberToString(loginscreen._programdata._rafencpass)),(Object)(__ref.getField(false,"_raf").getField(true,"CurrentPosition")))));
- BA.debugLineNum = 117;BA.debugLine="passString = raf.ReadEncryptedObject(ProgramData.";
+__ref.getField(false,"_raf").runVoidMethod ("Initialize",(Object)(loginscreen.__c.getField(false,"File").runMethod(true,"getDirDefaultExternal")),(Object)(BA.ObjectToString("users.config")),(Object)(loginscreen.__c.getField(true,"False")));
+ BA.debugLineNum = 117;BA.debugLine="usrString = raf.ReadEncryptedObject(ProgramData.r";
 Debug.ShouldStop(1048576);
+__ref.setField ("_usrstring",BA.ObjectToString(__ref.getField(false,"_raf").runMethod(false,"ReadEncryptedObject",(Object)(BA.NumberToString(loginscreen._programdata._rafencpass)),(Object)(__ref.getField(false,"_raf").getField(true,"CurrentPosition")))));
+ BA.debugLineNum = 118;BA.debugLine="passString = raf.ReadEncryptedObject(ProgramData.";
+Debug.ShouldStop(2097152);
 __ref.setField ("_passstring",BA.ObjectToString(__ref.getField(false,"_raf").runMethod(false,"ReadEncryptedObject",(Object)(BA.NumberToString(loginscreen._programdata._rafencpass)),(Object)(__ref.getField(false,"_raf").getField(true,"CurrentPosition")))));
- BA.debugLineNum = 119;BA.debugLine="ProgramData.strUser = usrString";
-Debug.ShouldStop(4194304);
-loginscreen._programdata._struser = __ref.getField(true,"_usrstring");
- BA.debugLineNum = 120;BA.debugLine="ProgramData.strPass = passString";
+ BA.debugLineNum = 120;BA.debugLine="ProgramData.strUser = usrString";
 Debug.ShouldStop(8388608);
-loginscreen._programdata._strpass = __ref.getField(true,"_passstring");
- BA.debugLineNum = 121;BA.debugLine="raf.Close";
+loginscreen._programdata._struser = __ref.getField(true,"_usrstring");
+ BA.debugLineNum = 121;BA.debugLine="ProgramData.strPass = passString";
 Debug.ShouldStop(16777216);
-__ref.getField(false,"_raf").runVoidMethod ("Close");
- BA.debugLineNum = 122;BA.debugLine="End Sub";
+loginscreen._programdata._strpass = __ref.getField(true,"_passstring");
+ BA.debugLineNum = 122;BA.debugLine="raf.Close";
 Debug.ShouldStop(33554432);
+__ref.getField(false,"_raf").runVoidMethod ("Close");
+ BA.debugLineNum = 123;BA.debugLine="End Sub";
+Debug.ShouldStop(67108864);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -452,24 +452,24 @@ finally {
 		}}
 public static RemoteObject  _write_usrs(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("write_Usrs (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,106);
+		Debug.PushSubsStack("write_Usrs (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,107);
 if (RapidSub.canDelegate("write_usrs")) return __ref.runUserSub(false, "loginscreen","write_usrs", __ref);
- BA.debugLineNum = 106;BA.debugLine="Private Sub write_Usrs";
-Debug.ShouldStop(512);
- BA.debugLineNum = 107;BA.debugLine="raf.Initialize(File.DirDefaultExternal, \"users.co";
+ BA.debugLineNum = 107;BA.debugLine="Private Sub write_Usrs";
 Debug.ShouldStop(1024);
-__ref.getField(false,"_raf").runVoidMethod ("Initialize",(Object)(loginscreen.__c.getField(false,"File").runMethod(true,"getDirDefaultExternal")),(Object)(BA.ObjectToString("users.config")),(Object)(loginscreen.__c.getField(true,"False")));
- BA.debugLineNum = 108;BA.debugLine="raf.WriteEncryptedObject(usrString, ProgramData.r";
+ BA.debugLineNum = 108;BA.debugLine="raf.Initialize(File.DirDefaultExternal, \"users.co";
 Debug.ShouldStop(2048);
-__ref.getField(false,"_raf").runVoidMethod ("WriteEncryptedObject",(Object)((__ref.getField(true,"_usrstring"))),(Object)(BA.NumberToString(loginscreen._programdata._rafencpass)),(Object)(__ref.getField(false,"_raf").getField(true,"CurrentPosition")));
- BA.debugLineNum = 109;BA.debugLine="raf.WriteEncryptedObject(passString, ProgramData.";
+__ref.getField(false,"_raf").runVoidMethod ("Initialize",(Object)(loginscreen.__c.getField(false,"File").runMethod(true,"getDirDefaultExternal")),(Object)(BA.ObjectToString("users.config")),(Object)(loginscreen.__c.getField(true,"False")));
+ BA.debugLineNum = 109;BA.debugLine="raf.WriteEncryptedObject(usrString, ProgramData.r";
 Debug.ShouldStop(4096);
-__ref.getField(false,"_raf").runVoidMethod ("WriteEncryptedObject",(Object)((__ref.getField(true,"_passstring"))),(Object)(BA.NumberToString(loginscreen._programdata._rafencpass)),(Object)(__ref.getField(false,"_raf").getField(true,"CurrentPosition")));
- BA.debugLineNum = 110;BA.debugLine="raf.Close";
+__ref.getField(false,"_raf").runVoidMethod ("WriteEncryptedObject",(Object)((__ref.getField(true,"_usrstring"))),(Object)(BA.NumberToString(loginscreen._programdata._rafencpass)),(Object)(__ref.getField(false,"_raf").getField(true,"CurrentPosition")));
+ BA.debugLineNum = 110;BA.debugLine="raf.WriteEncryptedObject(passString, ProgramData.";
 Debug.ShouldStop(8192);
-__ref.getField(false,"_raf").runVoidMethod ("Close");
- BA.debugLineNum = 111;BA.debugLine="End Sub";
+__ref.getField(false,"_raf").runVoidMethod ("WriteEncryptedObject",(Object)((__ref.getField(true,"_passstring"))),(Object)(BA.NumberToString(loginscreen._programdata._rafencpass)),(Object)(__ref.getField(false,"_raf").getField(true,"CurrentPosition")));
+ BA.debugLineNum = 111;BA.debugLine="raf.Close";
 Debug.ShouldStop(16384);
+__ref.getField(false,"_raf").runVoidMethod ("Close");
+ BA.debugLineNum = 112;BA.debugLine="End Sub";
+Debug.ShouldStop(32768);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

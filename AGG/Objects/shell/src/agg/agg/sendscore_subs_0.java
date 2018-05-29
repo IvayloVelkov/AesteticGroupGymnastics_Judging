@@ -8,7 +8,7 @@ public class sendscore_subs_0 {
 
 public static RemoteObject  _asview(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("asView (sendscore) ","sendscore",4,__ref.getField(false, "ba"),__ref,33);
+		Debug.PushSubsStack("asView (sendscore) ","sendscore",3,__ref.getField(false, "ba"),__ref,33);
 if (RapidSub.canDelegate("asview")) return __ref.runUserSub(false, "sendscore","asview", __ref);
  BA.debugLineNum = 33;BA.debugLine="Public Sub asView As Panel";
 Debug.ShouldStop(1);
@@ -40,7 +40,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _finalscore(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("finalScore (sendscore) ","sendscore",4,__ref.getField(false, "ba"),__ref,27);
+		Debug.PushSubsStack("finalScore (sendscore) ","sendscore",3,__ref.getField(false, "ba"),__ref,27);
 if (RapidSub.canDelegate("finalscore")) return __ref.runUserSub(false, "sendscore","finalscore", __ref);
  BA.debugLineNum = 27;BA.debugLine="Public Sub finalScore";
 Debug.ShouldStop(67108864);
@@ -62,7 +62,7 @@ finally {
 		}}
 public static RemoteObject  _initialize(RemoteObject __ref,RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (sendscore) ","sendscore",4,__ref.getField(false, "ba"),__ref,9);
+		Debug.PushSubsStack("Initialize (sendscore) ","sendscore",3,__ref.getField(false, "ba"),__ref,9);
 if (RapidSub.canDelegate("initialize")) return __ref.runUserSub(false, "sendscore","initialize", __ref, _ba);
 __ref.runVoidMethodAndSync("innerInitializeHelper", _ba);
 Debug.locals.put("ba", _ba);
@@ -116,7 +116,7 @@ finally {
 		}}
 public static RemoteObject  _send_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("send_Click (sendscore) ","sendscore",4,__ref.getField(false, "ba"),__ref,37);
+		Debug.PushSubsStack("send_Click (sendscore) ","sendscore",3,__ref.getField(false, "ba"),__ref,37);
 if (RapidSub.canDelegate("send_click")) return __ref.runUserSub(false, "sendscore","send_click", __ref);
  BA.debugLineNum = 37;BA.debugLine="Private Sub send_Click";
 Debug.ShouldStop(16);

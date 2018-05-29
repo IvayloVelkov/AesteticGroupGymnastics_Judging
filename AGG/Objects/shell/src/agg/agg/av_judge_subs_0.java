@@ -8,7 +8,7 @@ public class av_judge_subs_0 {
 
 public static RemoteObject  _asview(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("asView (av_judge) ","av_judge",2,__ref.getField(false, "ba"),__ref,157);
+		Debug.PushSubsStack("asView (av_judge) ","av_judge",5,__ref.getField(false, "ba"),__ref,157);
 if (RapidSub.canDelegate("asview")) return __ref.runUserSub(false, "av_judge","asview", __ref);
  BA.debugLineNum = 157;BA.debugLine="Public Sub asView As Panel";
 Debug.ShouldStop(268435456);
@@ -27,7 +27,7 @@ finally {
 		}}
 public static RemoteObject  _buildui(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("BuildUi (av_judge) ","av_judge",2,__ref.getField(false, "ba"),__ref,32);
+		Debug.PushSubsStack("BuildUi (av_judge) ","av_judge",5,__ref.getField(false, "ba"),__ref,32);
 if (RapidSub.canDelegate("buildui")) return __ref.runUserSub(false, "av_judge","buildui", __ref);
 RemoteObject _col = RemoteObject.declareNull("anywheresoftware.b4a.objects.drawable.ColorDrawable");
 RemoteObject _lblheigh = RemoteObject.createImmutable(0);
@@ -285,7 +285,7 @@ finally {
 		}}
 public static RemoteObject  _check_checkedchange(RemoteObject __ref,RemoteObject _checked) throws Exception{
 try {
-		Debug.PushSubsStack("check_CheckedChange (av_judge) ","av_judge",2,__ref.getField(false, "ba"),__ref,138);
+		Debug.PushSubsStack("check_CheckedChange (av_judge) ","av_judge",5,__ref.getField(false, "ba"),__ref,138);
 if (RapidSub.canDelegate("check_checkedchange")) return __ref.runUserSub(false, "av_judge","check_checkedchange", __ref, _checked);
 Debug.locals.put("Checked", _checked);
  BA.debugLineNum = 138;BA.debugLine="Private Sub check_CheckedChange(Checked As Boolean";
@@ -345,7 +345,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _finalavscore(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("finalAVscore (av_judge) ","av_judge",2,__ref.getField(false, "ba"),__ref,147);
+		Debug.PushSubsStack("finalAVscore (av_judge) ","av_judge",5,__ref.getField(false, "ba"),__ref,147);
 if (RapidSub.canDelegate("finalavscore")) return __ref.runUserSub(false, "av_judge","finalavscore", __ref);
  BA.debugLineNum = 147;BA.debugLine="Public Sub finalAVscore As Double";
 Debug.ShouldStop(262144);
@@ -367,7 +367,7 @@ finally {
 		}}
 public static RemoteObject  _initialize(RemoteObject __ref,RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (av_judge) ","av_judge",2,__ref.getField(false, "ba"),__ref,17);
+		Debug.PushSubsStack("Initialize (av_judge) ","av_judge",5,__ref.getField(false, "ba"),__ref,17);
 if (RapidSub.canDelegate("initialize")) return __ref.runUserSub(false, "av_judge","initialize", __ref, _ba);
 __ref.runVoidMethodAndSync("innerInitializeHelper", _ba);
 int _i = 0;
@@ -437,7 +437,7 @@ finally {
 		}}
 public static RemoteObject  _ready_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("ready_Click (av_judge) ","av_judge",2,__ref.getField(false, "ba"),__ref,152);
+		Debug.PushSubsStack("ready_Click (av_judge) ","av_judge",5,__ref.getField(false, "ba"),__ref,152);
 if (RapidSub.canDelegate("ready_click")) return __ref.runUserSub(false, "av_judge","ready_click", __ref);
  BA.debugLineNum = 152;BA.debugLine="Private Sub ready_Click";
 Debug.ShouldStop(8388608);

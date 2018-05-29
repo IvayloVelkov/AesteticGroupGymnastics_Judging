@@ -8,15 +8,15 @@ public class tv_judge_subs_0 {
 
 public static RemoteObject  _asview(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("asView (tv_judge) ","tv_judge",1,__ref.getField(false, "ba"),__ref,207);
+		Debug.PushSubsStack("asView (tv_judge) ","tv_judge",1,__ref.getField(false, "ba"),__ref,196);
 if (RapidSub.canDelegate("asview")) return __ref.runUserSub(false, "tv_judge","asview", __ref);
- BA.debugLineNum = 207;BA.debugLine="Public Sub asView As Panel";
-Debug.ShouldStop(16384);
- BA.debugLineNum = 208;BA.debugLine="Return tvPanel";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 196;BA.debugLine="Public Sub asView As Panel";
+Debug.ShouldStop(8);
+ BA.debugLineNum = 197;BA.debugLine="Return tvPanel";
+Debug.ShouldStop(16);
 if (true) return __ref.getField(false,"_tvpanel");
- BA.debugLineNum = 209;BA.debugLine="End Sub";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 198;BA.debugLine="End Sub";
+Debug.ShouldStop(32);
 return RemoteObject.createImmutable(null);
 }
 catch (Exception e) {
@@ -38,10 +38,10 @@ Debug.ShouldStop(512);
 __ref.getField(false,"_container").runVoidMethod ("Initialize",__ref.getField(false, "ba"));
  BA.debugLineNum = 44;BA.debugLine="Container.AddPage(page(0), Main.translate.GetStri";
 Debug.ShouldStop(2048);
-__ref.getField(false,"_container").runVoidMethod ("AddPage",(Object)((__ref.getField(false,"_page").getArrayElement(false,BA.numberCast(int.class, 0)).getObject())),(Object)(tv_judge._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("AvPage0")))));
+__ref.getField(false,"_container").runVoidMethod ("AddPage",(Object)((__ref.getField(false,"_page").getArrayElement(false,BA.numberCast(int.class, 0)).getObject())),(Object)(tv_judge._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("TvPage0")))));
  BA.debugLineNum = 45;BA.debugLine="Container.AddPage(page(1), Main.translate.GetStri";
 Debug.ShouldStop(4096);
-__ref.getField(false,"_container").runVoidMethod ("AddPage",(Object)((__ref.getField(false,"_page").getArrayElement(false,BA.numberCast(int.class, 1)).getObject())),(Object)(tv_judge._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("AvPage1")))));
+__ref.getField(false,"_container").runVoidMethod ("AddPage",(Object)((__ref.getField(false,"_page").getArrayElement(false,BA.numberCast(int.class, 1)).getObject())),(Object)(tv_judge._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("TvPage1")))));
  BA.debugLineNum = 47;BA.debugLine="Pager.Initialize(Container, \"MPager\")";
 Debug.ShouldStop(16384);
 __ref.getField(false,"_pager").runVoidMethod ("Initialize",__ref.getField(false, "ba"),(Object)(__ref.getField(false,"_container")),(Object)(RemoteObject.createImmutable("MPager")));
@@ -270,7 +270,6 @@ try {
 		Debug.PushSubsStack("check1_CheckedChange (tv_judge) ","tv_judge",1,__ref.getField(false, "ba"),__ref,157);
 if (RapidSub.canDelegate("check1_checkedchange")) return __ref.runUserSub(false, "tv_judge","check1_checkedchange", __ref, _checked);
 RemoteObject _chek1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");
-RemoteObject _chek = RemoteObject.createImmutable(0);
 Debug.locals.put("Checked", _checked);
  BA.debugLineNum = 157;BA.debugLine="Private Sub check1_CheckedChange(Checked As Boolea";
 Debug.ShouldStop(268435456);
@@ -278,31 +277,22 @@ Debug.ShouldStop(268435456);
 Debug.ShouldStop(536870912);
 _chek1 = RemoteObject.createNew ("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");
 _chek1.setObject(tv_judge.__c.runMethod(false,"Sender",__ref.getField(false, "ba")));Debug.locals.put("chek1", _chek1);
- BA.debugLineNum = 159;BA.debugLine="Private chek As Int = Sender";
+ BA.debugLineNum = 159;BA.debugLine="chek1 = Sender";
 Debug.ShouldStop(1073741824);
-_chek = BA.numberCast(int.class, tv_judge.__c.runMethod(false,"Sender",__ref.getField(false, "ba")));Debug.locals.put("chek", _chek);Debug.locals.put("chek", _chek);
- BA.debugLineNum = 160;BA.debugLine="chek1 = Sender";
-Debug.ShouldStop(-2147483648);
 _chek1.setObject(tv_judge.__c.runMethod(false,"Sender",__ref.getField(false, "ba")));
- BA.debugLineNum = 161;BA.debugLine="If chek1.Checked = True Then";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 160;BA.debugLine="If chek1.Checked = True Then";
+Debug.ShouldStop(-2147483648);
 if (RemoteObject.solveBoolean("=",_chek1.runMethod(true,"getChecked"),tv_judge.__c.getField(true,"True"))) { 
- BA.debugLineNum = 162;BA.debugLine="tvScore = tvScore + 0.1";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 161;BA.debugLine="tvScore = tvScore + 0.1";
+Debug.ShouldStop(1);
 __ref.setField ("_tvscore",RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_tvscore"),RemoteObject.createImmutable(0.1)}, "+",1, 0));
- BA.debugLineNum = 163;BA.debugLine="chekpointbox2(chek).Checked = False";
-Debug.ShouldStop(4);
-__ref.getField(false,"_chekpointbox2").getArrayElement(false,_chek).runMethodAndSync(true,"setChecked",tv_judge.__c.getField(true,"False"));
- BA.debugLineNum = 164;BA.debugLine="chekpointbox3(chek).Checked = False";
-Debug.ShouldStop(8);
-__ref.getField(false,"_chekpointbox3").getArrayElement(false,_chek).runMethodAndSync(true,"setChecked",tv_judge.__c.getField(true,"False"));
  }else {
- BA.debugLineNum = 166;BA.debugLine="tvScore = tvScore - 0.1";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 163;BA.debugLine="tvScore = tvScore - 0.1";
+Debug.ShouldStop(4);
 __ref.setField ("_tvscore",RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_tvscore"),RemoteObject.createImmutable(0.1)}, "-",1, 0));
  };
- BA.debugLineNum = 168;BA.debugLine="End Sub";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 165;BA.debugLine="End Sub";
+Debug.ShouldStop(16);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -313,41 +303,31 @@ finally {
 		}}
 public static RemoteObject  _check2_checkedchange(RemoteObject __ref,RemoteObject _checked) throws Exception{
 try {
-		Debug.PushSubsStack("check2_CheckedChange (tv_judge) ","tv_judge",1,__ref.getField(false, "ba"),__ref,170);
+		Debug.PushSubsStack("check2_CheckedChange (tv_judge) ","tv_judge",1,__ref.getField(false, "ba"),__ref,167);
 if (RapidSub.canDelegate("check2_checkedchange")) return __ref.runUserSub(false, "tv_judge","check2_checkedchange", __ref, _checked);
-RemoteObject _chek = RemoteObject.createImmutable(0);
 RemoteObject _chek2 = RemoteObject.declareNull("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");
 Debug.locals.put("Checked", _checked);
- BA.debugLineNum = 170;BA.debugLine="Private Sub check2_CheckedChange(Checked As Boolea";
-Debug.ShouldStop(512);
- BA.debugLineNum = 171;BA.debugLine="Private chek As Int = Sender";
-Debug.ShouldStop(1024);
-_chek = BA.numberCast(int.class, tv_judge.__c.runMethod(false,"Sender",__ref.getField(false, "ba")));Debug.locals.put("chek", _chek);Debug.locals.put("chek", _chek);
- BA.debugLineNum = 173;BA.debugLine="Private chek2 As CheckBox";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 167;BA.debugLine="Private Sub check2_CheckedChange(Checked As Boolea";
+Debug.ShouldStop(64);
+ BA.debugLineNum = 168;BA.debugLine="Private chek2 As CheckBox";
+Debug.ShouldStop(128);
 _chek2 = RemoteObject.createNew ("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");Debug.locals.put("chek2", _chek2);
- BA.debugLineNum = 174;BA.debugLine="chek2 = Sender";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 169;BA.debugLine="chek2 = Sender";
+Debug.ShouldStop(256);
 _chek2.setObject(tv_judge.__c.runMethod(false,"Sender",__ref.getField(false, "ba")));
- BA.debugLineNum = 175;BA.debugLine="If chek2.Checked = True Then";
-Debug.ShouldStop(16384);
+ BA.debugLineNum = 170;BA.debugLine="If chek2.Checked = True Then";
+Debug.ShouldStop(512);
 if (RemoteObject.solveBoolean("=",_chek2.runMethod(true,"getChecked"),tv_judge.__c.getField(true,"True"))) { 
- BA.debugLineNum = 176;BA.debugLine="tvScore = tvScore + 0.2";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 171;BA.debugLine="tvScore = tvScore + 0.2";
+Debug.ShouldStop(1024);
 __ref.setField ("_tvscore",RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_tvscore"),RemoteObject.createImmutable(0.2)}, "+",1, 0));
- BA.debugLineNum = 177;BA.debugLine="chekpointbox3(chek).Checked = False";
-Debug.ShouldStop(65536);
-__ref.getField(false,"_chekpointbox3").getArrayElement(false,_chek).runMethodAndSync(true,"setChecked",tv_judge.__c.getField(true,"False"));
- BA.debugLineNum = 178;BA.debugLine="chekpointbox1(chek).Checked = False";
-Debug.ShouldStop(131072);
-__ref.getField(false,"_chekpointbox1").getArrayElement(false,_chek).runMethodAndSync(true,"setChecked",tv_judge.__c.getField(true,"False"));
  }else {
- BA.debugLineNum = 180;BA.debugLine="tvScore = tvScore - 0.2";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 173;BA.debugLine="tvScore = tvScore - 0.2";
+Debug.ShouldStop(4096);
 __ref.setField ("_tvscore",RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_tvscore"),RemoteObject.createImmutable(0.2)}, "-",1, 0));
  };
- BA.debugLineNum = 182;BA.debugLine="End Sub";
-Debug.ShouldStop(2097152);
+ BA.debugLineNum = 175;BA.debugLine="End Sub";
+Debug.ShouldStop(16384);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -358,42 +338,32 @@ finally {
 		}}
 public static RemoteObject  _check3_checkedchange(RemoteObject __ref,RemoteObject _checked) throws Exception{
 try {
-		Debug.PushSubsStack("check3_CheckedChange (tv_judge) ","tv_judge",1,__ref.getField(false, "ba"),__ref,184);
+		Debug.PushSubsStack("check3_CheckedChange (tv_judge) ","tv_judge",1,__ref.getField(false, "ba"),__ref,177);
 if (RapidSub.canDelegate("check3_checkedchange")) return __ref.runUserSub(false, "tv_judge","check3_checkedchange", __ref, _checked);
 RemoteObject _chek3 = RemoteObject.declareNull("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");
-RemoteObject _chek = RemoteObject.createImmutable(0);
 Debug.locals.put("Checked", _checked);
- BA.debugLineNum = 184;BA.debugLine="Private Sub check3_CheckedChange(Checked As Boolea";
-Debug.ShouldStop(8388608);
- BA.debugLineNum = 185;BA.debugLine="Private chek3 As CheckBox = Sender";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 177;BA.debugLine="Private Sub check3_CheckedChange(Checked As Boolea";
+Debug.ShouldStop(65536);
+ BA.debugLineNum = 178;BA.debugLine="Private chek3 As CheckBox = Sender";
+Debug.ShouldStop(131072);
 _chek3 = RemoteObject.createNew ("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");
 _chek3.setObject(tv_judge.__c.runMethod(false,"Sender",__ref.getField(false, "ba")));Debug.locals.put("chek3", _chek3);
- BA.debugLineNum = 186;BA.debugLine="Private chek As Int = Sender";
-Debug.ShouldStop(33554432);
-_chek = BA.numberCast(int.class, tv_judge.__c.runMethod(false,"Sender",__ref.getField(false, "ba")));Debug.locals.put("chek", _chek);Debug.locals.put("chek", _chek);
- BA.debugLineNum = 188;BA.debugLine="chek3 = Sender";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 179;BA.debugLine="chek3 = Sender";
+Debug.ShouldStop(262144);
 _chek3.setObject(tv_judge.__c.runMethod(false,"Sender",__ref.getField(false, "ba")));
- BA.debugLineNum = 189;BA.debugLine="If chek3.Checked = True Then";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 180;BA.debugLine="If chek3.Checked = True Then";
+Debug.ShouldStop(524288);
 if (RemoteObject.solveBoolean("=",_chek3.runMethod(true,"getChecked"),tv_judge.__c.getField(true,"True"))) { 
- BA.debugLineNum = 190;BA.debugLine="tvScore = tvScore + 0.3";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 181;BA.debugLine="tvScore = tvScore + 0.3";
+Debug.ShouldStop(1048576);
 __ref.setField ("_tvscore",RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_tvscore"),RemoteObject.createImmutable(0.3)}, "+",1, 0));
- BA.debugLineNum = 191;BA.debugLine="chekpointbox2(chek).Checked = False";
-Debug.ShouldStop(1073741824);
-__ref.getField(false,"_chekpointbox2").getArrayElement(false,_chek).runMethodAndSync(true,"setChecked",tv_judge.__c.getField(true,"False"));
- BA.debugLineNum = 192;BA.debugLine="chekpointbox1(chek).Checked = False";
-Debug.ShouldStop(-2147483648);
-__ref.getField(false,"_chekpointbox1").getArrayElement(false,_chek).runMethodAndSync(true,"setChecked",tv_judge.__c.getField(true,"False"));
  }else {
- BA.debugLineNum = 194;BA.debugLine="tvScore = tvScore - 0.3";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 183;BA.debugLine="tvScore = tvScore - 0.3";
+Debug.ShouldStop(4194304);
 __ref.setField ("_tvscore",RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_tvscore"),RemoteObject.createImmutable(0.3)}, "-",1, 0));
  };
- BA.debugLineNum = 196;BA.debugLine="End Sub";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 185;BA.debugLine="End Sub";
+Debug.ShouldStop(16777216);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -437,18 +407,18 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _finaltvscore(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("finalTVscore (tv_judge) ","tv_judge",1,__ref.getField(false, "ba"),__ref,197);
+		Debug.PushSubsStack("finalTVscore (tv_judge) ","tv_judge",1,__ref.getField(false, "ba"),__ref,186);
 if (RapidSub.canDelegate("finaltvscore")) return __ref.runUserSub(false, "tv_judge","finaltvscore", __ref);
- BA.debugLineNum = 197;BA.debugLine="Public Sub finalTVscore As Double";
-Debug.ShouldStop(16);
- BA.debugLineNum = 198;BA.debugLine="Log(\"AVSCORE:\"&tvScore)";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 186;BA.debugLine="Public Sub finalTVscore As Double";
+Debug.ShouldStop(33554432);
+ BA.debugLineNum = 187;BA.debugLine="Log(\"AVSCORE:\"&tvScore)";
+Debug.ShouldStop(67108864);
 tv_judge.__c.runVoidMethod ("Log",(Object)(RemoteObject.concat(RemoteObject.createImmutable("AVSCORE:"),__ref.getField(true,"_tvscore"))));
- BA.debugLineNum = 199;BA.debugLine="Return tvScore";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 188;BA.debugLine="Return tvScore";
+Debug.ShouldStop(134217728);
 if (true) return __ref.getField(true,"_tvscore");
- BA.debugLineNum = 200;BA.debugLine="End Sub";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 189;BA.debugLine="End Sub";
+Debug.ShouldStop(268435456);
 return RemoteObject.createImmutable(0);
 }
 catch (Exception e) {
@@ -557,18 +527,18 @@ finally {
 		}}
 public static RemoteObject  _ready_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("ready_Click (tv_judge) ","tv_judge",1,__ref.getField(false, "ba"),__ref,202);
+		Debug.PushSubsStack("ready_Click (tv_judge) ","tv_judge",1,__ref.getField(false, "ba"),__ref,191);
 if (RapidSub.canDelegate("ready_click")) return __ref.runUserSub(false, "tv_judge","ready_click", __ref);
- BA.debugLineNum = 202;BA.debugLine="Private Sub ready_Click";
-Debug.ShouldStop(512);
- BA.debugLineNum = 203;BA.debugLine="CallSub(Main, \"FinalClick\")";
-Debug.ShouldStop(1024);
+ BA.debugLineNum = 191;BA.debugLine="Private Sub ready_Click";
+Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 192;BA.debugLine="CallSub(Main, \"FinalClick\")";
+Debug.ShouldStop(-2147483648);
 tv_judge.__c.runMethodAndSync(false,"CallSubNew",__ref.getField(false, "ba"),(Object)((tv_judge._main.getObject())),(Object)(RemoteObject.createImmutable("FinalClick")));
- BA.debugLineNum = 204;BA.debugLine="finalTVscore";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 193;BA.debugLine="finalTVscore";
+Debug.ShouldStop(1);
 __ref.runClassMethod (agg.agg.tv_judge.class, "_finaltvscore");
- BA.debugLineNum = 205;BA.debugLine="End Sub";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 194;BA.debugLine="End Sub";
+Debug.ShouldStop(2);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

@@ -138,13 +138,13 @@ __ref = this;
 RDebugUtils.currentModule="tv_judge";
 if (Debug.shouldDelegate(ba, "asview"))
 	return (anywheresoftware.b4a.objects.PanelWrapper) Debug.delegate(ba, "asview", null);
-RDebugUtils.currentLine=1638400;
- //BA.debugLineNum = 1638400;BA.debugLine="Public Sub asView As Panel";
-RDebugUtils.currentLine=1638401;
- //BA.debugLineNum = 1638401;BA.debugLine="Return tvPanel";
+RDebugUtils.currentLine=1703936;
+ //BA.debugLineNum = 1703936;BA.debugLine="Public Sub asView As Panel";
+RDebugUtils.currentLine=1703937;
+ //BA.debugLineNum = 1703937;BA.debugLine="Return tvPanel";
 if (true) return __ref._tvpanel;
-RDebugUtils.currentLine=1638402;
- //BA.debugLineNum = 1638402;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1703938;
+ //BA.debugLineNum = 1703938;BA.debugLine="End Sub";
 return null;
 }
 public String  _buildui(agg.agg.tv_judge __ref) throws Exception{
@@ -161,10 +161,10 @@ RDebugUtils.currentLine=1310721;
 __ref._container.Initialize(ba);
 RDebugUtils.currentLine=1310723;
  //BA.debugLineNum = 1310723;BA.debugLine="Container.AddPage(page(0), Main.translate.GetStri";
-__ref._container.AddPage((android.view.View)(__ref._page[(int) (0)].getObject()),_main._translate._getstring(null,"AvPage0"));
+__ref._container.AddPage((android.view.View)(__ref._page[(int) (0)].getObject()),_main._translate._getstring(null,"TvPage0"));
 RDebugUtils.currentLine=1310724;
  //BA.debugLineNum = 1310724;BA.debugLine="Container.AddPage(page(1), Main.translate.GetStri";
-__ref._container.AddPage((android.view.View)(__ref._page[(int) (1)].getObject()),_main._translate._getstring(null,"AvPage1"));
+__ref._container.AddPage((android.view.View)(__ref._page[(int) (1)].getObject()),_main._translate._getstring(null,"TvPage1"));
 RDebugUtils.currentLine=1310726;
  //BA.debugLineNum = 1310726;BA.debugLine="Pager.Initialize(Container, \"MPager\")";
 __ref._pager.Initialize(ba,__ref._container,"MPager");
@@ -381,16 +381,16 @@ __ref = this;
 RDebugUtils.currentModule="tv_judge";
 if (Debug.shouldDelegate(ba, "finaltvscore"))
 	return (Double) Debug.delegate(ba, "finaltvscore", null);
-RDebugUtils.currentLine=6553600;
- //BA.debugLineNum = 6553600;BA.debugLine="Public Sub finalTVscore As Double";
-RDebugUtils.currentLine=6553601;
- //BA.debugLineNum = 6553601;BA.debugLine="Log(\"AVSCORE:\"&tvScore)";
+RDebugUtils.currentLine=1572864;
+ //BA.debugLineNum = 1572864;BA.debugLine="Public Sub finalTVscore As Double";
+RDebugUtils.currentLine=1572865;
+ //BA.debugLineNum = 1572865;BA.debugLine="Log(\"AVSCORE:\"&tvScore)";
 __c.Log("AVSCORE:"+BA.NumberToString(__ref._tvscore));
-RDebugUtils.currentLine=6553602;
- //BA.debugLineNum = 6553602;BA.debugLine="Return tvScore";
+RDebugUtils.currentLine=1572866;
+ //BA.debugLineNum = 1572866;BA.debugLine="Return tvScore";
 if (true) return __ref._tvscore;
-RDebugUtils.currentLine=6553603;
- //BA.debugLineNum = 6553603;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1572867;
+ //BA.debugLineNum = 1572867;BA.debugLine="End Sub";
 return 0;
 }
 public String  _check1_checkedchange(agg.agg.tv_judge __ref,boolean _checked) throws Exception{
@@ -399,7 +399,6 @@ RDebugUtils.currentModule="tv_judge";
 if (Debug.shouldDelegate(ba, "check1_checkedchange"))
 	return (String) Debug.delegate(ba, "check1_checkedchange", new Object[] {_checked});
 anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _chek1 = null;
-int _chek = 0;
 RDebugUtils.currentLine=1376256;
  //BA.debugLineNum = 1376256;BA.debugLine="Private Sub check1_CheckedChange(Checked As Boolea";
 RDebugUtils.currentLine=1376257;
@@ -407,30 +406,21 @@ RDebugUtils.currentLine=1376257;
 _chek1 = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
 _chek1.setObject((android.widget.CheckBox)(__c.Sender(ba)));
 RDebugUtils.currentLine=1376258;
- //BA.debugLineNum = 1376258;BA.debugLine="Private chek As Int = Sender";
-_chek = (int)(BA.ObjectToNumber(__c.Sender(ba)));
-RDebugUtils.currentLine=1376259;
- //BA.debugLineNum = 1376259;BA.debugLine="chek1 = Sender";
+ //BA.debugLineNum = 1376258;BA.debugLine="chek1 = Sender";
 _chek1.setObject((android.widget.CheckBox)(__c.Sender(ba)));
-RDebugUtils.currentLine=1376260;
- //BA.debugLineNum = 1376260;BA.debugLine="If chek1.Checked = True Then";
+RDebugUtils.currentLine=1376259;
+ //BA.debugLineNum = 1376259;BA.debugLine="If chek1.Checked = True Then";
 if (_chek1.getChecked()==__c.True) { 
-RDebugUtils.currentLine=1376261;
- //BA.debugLineNum = 1376261;BA.debugLine="tvScore = tvScore + 0.1";
+RDebugUtils.currentLine=1376260;
+ //BA.debugLineNum = 1376260;BA.debugLine="tvScore = tvScore + 0.1";
 __ref._tvscore = __ref._tvscore+0.1;
-RDebugUtils.currentLine=1376262;
- //BA.debugLineNum = 1376262;BA.debugLine="chekpointbox2(chek).Checked = False";
-__ref._chekpointbox2[_chek].setChecked(__c.False);
-RDebugUtils.currentLine=1376263;
- //BA.debugLineNum = 1376263;BA.debugLine="chekpointbox3(chek).Checked = False";
-__ref._chekpointbox3[_chek].setChecked(__c.False);
  }else {
-RDebugUtils.currentLine=1376265;
- //BA.debugLineNum = 1376265;BA.debugLine="tvScore = tvScore - 0.1";
+RDebugUtils.currentLine=1376262;
+ //BA.debugLineNum = 1376262;BA.debugLine="tvScore = tvScore - 0.1";
 __ref._tvscore = __ref._tvscore-0.1;
  };
-RDebugUtils.currentLine=1376267;
- //BA.debugLineNum = 1376267;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1376264;
+ //BA.debugLineNum = 1376264;BA.debugLine="End Sub";
 return "";
 }
 public String  _check2_checkedchange(agg.agg.tv_judge __ref,boolean _checked) throws Exception{
@@ -438,38 +428,28 @@ __ref = this;
 RDebugUtils.currentModule="tv_judge";
 if (Debug.shouldDelegate(ba, "check2_checkedchange"))
 	return (String) Debug.delegate(ba, "check2_checkedchange", new Object[] {_checked});
-int _chek = 0;
 anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _chek2 = null;
 RDebugUtils.currentLine=1441792;
  //BA.debugLineNum = 1441792;BA.debugLine="Private Sub check2_CheckedChange(Checked As Boolea";
 RDebugUtils.currentLine=1441793;
- //BA.debugLineNum = 1441793;BA.debugLine="Private chek As Int = Sender";
-_chek = (int)(BA.ObjectToNumber(__c.Sender(ba)));
-RDebugUtils.currentLine=1441795;
- //BA.debugLineNum = 1441795;BA.debugLine="Private chek2 As CheckBox";
+ //BA.debugLineNum = 1441793;BA.debugLine="Private chek2 As CheckBox";
 _chek2 = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
-RDebugUtils.currentLine=1441796;
- //BA.debugLineNum = 1441796;BA.debugLine="chek2 = Sender";
+RDebugUtils.currentLine=1441794;
+ //BA.debugLineNum = 1441794;BA.debugLine="chek2 = Sender";
 _chek2.setObject((android.widget.CheckBox)(__c.Sender(ba)));
-RDebugUtils.currentLine=1441797;
- //BA.debugLineNum = 1441797;BA.debugLine="If chek2.Checked = True Then";
+RDebugUtils.currentLine=1441795;
+ //BA.debugLineNum = 1441795;BA.debugLine="If chek2.Checked = True Then";
 if (_chek2.getChecked()==__c.True) { 
-RDebugUtils.currentLine=1441798;
- //BA.debugLineNum = 1441798;BA.debugLine="tvScore = tvScore + 0.2";
+RDebugUtils.currentLine=1441796;
+ //BA.debugLineNum = 1441796;BA.debugLine="tvScore = tvScore + 0.2";
 __ref._tvscore = __ref._tvscore+0.2;
-RDebugUtils.currentLine=1441799;
- //BA.debugLineNum = 1441799;BA.debugLine="chekpointbox3(chek).Checked = False";
-__ref._chekpointbox3[_chek].setChecked(__c.False);
-RDebugUtils.currentLine=1441800;
- //BA.debugLineNum = 1441800;BA.debugLine="chekpointbox1(chek).Checked = False";
-__ref._chekpointbox1[_chek].setChecked(__c.False);
  }else {
-RDebugUtils.currentLine=1441802;
- //BA.debugLineNum = 1441802;BA.debugLine="tvScore = tvScore - 0.2";
+RDebugUtils.currentLine=1441798;
+ //BA.debugLineNum = 1441798;BA.debugLine="tvScore = tvScore - 0.2";
 __ref._tvscore = __ref._tvscore-0.2;
  };
-RDebugUtils.currentLine=1441804;
- //BA.debugLineNum = 1441804;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1441800;
+ //BA.debugLineNum = 1441800;BA.debugLine="End Sub";
 return "";
 }
 public String  _check3_checkedchange(agg.agg.tv_judge __ref,boolean _checked) throws Exception{
@@ -478,7 +458,6 @@ RDebugUtils.currentModule="tv_judge";
 if (Debug.shouldDelegate(ba, "check3_checkedchange"))
 	return (String) Debug.delegate(ba, "check3_checkedchange", new Object[] {_checked});
 anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _chek3 = null;
-int _chek = 0;
 RDebugUtils.currentLine=1507328;
  //BA.debugLineNum = 1507328;BA.debugLine="Private Sub check3_CheckedChange(Checked As Boolea";
 RDebugUtils.currentLine=1507329;
@@ -486,30 +465,21 @@ RDebugUtils.currentLine=1507329;
 _chek3 = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
 _chek3.setObject((android.widget.CheckBox)(__c.Sender(ba)));
 RDebugUtils.currentLine=1507330;
- //BA.debugLineNum = 1507330;BA.debugLine="Private chek As Int = Sender";
-_chek = (int)(BA.ObjectToNumber(__c.Sender(ba)));
-RDebugUtils.currentLine=1507332;
- //BA.debugLineNum = 1507332;BA.debugLine="chek3 = Sender";
+ //BA.debugLineNum = 1507330;BA.debugLine="chek3 = Sender";
 _chek3.setObject((android.widget.CheckBox)(__c.Sender(ba)));
-RDebugUtils.currentLine=1507333;
- //BA.debugLineNum = 1507333;BA.debugLine="If chek3.Checked = True Then";
+RDebugUtils.currentLine=1507331;
+ //BA.debugLineNum = 1507331;BA.debugLine="If chek3.Checked = True Then";
 if (_chek3.getChecked()==__c.True) { 
-RDebugUtils.currentLine=1507334;
- //BA.debugLineNum = 1507334;BA.debugLine="tvScore = tvScore + 0.3";
+RDebugUtils.currentLine=1507332;
+ //BA.debugLineNum = 1507332;BA.debugLine="tvScore = tvScore + 0.3";
 __ref._tvscore = __ref._tvscore+0.3;
-RDebugUtils.currentLine=1507335;
- //BA.debugLineNum = 1507335;BA.debugLine="chekpointbox2(chek).Checked = False";
-__ref._chekpointbox2[_chek].setChecked(__c.False);
-RDebugUtils.currentLine=1507336;
- //BA.debugLineNum = 1507336;BA.debugLine="chekpointbox1(chek).Checked = False";
-__ref._chekpointbox1[_chek].setChecked(__c.False);
  }else {
-RDebugUtils.currentLine=1507338;
- //BA.debugLineNum = 1507338;BA.debugLine="tvScore = tvScore - 0.3";
+RDebugUtils.currentLine=1507334;
+ //BA.debugLineNum = 1507334;BA.debugLine="tvScore = tvScore - 0.3";
 __ref._tvscore = __ref._tvscore-0.3;
  };
-RDebugUtils.currentLine=1507340;
- //BA.debugLineNum = 1507340;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1507336;
+ //BA.debugLineNum = 1507336;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals(agg.agg.tv_judge __ref) throws Exception{
@@ -603,16 +573,16 @@ __ref = this;
 RDebugUtils.currentModule="tv_judge";
 if (Debug.shouldDelegate(ba, "ready_click"))
 	return (String) Debug.delegate(ba, "ready_click", null);
-RDebugUtils.currentLine=1572864;
- //BA.debugLineNum = 1572864;BA.debugLine="Private Sub ready_Click";
-RDebugUtils.currentLine=1572865;
- //BA.debugLineNum = 1572865;BA.debugLine="CallSub(Main, \"FinalClick\")";
+RDebugUtils.currentLine=1638400;
+ //BA.debugLineNum = 1638400;BA.debugLine="Private Sub ready_Click";
+RDebugUtils.currentLine=1638401;
+ //BA.debugLineNum = 1638401;BA.debugLine="CallSub(Main, \"FinalClick\")";
 __c.CallSubDebug(ba,(Object)(_main.getObject()),"FinalClick");
-RDebugUtils.currentLine=1572866;
- //BA.debugLineNum = 1572866;BA.debugLine="finalTVscore";
+RDebugUtils.currentLine=1638402;
+ //BA.debugLineNum = 1638402;BA.debugLine="finalTVscore";
 __ref._finaltvscore(null);
-RDebugUtils.currentLine=1572867;
- //BA.debugLineNum = 1572867;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1638403;
+ //BA.debugLineNum = 1638403;BA.debugLine="End Sub";
 return "";
 }
 }

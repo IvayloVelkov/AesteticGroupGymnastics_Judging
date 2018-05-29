@@ -39,7 +39,7 @@ End Sub
 Public Sub BuildUi
 	Container.Initialize
 		
-	Container.AddPage(page(0), Main.translate.GetString("AvPage0"))
+	Container.AddPage(page(0), Main.translate.GetString("ExePage0"))
 
 	Pager.Initialize(Container, "MPager")
 	
@@ -73,7 +73,7 @@ Public Sub BuildUi
 	downPanel.AddView(btnready, downPanel.Width - 12%x, 0, 10%x, 33dip)
 	
 	page(0).AddView(label(0), 2%x, 5%y, 50%x, 10%y)
-	label(0).Text = Main.translate.GetString("AVlabal0")
+	label(0).Text = Main.translate.GetString("Exelabal0")
 	label(0).TextColor = Colors.White
 	
 	page(0).AddView(btnPoints(0), label(0).left + label(0).Width + 10%x, label(0).Top, 15%x, 10%y)
@@ -81,7 +81,7 @@ Public Sub BuildUi
 
 	For i = 1 To 7
 		page(0).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
-		label(i).Text = Main.translate.GetString("AVlabal" & i)
+		label(i).Text = Main.translate.GetString("Exelabal" & i)
 		label(i).TextColor = Colors.White
 	Next
 	

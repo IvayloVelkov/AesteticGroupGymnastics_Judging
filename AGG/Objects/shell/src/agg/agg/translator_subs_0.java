@@ -47,7 +47,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _duplicate_map(RemoteObject __ref,RemoteObject _source) throws Exception{
 try {
-		Debug.PushSubsStack("Duplicate_Map (translator) ","translator",5,__ref.getField(false, "ba"),__ref,158);
+		Debug.PushSubsStack("Duplicate_Map (translator) ","translator",6,__ref.getField(false, "ba"),__ref,158);
 if (RapidSub.canDelegate("duplicate_map")) return __ref.runUserSub(false, "translator","duplicate_map", __ref, _source);
 RemoteObject _copymap = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _key = RemoteObject.createImmutable("");
@@ -91,7 +91,7 @@ finally {
 		}}
 public static RemoteObject  _generate_languagelist(RemoteObject __ref,RemoteObject _langabbreviation) throws Exception{
 try {
-		Debug.PushSubsStack("Generate_LanguageList (translator) ","translator",5,__ref.getField(false, "ba"),__ref,169);
+		Debug.PushSubsStack("Generate_LanguageList (translator) ","translator",6,__ref.getField(false, "ba"),__ref,169);
 if (RapidSub.canDelegate("generate_languagelist")) return __ref.runUserSub(false, "translator","generate_languagelist", __ref, _langabbreviation);
 Debug.locals.put("langAbbreviation", _langabbreviation);
  BA.debugLineNum = 169;BA.debugLine="Private Sub Generate_LanguageList(langAbbreviation";
@@ -131,7 +131,7 @@ finally {
 		}}
 public static RemoteObject  _generate_maprow(RemoteObject __ref,RemoteObject _name,RemoteObject _text,RemoteObject _language) throws Exception{
 try {
-		Debug.PushSubsStack("Generate_MapRow (translator) ","translator",5,__ref.getField(false, "ba"),__ref,183);
+		Debug.PushSubsStack("Generate_MapRow (translator) ","translator",6,__ref.getField(false, "ba"),__ref,183);
 if (RapidSub.canDelegate("generate_maprow")) return __ref.runUserSub(false, "translator","generate_maprow", __ref, _name, _text, _language);
 RemoteObject _newrecords = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 RemoteObject _keytranslation = RemoteObject.createImmutable("");
@@ -202,7 +202,7 @@ finally {
 		}}
 public static RemoteObject  _get_language(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("Get_Language (translator) ","translator",5,__ref.getField(false, "ba"),__ref,253);
+		Debug.PushSubsStack("Get_Language (translator) ","translator",6,__ref.getField(false, "ba"),__ref,253);
 if (RapidSub.canDelegate("get_language")) return __ref.runUserSub(false, "translator","get_language", __ref);
  BA.debugLineNum = 253;BA.debugLine="Private Sub Get_Language() As String";
 Debug.ShouldStop(268435456);
@@ -221,7 +221,7 @@ finally {
 		}}
 public static RemoteObject  _get_languagelist(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("Get_LanguageList (translator) ","translator",5,__ref.getField(false, "ba"),__ref,231);
+		Debug.PushSubsStack("Get_LanguageList (translator) ","translator",6,__ref.getField(false, "ba"),__ref,231);
 if (RapidSub.canDelegate("get_languagelist")) return __ref.runUserSub(false, "translator","get_languagelist", __ref);
  BA.debugLineNum = 231;BA.debugLine="Public Sub Get_LanguageList() As List";
 Debug.ShouldStop(64);
@@ -240,7 +240,7 @@ finally {
 		}}
 public static RemoteObject  _get_translatedstring(RemoteObject __ref,RemoteObject _key,RemoteObject _language) throws Exception{
 try {
-		Debug.PushSubsStack("Get_TranslatedString (translator) ","translator",5,__ref.getField(false, "ba"),__ref,285);
+		Debug.PushSubsStack("Get_TranslatedString (translator) ","translator",6,__ref.getField(false, "ba"),__ref,285);
 if (RapidSub.canDelegate("get_translatedstring")) return __ref.runUserSub(false, "translator","get_translatedstring", __ref, _key, _language);
 RemoteObject _strtranslationlist = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 RemoteObject _translatedstring = RemoteObject.createImmutable("");
@@ -289,7 +289,7 @@ finally {
 		}}
 public static RemoteObject  _get_translation(RemoteObject __ref,RemoteObject _key) throws Exception{
 try {
-		Debug.PushSubsStack("Get_Translation (translator) ","translator",5,__ref.getField(false, "ba"),__ref,268);
+		Debug.PushSubsStack("Get_Translation (translator) ","translator",6,__ref.getField(false, "ba"),__ref,268);
 if (RapidSub.canDelegate("get_translation")) return __ref.runUserSub(false, "translator","get_translation", __ref, _key);
 RemoteObject _translationstring = RemoteObject.createImmutable("");
 Debug.locals.put("key", _key);
@@ -336,7 +336,7 @@ finally {
 		}}
 public static RemoteObject  _getstring(RemoteObject __ref,RemoteObject _key) throws Exception{
 try {
-		Debug.PushSubsStack("GetString (translator) ","translator",5,__ref.getField(false, "ba"),__ref,259);
+		Debug.PushSubsStack("GetString (translator) ","translator",6,__ref.getField(false, "ba"),__ref,259);
 if (RapidSub.canDelegate("getstring")) return __ref.runUserSub(false, "translator","getstring", __ref, _key);
 Debug.locals.put("key", _key);
  BA.debugLineNum = 259;BA.debugLine="Public Sub GetString(key As String) As String";
@@ -364,7 +364,7 @@ finally {
 		}}
 public static RemoteObject  _import_newlanguage(RemoteObject __ref,RemoteObject _key,RemoteObject _values) throws Exception{
 try {
-		Debug.PushSubsStack("Import_NewLanguage (translator) ","translator",5,__ref.getField(false, "ba"),__ref,208);
+		Debug.PushSubsStack("Import_NewLanguage (translator) ","translator",6,__ref.getField(false, "ba"),__ref,208);
 if (RapidSub.canDelegate("import_newlanguage")) return __ref.runUserSub(false, "translator","import_newlanguage", __ref, _key, _values);
 RemoteObject _updatelist = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 Debug.locals.put("key", _key);
@@ -404,7 +404,7 @@ finally {
 		}}
 public static RemoteObject  _initialize(RemoteObject __ref,RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (translator) ","translator",5,__ref.getField(false, "ba"),__ref,27);
+		Debug.PushSubsStack("Initialize (translator) ","translator",6,__ref.getField(false, "ba"),__ref,27);
 if (RapidSub.canDelegate("initialize")) return __ref.runUserSub(false, "translator","initialize", __ref, _ba);
 __ref.runVoidMethodAndSync("innerInitializeHelper", _ba);
 Debug.locals.put("ba", _ba);
@@ -455,7 +455,7 @@ finally {
 		}}
 public static RemoteObject  _open_xml(RemoteObject __ref,RemoteObject _filepath,RemoteObject _filename) throws Exception{
 try {
-		Debug.PushSubsStack("Open_XML (translator) ","translator",5,__ref.getField(false, "ba"),__ref,51);
+		Debug.PushSubsStack("Open_XML (translator) ","translator",6,__ref.getField(false, "ba"),__ref,51);
 if (RapidSub.canDelegate("open_xml")) return __ref.runUserSub(false, "translator","open_xml", __ref, _filepath, _filename);
 RemoteObject _currentproduct = RemoteObject.declareNull("agg.agg.translator._product");
 Debug.locals.put("filePath", _filepath);
@@ -499,7 +499,7 @@ finally {
 		}}
 public static RemoteObject  _parse_xml(RemoteObject __ref,RemoteObject _filepath,RemoteObject _filename) throws Exception{
 try {
-		Debug.PushSubsStack("Parse_XML (translator) ","translator",5,__ref.getField(false, "ba"),__ref,65);
+		Debug.PushSubsStack("Parse_XML (translator) ","translator",6,__ref.getField(false, "ba"),__ref,65);
 if (RapidSub.canDelegate("parse_xml")) return __ref.runUserSub(false, "translator","parse_xml", __ref, _filepath, _filename);
 RemoteObject _xmltext = RemoteObject.declareNull("anywheresoftware.b4a.objects.streams.File.InputStreamWrapper");
 Debug.locals.put("filePath", _filepath);
@@ -533,7 +533,7 @@ finally {
 		}}
 public static RemoteObject  _resetvariables(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("ResetVariables (translator) ","translator",5,__ref.getField(false, "ba"),__ref,93);
+		Debug.PushSubsStack("ResetVariables (translator) ","translator",6,__ref.getField(false, "ba"),__ref,93);
 if (RapidSub.canDelegate("resetvariables")) return __ref.runUserSub(false, "translator","resetvariables", __ref);
  BA.debugLineNum = 93;BA.debugLine="Private Sub ResetVariables";
 Debug.ShouldStop(268435456);
@@ -570,7 +570,7 @@ finally {
 		}}
 public static RemoteObject  _setlanguage(RemoteObject __ref,RemoteObject _lang) throws Exception{
 try {
-		Debug.PushSubsStack("SetLanguage (translator) ","translator",5,__ref.getField(false, "ba"),__ref,247);
+		Debug.PushSubsStack("SetLanguage (translator) ","translator",6,__ref.getField(false, "ba"),__ref,247);
 if (RapidSub.canDelegate("setlanguage")) return __ref.runUserSub(false, "translator","setlanguage", __ref, _lang);
 Debug.locals.put("lang", _lang);
  BA.debugLineNum = 247;BA.debugLine="Public Sub SetLanguage(lang As String)";
@@ -594,7 +594,7 @@ finally {
 		}}
 public static RemoteObject  _setproduct(RemoteObject __ref,RemoteObject _productname) throws Exception{
 try {
-		Debug.PushSubsStack("SetProduct (translator) ","translator",5,__ref.getField(false, "ba"),__ref,236);
+		Debug.PushSubsStack("SetProduct (translator) ","translator",6,__ref.getField(false, "ba"),__ref,236);
 if (RapidSub.canDelegate("setproduct")) return __ref.runUserSub(false, "translator","setproduct", __ref, _productname);
 Debug.locals.put("productName", _productname);
  BA.debugLineNum = 236;BA.debugLine="Private Sub SetProduct(productName As String)";
@@ -630,7 +630,7 @@ finally {
 		}}
 public static RemoteObject  _update_existinglanguage(RemoteObject __ref,RemoteObject _key,RemoteObject _data) throws Exception{
 try {
-		Debug.PushSubsStack("Update_ExistingLanguage (translator) ","translator",5,__ref.getField(false, "ba"),__ref,220);
+		Debug.PushSubsStack("Update_ExistingLanguage (translator) ","translator",6,__ref.getField(false, "ba"),__ref,220);
 if (RapidSub.canDelegate("update_existinglanguage")) return __ref.runUserSub(false, "translator","update_existinglanguage", __ref, _key, _data);
 RemoteObject _updatelist = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 Debug.locals.put("key", _key);
@@ -669,7 +669,7 @@ finally {
 		}}
 public static RemoteObject  _xmlparser_endelement(RemoteObject __ref,RemoteObject _uri,RemoteObject _name,RemoteObject _text) throws Exception{
 try {
-		Debug.PushSubsStack("xmlParser_EndElement (translator) ","translator",5,__ref.getField(false, "ba"),__ref,104);
+		Debug.PushSubsStack("xmlParser_EndElement (translator) ","translator",6,__ref.getField(false, "ba"),__ref,104);
 if (RapidSub.canDelegate("xmlparser_endelement")) return __ref.runUserSub(false, "translator","xmlparser_endelement", __ref, _uri, _name, _text);
 RemoteObject _currentproduct = RemoteObject.declareNull("agg.agg.translator._product");
 RemoteObject _key = RemoteObject.createImmutable("");
@@ -832,7 +832,7 @@ finally {
 		}}
 public static RemoteObject  _xmlparser_startelement(RemoteObject __ref,RemoteObject _uri,RemoteObject _name,RemoteObject _attributes) throws Exception{
 try {
-		Debug.PushSubsStack("xmlParser_StartElement (translator) ","translator",5,__ref.getField(false, "ba"),__ref,74);
+		Debug.PushSubsStack("xmlParser_StartElement (translator) ","translator",6,__ref.getField(false, "ba"),__ref,74);
 if (RapidSub.canDelegate("xmlparser_startelement")) return __ref.runUserSub(false, "translator","xmlparser_startelement", __ref, _uri, _name, _attributes);
 RemoteObject _productname = RemoteObject.createImmutable("");
 RemoteObject _productversion = RemoteObject.createImmutable(0);

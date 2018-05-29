@@ -19,11 +19,11 @@ Module1=TV_Judge
 Module10=UISizes
 Module11=Version
 Module12=HelperFunctions
-Module2=AV_judge
-Module3=EXE_Judging
-Module4=SendScore
-Module5=Translator
-Module6=Starter
+Module2=EXE_Judging
+Module3=SendScore
+Module4=Starter
+Module5=AV_judge
+Module6=Translator
 Module7=LoginScreen
 Module8=typeJudge
 Module9=ProgramData
@@ -64,7 +64,7 @@ Sub Globals
 	Private exeJ As EXE_Judging
 	Private final As SendScore	
 	Public score As Double
-	Private scActive as int
+	Private scActive As Int
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)

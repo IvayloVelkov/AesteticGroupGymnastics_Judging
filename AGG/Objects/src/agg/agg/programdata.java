@@ -27,10 +27,10 @@ public static String  _initialize(anywheresoftware.b4a.BA _ba) throws Exception{
 RDebugUtils.currentModule="programdata";
 if (Debug.shouldDelegate(null, "initialize"))
 	return (String) Debug.delegate(null, "initialize", new Object[] {_ba});
-RDebugUtils.currentLine=5308416;
- //BA.debugLineNum = 5308416;BA.debugLine="Public Sub Initialize";
-RDebugUtils.currentLine=5308417;
- //BA.debugLineNum = 5308417;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5570560;
+ //BA.debugLineNum = 5570560;BA.debugLine="Public Sub Initialize";
+RDebugUtils.currentLine=5570561;
+ //BA.debugLineNum = 5570561;BA.debugLine="End Sub";
 return "";
 }
 }

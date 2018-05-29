@@ -76,6 +76,7 @@ Private Sub loginPanel_Configurations
 	HelperFunctions.Apply_ViewStyle(user,Colors.Black,Colors.White,Colors.White,Colors.White,Colors.White,Colors.White,Colors.White,60)
 	user.Padding = Array As Int(15,0,0,0)
 	user.SingleLine = True
+
 	user.Hint = Main.translate.GetString("hintMail")
 	user.HintColor = Colors.Gray
 	user.TextSize = 14

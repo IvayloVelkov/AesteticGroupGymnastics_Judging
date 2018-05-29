@@ -47,8 +47,8 @@ End Sub
 Public Sub BuildUi
 	Container.Initialize
 		
-	Container.AddPage(page(0), Main.translate.GetString("AvPage0"))
-	Container.AddPage(page(1), Main.translate.GetString("AvPage1"))
+	Container.AddPage(page(0), Main.translate.GetString("TvPage0"))
+	Container.AddPage(page(1), Main.translate.GetString("TvPage1"))
 
 	Pager.Initialize(Container, "MPager")
 	
@@ -161,42 +161,30 @@ Public Sub BuildUi
 End Sub
 
 Private Sub check1_CheckedChange(Checked As Boolean)
-	Private chek1, chek2, chek3 As CheckBox = Sender
+	Private chek1 As CheckBox = Sender
 	chek1 = Sender
-	chek2 = Sender
-	chek3 = Sender
 	If chek1.Checked = True Then
 		tvScore = tvScore + 0.1
-		chek2.Checked = False
-		chek3.Checked = False
 	Else
 		tvScore = tvScore - 0.1
 	End If
 End Sub
 
 Private Sub check2_CheckedChange(Checked As Boolean)	
-	Private chek1, chek2, chek3 As CheckBox
-	chek1 = Sender
+	Private chek2 As CheckBox
 	chek2 = Sender
-	chek3 = Sender
 	If chek2.Checked = True Then
 		tvScore = tvScore + 0.2
-		chek1.Checked = False
-		chek3.Checked = False
 	Else
 		tvScore = tvScore - 0.2
 	End If
 End Sub
 
 Private Sub check3_CheckedChange(Checked As Boolean)
-	Private chek1, chek2, chek3 As CheckBox = Sender
-	chek1 = Sender
-	chek2 = Sender
+	Private chek3 As CheckBox = Sender
 	chek3 = Sender
 	 If chek3.Checked = True Then
 		tvScore = tvScore + 0.3
-		chek2.Checked = False
-		chek1.Checked = False
 	Else
 		tvScore = tvScore - 0.3
 	End If
