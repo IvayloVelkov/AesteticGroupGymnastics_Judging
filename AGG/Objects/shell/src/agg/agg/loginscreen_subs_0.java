@@ -8,7 +8,7 @@ public class loginscreen_subs_0 {
 
 public static RemoteObject  _asview(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("asView (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,171);
+		Debug.PushSubsStack("asView (loginscreen) ","loginscreen",6,__ref.getField(false, "ba"),__ref,171);
 if (RapidSub.canDelegate("asview")) return __ref.runUserSub(false, "loginscreen","asview", __ref);
  BA.debugLineNum = 171;BA.debugLine="Public Sub asView As Panel";
 Debug.ShouldStop(1024);
@@ -27,7 +27,7 @@ finally {
 		}}
 public static RemoteObject  _build_screen(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("build_Screen (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,37);
+		Debug.PushSubsStack("build_Screen (loginscreen) ","loginscreen",6,__ref.getField(false, "ba"),__ref,37);
 if (RapidSub.canDelegate("build_screen")) return __ref.runUserSub(false, "loginscreen","build_screen", __ref);
 RemoteObject _edtwidth = RemoteObject.createImmutable(0);
 RemoteObject _edtheight = RemoteObject.createImmutable(0);
@@ -100,7 +100,7 @@ finally {
 		}}
 public static RemoteObject  _buttonloginpanel_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("ButtonloginPanel_Click (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,126);
+		Debug.PushSubsStack("ButtonloginPanel_Click (loginscreen) ","loginscreen",6,__ref.getField(false, "ba"),__ref,126);
 if (RapidSub.canDelegate("buttonloginpanel_click")) return __ref.runUserSub(false, "loginscreen","buttonloginpanel_click", __ref);
  BA.debugLineNum = 126;BA.debugLine="Private Sub ButtonloginPanel_Click";
 Debug.ShouldStop(536870912);
@@ -164,7 +164,7 @@ finally {
 		}}
 public static RemoteObject  _check_pass(RemoteObject __ref,RemoteObject _text) throws Exception{
 try {
-		Debug.PushSubsStack("check_Pass (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,167);
+		Debug.PushSubsStack("check_Pass (loginscreen) ","loginscreen",6,__ref.getField(false, "ba"),__ref,167);
 if (RapidSub.canDelegate("check_pass")) return __ref.runUserSub(false, "loginscreen","check_pass", __ref, _text);
 Debug.locals.put("text", _text);
  BA.debugLineNum = 167;BA.debugLine="Private Sub check_Pass(text As String) As Boolean";
@@ -184,7 +184,7 @@ finally {
 		}}
 public static RemoteObject  _check_user(RemoteObject __ref,RemoteObject _text) throws Exception{
 try {
-		Debug.PushSubsStack("check_User (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,159);
+		Debug.PushSubsStack("check_User (loginscreen) ","loginscreen",6,__ref.getField(false, "ba"),__ref,159);
 if (RapidSub.canDelegate("check_user")) return __ref.runUserSub(false, "loginscreen","check_user", __ref, _text);
 RemoteObject _m = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Regex.MatcherWrapper");
 Debug.locals.put("text", _text);
@@ -236,7 +236,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _initialize(RemoteObject __ref,RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,28);
+		Debug.PushSubsStack("Initialize (loginscreen) ","loginscreen",6,__ref.getField(false, "ba"),__ref,28);
 if (RapidSub.canDelegate("initialize")) return __ref.runUserSub(false, "loginscreen","initialize", __ref, _ba);
 __ref.runVoidMethodAndSync("innerInitializeHelper", _ba);
 Debug.locals.put("ba", _ba);
@@ -269,7 +269,7 @@ finally {
 		}}
 public static RemoteObject  _loginpanel_configurations(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("loginPanel_Configurations (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,66);
+		Debug.PushSubsStack("loginPanel_Configurations (loginscreen) ","loginscreen",6,__ref.getField(false, "ba"),__ref,66);
 if (RapidSub.canDelegate("loginpanel_configurations")) return __ref.runUserSub(false, "loginscreen","loginpanel_configurations", __ref);
  BA.debugLineNum = 66;BA.debugLine="Private Sub loginPanel_Configurations";
 Debug.ShouldStop(2);
@@ -351,7 +351,7 @@ finally {
 		}}
 public static RemoteObject  _pass_focuschanged(RemoteObject __ref,RemoteObject _hasfocus) throws Exception{
 try {
-		Debug.PushSubsStack("pass_FocusChanged (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,100);
+		Debug.PushSubsStack("pass_FocusChanged (loginscreen) ","loginscreen",6,__ref.getField(false, "ba"),__ref,100);
 if (RapidSub.canDelegate("pass_focuschanged")) return __ref.runUserSub(false, "loginscreen","pass_focuschanged", __ref, _hasfocus);
 Debug.locals.put("HasFocus", _hasfocus);
  BA.debugLineNum = 100;BA.debugLine="Private Sub pass_FocusChanged (HasFocus As Boolean";
@@ -375,7 +375,7 @@ finally {
 		}}
 public static RemoteObject  _read_savedusrs(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("Read_SavedUsrs (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,115);
+		Debug.PushSubsStack("Read_SavedUsrs (loginscreen) ","loginscreen",6,__ref.getField(false, "ba"),__ref,115);
 if (RapidSub.canDelegate("read_savedusrs")) return __ref.runUserSub(false, "loginscreen","read_savedusrs", __ref);
  BA.debugLineNum = 115;BA.debugLine="Private Sub Read_SavedUsrs";
 Debug.ShouldStop(262144);
@@ -409,7 +409,7 @@ finally {
 		}}
 public static RemoteObject  _start_up(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("start_up (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,12);
+		Debug.PushSubsStack("start_up (loginscreen) ","loginscreen",6,__ref.getField(false, "ba"),__ref,12);
 if (RapidSub.canDelegate("start_up")) return __ref.runUserSub(false, "loginscreen","start_up", __ref);
  BA.debugLineNum = 12;BA.debugLine="Private Sub start_up";
 Debug.ShouldStop(2048);
@@ -452,7 +452,7 @@ finally {
 		}}
 public static RemoteObject  _write_usrs(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("write_Usrs (loginscreen) ","loginscreen",7,__ref.getField(false, "ba"),__ref,107);
+		Debug.PushSubsStack("write_Usrs (loginscreen) ","loginscreen",6,__ref.getField(false, "ba"),__ref,107);
 if (RapidSub.canDelegate("write_usrs")) return __ref.runUserSub(false, "loginscreen","write_usrs", __ref);
  BA.debugLineNum = 107;BA.debugLine="Private Sub write_Usrs";
 Debug.ShouldStop(1024);

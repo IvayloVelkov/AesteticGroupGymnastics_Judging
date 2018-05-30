@@ -5,7 +5,11 @@ Type=StaticCode
 Version=7.3
 @EndOfDesignText@
 Sub Process_Globals
-	
+	Public TvScore1 As String = "0.10"
+	Public TvScore2 As String = "0.20"
+	Public TvScore3 As String = "0.30"
+	Public TvScore4 As String = "0.40"
+	Public TvScore5 As String = "0.50"
 End Sub
 
 Public Sub Apply_ViewStyle (Control As View, TextColor As Int, ColorA As Int, ColorB As Int, ColorPressedA As Int, ColorPressedB As Int, ColorDisabledA As Int, ColorDisabledB As Int, CornerRound As Int)

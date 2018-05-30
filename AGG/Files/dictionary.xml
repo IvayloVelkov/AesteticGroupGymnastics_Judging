@@ -167,7 +167,7 @@
 					<Value Lang="FI"></Value>
 				</Values>							
 			</Data>	
-				<Data Key="AvPage3">
+			<Data Key="AvPage3">
 				<Values>
 					<Value Lang="EN"></Value>
 					<Value Lang="RU"></Value>
@@ -181,6 +181,847 @@
 					<Value Lang="FI"></Value>
 				</Values>							
 			</Data>	
+			<Data Key="TvPage0">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Задължителни елемнти</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="TvPage1">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Допълнителни трудности</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="ExePage0">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Наказания</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="TVlabel0">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Равновесие</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="TVlabel1">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Скок</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="TVlabel2">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Вълна</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="TVlabel3">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Възмах</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="TVlabel4">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">А/В-серия</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="TVlabel5">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">А/В-серия</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="TVlabel6">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Движение с тяло+Скок</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="TVlabel7">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Скок+Движение с тяло</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="TVlabel8">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Равновесие+Движение с тяло</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="TVlabel9">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Движение с тяло+Равновесие</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="TVlabel10">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Скок+Равновесие</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="TVlabel11">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Равновесие+Скок</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="Exelabal0">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Задравословно</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="Exelabal1">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Основна техника</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="Exelabal2">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Движение с тяло</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="Exelabal3">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Скокве</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="Exelabal4">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Равновесия</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="Exelabal5">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Единство</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="Exelabal6">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Физически характеристики</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="Exelabal7">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">ЕГГ техника</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal0">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">ЕГГ техника</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal1">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Плавност</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal2">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Възможности и умения</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal3">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Единство</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal4">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Единност и композиция</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal5">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Разнообразна структура</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal6">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Разнообразие в разновесията</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal7">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Разнообразие в движенията с тялото</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal8">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Разнообразие в скоковете</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal9">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Разнообразие в допълнителните трудности</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal10">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">8 фигури</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal11">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Плавни престроявания</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal12">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Разнообразие в темпото</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal13">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Разнообразие в пространстово</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal14">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Разнообразие в нивата</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal15">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Равновесие в динамиката</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal16">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Композицията е изразителна</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal17">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Композицията е естетична</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal18">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Единен стил в композицията</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal19">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">допълнителни изразителност/стил</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal20">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Изразителни движения с тялото</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal21">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Композиция + музика</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal22">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Оригиналност в движенията</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal23">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Музиката следва композицията</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal24">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Разнообразие в темпото</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal25">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Кулминация</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal26">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Оригиналност във фигурите</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal27">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Разнообразие в динамиката</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal28">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Лошо свързана музика</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal29">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Гонова музика</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal30">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Забранени елементи</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+						<Data Key="AVlabal31">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Музиката спира преди отбора</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="AVlabal32">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Грешка в композицията</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+				<Data Key="AVlabal33">
+				<Values>
+					<Value Lang="EN"></Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Религиозни/политически елементи</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="Score">
+				<Values>
+					<Value Lang="EN">Score</Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Оценка</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="SendBtn">
+				<Values>
+					<Value Lang="EN">Send</Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Изпрати</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+			<Data Key="TeamName">
+				<Values>
+					<Value Lang="EN">Team Name</Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Име на отбора</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
+
 			
 			
 			

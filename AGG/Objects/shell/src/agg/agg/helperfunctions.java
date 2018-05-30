@@ -45,12 +45,17 @@ public boolean isSingleton() {
         throw new RuntimeException("CREATE is not supported.");
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
+public static RemoteObject _tvscore1 = RemoteObject.createImmutable("");
+public static RemoteObject _tvscore2 = RemoteObject.createImmutable("");
+public static RemoteObject _tvscore3 = RemoteObject.createImmutable("");
+public static RemoteObject _tvscore4 = RemoteObject.createImmutable("");
+public static RemoteObject _tvscore5 = RemoteObject.createImmutable("");
 public static agg.agg.main _main = null;
 public static agg.agg.starter _starter = null;
 public static agg.agg.programdata _programdata = null;
 public static agg.agg.uisizes _uisizes = null;
 public static agg.agg.version _version = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Main",Debug.moduleToString(agg.agg.main.class),"ProgramData",Debug.moduleToString(agg.agg.programdata.class),"Starter",Debug.moduleToString(agg.agg.starter.class),"UISizes",Debug.moduleToString(agg.agg.uisizes.class),"Version",Debug.moduleToString(agg.agg.version.class)};
+		return new Object[] {"Main",Debug.moduleToString(agg.agg.main.class),"ProgramData",Debug.moduleToString(agg.agg.programdata.class),"Starter",Debug.moduleToString(agg.agg.starter.class),"TvScore1",helperfunctions._tvscore1,"TvScore2",helperfunctions._tvscore2,"TvScore3",helperfunctions._tvscore3,"TvScore4",helperfunctions._tvscore4,"TvScore5",helperfunctions._tvscore5,"UISizes",Debug.moduleToString(agg.agg.uisizes.class),"Version",Debug.moduleToString(agg.agg.version.class)};
 }
 }

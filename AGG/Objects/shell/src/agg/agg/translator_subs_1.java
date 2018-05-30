@@ -3,7 +3,7 @@ package agg.agg;
 import anywheresoftware.b4a.BA;
 import anywheresoftware.b4a.pc.*;
 
-public class translator_subs_0 {
+public class translator_subs_1 {
 
 
 public static RemoteObject  _class_globals(RemoteObject __ref) throws Exception{

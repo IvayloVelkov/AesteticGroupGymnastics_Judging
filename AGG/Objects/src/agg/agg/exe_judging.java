@@ -199,49 +199,67 @@ RDebugUtils.currentLine=1900584;
  //BA.debugLineNum = 1900584;BA.debugLine="page(0).AddView(btnPoints(0), label(0).left + lab";
 __ref._page[(int) (0)].AddView((android.view.View)(__ref._btnpoints[(int) (0)].getObject()),(int) (__ref._label[(int) (0)].getLeft()+__ref._label[(int) (0)].getWidth()+__c.PerXToCurrent((float) (10),ba)),__ref._label[(int) (0)].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (10),ba));
 RDebugUtils.currentLine=1900585;
- //BA.debugLineNum = 1900585;BA.debugLine="btnPoints(0).Text = Main.translate.GetString(\"Che";
-__ref._btnpoints[(int) (0)].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"Checkl0")));
+ //BA.debugLineNum = 1900585;BA.debugLine="btnPoints(0).Text = \"-\" & HelperFunctions.TvScore";
+__ref._btnpoints[(int) (0)].setText(BA.ObjectToCharSequence("-"+_helperfunctions._tvscore1));
+RDebugUtils.currentLine=1900586;
+ //BA.debugLineNum = 1900586;BA.debugLine="HelperFunctions.Apply_ViewStyle(btnPoints(0),Colo";
+_helperfunctions._apply_viewstyle(ba,(anywheresoftware.b4a.objects.ConcreteViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.ConcreteViewWrapper(), (android.view.View)(__ref._btnpoints[(int) (0)].getObject())),__c.Colors.White,(int) (0xff4ac2ff),(int) (0xff149be0),(int) (0xff2cb7ff),(int) (0xff2cb7ff),(int) (0x66040509),(int) (0x66040509),(int) (60));
 RDebugUtils.currentLine=1900587;
- //BA.debugLineNum = 1900587;BA.debugLine="For i = 1 To 7";
-{
-final int step26 = 1;
-final int limit26 = (int) (7);
-_i = (int) (1) ;
-for (;(step26 > 0 && _i <= limit26) || (step26 < 0 && _i >= limit26) ;_i = ((int)(0 + _i + step26))  ) {
+ //BA.debugLineNum = 1900587;BA.debugLine="btnPoints(0).Padding = Array As Int(15,0,0,0)";
+__ref._btnpoints[(int) (0)].setPadding(new int[]{(int) (15),(int) (0),(int) (0),(int) (0)});
 RDebugUtils.currentLine=1900588;
- //BA.debugLineNum = 1900588;BA.debugLine="page(0).AddView(label(i), 2%x, label(i - 1).Top";
+ //BA.debugLineNum = 1900588;BA.debugLine="btnPoints(0).SingleLine = True";
+__ref._btnpoints[(int) (0)].setSingleLine(__c.True);
+RDebugUtils.currentLine=1900591;
+ //BA.debugLineNum = 1900591;BA.debugLine="For i = 1 To 7";
+{
+final int step29 = 1;
+final int limit29 = (int) (7);
+_i = (int) (1) ;
+for (;(step29 > 0 && _i <= limit29) || (step29 < 0 && _i >= limit29) ;_i = ((int)(0 + _i + step29))  ) {
+RDebugUtils.currentLine=1900592;
+ //BA.debugLineNum = 1900592;BA.debugLine="page(0).AddView(label(i), 2%x, label(i - 1).Top";
 __ref._page[(int) (0)].AddView((android.view.View)(__ref._label[_i].getObject()),__c.PerXToCurrent((float) (2),ba),(int) (__ref._label[(int) (_i-1)].getTop()+__ref._label[(int) (_i-1)].getHeight()+__c.DipToCurrent((int) (3))),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=1900589;
- //BA.debugLineNum = 1900589;BA.debugLine="label(i).Text = Main.translate.GetString(\"Exelab";
+RDebugUtils.currentLine=1900593;
+ //BA.debugLineNum = 1900593;BA.debugLine="label(i).Text = Main.translate.GetString(\"Exelab";
 __ref._label[_i].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"Exelabal"+BA.NumberToString(_i))));
-RDebugUtils.currentLine=1900590;
- //BA.debugLineNum = 1900590;BA.debugLine="label(i).TextColor = Colors.White";
+RDebugUtils.currentLine=1900594;
+ //BA.debugLineNum = 1900594;BA.debugLine="label(i).TextColor = Colors.White";
 __ref._label[_i].setTextColor(__c.Colors.White);
  }
 };
-RDebugUtils.currentLine=1900593;
- //BA.debugLineNum = 1900593;BA.debugLine="For i = 1 To 6";
+RDebugUtils.currentLine=1900597;
+ //BA.debugLineNum = 1900597;BA.debugLine="For i = 1 To 6";
 {
-final int step31 = 1;
-final int limit31 = (int) (6);
+final int step34 = 1;
+final int limit34 = (int) (6);
 _i = (int) (1) ;
-for (;(step31 > 0 && _i <= limit31) || (step31 < 0 && _i >= limit31) ;_i = ((int)(0 + _i + step31))  ) {
-RDebugUtils.currentLine=1900594;
- //BA.debugLineNum = 1900594;BA.debugLine="page(0).AddView(btnPoints(i), label(i).left + la";
+for (;(step34 > 0 && _i <= limit34) || (step34 < 0 && _i >= limit34) ;_i = ((int)(0 + _i + step34))  ) {
+RDebugUtils.currentLine=1900598;
+ //BA.debugLineNum = 1900598;BA.debugLine="page(0).AddView(btnPoints(i), label(i).left + la";
 __ref._page[(int) (0)].AddView((android.view.View)(__ref._btnpoints[_i].getObject()),(int) (__ref._label[_i].getLeft()+__ref._label[_i].getWidth()+__c.PerXToCurrent((float) (10),ba)),__ref._label[_i].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=1900595;
- //BA.debugLineNum = 1900595;BA.debugLine="btnPoints(i).Text = Main.translate.GetString(\"ad";
-__ref._btnpoints[_i].setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"addPan"+BA.NumberToString(_i))));
+RDebugUtils.currentLine=1900599;
+ //BA.debugLineNum = 1900599;BA.debugLine="btnPoints(i).Text = \"-\" & HelperFunctions.TvScor";
+__ref._btnpoints[_i].setText(BA.ObjectToCharSequence("-"+_helperfunctions._tvscore1));
+RDebugUtils.currentLine=1900600;
+ //BA.debugLineNum = 1900600;BA.debugLine="HelperFunctions.Apply_ViewStyle(btnPoints(i),Col";
+_helperfunctions._apply_viewstyle(ba,(anywheresoftware.b4a.objects.ConcreteViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.ConcreteViewWrapper(), (android.view.View)(__ref._btnpoints[_i].getObject())),__c.Colors.White,(int) (0xff4ac2ff),(int) (0xff149be0),(int) (0xff2cb7ff),(int) (0xff2cb7ff),(int) (0x66040509),(int) (0x66040509),(int) (60));
+RDebugUtils.currentLine=1900601;
+ //BA.debugLineNum = 1900601;BA.debugLine="btnPoints(i).Padding = Array As Int(15,0,0,0)";
+__ref._btnpoints[_i].setPadding(new int[]{(int) (15),(int) (0),(int) (0),(int) (0)});
+RDebugUtils.currentLine=1900602;
+ //BA.debugLineNum = 1900602;BA.debugLine="btnPoints(i).SingleLine = True";
+__ref._btnpoints[_i].setSingleLine(__c.True);
  }
 };
-RDebugUtils.currentLine=1900598;
- //BA.debugLineNum = 1900598;BA.debugLine="page(0).AddView(chekpointbox, label(7).left + lab";
+RDebugUtils.currentLine=1900605;
+ //BA.debugLineNum = 1900605;BA.debugLine="page(0).AddView(chekpointbox, label(7).left + lab";
 __ref._page[(int) (0)].AddView((android.view.View)(__ref._chekpointbox.getObject()),(int) (__ref._label[(int) (7)].getLeft()+__ref._label[(int) (7)].getWidth()+__c.PerXToCurrent((float) (10),ba)),__ref._label[(int) (7)].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=1900599;
- //BA.debugLineNum = 1900599;BA.debugLine="chekpointbox.Text = Main.translate.GetString(\"add";
-__ref._chekpointbox.setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"addPan"+BA.NumberToString(_i))));
-RDebugUtils.currentLine=1900600;
- //BA.debugLineNum = 1900600;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1900606;
+ //BA.debugLineNum = 1900606;BA.debugLine="chekpointbox.Text = \"-\" & HelperFunctions.TvScore";
+__ref._chekpointbox.setText(BA.ObjectToCharSequence("-"+_helperfunctions._tvscore3));
+RDebugUtils.currentLine=1900607;
+ //BA.debugLineNum = 1900607;BA.debugLine="End Sub";
 return "";
 }
 public double  _finalexescore(agg.agg.exe_judging __ref) throws Exception{

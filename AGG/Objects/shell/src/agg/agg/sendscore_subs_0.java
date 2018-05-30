@@ -8,15 +8,15 @@ public class sendscore_subs_0 {
 
 public static RemoteObject  _asview(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("asView (sendscore) ","sendscore",3,__ref.getField(false, "ba"),__ref,33);
+		Debug.PushSubsStack("asView (sendscore) ","sendscore",3,__ref.getField(false, "ba"),__ref,35);
 if (RapidSub.canDelegate("asview")) return __ref.runUserSub(false, "sendscore","asview", __ref);
- BA.debugLineNum = 33;BA.debugLine="Public Sub asView As Panel";
-Debug.ShouldStop(1);
- BA.debugLineNum = 34;BA.debugLine="Return finalPanel";
-Debug.ShouldStop(2);
-if (true) return __ref.getField(false,"_finalpanel");
- BA.debugLineNum = 35;BA.debugLine="End Sub";
+ BA.debugLineNum = 35;BA.debugLine="Public Sub asView As Panel";
 Debug.ShouldStop(4);
+ BA.debugLineNum = 36;BA.debugLine="Return finalPanel";
+Debug.ShouldStop(8);
+if (true) return __ref.getField(false,"_finalpanel");
+ BA.debugLineNum = 37;BA.debugLine="End Sub";
+Debug.ShouldStop(16);
 return RemoteObject.createImmutable(null);
 }
 catch (Exception e) {
@@ -40,18 +40,18 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _finalscore(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("finalScore (sendscore) ","sendscore",3,__ref.getField(false, "ba"),__ref,27);
+		Debug.PushSubsStack("finalScore (sendscore) ","sendscore",3,__ref.getField(false, "ba"),__ref,29);
 if (RapidSub.canDelegate("finalscore")) return __ref.runUserSub(false, "sendscore","finalscore", __ref);
- BA.debugLineNum = 27;BA.debugLine="Public Sub finalScore";
-Debug.ShouldStop(67108864);
- BA.debugLineNum = 28;BA.debugLine="teamscore.Text = CallSub(Main, \"finalScore\")";
-Debug.ShouldStop(134217728);
-__ref.getField(false,"_teamscore").runMethod(true,"setText",BA.ObjectToCharSequence(sendscore.__c.runMethodAndSync(false,"CallSubNew",__ref.getField(false, "ba"),(Object)((sendscore._main.getObject())),(Object)(RemoteObject.createImmutable("finalScore")))));
- BA.debugLineNum = 30;BA.debugLine="Log(\"FINAL\"&teamscore.Text)";
+ BA.debugLineNum = 29;BA.debugLine="Public Sub finalScore";
+Debug.ShouldStop(268435456);
+ BA.debugLineNum = 30;BA.debugLine="teamscore.Text = Main.translate.GetString(\"Score\"";
 Debug.ShouldStop(536870912);
+__ref.getField(false,"_teamscore").runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(sendscore._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("Score"))),RemoteObject.createImmutable(": "),sendscore.__c.runMethodAndSync(false,"CallSubNew",__ref.getField(false, "ba"),(Object)((sendscore._main.getObject())),(Object)(RemoteObject.createImmutable("finalScore"))))));
+ BA.debugLineNum = 32;BA.debugLine="Log(\"FINAL\"&teamscore.Text)";
+Debug.ShouldStop(-2147483648);
 sendscore.__c.runVoidMethod ("Log",(Object)(RemoteObject.concat(RemoteObject.createImmutable("FINAL"),__ref.getField(false,"_teamscore").runMethod(true,"getText"))));
- BA.debugLineNum = 31;BA.debugLine="End Sub";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 33;BA.debugLine="End Sub";
+Debug.ShouldStop(1);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -83,9 +83,9 @@ __ref.getField(false,"_sendbtn").runVoidMethod ("Initialize",__ref.getField(fals
  BA.debugLineNum = 15;BA.debugLine="finalPanel.AddView(teamname, 20%x, 10%y, 60%x, 10";
 Debug.ShouldStop(16384);
 __ref.getField(false,"_finalpanel").runVoidMethod ("AddView",(Object)((__ref.getField(false,"_teamname").getObject())),(Object)(sendscore.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 20)),__ref.getField(false, "ba"))),(Object)(sendscore.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 10)),__ref.getField(false, "ba"))),(Object)(sendscore.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 60)),__ref.getField(false, "ba"))),(Object)(sendscore.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 10)),__ref.getField(false, "ba"))));
- BA.debugLineNum = 16;BA.debugLine="teamname.Hint = \"Team Name\"";
+ BA.debugLineNum = 16;BA.debugLine="teamname.Hint = Main.translate.GetString(\"TeamNam";
 Debug.ShouldStop(32768);
-__ref.getField(false,"_teamname").runMethod(true,"setHint",BA.ObjectToString("Team Name"));
+__ref.getField(false,"_teamname").runMethod(true,"setHint",sendscore._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("TeamName"))));
  BA.debugLineNum = 17;BA.debugLine="teamname.SingleLine = True";
 Debug.ShouldStop(65536);
 __ref.getField(false,"_teamname").runVoidMethod ("setSingleLine",sendscore.__c.getField(true,"True"));
@@ -98,14 +98,20 @@ __ref.getField(false,"_teamscore").runMethod(true,"setGravity",sendscore.__c.get
  BA.debugLineNum = 22;BA.debugLine="finalPanel.AddView(SendBtn, 20%x, 55%y, 60%x, 10%";
 Debug.ShouldStop(2097152);
 __ref.getField(false,"_finalpanel").runVoidMethod ("AddView",(Object)((__ref.getField(false,"_sendbtn").getObject())),(Object)(sendscore.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 20)),__ref.getField(false, "ba"))),(Object)(sendscore.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 55)),__ref.getField(false, "ba"))),(Object)(sendscore.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 60)),__ref.getField(false, "ba"))),(Object)(sendscore.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 10)),__ref.getField(false, "ba"))));
- BA.debugLineNum = 23;BA.debugLine="SendBtn.Text = \"Send\"";
+ BA.debugLineNum = 23;BA.debugLine="SendBtn.Text = Main.translate.GetString(\"SendBtn\"";
 Debug.ShouldStop(4194304);
-__ref.getField(false,"_sendbtn").runMethod(true,"setText",BA.ObjectToCharSequence("Send"));
- BA.debugLineNum = 24;BA.debugLine="SendBtn.Gravity = Gravity.CENTER";
+__ref.getField(false,"_sendbtn").runMethod(true,"setText",BA.ObjectToCharSequence(sendscore._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("SendBtn")))));
+ BA.debugLineNum = 24;BA.debugLine="HelperFunctions.Apply_ViewStyle(SendBtn,Colors.Wh";
 Debug.ShouldStop(8388608);
-__ref.getField(false,"_sendbtn").runMethod(true,"setGravity",sendscore.__c.getField(false,"Gravity").getField(true,"CENTER"));
- BA.debugLineNum = 25;BA.debugLine="End Sub";
+sendscore._helperfunctions.runVoidMethod ("_apply_viewstyle",__ref.getField(false, "ba"),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), __ref.getField(false,"_sendbtn").getObject()),(Object)(sendscore.__c.getField(false,"Colors").getField(true,"White")),(Object)(BA.numberCast(int.class, 0xff4ac2ff)),(Object)(BA.numberCast(int.class, 0xff149be0)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 60)));
+ BA.debugLineNum = 25;BA.debugLine="SendBtn.Padding = Array As Int(15,0,0,0)";
 Debug.ShouldStop(16777216);
+__ref.getField(false,"_sendbtn").runMethod(false,"setPadding",RemoteObject.createNewArray("int",new int[] {4},new Object[] {BA.numberCast(int.class, 15),BA.numberCast(int.class, 0),BA.numberCast(int.class, 0),BA.numberCast(int.class, 0)}));
+ BA.debugLineNum = 26;BA.debugLine="SendBtn.SingleLine = True";
+Debug.ShouldStop(33554432);
+__ref.getField(false,"_sendbtn").runVoidMethod ("setSingleLine",sendscore.__c.getField(true,"True"));
+ BA.debugLineNum = 27;BA.debugLine="End Sub";
+Debug.ShouldStop(67108864);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -116,19 +122,19 @@ finally {
 		}}
 public static RemoteObject  _send_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("send_Click (sendscore) ","sendscore",3,__ref.getField(false, "ba"),__ref,37);
+		Debug.PushSubsStack("send_Click (sendscore) ","sendscore",3,__ref.getField(false, "ba"),__ref,39);
 if (RapidSub.canDelegate("send_click")) return __ref.runUserSub(false, "sendscore","send_click", __ref);
- BA.debugLineNum = 37;BA.debugLine="Private Sub send_Click";
-Debug.ShouldStop(16);
- BA.debugLineNum = 38;BA.debugLine="If teamname.Text = \"\" Then";
-Debug.ShouldStop(32);
-if (RemoteObject.solveBoolean("=",__ref.getField(false,"_teamname").runMethod(true,"getText"),BA.ObjectToString(""))) { 
- BA.debugLineNum = 39;BA.debugLine="Msgbox(\"Добавате име на отбора.\",\"Липсва име.\")";
+ BA.debugLineNum = 39;BA.debugLine="Private Sub send_Click";
 Debug.ShouldStop(64);
+ BA.debugLineNum = 40;BA.debugLine="If teamname.Text = \"\" Then";
+Debug.ShouldStop(128);
+if (RemoteObject.solveBoolean("=",__ref.getField(false,"_teamname").runMethod(true,"getText"),BA.ObjectToString(""))) { 
+ BA.debugLineNum = 41;BA.debugLine="Msgbox(\"Добавате име на отбора.\",\"Липсва име.\")";
+Debug.ShouldStop(256);
 sendscore.__c.runVoidMethodAndSync ("Msgbox",(Object)(BA.ObjectToCharSequence("Добавате име на отбора.")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Липсва име."))),__ref.getField(false, "ba"));
  };
- BA.debugLineNum = 42;BA.debugLine="End Sub";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 44;BA.debugLine="End Sub";
+Debug.ShouldStop(2048);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

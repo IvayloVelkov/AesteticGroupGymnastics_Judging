@@ -8,18 +8,18 @@ public class exe_judging_subs_0 {
 
 public static RemoteObject  _addpan_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("addPan_Click (exe_judging) ","exe_judging",2,__ref.getField(false, "ba"),__ref,91);
+		Debug.PushSubsStack("addPan_Click (exe_judging) ","exe_judging",2,__ref.getField(false, "ba"),__ref,98);
 if (RapidSub.canDelegate("addpan_click")) return __ref.runUserSub(false, "exe_judging","addpan_click", __ref);
- BA.debugLineNum = 91;BA.debugLine="Public Sub addPan_Click";
-Debug.ShouldStop(67108864);
- BA.debugLineNum = 92;BA.debugLine="exeScore = exeScore + 0.1";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 98;BA.debugLine="Public Sub addPan_Click";
+Debug.ShouldStop(2);
+ BA.debugLineNum = 99;BA.debugLine="exeScore = exeScore + 0.1";
+Debug.ShouldStop(4);
 __ref.setField ("_exescore",RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_exescore"),RemoteObject.createImmutable(0.1)}, "+",1, 0));
- BA.debugLineNum = 93;BA.debugLine="Log(exeScore)";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 100;BA.debugLine="Log(exeScore)";
+Debug.ShouldStop(8);
 exe_judging.__c.runVoidMethod ("Log",(Object)(BA.NumberToString(__ref.getField(true,"_exescore"))));
- BA.debugLineNum = 94;BA.debugLine="End Sub";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 101;BA.debugLine="End Sub";
+Debug.ShouldStop(16);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -30,15 +30,15 @@ finally {
 		}}
 public static RemoteObject  _asview(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("asView (exe_judging) ","exe_judging",2,__ref.getField(false, "ba"),__ref,116);
+		Debug.PushSubsStack("asView (exe_judging) ","exe_judging",2,__ref.getField(false, "ba"),__ref,123);
 if (RapidSub.canDelegate("asview")) return __ref.runUserSub(false, "exe_judging","asview", __ref);
- BA.debugLineNum = 116;BA.debugLine="Public Sub asView As Panel";
-Debug.ShouldStop(524288);
- BA.debugLineNum = 117;BA.debugLine="Return exePanel";
-Debug.ShouldStop(1048576);
+ BA.debugLineNum = 123;BA.debugLine="Public Sub asView As Panel";
+Debug.ShouldStop(67108864);
+ BA.debugLineNum = 124;BA.debugLine="Return exePanel";
+Debug.ShouldStop(134217728);
 if (true) return __ref.getField(false,"_exepanel");
- BA.debugLineNum = 118;BA.debugLine="End Sub";
-Debug.ShouldStop(2097152);
+ BA.debugLineNum = 125;BA.debugLine="End Sub";
+Debug.ShouldStop(268435456);
 return RemoteObject.createImmutable(null);
 }
 catch (Exception e) {
@@ -127,54 +127,72 @@ __ref.getField(false,"_label").getArrayElement(false,BA.numberCast(int.class, 0)
  BA.debugLineNum = 73;BA.debugLine="page(0).AddView(btnPoints(0), label(0).left + lab";
 Debug.ShouldStop(256);
 __ref.getField(false,"_page").getArrayElement(false,BA.numberCast(int.class, 0)).runVoidMethod ("AddView",(Object)((__ref.getField(false,"_btnpoints").getArrayElement(false,BA.numberCast(int.class, 0)).getObject())),(Object)(RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_label").getArrayElement(false,BA.numberCast(int.class, 0)).runMethod(true,"getLeft"),__ref.getField(false,"_label").getArrayElement(false,BA.numberCast(int.class, 0)).runMethod(true,"getWidth"),exe_judging.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 10)),__ref.getField(false, "ba"))}, "++",2, 1)),(Object)(__ref.getField(false,"_label").getArrayElement(false,BA.numberCast(int.class, 0)).runMethod(true,"getTop")),(Object)(exe_judging.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 15)),__ref.getField(false, "ba"))),(Object)(exe_judging.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 10)),__ref.getField(false, "ba"))));
- BA.debugLineNum = 74;BA.debugLine="btnPoints(0).Text = Main.translate.GetString(\"Che";
+ BA.debugLineNum = 74;BA.debugLine="btnPoints(0).Text = \"-\" & HelperFunctions.TvScore";
 Debug.ShouldStop(512);
-__ref.getField(false,"_btnpoints").getArrayElement(false,BA.numberCast(int.class, 0)).runMethod(true,"setText",BA.ObjectToCharSequence(exe_judging._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("Checkl0")))));
- BA.debugLineNum = 76;BA.debugLine="For i = 1 To 7";
+__ref.getField(false,"_btnpoints").getArrayElement(false,BA.numberCast(int.class, 0)).runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("-"),exe_judging._helperfunctions._tvscore1)));
+ BA.debugLineNum = 75;BA.debugLine="HelperFunctions.Apply_ViewStyle(btnPoints(0),Colo";
+Debug.ShouldStop(1024);
+exe_judging._helperfunctions.runVoidMethod ("_apply_viewstyle",__ref.getField(false, "ba"),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), __ref.getField(false,"_btnpoints").getArrayElement(false,BA.numberCast(int.class, 0)).getObject()),(Object)(exe_judging.__c.getField(false,"Colors").getField(true,"White")),(Object)(BA.numberCast(int.class, 0xff4ac2ff)),(Object)(BA.numberCast(int.class, 0xff149be0)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 60)));
+ BA.debugLineNum = 76;BA.debugLine="btnPoints(0).Padding = Array As Int(15,0,0,0)";
 Debug.ShouldStop(2048);
-{
-final int step26 = 1;
-final int limit26 = 7;
-_i = 1 ;
-for (;(step26 > 0 && _i <= limit26) || (step26 < 0 && _i >= limit26) ;_i = ((int)(0 + _i + step26))  ) {
-Debug.locals.put("i", _i);
- BA.debugLineNum = 77;BA.debugLine="page(0).AddView(label(i), 2%x, label(i - 1).Top";
+__ref.getField(false,"_btnpoints").getArrayElement(false,BA.numberCast(int.class, 0)).runMethod(false,"setPadding",RemoteObject.createNewArray("int",new int[] {4},new Object[] {BA.numberCast(int.class, 15),BA.numberCast(int.class, 0),BA.numberCast(int.class, 0),BA.numberCast(int.class, 0)}));
+ BA.debugLineNum = 77;BA.debugLine="btnPoints(0).SingleLine = True";
 Debug.ShouldStop(4096);
+__ref.getField(false,"_btnpoints").getArrayElement(false,BA.numberCast(int.class, 0)).runVoidMethod ("setSingleLine",exe_judging.__c.getField(true,"True"));
+ BA.debugLineNum = 80;BA.debugLine="For i = 1 To 7";
+Debug.ShouldStop(32768);
+{
+final int step29 = 1;
+final int limit29 = 7;
+_i = 1 ;
+for (;(step29 > 0 && _i <= limit29) || (step29 < 0 && _i >= limit29) ;_i = ((int)(0 + _i + step29))  ) {
+Debug.locals.put("i", _i);
+ BA.debugLineNum = 81;BA.debugLine="page(0).AddView(label(i), 2%x, label(i - 1).Top";
+Debug.ShouldStop(65536);
 __ref.getField(false,"_page").getArrayElement(false,BA.numberCast(int.class, 0)).runVoidMethod ("AddView",(Object)((__ref.getField(false,"_label").getArrayElement(false,BA.numberCast(int.class, _i)).getObject())),(Object)(exe_judging.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 2)),__ref.getField(false, "ba"))),(Object)(RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_label").getArrayElement(false,RemoteObject.solve(new RemoteObject[] {RemoteObject.createImmutable(_i),RemoteObject.createImmutable(1)}, "-",1, 1)).runMethod(true,"getTop"),__ref.getField(false,"_label").getArrayElement(false,RemoteObject.solve(new RemoteObject[] {RemoteObject.createImmutable(_i),RemoteObject.createImmutable(1)}, "-",1, 1)).runMethod(true,"getHeight"),exe_judging.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 3)))}, "++",2, 1)),(Object)(exe_judging.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 50)),__ref.getField(false, "ba"))),(Object)(exe_judging.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 10)),__ref.getField(false, "ba"))));
- BA.debugLineNum = 78;BA.debugLine="label(i).Text = Main.translate.GetString(\"Exelab";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 82;BA.debugLine="label(i).Text = Main.translate.GetString(\"Exelab";
+Debug.ShouldStop(131072);
 __ref.getField(false,"_label").getArrayElement(false,BA.numberCast(int.class, _i)).runMethod(true,"setText",BA.ObjectToCharSequence(exe_judging._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.concat(RemoteObject.createImmutable("Exelabal"),RemoteObject.createImmutable(_i))))));
- BA.debugLineNum = 79;BA.debugLine="label(i).TextColor = Colors.White";
-Debug.ShouldStop(16384);
+ BA.debugLineNum = 83;BA.debugLine="label(i).TextColor = Colors.White";
+Debug.ShouldStop(262144);
 __ref.getField(false,"_label").getArrayElement(false,BA.numberCast(int.class, _i)).runMethod(true,"setTextColor",exe_judging.__c.getField(false,"Colors").getField(true,"White"));
  }
 }Debug.locals.put("i", _i);
 ;
- BA.debugLineNum = 82;BA.debugLine="For i = 1 To 6";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 86;BA.debugLine="For i = 1 To 6";
+Debug.ShouldStop(2097152);
 {
-final int step31 = 1;
-final int limit31 = 6;
+final int step34 = 1;
+final int limit34 = 6;
 _i = 1 ;
-for (;(step31 > 0 && _i <= limit31) || (step31 < 0 && _i >= limit31) ;_i = ((int)(0 + _i + step31))  ) {
+for (;(step34 > 0 && _i <= limit34) || (step34 < 0 && _i >= limit34) ;_i = ((int)(0 + _i + step34))  ) {
 Debug.locals.put("i", _i);
- BA.debugLineNum = 83;BA.debugLine="page(0).AddView(btnPoints(i), label(i).left + la";
-Debug.ShouldStop(262144);
+ BA.debugLineNum = 87;BA.debugLine="page(0).AddView(btnPoints(i), label(i).left + la";
+Debug.ShouldStop(4194304);
 __ref.getField(false,"_page").getArrayElement(false,BA.numberCast(int.class, 0)).runVoidMethod ("AddView",(Object)((__ref.getField(false,"_btnpoints").getArrayElement(false,BA.numberCast(int.class, _i)).getObject())),(Object)(RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_label").getArrayElement(false,BA.numberCast(int.class, _i)).runMethod(true,"getLeft"),__ref.getField(false,"_label").getArrayElement(false,BA.numberCast(int.class, _i)).runMethod(true,"getWidth"),exe_judging.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 10)),__ref.getField(false, "ba"))}, "++",2, 1)),(Object)(__ref.getField(false,"_label").getArrayElement(false,BA.numberCast(int.class, _i)).runMethod(true,"getTop")),(Object)(exe_judging.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 15)),__ref.getField(false, "ba"))),(Object)(exe_judging.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 10)),__ref.getField(false, "ba"))));
- BA.debugLineNum = 84;BA.debugLine="btnPoints(i).Text = Main.translate.GetString(\"ad";
-Debug.ShouldStop(524288);
-__ref.getField(false,"_btnpoints").getArrayElement(false,BA.numberCast(int.class, _i)).runMethod(true,"setText",BA.ObjectToCharSequence(exe_judging._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.concat(RemoteObject.createImmutable("addPan"),RemoteObject.createImmutable(_i))))));
+ BA.debugLineNum = 88;BA.debugLine="btnPoints(i).Text = \"-\" & HelperFunctions.TvScor";
+Debug.ShouldStop(8388608);
+__ref.getField(false,"_btnpoints").getArrayElement(false,BA.numberCast(int.class, _i)).runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("-"),exe_judging._helperfunctions._tvscore1)));
+ BA.debugLineNum = 89;BA.debugLine="HelperFunctions.Apply_ViewStyle(btnPoints(i),Col";
+Debug.ShouldStop(16777216);
+exe_judging._helperfunctions.runVoidMethod ("_apply_viewstyle",__ref.getField(false, "ba"),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), __ref.getField(false,"_btnpoints").getArrayElement(false,BA.numberCast(int.class, _i)).getObject()),(Object)(exe_judging.__c.getField(false,"Colors").getField(true,"White")),(Object)(BA.numberCast(int.class, 0xff4ac2ff)),(Object)(BA.numberCast(int.class, 0xff149be0)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 60)));
+ BA.debugLineNum = 90;BA.debugLine="btnPoints(i).Padding = Array As Int(15,0,0,0)";
+Debug.ShouldStop(33554432);
+__ref.getField(false,"_btnpoints").getArrayElement(false,BA.numberCast(int.class, _i)).runMethod(false,"setPadding",RemoteObject.createNewArray("int",new int[] {4},new Object[] {BA.numberCast(int.class, 15),BA.numberCast(int.class, 0),BA.numberCast(int.class, 0),BA.numberCast(int.class, 0)}));
+ BA.debugLineNum = 91;BA.debugLine="btnPoints(i).SingleLine = True";
+Debug.ShouldStop(67108864);
+__ref.getField(false,"_btnpoints").getArrayElement(false,BA.numberCast(int.class, _i)).runVoidMethod ("setSingleLine",exe_judging.__c.getField(true,"True"));
  }
 }Debug.locals.put("i", _i);
 ;
- BA.debugLineNum = 87;BA.debugLine="page(0).AddView(chekpointbox, label(7).left + lab";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 94;BA.debugLine="page(0).AddView(chekpointbox, label(7).left + lab";
+Debug.ShouldStop(536870912);
 __ref.getField(false,"_page").getArrayElement(false,BA.numberCast(int.class, 0)).runVoidMethod ("AddView",(Object)((__ref.getField(false,"_chekpointbox").getObject())),(Object)(RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_label").getArrayElement(false,BA.numberCast(int.class, 7)).runMethod(true,"getLeft"),__ref.getField(false,"_label").getArrayElement(false,BA.numberCast(int.class, 7)).runMethod(true,"getWidth"),exe_judging.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 10)),__ref.getField(false, "ba"))}, "++",2, 1)),(Object)(__ref.getField(false,"_label").getArrayElement(false,BA.numberCast(int.class, 7)).runMethod(true,"getTop")),(Object)(exe_judging.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 15)),__ref.getField(false, "ba"))),(Object)(exe_judging.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 10)),__ref.getField(false, "ba"))));
- BA.debugLineNum = 88;BA.debugLine="chekpointbox.Text = Main.translate.GetString(\"add";
-Debug.ShouldStop(8388608);
-__ref.getField(false,"_chekpointbox").runMethod(true,"setText",BA.ObjectToCharSequence(exe_judging._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.concat(RemoteObject.createImmutable("addPan"),RemoteObject.createImmutable(_i))))));
- BA.debugLineNum = 89;BA.debugLine="End Sub";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 95;BA.debugLine="chekpointbox.Text = \"-\" & HelperFunctions.TvScore";
+Debug.ShouldStop(1073741824);
+__ref.getField(false,"_chekpointbox").runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("-"),exe_judging._helperfunctions._tvscore3)));
+ BA.debugLineNum = 96;BA.debugLine="End Sub";
+Debug.ShouldStop(-2147483648);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -185,27 +203,27 @@ finally {
 		}}
 public static RemoteObject  _check_checkedchange(RemoteObject __ref,RemoteObject _checked) throws Exception{
 try {
-		Debug.PushSubsStack("check_CheckedChange (exe_judging) ","exe_judging",2,__ref.getField(false, "ba"),__ref,96);
+		Debug.PushSubsStack("check_CheckedChange (exe_judging) ","exe_judging",2,__ref.getField(false, "ba"),__ref,103);
 if (RapidSub.canDelegate("check_checkedchange")) return __ref.runUserSub(false, "exe_judging","check_checkedchange", __ref, _checked);
 Debug.locals.put("Checked", _checked);
- BA.debugLineNum = 96;BA.debugLine="Private Sub check_CheckedChange(Checked As Boolean";
-Debug.ShouldStop(-2147483648);
- BA.debugLineNum = 97;BA.debugLine="If Checked = True Then";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 103;BA.debugLine="Private Sub check_CheckedChange(Checked As Boolean";
+Debug.ShouldStop(64);
+ BA.debugLineNum = 104;BA.debugLine="If Checked = True Then";
+Debug.ShouldStop(128);
 if (RemoteObject.solveBoolean("=",_checked,exe_judging.__c.getField(true,"True"))) { 
- BA.debugLineNum = 98;BA.debugLine="exeScore = exeScore + 0.1";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 105;BA.debugLine="exeScore = exeScore + 0.1";
+Debug.ShouldStop(256);
 __ref.setField ("_exescore",RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_exescore"),RemoteObject.createImmutable(0.1)}, "+",1, 0));
- BA.debugLineNum = 99;BA.debugLine="Log(exeScore)";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 106;BA.debugLine="Log(exeScore)";
+Debug.ShouldStop(512);
 exe_judging.__c.runVoidMethod ("Log",(Object)(BA.NumberToString(__ref.getField(true,"_exescore"))));
  }else {
- BA.debugLineNum = 101;BA.debugLine="exeScore = exeScore - 0.1";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 108;BA.debugLine="exeScore = exeScore - 0.1";
+Debug.ShouldStop(2048);
 __ref.setField ("_exescore",RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_exescore"),RemoteObject.createImmutable(0.1)}, "-",1, 0));
  };
- BA.debugLineNum = 103;BA.debugLine="End Sub";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 110;BA.debugLine="End Sub";
+Debug.ShouldStop(8192);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -249,21 +267,21 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _finalexescore(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("finalEXEscore (exe_judging) ","exe_judging",2,__ref.getField(false, "ba"),__ref,105);
+		Debug.PushSubsStack("finalEXEscore (exe_judging) ","exe_judging",2,__ref.getField(false, "ba"),__ref,112);
 if (RapidSub.canDelegate("finalexescore")) return __ref.runUserSub(false, "exe_judging","finalexescore", __ref);
- BA.debugLineNum = 105;BA.debugLine="Public Sub finalEXEscore As Double";
-Debug.ShouldStop(256);
- BA.debugLineNum = 106;BA.debugLine="exeScore = maxValue - exeScore";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 112;BA.debugLine="Public Sub finalEXEscore As Double";
+Debug.ShouldStop(32768);
+ BA.debugLineNum = 113;BA.debugLine="exeScore = maxValue - exeScore";
+Debug.ShouldStop(65536);
 __ref.setField ("_exescore",RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_maxvalue"),__ref.getField(true,"_exescore")}, "-",1, 0));
- BA.debugLineNum = 107;BA.debugLine="Log(\"EXESCORE:\"&exeScore)";
-Debug.ShouldStop(1024);
+ BA.debugLineNum = 114;BA.debugLine="Log(\"EXESCORE:\"&exeScore)";
+Debug.ShouldStop(131072);
 exe_judging.__c.runVoidMethod ("Log",(Object)(RemoteObject.concat(RemoteObject.createImmutable("EXESCORE:"),__ref.getField(true,"_exescore"))));
- BA.debugLineNum = 108;BA.debugLine="Return exeScore";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 115;BA.debugLine="Return exeScore";
+Debug.ShouldStop(262144);
 if (true) return __ref.getField(true,"_exescore");
- BA.debugLineNum = 109;BA.debugLine="End Sub";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 116;BA.debugLine="End Sub";
+Debug.ShouldStop(524288);
 return RemoteObject.createImmutable(0);
 }
 catch (Exception e) {
@@ -336,18 +354,18 @@ finally {
 		}}
 public static RemoteObject  _ready_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("ready_Click (exe_judging) ","exe_judging",2,__ref.getField(false, "ba"),__ref,111);
+		Debug.PushSubsStack("ready_Click (exe_judging) ","exe_judging",2,__ref.getField(false, "ba"),__ref,118);
 if (RapidSub.canDelegate("ready_click")) return __ref.runUserSub(false, "exe_judging","ready_click", __ref);
- BA.debugLineNum = 111;BA.debugLine="Private Sub ready_Click";
-Debug.ShouldStop(16384);
- BA.debugLineNum = 112;BA.debugLine="CallSub(Main, \"FinalClick\")";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 118;BA.debugLine="Private Sub ready_Click";
+Debug.ShouldStop(2097152);
+ BA.debugLineNum = 119;BA.debugLine="CallSub(Main, \"FinalClick\")";
+Debug.ShouldStop(4194304);
 exe_judging.__c.runMethodAndSync(false,"CallSubNew",__ref.getField(false, "ba"),(Object)((exe_judging._main.getObject())),(Object)(RemoteObject.createImmutable("FinalClick")));
- BA.debugLineNum = 113;BA.debugLine="finalEXEscore";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 120;BA.debugLine="finalEXEscore";
+Debug.ShouldStop(8388608);
 __ref.runClassMethod (agg.agg.exe_judging.class, "_finalexescore");
- BA.debugLineNum = 114;BA.debugLine="End Sub";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 121;BA.debugLine="End Sub";
+Debug.ShouldStop(16777216);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

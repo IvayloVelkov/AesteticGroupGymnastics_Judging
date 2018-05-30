@@ -88,12 +88,12 @@ Public Sub BuildUi
 	
 	page(0).AddView(chekpointbox1(0), label(0).left + label(0).Width, label(0).Top, 30%x, 10%y)
 '	chekpointbox(0).Text = Main.translate.GetString("Check0")
-	chekpointbox1(0).Text = "001" 
+	chekpointbox1(0).Text = HelperFunctions.TvScore1
 	chekpointbox1(0).Tag = 0 
 	page(0).AddView(chekpointbox2(0), chekpointbox1(0).left + chekpointbox1(0).Width, chekpointbox1(0).Top, 30%x, 10%y)
 '	chekpointbox(13).Text = Main.translate.GetString("Check14")
 	chekpointbox2(0).Tag = 0
-	chekpointbox2(0).Text = "002"
+	chekpointbox2(0).Text = HelperFunctions.TvScore2
 
 	For i = 1 To 5
 		page(0).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
@@ -102,12 +102,12 @@ Public Sub BuildUi
 		
 		page(0).AddView(chekpointbox1(i), label(i).left + label(i).Width, label(i).Top, 30%x, 10%y)
 '		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
-		chekpointbox1(i).Text = i & "1"
+		chekpointbox1(i).Text = HelperFunctions.TvScore1
 		chekpointbox1(i).Tag = i
 
 		page(0).AddView(chekpointbox2(i), chekpointbox1(i).left + chekpointbox1(i).Width, chekpointbox1(i).Top, 30%x, 10%y)
 '		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
-		chekpointbox2(i).Text = i & "2"
+		chekpointbox2(i).Text = HelperFunctions.TvScore2
 		chekpointbox2(i).Tag = i
 
 
@@ -119,18 +119,18 @@ Public Sub BuildUi
 	
 	page(1).AddView(chekpointbox1(6), label(6).left + label(6).Width, label(6).Top, 15%x, 10%y)
 '	chekpointbox(0).Text = Main.translate.GetString("Check0")
-	chekpointbox1(6).Text = "001"
+	chekpointbox1(6).Text = HelperFunctions.TvScore2
 	chekpointbox1(6).Tag = 6
 
 	page(1).AddView(chekpointbox2(6), chekpointbox1(6).left + chekpointbox1(6).Width, chekpointbox1(6).Top, 15%x, 10%y)
 '	chekpointbox(13).Text = Main.translate.GetString("Check14")
-	chekpointbox2(6).Text = "002"
+	chekpointbox2(6).Text = HelperFunctions.TvScore3
 	chekpointbox2(6).Tag = 6
 
 	
 	page(1).AddView(chekpointbox3(6), chekpointbox2(6).left + chekpointbox2(6).Width, chekpointbox2(6).Top, 15%x, 10%y)
 '	chekpointbox(13).Text = Main.translate.GetString("Check14")
-	chekpointbox3(6).Text = "003"
+	chekpointbox3(6).Text = HelperFunctions.TvScore5
 	chekpointbox3(6).Tag = 6
 
 	
@@ -143,17 +143,17 @@ Public Sub BuildUi
 	For i = 7 To 11
 		page(1).AddView(chekpointbox1(i),label(i).left + label(i).Width, label(i).Top, 15%x, 10%y)
 		'chekpointbox(i).Text = Main.translate.GetString("Check" & i)
-		chekpointbox1(i).Text = i & "1"
+		chekpointbox1(i).Text = HelperFunctions.TvScore2
 		chekpointbox1(i).Tag = i
 
 		page(1).AddView(chekpointbox2(i),chekpointbox1(i).left + chekpointbox1(i).Width, chekpointbox1(i).Top, 15%x, 10%y)
 		'chekpointbox(i).Text = Main.translate.GetString("Check" & i)
-		chekpointbox2(i).Text = i & "2"
+		chekpointbox2(i).Text = HelperFunctions.TvScore3
 		chekpointbox2(i).Tag = i
 
 		page(1).AddView(chekpointbox3(i), chekpointbox2(i).left + chekpointbox2(i).Width, chekpointbox2(i).Top, 15%x, 10%y)
 		'chekpointbox(i).Text = Main.translate.GetString("Check" & i)
-		chekpointbox3(i).Text = i & "3"
+		chekpointbox3(i).Text = HelperFunctions.TvScore5
 		chekpointbox3(i).Tag = i
 
 	Next

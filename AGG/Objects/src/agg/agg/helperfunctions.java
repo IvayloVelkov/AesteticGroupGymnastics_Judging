@@ -12,6 +12,11 @@ public static Object getObject() {
 }
  
 public anywheresoftware.b4a.keywords.Common __c = null;
+public static String _tvscore1 = "";
+public static String _tvscore2 = "";
+public static String _tvscore3 = "";
+public static String _tvscore4 = "";
+public static String _tvscore5 = "";
 public agg.agg.main _main = null;
 public agg.agg.starter _starter = null;
 public agg.agg.programdata _programdata = null;

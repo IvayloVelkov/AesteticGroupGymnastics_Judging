@@ -29,17 +29,17 @@ Public Sub Initialize
 	typePanel.AddView(btnTv, 35%x, btnAv.Top+btnAv.Height*1.5+Padding, 30%x, 10%y)
 	typePanel.AddView(btnExe, 35%x, btnTv.Top+btnTv.Height*1.5+Padding, 30%x, 10%y)
 	
-	HelperFunctions.Apply_ViewStyle(btnAv,Colors.Black,Colors.White,Colors.White,Colors.White,Colors.White,Colors.White,Colors.White,60)
+	HelperFunctions.Apply_ViewStyle(btnAv,Colors.White,0xff4ac2ff,0xff149be0,0xff2cb7ff,0xff2cb7ff,0x66040509,0x66040509,60)
 	btnAv.Text = Main.translate.GetString("AVbtn")
 	btnAv.Padding = Array As Int(15,0,0,0)
 	btnAv.TextSize = 14
 	
-	HelperFunctions.Apply_ViewStyle(btnTv,Colors.Black,Colors.White,Colors.White,Colors.White,Colors.White,Colors.White,Colors.White,60)
+	HelperFunctions.Apply_ViewStyle(btnTv,Colors.White,0xff4ac2ff,0xff149be0,0xff2cb7ff,0xff2cb7ff,0x66040509,0x66040509,60)
 	btnTv.Text = Main.translate.GetString("TVbtn")
 	btnTv.Padding = Array As Int(15,0,0,0)
 	btnTv.TextSize = 14
 
-	HelperFunctions.Apply_ViewStyle(btnExe,Colors.Black,Colors.White,Colors.White,Colors.White,Colors.White,Colors.White,Colors.White,60)
+	HelperFunctions.Apply_ViewStyle(btnExe,Colors.White,0xff4ac2ff,0xff149be0,0xff2cb7ff,0xff2cb7ff,0x66040509,0x66040509,60)
 	btnExe.Text = Main.translate.GetString("EXEbtn")
 	btnExe.Padding = Array As Int(15,0,0,0)
 	btnExe.TextSize = 14

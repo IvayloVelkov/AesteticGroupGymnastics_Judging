@@ -19,86 +19,89 @@ main._translate.runClassMethod (agg.agg.translator.class, "_initialize",main.pro
  BA.debugLineNum = 38;BA.debugLine="intFontTransfer = UISizes.DefaultFont";
 Debug.ShouldStop(32);
 main._intfonttransfer = main.mostCurrent._uisizes._defaultfont;
- BA.debugLineNum = 40;BA.debugLine="Login.Initialize";
+ BA.debugLineNum = 40;BA.debugLine="Load_Language";
 Debug.ShouldStop(128);
-main.mostCurrent._login.runClassMethod (agg.agg.loginscreen.class, "_initialize",main.mostCurrent.activityBA);
- BA.debugLineNum = 41;BA.debugLine="Activity.AddView(Login.asView, 0, 0, 100%x, 100%y";
-Debug.ShouldStop(256);
-main.mostCurrent._activity.runVoidMethod ("AddView",(Object)((main.mostCurrent._login.runClassMethod (agg.agg.loginscreen.class, "_asview").getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(main.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)),(Object)(main.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)));
- BA.debugLineNum = 42;BA.debugLine="Login.build_Screen";
+_load_language();
+ BA.debugLineNum = 42;BA.debugLine="Login.Initialize";
 Debug.ShouldStop(512);
-main.mostCurrent._login.runClassMethod (agg.agg.loginscreen.class, "_build_screen");
- BA.debugLineNum = 44;BA.debugLine="typeJ.Initialize";
+main.mostCurrent._login.runClassMethod (agg.agg.loginscreen.class, "_initialize",main.mostCurrent.activityBA);
+ BA.debugLineNum = 43;BA.debugLine="Activity.AddView(Login.asView, 0, 0, 100%x, 100%y";
+Debug.ShouldStop(1024);
+main.mostCurrent._activity.runVoidMethod ("AddView",(Object)((main.mostCurrent._login.runClassMethod (agg.agg.loginscreen.class, "_asview").getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(main.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)),(Object)(main.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)));
+ BA.debugLineNum = 44;BA.debugLine="Login.build_Screen";
 Debug.ShouldStop(2048);
-main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_initialize",main.mostCurrent.activityBA);
- BA.debugLineNum = 45;BA.debugLine="Activity.AddView(typeJ.asView, 0, 0, 100%x, 100%y";
-Debug.ShouldStop(4096);
-main.mostCurrent._activity.runVoidMethod ("AddView",(Object)((main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(main.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)),(Object)(main.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)));
- BA.debugLineNum = 46;BA.debugLine="typeJ.asView.Visible = False";
+main.mostCurrent._login.runClassMethod (agg.agg.loginscreen.class, "_build_screen");
+ BA.debugLineNum = 46;BA.debugLine="typeJ.Initialize";
 Debug.ShouldStop(8192);
-main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 47;BA.debugLine="typeJ.asView.Enabled = False";
+main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_initialize",main.mostCurrent.activityBA);
+ BA.debugLineNum = 47;BA.debugLine="Activity.AddView(typeJ.asView, 0, 0, 100%x, 100%y";
 Debug.ShouldStop(16384);
-main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 49;BA.debugLine="avJ.Initialize";
+main.mostCurrent._activity.runVoidMethod ("AddView",(Object)((main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(main.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)),(Object)(main.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)));
+ BA.debugLineNum = 48;BA.debugLine="typeJ.asView.Visible = False";
+Debug.ShouldStop(32768);
+main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 49;BA.debugLine="typeJ.asView.Enabled = False";
 Debug.ShouldStop(65536);
-main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_initialize",main.mostCurrent.activityBA);
- BA.debugLineNum = 50;BA.debugLine="Activity.AddView(avJ.asView, 0, 0, 100%x, 100%y)";
-Debug.ShouldStop(131072);
-main.mostCurrent._activity.runVoidMethod ("AddView",(Object)((main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(main.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)),(Object)(main.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)));
- BA.debugLineNum = 51;BA.debugLine="avJ.asView.Visible = False";
+main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 51;BA.debugLine="avJ.Initialize";
 Debug.ShouldStop(262144);
-main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 52;BA.debugLine="avJ.asView.Enabled = False";
+main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_initialize",main.mostCurrent.activityBA);
+ BA.debugLineNum = 52;BA.debugLine="Activity.AddView(avJ.asView, 0, 0, 100%x, 100%y)";
 Debug.ShouldStop(524288);
-main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 53;BA.debugLine="avJ.BuildUi";
+main.mostCurrent._activity.runVoidMethod ("AddView",(Object)((main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(main.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)),(Object)(main.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)));
+ BA.debugLineNum = 53;BA.debugLine="avJ.asView.Visible = False";
 Debug.ShouldStop(1048576);
-main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_buildui");
- BA.debugLineNum = 55;BA.debugLine="tvJ.Initialize";
+main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 54;BA.debugLine="avJ.asView.Enabled = False";
+Debug.ShouldStop(2097152);
+main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 55;BA.debugLine="avJ.BuildUi";
 Debug.ShouldStop(4194304);
-main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_initialize",main.mostCurrent.activityBA);
- BA.debugLineNum = 56;BA.debugLine="Activity.AddView(tvJ.asView, 0, 0, 100%x, 100%y)";
-Debug.ShouldStop(8388608);
-main.mostCurrent._activity.runVoidMethod ("AddView",(Object)((main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(main.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)),(Object)(main.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)));
- BA.debugLineNum = 57;BA.debugLine="tvJ.asView.Visible = False";
+main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_buildui");
+ BA.debugLineNum = 57;BA.debugLine="tvJ.Initialize";
 Debug.ShouldStop(16777216);
-main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 58;BA.debugLine="tvJ.asView.Enabled = False";
+main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_initialize",main.mostCurrent.activityBA);
+ BA.debugLineNum = 58;BA.debugLine="Activity.AddView(tvJ.asView, 0, 0, 100%x, 100%y)";
 Debug.ShouldStop(33554432);
-main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 59;BA.debugLine="tvJ.BuildUi";
+main.mostCurrent._activity.runVoidMethod ("AddView",(Object)((main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(main.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)),(Object)(main.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)));
+ BA.debugLineNum = 59;BA.debugLine="tvJ.asView.Visible = False";
 Debug.ShouldStop(67108864);
-main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_buildui");
- BA.debugLineNum = 61;BA.debugLine="exeJ.Initialize";
+main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 60;BA.debugLine="tvJ.asView.Enabled = False";
+Debug.ShouldStop(134217728);
+main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 61;BA.debugLine="tvJ.BuildUi";
 Debug.ShouldStop(268435456);
-main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_initialize",main.mostCurrent.activityBA);
- BA.debugLineNum = 62;BA.debugLine="Activity.AddView(exeJ.asView, 0, 0, 100%x, 100%y)";
-Debug.ShouldStop(536870912);
-main.mostCurrent._activity.runVoidMethod ("AddView",(Object)((main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(main.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)),(Object)(main.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)));
- BA.debugLineNum = 63;BA.debugLine="exeJ.asView.Visible = False";
+main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_buildui");
+ BA.debugLineNum = 63;BA.debugLine="exeJ.Initialize";
 Debug.ShouldStop(1073741824);
-main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 64;BA.debugLine="exeJ.asView.Enabled = False";
+main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_initialize",main.mostCurrent.activityBA);
+ BA.debugLineNum = 64;BA.debugLine="Activity.AddView(exeJ.asView, 0, 0, 100%x, 100%y)";
 Debug.ShouldStop(-2147483648);
-main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 65;BA.debugLine="exeJ.BuildUi";
+main.mostCurrent._activity.runVoidMethod ("AddView",(Object)((main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(main.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)),(Object)(main.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)));
+ BA.debugLineNum = 65;BA.debugLine="exeJ.asView.Visible = False";
 Debug.ShouldStop(1);
-main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_buildui");
- BA.debugLineNum = 67;BA.debugLine="final.Initialize";
+main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 66;BA.debugLine="exeJ.asView.Enabled = False";
+Debug.ShouldStop(2);
+main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 67;BA.debugLine="exeJ.BuildUi";
 Debug.ShouldStop(4);
-main.mostCurrent._final.runClassMethod (agg.agg.sendscore.class, "_initialize",main.mostCurrent.activityBA);
- BA.debugLineNum = 68;BA.debugLine="Activity.AddView(final.asView, 0, 0, 100%x, 100%y";
-Debug.ShouldStop(8);
-main.mostCurrent._activity.runVoidMethod ("AddView",(Object)((main.mostCurrent._final.runClassMethod (agg.agg.sendscore.class, "_asview").getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(main.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)),(Object)(main.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)));
- BA.debugLineNum = 69;BA.debugLine="final.asView.Visible = False";
+main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_buildui");
+ BA.debugLineNum = 69;BA.debugLine="final.Initialize";
 Debug.ShouldStop(16);
-main.mostCurrent._final.runClassMethod (agg.agg.sendscore.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 70;BA.debugLine="final.asView.Enabled = False";
+main.mostCurrent._final.runClassMethod (agg.agg.sendscore.class, "_initialize",main.mostCurrent.activityBA);
+ BA.debugLineNum = 70;BA.debugLine="Activity.AddView(final.asView, 0, 0, 100%x, 100%y";
 Debug.ShouldStop(32);
+main.mostCurrent._activity.runVoidMethod ("AddView",(Object)((main.mostCurrent._final.runClassMethod (agg.agg.sendscore.class, "_asview").getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(main.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)),(Object)(main.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 100)),main.mostCurrent.activityBA)));
+ BA.debugLineNum = 71;BA.debugLine="final.asView.Visible = False";
+Debug.ShouldStop(64);
+main.mostCurrent._final.runClassMethod (agg.agg.sendscore.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 72;BA.debugLine="final.asView.Enabled = False";
+Debug.ShouldStop(128);
 main.mostCurrent._final.runClassMethod (agg.agg.sendscore.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 73;BA.debugLine="End Sub";
-Debug.ShouldStop(256);
+ BA.debugLineNum = 75;BA.debugLine="End Sub";
+Debug.ShouldStop(1024);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -109,97 +112,101 @@ finally {
 		}}
 public static RemoteObject  _activity_keypress(RemoteObject _keycode) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_KeyPress (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,139);
+		Debug.PushSubsStack("Activity_KeyPress (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,146);
 if (RapidSub.canDelegate("activity_keypress")) return agg.agg.main.remoteMe.runUserSub(false, "main","activity_keypress", _keycode);
 Debug.locals.put("KeyCode", _keycode);
- BA.debugLineNum = 139;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
-Debug.ShouldStop(1024);
- BA.debugLineNum = 140;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
-Debug.ShouldStop(2048);
-if (RemoteObject.solveBoolean("=",_keycode,BA.numberCast(double.class, main.mostCurrent.__c.getField(false,"KeyCodes").getField(true,"KEYCODE_BACK")))) { 
- BA.debugLineNum = 141;BA.debugLine="If avJ.asView.Visible = True Then";
-Debug.ShouldStop(4096);
-if (RemoteObject.solveBoolean("=",main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"getVisible"),main.mostCurrent.__c.getField(true,"True"))) { 
- BA.debugLineNum = 142;BA.debugLine="Login.asView.Visible = True";
-Debug.ShouldStop(8192);
-main.mostCurrent._login.runClassMethod (agg.agg.loginscreen.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 143;BA.debugLine="avJ.asView.Visible = False";
-Debug.ShouldStop(16384);
-main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 144;BA.debugLine="Login.btnloginPanel.Enabled = True";
-Debug.ShouldStop(32768);
-main.mostCurrent._login.getField(false,"_btnloginpanel").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"True"));
- }else 
-{ BA.debugLineNum = 145;BA.debugLine="Else If tvJ.asView.Visible = True Then";
-Debug.ShouldStop(65536);
-if (RemoteObject.solveBoolean("=",main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"getVisible"),main.mostCurrent.__c.getField(true,"True"))) { 
- BA.debugLineNum = 146;BA.debugLine="tvJ.asView.Visible = False";
+ BA.debugLineNum = 146;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
 Debug.ShouldStop(131072);
-main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 147;BA.debugLine="Login.asView.Visible = True";
+ BA.debugLineNum = 147;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
 Debug.ShouldStop(262144);
-main.mostCurrent._login.runClassMethod (agg.agg.loginscreen.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 148;BA.debugLine="Login.btnloginPanel.Enabled = True";
+if (RemoteObject.solveBoolean("=",_keycode,BA.numberCast(double.class, main.mostCurrent.__c.getField(false,"KeyCodes").getField(true,"KEYCODE_BACK")))) { 
+ BA.debugLineNum = 148;BA.debugLine="If avJ.asView.Visible = True Then";
 Debug.ShouldStop(524288);
-main.mostCurrent._login.getField(false,"_btnloginpanel").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"True"));
- }else 
-{ BA.debugLineNum = 149;BA.debugLine="Else If exeJ.asView.Visible = True Then";
+if (RemoteObject.solveBoolean("=",main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"getVisible"),main.mostCurrent.__c.getField(true,"True"))) { 
+ BA.debugLineNum = 149;BA.debugLine="typeJ.asView.Visible = True";
 Debug.ShouldStop(1048576);
-if (RemoteObject.solveBoolean("=",main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"getVisible"),main.mostCurrent.__c.getField(true,"True"))) { 
- BA.debugLineNum = 150;BA.debugLine="exeJ.asView.Visible = False";
+main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 150;BA.debugLine="avJ.asView.Visible = False";
 Debug.ShouldStop(2097152);
-main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 151;BA.debugLine="Login.asView.Visible = True";
+main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
+ }else 
+{ BA.debugLineNum = 151;BA.debugLine="Else If tvJ.asView.Visible = True Then";
 Debug.ShouldStop(4194304);
-main.mostCurrent._login.runClassMethod (agg.agg.loginscreen.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 152;BA.debugLine="Login.btnloginPanel.Enabled = True";
+if (RemoteObject.solveBoolean("=",main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"getVisible"),main.mostCurrent.__c.getField(true,"True"))) { 
+ BA.debugLineNum = 152;BA.debugLine="tvJ.asView.Visible = False";
 Debug.ShouldStop(8388608);
+main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 153;BA.debugLine="typeJ.asView.Visible = True";
+Debug.ShouldStop(16777216);
+main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
+ }else 
+{ BA.debugLineNum = 154;BA.debugLine="Else If exeJ.asView.Visible = True Then";
+Debug.ShouldStop(33554432);
+if (RemoteObject.solveBoolean("=",main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"getVisible"),main.mostCurrent.__c.getField(true,"True"))) { 
+ BA.debugLineNum = 155;BA.debugLine="exeJ.asView.Visible = False";
+Debug.ShouldStop(67108864);
+main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 156;BA.debugLine="typeJ.asView.Visible = True";
+Debug.ShouldStop(134217728);
+main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
+ }else 
+{ BA.debugLineNum = 157;BA.debugLine="Else If typeJ.asView.Visible = True Then";
+Debug.ShouldStop(268435456);
+if (RemoteObject.solveBoolean("=",main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"getVisible"),main.mostCurrent.__c.getField(true,"True"))) { 
+ BA.debugLineNum = 158;BA.debugLine="typeJ.asView.Visible = False";
+Debug.ShouldStop(536870912);
+main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 159;BA.debugLine="Login.asView.Visible = True";
+Debug.ShouldStop(1073741824);
+main.mostCurrent._login.runClassMethod (agg.agg.loginscreen.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 160;BA.debugLine="Login.btnloginPanel.Enabled = True";
+Debug.ShouldStop(-2147483648);
 main.mostCurrent._login.getField(false,"_btnloginpanel").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"True"));
  }else 
-{ BA.debugLineNum = 153;BA.debugLine="Else If final.asView.Visible = True Then";
-Debug.ShouldStop(16777216);
+{ BA.debugLineNum = 161;BA.debugLine="Else If final.asView.Visible = True Then";
+Debug.ShouldStop(1);
 if (RemoteObject.solveBoolean("=",main.mostCurrent._final.runClassMethod (agg.agg.sendscore.class, "_asview").runMethod(true,"getVisible"),main.mostCurrent.__c.getField(true,"True"))) { 
- BA.debugLineNum = 154;BA.debugLine="Select scActive";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 162;BA.debugLine="Select scActive";
+Debug.ShouldStop(2);
 switch (BA.switchObjectToInt(main._scactive,BA.numberCast(int.class, 1),BA.numberCast(int.class, 2),BA.numberCast(int.class, 3))) {
 case 0: {
- BA.debugLineNum = 156;BA.debugLine="avJ.asView.Visible = True";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 164;BA.debugLine="avJ.asView.Visible = True";
+Debug.ShouldStop(8);
 main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 157;BA.debugLine="final.asView.Visible = False";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 165;BA.debugLine="final.asView.Visible = False";
+Debug.ShouldStop(16);
 main.mostCurrent._final.runClassMethod (agg.agg.sendscore.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
  break; }
 case 1: {
- BA.debugLineNum = 159;BA.debugLine="tvJ.asView.Visible = True";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 167;BA.debugLine="tvJ.asView.Visible = True";
+Debug.ShouldStop(64);
 main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 160;BA.debugLine="final.asView.Visible = False";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 168;BA.debugLine="final.asView.Visible = False";
+Debug.ShouldStop(128);
 main.mostCurrent._final.runClassMethod (agg.agg.sendscore.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
  break; }
 case 2: {
- BA.debugLineNum = 162;BA.debugLine="exeJ.asView.Visible = True";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 170;BA.debugLine="exeJ.asView.Visible = True";
+Debug.ShouldStop(512);
 main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 163;BA.debugLine="final.asView.Visible = False";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 171;BA.debugLine="final.asView.Visible = False";
+Debug.ShouldStop(1024);
 main.mostCurrent._final.runClassMethod (agg.agg.sendscore.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
  break; }
 }
 ;
- }}}}
+ }}}}}
 ;
- BA.debugLineNum = 166;BA.debugLine="Return True";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 174;BA.debugLine="Return True";
+Debug.ShouldStop(8192);
 if (true) return main.mostCurrent.__c.getField(true,"True");
  }else {
- BA.debugLineNum = 168;BA.debugLine="Return False";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 176;BA.debugLine="Return False";
+Debug.ShouldStop(32768);
 if (true) return main.mostCurrent.__c.getField(true,"False");
  };
- BA.debugLineNum = 170;BA.debugLine="End Sub";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 178;BA.debugLine="End Sub";
+Debug.ShouldStop(131072);
 return RemoteObject.createImmutable(false);
 }
 catch (Exception e) {
@@ -210,27 +217,27 @@ finally {
 		}}
 public static RemoteObject  _av_click() throws Exception{
 try {
-		Debug.PushSubsStack("AV_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,95);
+		Debug.PushSubsStack("AV_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,102);
 if (RapidSub.canDelegate("av_click")) return agg.agg.main.remoteMe.runUserSub(false, "main","av_click");
- BA.debugLineNum = 95;BA.debugLine="Public Sub AV_Click";
-Debug.ShouldStop(1073741824);
- BA.debugLineNum = 96;BA.debugLine="typeJ.asView.Visible = False";
-Debug.ShouldStop(-2147483648);
-main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 97;BA.debugLine="typeJ.asView.Enabled = False";
-Debug.ShouldStop(1);
-main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 99;BA.debugLine="avJ.asView.Visible = True";
-Debug.ShouldStop(4);
-main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 100;BA.debugLine="avJ.asView.Enabled = True";
-Debug.ShouldStop(8);
-main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 101;BA.debugLine="scActive = 1";
-Debug.ShouldStop(16);
-main._scactive = BA.numberCast(int.class, 1);
- BA.debugLineNum = 102;BA.debugLine="End Sub";
+ BA.debugLineNum = 102;BA.debugLine="Public Sub AV_Click";
 Debug.ShouldStop(32);
+ BA.debugLineNum = 103;BA.debugLine="typeJ.asView.Visible = False";
+Debug.ShouldStop(64);
+main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 104;BA.debugLine="typeJ.asView.Enabled = False";
+Debug.ShouldStop(128);
+main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 106;BA.debugLine="avJ.asView.Visible = True";
+Debug.ShouldStop(512);
+main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 107;BA.debugLine="avJ.asView.Enabled = True";
+Debug.ShouldStop(1024);
+main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 108;BA.debugLine="scActive = 1";
+Debug.ShouldStop(2048);
+main._scactive = BA.numberCast(int.class, 1);
+ BA.debugLineNum = 109;BA.debugLine="End Sub";
+Debug.ShouldStop(4096);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -241,27 +248,27 @@ finally {
 		}}
 public static RemoteObject  _exe_click() throws Exception{
 try {
-		Debug.PushSubsStack("EXE_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,113);
+		Debug.PushSubsStack("EXE_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,120);
 if (RapidSub.canDelegate("exe_click")) return agg.agg.main.remoteMe.runUserSub(false, "main","exe_click");
- BA.debugLineNum = 113;BA.debugLine="Public Sub EXE_Click";
-Debug.ShouldStop(65536);
- BA.debugLineNum = 114;BA.debugLine="typeJ.asView.Visible = False";
-Debug.ShouldStop(131072);
-main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 115;BA.debugLine="typeJ.asView.Enabled = False";
-Debug.ShouldStop(262144);
-main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 117;BA.debugLine="exeJ.asView.Visible = True";
-Debug.ShouldStop(1048576);
-main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 118;BA.debugLine="exeJ.asView.Enabled = True";
-Debug.ShouldStop(2097152);
-main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 119;BA.debugLine="scActive = 3";
-Debug.ShouldStop(4194304);
-main._scactive = BA.numberCast(int.class, 3);
- BA.debugLineNum = 120;BA.debugLine="End Sub";
+ BA.debugLineNum = 120;BA.debugLine="Public Sub EXE_Click";
 Debug.ShouldStop(8388608);
+ BA.debugLineNum = 121;BA.debugLine="typeJ.asView.Visible = False";
+Debug.ShouldStop(16777216);
+main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 122;BA.debugLine="typeJ.asView.Enabled = False";
+Debug.ShouldStop(33554432);
+main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 124;BA.debugLine="exeJ.asView.Visible = True";
+Debug.ShouldStop(134217728);
+main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 125;BA.debugLine="exeJ.asView.Enabled = True";
+Debug.ShouldStop(268435456);
+main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 126;BA.debugLine="scActive = 3";
+Debug.ShouldStop(536870912);
+main._scactive = BA.numberCast(int.class, 3);
+ BA.debugLineNum = 127;BA.debugLine="End Sub";
+Debug.ShouldStop(1073741824);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -272,52 +279,52 @@ finally {
 		}}
 public static RemoteObject  _finalclick() throws Exception{
 try {
-		Debug.PushSubsStack("FinalClick (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,122);
+		Debug.PushSubsStack("FinalClick (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,129);
 if (RapidSub.canDelegate("finalclick")) return agg.agg.main.remoteMe.runUserSub(false, "main","finalclick");
- BA.debugLineNum = 122;BA.debugLine="Public Sub FinalClick";
-Debug.ShouldStop(33554432);
- BA.debugLineNum = 123;BA.debugLine="If avJ.asView.Visible = True Then";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 129;BA.debugLine="Public Sub FinalClick";
+Debug.ShouldStop(1);
+ BA.debugLineNum = 130;BA.debugLine="If avJ.asView.Visible = True Then";
+Debug.ShouldStop(2);
 if (RemoteObject.solveBoolean("=",main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"getVisible"),main.mostCurrent.__c.getField(true,"True"))) { 
- BA.debugLineNum = 124;BA.debugLine="avJ.asView.Visible = False";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 131;BA.debugLine="avJ.asView.Visible = False";
+Debug.ShouldStop(4);
 main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 125;BA.debugLine="avJ.asView.Enabled = False";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 132;BA.debugLine="avJ.asView.Enabled = False";
+Debug.ShouldStop(8);
 main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
  }else 
-{ BA.debugLineNum = 126;BA.debugLine="Else If tvJ.asView.Visible = True Then";
-Debug.ShouldStop(536870912);
+{ BA.debugLineNum = 133;BA.debugLine="Else If tvJ.asView.Visible = True Then";
+Debug.ShouldStop(16);
 if (RemoteObject.solveBoolean("=",main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"getVisible"),main.mostCurrent.__c.getField(true,"True"))) { 
- BA.debugLineNum = 127;BA.debugLine="tvJ.asView.Visible = False";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 134;BA.debugLine="tvJ.asView.Visible = False";
+Debug.ShouldStop(32);
 main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 128;BA.debugLine="tvJ.asView.Enabled = False";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 135;BA.debugLine="tvJ.asView.Enabled = False";
+Debug.ShouldStop(64);
 main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
  }else 
-{ BA.debugLineNum = 129;BA.debugLine="Else If exeJ.asView.Visible = True Then";
-Debug.ShouldStop(1);
+{ BA.debugLineNum = 136;BA.debugLine="Else If exeJ.asView.Visible = True Then";
+Debug.ShouldStop(128);
 if (RemoteObject.solveBoolean("=",main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"getVisible"),main.mostCurrent.__c.getField(true,"True"))) { 
- BA.debugLineNum = 130;BA.debugLine="exeJ.asView.Visible = False";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 137;BA.debugLine="exeJ.asView.Visible = False";
+Debug.ShouldStop(256);
 main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 131;BA.debugLine="exeJ.asView.Enabled = False";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 138;BA.debugLine="exeJ.asView.Enabled = False";
+Debug.ShouldStop(512);
 main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
  }}}
 ;
- BA.debugLineNum = 134;BA.debugLine="final.asView.Visible = True";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 141;BA.debugLine="final.asView.Visible = True";
+Debug.ShouldStop(4096);
 main.mostCurrent._final.runClassMethod (agg.agg.sendscore.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 135;BA.debugLine="final.asView.Enabled = True";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 142;BA.debugLine="final.asView.Enabled = True";
+Debug.ShouldStop(8192);
 main.mostCurrent._final.runClassMethod (agg.agg.sendscore.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 136;BA.debugLine="final.finalScore";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 143;BA.debugLine="final.finalScore";
+Debug.ShouldStop(16384);
 main.mostCurrent._final.runClassMethod (agg.agg.sendscore.class, "_finalscore");
- BA.debugLineNum = 137;BA.debugLine="End Sub";
-Debug.ShouldStop(256);
+ BA.debugLineNum = 144;BA.debugLine="End Sub";
+Debug.ShouldStop(32768);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -328,35 +335,35 @@ finally {
 		}}
 public static RemoteObject  _finalscore() throws Exception{
 try {
-		Debug.PushSubsStack("finalScore (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,75);
+		Debug.PushSubsStack("finalScore (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,82);
 if (RapidSub.canDelegate("finalscore")) return agg.agg.main.remoteMe.runUserSub(false, "main","finalscore");
- BA.debugLineNum = 75;BA.debugLine="Public Sub finalScore As Double";
-Debug.ShouldStop(1024);
- BA.debugLineNum = 76;BA.debugLine="Select scActive";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 82;BA.debugLine="Public Sub finalScore As Double";
+Debug.ShouldStop(131072);
+ BA.debugLineNum = 83;BA.debugLine="Select scActive";
+Debug.ShouldStop(262144);
 switch (BA.switchObjectToInt(main._scactive,BA.numberCast(int.class, 1),BA.numberCast(int.class, 2),BA.numberCast(int.class, 3))) {
 case 0: {
- BA.debugLineNum = 78;BA.debugLine="score = avJ.finalAVscore";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 85;BA.debugLine="score = avJ.finalAVscore";
+Debug.ShouldStop(1048576);
 main._score = main.mostCurrent._avj.runClassMethod (agg.agg.av_judge.class, "_finalavscore");
  break; }
 case 1: {
- BA.debugLineNum = 80;BA.debugLine="score = tvJ.finalTVscore";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 87;BA.debugLine="score = tvJ.finalTVscore";
+Debug.ShouldStop(4194304);
 main._score = main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_finaltvscore");
  break; }
 case 2: {
- BA.debugLineNum = 82;BA.debugLine="score = exeJ.finalEXEscore";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 89;BA.debugLine="score = exeJ.finalEXEscore";
+Debug.ShouldStop(16777216);
 main._score = main.mostCurrent._exej.runClassMethod (agg.agg.exe_judging.class, "_finalexescore");
  break; }
 }
 ;
- BA.debugLineNum = 84;BA.debugLine="Return score";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 91;BA.debugLine="Return score";
+Debug.ShouldStop(67108864);
 if (true) return main._score;
- BA.debugLineNum = 85;BA.debugLine="End Sub";
-Debug.ShouldStop(1048576);
+ BA.debugLineNum = 92;BA.debugLine="End Sub";
+Debug.ShouldStop(134217728);
 return RemoteObject.createImmutable(0);
 }
 catch (Exception e) {
@@ -386,26 +393,45 @@ main._scactive = RemoteObject.createImmutable(0);
  //BA.debugLineNum = 34;BA.debugLine="End Sub";
 return RemoteObject.createImmutable("");
 }
+public static RemoteObject  _load_language() throws Exception{
+try {
+		Debug.PushSubsStack("Load_Language (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,77);
+if (RapidSub.canDelegate("load_language")) return agg.agg.main.remoteMe.runUserSub(false, "main","load_language");
+ BA.debugLineNum = 77;BA.debugLine="Private Sub Load_Language";
+Debug.ShouldStop(4096);
+ BA.debugLineNum = 78;BA.debugLine="translate.SetLanguage(SelectedLanguage)";
+Debug.ShouldStop(8192);
+main._translate.runClassMethod (agg.agg.translator.class, "_setlanguage",(Object)(main._selectedlanguage));
+ BA.debugLineNum = 79;BA.debugLine="End Sub";
+Debug.ShouldStop(16384);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
 public static RemoteObject  _loginscreen_loginclick() throws Exception{
 try {
-		Debug.PushSubsStack("LoginScreen_LoginClick (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,87);
+		Debug.PushSubsStack("LoginScreen_LoginClick (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,94);
 if (RapidSub.canDelegate("loginscreen_loginclick")) return agg.agg.main.remoteMe.runUserSub(false, "main","loginscreen_loginclick");
- BA.debugLineNum = 87;BA.debugLine="Public Sub LoginScreen_LoginClick";
-Debug.ShouldStop(4194304);
- BA.debugLineNum = 88;BA.debugLine="Login.asView.Visible = False";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 94;BA.debugLine="Public Sub LoginScreen_LoginClick";
+Debug.ShouldStop(536870912);
+ BA.debugLineNum = 95;BA.debugLine="Login.asView.Visible = False";
+Debug.ShouldStop(1073741824);
 main.mostCurrent._login.runClassMethod (agg.agg.loginscreen.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 89;BA.debugLine="Login.asView.Enabled = False";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 96;BA.debugLine="Login.asView.Enabled = False";
+Debug.ShouldStop(-2147483648);
 main.mostCurrent._login.runClassMethod (agg.agg.loginscreen.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 91;BA.debugLine="typeJ.asView.Visible = True";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 98;BA.debugLine="typeJ.asView.Visible = True";
+Debug.ShouldStop(2);
 main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 92;BA.debugLine="typeJ.asView.Enabled = True";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 99;BA.debugLine="typeJ.asView.Enabled = True";
+Debug.ShouldStop(4);
 main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 93;BA.debugLine="End Sub";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 100;BA.debugLine="End Sub";
+Debug.ShouldStop(8);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -432,9 +458,9 @@ exe_judging.myClass = BA.getDeviceClass ("agg.agg.exe_judging");
 sendscore.myClass = BA.getDeviceClass ("agg.agg.sendscore");
 starter.myClass = BA.getDeviceClass ("agg.agg.starter");
 av_judge.myClass = BA.getDeviceClass ("agg.agg.av_judge");
-translator.myClass = BA.getDeviceClass ("agg.agg.translator");
 loginscreen.myClass = BA.getDeviceClass ("agg.agg.loginscreen");
 typejudge.myClass = BA.getDeviceClass ("agg.agg.typejudge");
+translator.myClass = BA.getDeviceClass ("agg.agg.translator");
 programdata.myClass = BA.getDeviceClass ("agg.agg.programdata");
 uisizes.myClass = BA.getDeviceClass ("agg.agg.uisizes");
 version.myClass = BA.getDeviceClass ("agg.agg.version");
@@ -463,27 +489,27 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _tv_click() throws Exception{
 try {
-		Debug.PushSubsStack("TV_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,104);
+		Debug.PushSubsStack("TV_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,111);
 if (RapidSub.canDelegate("tv_click")) return agg.agg.main.remoteMe.runUserSub(false, "main","tv_click");
- BA.debugLineNum = 104;BA.debugLine="Public Sub TV_Click";
-Debug.ShouldStop(128);
- BA.debugLineNum = 105;BA.debugLine="typeJ.asView.Visible = False";
-Debug.ShouldStop(256);
-main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 106;BA.debugLine="typeJ.asView.Enabled = False";
-Debug.ShouldStop(512);
-main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 108;BA.debugLine="tvJ.asView.Visible = True";
-Debug.ShouldStop(2048);
-main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 109;BA.debugLine="tvJ.asView.Enabled = True";
-Debug.ShouldStop(4096);
-main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 110;BA.debugLine="scActive = 2";
-Debug.ShouldStop(8192);
-main._scactive = BA.numberCast(int.class, 2);
- BA.debugLineNum = 111;BA.debugLine="End Sub";
+ BA.debugLineNum = 111;BA.debugLine="Public Sub TV_Click";
 Debug.ShouldStop(16384);
+ BA.debugLineNum = 112;BA.debugLine="typeJ.asView.Visible = False";
+Debug.ShouldStop(32768);
+main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 113;BA.debugLine="typeJ.asView.Enabled = False";
+Debug.ShouldStop(65536);
+main.mostCurrent._typej.runClassMethod (agg.agg.typejudge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 115;BA.debugLine="tvJ.asView.Visible = True";
+Debug.ShouldStop(262144);
+main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"setVisible",main.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 116;BA.debugLine="tvJ.asView.Enabled = True";
+Debug.ShouldStop(524288);
+main.mostCurrent._tvj.runClassMethod (agg.agg.tv_judge.class, "_asview").runMethod(true,"setEnabled",main.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 117;BA.debugLine="scActive = 2";
+Debug.ShouldStop(1048576);
+main._scactive = BA.numberCast(int.class, 2);
+ BA.debugLineNum = 118;BA.debugLine="End Sub";
+Debug.ShouldStop(2097152);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

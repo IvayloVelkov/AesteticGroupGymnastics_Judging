@@ -8,7 +8,7 @@ public class typejudge_subs_0 {
 
 public static RemoteObject  _asview(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("asView (typejudge) ","typejudge",8,__ref.getField(false, "ba"),__ref,42);
+		Debug.PushSubsStack("asView (typejudge) ","typejudge",7,__ref.getField(false, "ba"),__ref,42);
 if (RapidSub.canDelegate("asview")) return __ref.runUserSub(false, "typejudge","asview", __ref);
  BA.debugLineNum = 42;BA.debugLine="Public Sub asView As Panel";
 Debug.ShouldStop(512);
@@ -27,7 +27,7 @@ finally {
 		}}
 public static RemoteObject  _avtypebtn_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("AVtypeBtn_Click (typejudge) ","typejudge",8,__ref.getField(false, "ba"),__ref,46);
+		Debug.PushSubsStack("AVtypeBtn_Click (typejudge) ","typejudge",7,__ref.getField(false, "ba"),__ref,46);
 if (RapidSub.canDelegate("avtypebtn_click")) return __ref.runUserSub(false, "typejudge","avtypebtn_click", __ref);
  BA.debugLineNum = 46;BA.debugLine="Private Sub AVtypeBtn_Click";
 Debug.ShouldStop(8192);
@@ -61,7 +61,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _exetypebtn_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("EXEtypeBtn_Click (typejudge) ","typejudge",8,__ref.getField(false, "ba"),__ref,54);
+		Debug.PushSubsStack("EXEtypeBtn_Click (typejudge) ","typejudge",7,__ref.getField(false, "ba"),__ref,54);
 if (RapidSub.canDelegate("exetypebtn_click")) return __ref.runUserSub(false, "typejudge","exetypebtn_click", __ref);
  BA.debugLineNum = 54;BA.debugLine="Private Sub EXEtypeBtn_Click";
 Debug.ShouldStop(2097152);
@@ -80,7 +80,7 @@ finally {
 		}}
 public static RemoteObject  _initialize(RemoteObject __ref,RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (typejudge) ","typejudge",8,__ref.getField(false, "ba"),__ref,12);
+		Debug.PushSubsStack("Initialize (typejudge) ","typejudge",7,__ref.getField(false, "ba"),__ref,12);
 if (RapidSub.canDelegate("initialize")) return __ref.runUserSub(false, "typejudge","initialize", __ref, _ba);
 __ref.runVoidMethodAndSync("innerInitializeHelper", _ba);
 Debug.locals.put("ba", _ba);
@@ -110,9 +110,9 @@ __ref.getField(false,"_typepanel").runVoidMethod ("AddView",(Object)((__ref.getF
  BA.debugLineNum = 24;BA.debugLine="typePanel.AddView(btnExe, 35%x, btnTv.Top+btnTv.H";
 Debug.ShouldStop(8388608);
 __ref.getField(false,"_typepanel").runVoidMethod ("AddView",(Object)((__ref.getField(false,"_btnexe").getObject())),(Object)(typejudge.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 35)),__ref.getField(false, "ba"))),(Object)(BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_btntv").runMethod(true,"getTop"),__ref.getField(false,"_btntv").runMethod(true,"getHeight"),RemoteObject.createImmutable(1.5),__ref.getField(true,"_padding")}, "+*+",2, 0))),(Object)(typejudge.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 30)),__ref.getField(false, "ba"))),(Object)(typejudge.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 10)),__ref.getField(false, "ba"))));
- BA.debugLineNum = 26;BA.debugLine="HelperFunctions.Apply_ViewStyle(btnAv,Colors.Blac";
+ BA.debugLineNum = 26;BA.debugLine="HelperFunctions.Apply_ViewStyle(btnAv,Colors.Whit";
 Debug.ShouldStop(33554432);
-typejudge._helperfunctions.runVoidMethod ("_apply_viewstyle",__ref.getField(false, "ba"),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), __ref.getField(false,"_btnav").getObject()),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"Black")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(BA.numberCast(int.class, 60)));
+typejudge._helperfunctions.runVoidMethod ("_apply_viewstyle",__ref.getField(false, "ba"),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), __ref.getField(false,"_btnav").getObject()),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(BA.numberCast(int.class, 0xff4ac2ff)),(Object)(BA.numberCast(int.class, 0xff149be0)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 60)));
  BA.debugLineNum = 27;BA.debugLine="btnAv.Text = Main.translate.GetString(\"AVbtn\")";
 Debug.ShouldStop(67108864);
 __ref.getField(false,"_btnav").runMethod(true,"setText",BA.ObjectToCharSequence(typejudge._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("AVbtn")))));
@@ -122,9 +122,9 @@ __ref.getField(false,"_btnav").runMethod(false,"setPadding",RemoteObject.createN
  BA.debugLineNum = 29;BA.debugLine="btnAv.TextSize = 14";
 Debug.ShouldStop(268435456);
 __ref.getField(false,"_btnav").runMethod(true,"setTextSize",BA.numberCast(float.class, 14));
- BA.debugLineNum = 31;BA.debugLine="HelperFunctions.Apply_ViewStyle(btnTv,Colors.Blac";
+ BA.debugLineNum = 31;BA.debugLine="HelperFunctions.Apply_ViewStyle(btnTv,Colors.Whit";
 Debug.ShouldStop(1073741824);
-typejudge._helperfunctions.runVoidMethod ("_apply_viewstyle",__ref.getField(false, "ba"),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), __ref.getField(false,"_btntv").getObject()),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"Black")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(BA.numberCast(int.class, 60)));
+typejudge._helperfunctions.runVoidMethod ("_apply_viewstyle",__ref.getField(false, "ba"),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), __ref.getField(false,"_btntv").getObject()),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(BA.numberCast(int.class, 0xff4ac2ff)),(Object)(BA.numberCast(int.class, 0xff149be0)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 60)));
  BA.debugLineNum = 32;BA.debugLine="btnTv.Text = Main.translate.GetString(\"TVbtn\")";
 Debug.ShouldStop(-2147483648);
 __ref.getField(false,"_btntv").runMethod(true,"setText",BA.ObjectToCharSequence(typejudge._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("TVbtn")))));
@@ -134,9 +134,9 @@ __ref.getField(false,"_btntv").runMethod(false,"setPadding",RemoteObject.createN
  BA.debugLineNum = 34;BA.debugLine="btnTv.TextSize = 14";
 Debug.ShouldStop(2);
 __ref.getField(false,"_btntv").runMethod(true,"setTextSize",BA.numberCast(float.class, 14));
- BA.debugLineNum = 36;BA.debugLine="HelperFunctions.Apply_ViewStyle(btnExe,Colors.Bla";
+ BA.debugLineNum = 36;BA.debugLine="HelperFunctions.Apply_ViewStyle(btnExe,Colors.Whi";
 Debug.ShouldStop(8);
-typejudge._helperfunctions.runVoidMethod ("_apply_viewstyle",__ref.getField(false, "ba"),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), __ref.getField(false,"_btnexe").getObject()),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"Black")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(BA.numberCast(int.class, 60)));
+typejudge._helperfunctions.runVoidMethod ("_apply_viewstyle",__ref.getField(false, "ba"),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), __ref.getField(false,"_btnexe").getObject()),(Object)(typejudge.__c.getField(false,"Colors").getField(true,"White")),(Object)(BA.numberCast(int.class, 0xff4ac2ff)),(Object)(BA.numberCast(int.class, 0xff149be0)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0xff2cb7ff)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 0x66040509)),(Object)(BA.numberCast(int.class, 60)));
  BA.debugLineNum = 37;BA.debugLine="btnExe.Text = Main.translate.GetString(\"EXEbtn\")";
 Debug.ShouldStop(16);
 __ref.getField(false,"_btnexe").runMethod(true,"setText",BA.ObjectToCharSequence(typejudge._main._translate.runClassMethod (agg.agg.translator.class, "_getstring",(Object)(RemoteObject.createImmutable("EXEbtn")))));
@@ -158,7 +158,7 @@ finally {
 		}}
 public static RemoteObject  _tvtypebtn_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("TVtypeBtn_Click (typejudge) ","typejudge",8,__ref.getField(false, "ba"),__ref,50);
+		Debug.PushSubsStack("TVtypeBtn_Click (typejudge) ","typejudge",7,__ref.getField(false, "ba"),__ref,50);
 if (RapidSub.canDelegate("tvtypebtn_click")) return __ref.runUserSub(false, "typejudge","tvtypebtn_click", __ref);
  BA.debugLineNum = 50;BA.debugLine="Private Sub TVtypeBtn_Click";
 Debug.ShouldStop(131072);

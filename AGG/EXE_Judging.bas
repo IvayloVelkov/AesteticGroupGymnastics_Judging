@@ -77,7 +77,11 @@ Public Sub BuildUi
 	label(0).TextColor = Colors.White
 	
 	page(0).AddView(btnPoints(0), label(0).left + label(0).Width + 10%x, label(0).Top, 15%x, 10%y)
-	btnPoints(0).Text = Main.translate.GetString("Checkl0")
+	btnPoints(0).Text = "-" & HelperFunctions.TvScore1
+	HelperFunctions.Apply_ViewStyle(btnPoints(0),Colors.White,0xff4ac2ff,0xff149be0,0xff2cb7ff,0xff2cb7ff,0x66040509,0x66040509,60)
+	btnPoints(0).Padding = Array As Int(15,0,0,0)
+	btnPoints(0).SingleLine = True
+
 
 	For i = 1 To 7
 		page(0).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
@@ -87,11 +91,14 @@ Public Sub BuildUi
 	
 	For i = 1 To 6
 		page(0).AddView(btnPoints(i), label(i).left + label(i).Width + 10%x, label(i).Top, 15%x, 10%y)
-		btnPoints(i).Text = Main.translate.GetString("addPan" & i)
+		btnPoints(i).Text = "-" & HelperFunctions.TvScore1
+		HelperFunctions.Apply_ViewStyle(btnPoints(i),Colors.White,0xff4ac2ff,0xff149be0,0xff2cb7ff,0xff2cb7ff,0x66040509,0x66040509,60)
+		btnPoints(i).Padding = Array As Int(15,0,0,0)
+		btnPoints(i).SingleLine = True
 	Next
 	
 	page(0).AddView(chekpointbox, label(7).left + label(7).Width + 10%x, label(7).Top, 15%x, 10%y)
-	chekpointbox.Text = Main.translate.GetString("addPan" & i)
+	chekpointbox.Text = "-" & HelperFunctions.TvScore3
 End Sub
 
 Public Sub addPan_Click
