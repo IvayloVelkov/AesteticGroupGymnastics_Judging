@@ -10,27 +10,30 @@ private static version mostCurrent = new version();
 public static Object getObject() {
     throw new RuntimeException("Code module does not support this method.");
 }
- 
-public anywheresoftware.b4a.keywords.Common __c = null;
+ public anywheresoftware.b4a.keywords.Common __c = null;
 public static int _productid = 0;
 public static String _programname = "";
 public static String _productindictionary = "";
 public agg.agg.main _main = null;
-public agg.agg.starter _starter = null;
+public agg.agg.helperfunctions _helperfunctions = null;
 public agg.agg.programdata _programdata = null;
 public agg.agg.uisizes _uisizes = null;
-public agg.agg.helperfunctions _helperfunctions = null;
 public static String  _path(anywheresoftware.b4a.BA _ba) throws Exception{
-RDebugUtils.currentModule="version";
-if (Debug.shouldDelegate(null, "path"))
-	return (String) Debug.delegate(null, "path", new Object[] {_ba});
-RDebugUtils.currentLine=5832704;
- //BA.debugLineNum = 5832704;BA.debugLine="Public Sub Path As String";
-RDebugUtils.currentLine=5832705;
- //BA.debugLineNum = 5832705;BA.debugLine="Return \"/Microinvest/\"&ProgramName";
+ //BA.debugLineNum = 8;BA.debugLine="Public Sub Path As String";
+ //BA.debugLineNum = 9;BA.debugLine="Return \"/Microinvest/\"&ProgramName";
 if (true) return "/Microinvest/"+_programname;
-RDebugUtils.currentLine=5832706;
- //BA.debugLineNum = 5832706;BA.debugLine="End Sub";
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
+return "";
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 1;BA.debugLine="Private Sub Process_Globals";
+ //BA.debugLineNum = 2;BA.debugLine="Public ProductID As Int = 301							'Product Iden";
+_productid = (int) (301);
+ //BA.debugLineNum = 3;BA.debugLine="Public ProgramName As String = \"AGG\"";
+_programname = "AGG";
+ //BA.debugLineNum = 4;BA.debugLine="Public ProductInDictionary As String = \"AndroidPr";
+_productindictionary = "AndroidProjects";
+ //BA.debugLineNum = 5;BA.debugLine="End Sub";
 return "";
 }
 }

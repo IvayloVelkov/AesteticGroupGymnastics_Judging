@@ -1,8 +1,7 @@
-﻿B4A=true
-Group=Default Group
-ModulesStructureVersion=1
-Type=Class
+﻿Type=Class
 Version=7.3
+ModulesStructureVersion=1
+B4A=true
 @EndOfDesignText@
 Private Sub Class_Globals
 	Private raf As RandomAccessFile

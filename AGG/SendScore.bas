@@ -1,8 +1,7 @@
-﻿B4A=true
-Group=Default Group
-ModulesStructureVersion=1
-Type=Class
+﻿Type=Class
 Version=7.3
+ModulesStructureVersion=1
+B4A=true
 @EndOfDesignText@
 Sub Class_Globals
 	Public finalPanel As Panel

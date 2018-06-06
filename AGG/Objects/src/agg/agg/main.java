@@ -31,9 +31,8 @@ public class main extends Activity implements B4AActivity{
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-        mostCurrent = this;
-		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "agg.agg", "agg.agg.main");
+		if (isFirst) {
+			processBA = new BA(this.getApplicationContext(), null, null, "agg.agg", "agg.agg.main");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -46,7 +45,6 @@ public class main extends Activity implements B4AActivity{
 				p.finish();
 			}
 		}
-        processBA.setActivityPaused(true);
         processBA.runHook("oncreate", this, null);
 		if (!includeTitle) {
         	this.getWindow().requestFeature(android.view.Window.FEATURE_NO_TITLE);
@@ -55,13 +53,13 @@ public class main extends Activity implements B4AActivity{
         	getWindow().setFlags(android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN,   
         			android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
-		
+		mostCurrent = this;
         processBA.sharedProcessBA.activityBA = null;
 		layout = new BALayout(this);
 		setContentView(layout);
 		afterFirstLayout = false;
         WaitForLayout wl = new WaitForLayout();
-        if (anywheresoftware.b4a.objects.ServiceHelper.StarterHelper.startFromActivity(processBA, wl, false))
+        if (anywheresoftware.b4a.objects.ServiceHelper.StarterHelper.startFromActivity(processBA, wl, true))
 		    BA.handler.postDelayed(wl, 5);
 
 	}
@@ -261,14 +259,11 @@ public class main extends Activity implements B4AActivity{
     @Override 
 	public void onPause() {
 		super.onPause();
-        if (_activity == null)
+        if (_activity == null) //workaround for emulator bug (Issue 2423)
             return;
-        if (this != mostCurrent)
-			return;
 		anywheresoftware.b4a.Msgbox.dismiss(true);
         BA.LogInfo("** Activity (main) Pause, UserClosed = " + activityBA.activity.isFinishing() + " **");
-        if (mostCurrent != null)
-            processBA.raiseEvent2(_activity, true, "activity_pause", false, activityBA.activity.isFinishing());		
+        processBA.raiseEvent2(_activity, true, "activity_pause", false, activityBA.activity.isFinishing());		
         processBA.setActivityPaused(true);
         mostCurrent = null;
         if (!activityBA.activity.isFinishing())
@@ -325,47 +320,31 @@ public class main extends Activity implements B4AActivity{
             
     }
 
+public anywheresoftware.b4a.keywords.Common __c = null;
+public static agg.agg.translator _translate = null;
+public static String _selectedlanguage = "";
+public static int _intfonttransfer = 0;
+public static boolean _basenotaccessible = false;
+public static String _primecurrency = "";
+public static agg.agg.dbsqlconn _databasesql = null;
+public agg.agg.loginscreen _login = null;
+public agg.agg.typejudge _typej = null;
+public agg.agg.av_judge _avj = null;
+public agg.agg.tv_judge _tvj = null;
+public agg.agg.exe_judging _exej = null;
+public agg.agg.connector _conn = null;
+public agg.agg.sendscore _final = null;
+public static double _score = 0;
+public static int _scactive = 0;
+public agg.agg.helperfunctions _helperfunctions = null;
+public agg.agg.programdata _programdata = null;
+public agg.agg.uisizes _uisizes = null;
+public agg.agg.version _version = null;
 
-
-public static void initializeProcessGlobals() {
-    
-    if (main.processGlobalsRun == false) {
-	    main.processGlobalsRun = true;
-		try {
-		        		
-        } catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-    }
-}
 public static boolean isAnyActivityVisible() {
     boolean vis = false;
 vis = vis | (main.mostCurrent != null);
 return vis;}
-
-private static BA killProgramHelper(BA ba) {
-    if (ba == null)
-        return null;
-    anywheresoftware.b4a.BA.SharedProcessBA sharedProcessBA = ba.sharedProcessBA;
-    if (sharedProcessBA == null || sharedProcessBA.activityBA == null)
-        return null;
-    return sharedProcessBA.activityBA.get();
-}
-public static void killProgram() {
-     {
-            Activity __a = null;
-            if (main.previousOne != null) {
-				__a = main.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(main.mostCurrent == null ? null : main.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
-}
 public static class _report{
 public boolean IsInitialized;
 public String ChartType;
@@ -393,411 +372,314 @@ Data = new anywheresoftware.b4a.objects.collections.List();
 		public String toString() {
 			return BA.TypeToString(this, false);
 		}}
-public anywheresoftware.b4a.keywords.Common __c = null;
-public static agg.agg.translator _translate = null;
-public static String _selectedlanguage = "";
-public static int _intfonttransfer = 0;
-public static boolean _basenotaccessible = false;
-public static String _primecurrency = "";
-public agg.agg.loginscreen _login = null;
-public agg.agg.typejudge _typej = null;
-public agg.agg.av_judge _avj = null;
-public agg.agg.tv_judge _tvj = null;
-public agg.agg.exe_judging _exej = null;
-public agg.agg.sendscore _final = null;
-public static double _score = 0;
-public static int _scactive = 0;
-public agg.agg.starter _starter = null;
-public agg.agg.programdata _programdata = null;
-public agg.agg.uisizes _uisizes = null;
-public agg.agg.version _version = null;
-public agg.agg.helperfunctions _helperfunctions = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime});
-RDebugUtils.currentLine=131072;
- //BA.debugLineNum = 131072;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=131073;
- //BA.debugLineNum = 131073;BA.debugLine="translate.Initialize";
-_translate._initialize(null,processBA);
-RDebugUtils.currentLine=131074;
- //BA.debugLineNum = 131074;BA.debugLine="intFontTransfer = UISizes.DefaultFont";
+ //BA.debugLineNum = 38;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 39;BA.debugLine="translate.Initialize";
+_translate._initialize(processBA);
+ //BA.debugLineNum = 40;BA.debugLine="intFontTransfer = UISizes.DefaultFont";
 _intfonttransfer = mostCurrent._uisizes._defaultfont;
-RDebugUtils.currentLine=131076;
- //BA.debugLineNum = 131076;BA.debugLine="Load_Language";
+ //BA.debugLineNum = 42;BA.debugLine="Load_Language";
 _load_language();
-RDebugUtils.currentLine=131078;
- //BA.debugLineNum = 131078;BA.debugLine="Login.Initialize";
-mostCurrent._login._initialize(null,mostCurrent.activityBA);
-RDebugUtils.currentLine=131079;
- //BA.debugLineNum = 131079;BA.debugLine="Activity.AddView(Login.asView, 0, 0, 100%x, 100%y";
-mostCurrent._activity.AddView((android.view.View)(mostCurrent._login._asview(null).getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
-RDebugUtils.currentLine=131080;
- //BA.debugLineNum = 131080;BA.debugLine="Login.build_Screen";
-mostCurrent._login._build_screen(null);
-RDebugUtils.currentLine=131082;
- //BA.debugLineNum = 131082;BA.debugLine="typeJ.Initialize";
-mostCurrent._typej._initialize(null,mostCurrent.activityBA);
-RDebugUtils.currentLine=131083;
- //BA.debugLineNum = 131083;BA.debugLine="Activity.AddView(typeJ.asView, 0, 0, 100%x, 100%y";
-mostCurrent._activity.AddView((android.view.View)(mostCurrent._typej._asview(null).getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
-RDebugUtils.currentLine=131084;
- //BA.debugLineNum = 131084;BA.debugLine="typeJ.asView.Visible = False";
-mostCurrent._typej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=131085;
- //BA.debugLineNum = 131085;BA.debugLine="typeJ.asView.Enabled = False";
-mostCurrent._typej._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=131087;
- //BA.debugLineNum = 131087;BA.debugLine="avJ.Initialize";
-mostCurrent._avj._initialize(null,mostCurrent.activityBA);
-RDebugUtils.currentLine=131088;
- //BA.debugLineNum = 131088;BA.debugLine="Activity.AddView(avJ.asView, 0, 0, 100%x, 100%y)";
-mostCurrent._activity.AddView((android.view.View)(mostCurrent._avj._asview(null).getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
-RDebugUtils.currentLine=131089;
- //BA.debugLineNum = 131089;BA.debugLine="avJ.asView.Visible = False";
-mostCurrent._avj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=131090;
- //BA.debugLineNum = 131090;BA.debugLine="avJ.asView.Enabled = False";
-mostCurrent._avj._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=131091;
- //BA.debugLineNum = 131091;BA.debugLine="avJ.BuildUi";
-mostCurrent._avj._buildui(null);
-RDebugUtils.currentLine=131093;
- //BA.debugLineNum = 131093;BA.debugLine="tvJ.Initialize";
-mostCurrent._tvj._initialize(null,mostCurrent.activityBA);
-RDebugUtils.currentLine=131094;
- //BA.debugLineNum = 131094;BA.debugLine="Activity.AddView(tvJ.asView, 0, 0, 100%x, 100%y)";
-mostCurrent._activity.AddView((android.view.View)(mostCurrent._tvj._asview(null).getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
-RDebugUtils.currentLine=131095;
- //BA.debugLineNum = 131095;BA.debugLine="tvJ.asView.Visible = False";
-mostCurrent._tvj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=131096;
- //BA.debugLineNum = 131096;BA.debugLine="tvJ.asView.Enabled = False";
-mostCurrent._tvj._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=131097;
- //BA.debugLineNum = 131097;BA.debugLine="tvJ.BuildUi";
-mostCurrent._tvj._buildui(null);
-RDebugUtils.currentLine=131099;
- //BA.debugLineNum = 131099;BA.debugLine="exeJ.Initialize";
-mostCurrent._exej._initialize(null,mostCurrent.activityBA);
-RDebugUtils.currentLine=131100;
- //BA.debugLineNum = 131100;BA.debugLine="Activity.AddView(exeJ.asView, 0, 0, 100%x, 100%y)";
-mostCurrent._activity.AddView((android.view.View)(mostCurrent._exej._asview(null).getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
-RDebugUtils.currentLine=131101;
- //BA.debugLineNum = 131101;BA.debugLine="exeJ.asView.Visible = False";
-mostCurrent._exej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=131102;
- //BA.debugLineNum = 131102;BA.debugLine="exeJ.asView.Enabled = False";
-mostCurrent._exej._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=131103;
- //BA.debugLineNum = 131103;BA.debugLine="exeJ.BuildUi";
-mostCurrent._exej._buildui(null);
-RDebugUtils.currentLine=131105;
- //BA.debugLineNum = 131105;BA.debugLine="final.Initialize";
-mostCurrent._final._initialize(null,mostCurrent.activityBA);
-RDebugUtils.currentLine=131106;
- //BA.debugLineNum = 131106;BA.debugLine="Activity.AddView(final.asView, 0, 0, 100%x, 100%y";
-mostCurrent._activity.AddView((android.view.View)(mostCurrent._final._asview(null).getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
-RDebugUtils.currentLine=131107;
- //BA.debugLineNum = 131107;BA.debugLine="final.asView.Visible = False";
-mostCurrent._final._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=131108;
- //BA.debugLineNum = 131108;BA.debugLine="final.asView.Enabled = False";
-mostCurrent._final._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=131111;
- //BA.debugLineNum = 131111;BA.debugLine="End Sub";
-return "";
-}
-public static String  _load_language() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "load_language"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "load_language", null);
-RDebugUtils.currentLine=6160384;
- //BA.debugLineNum = 6160384;BA.debugLine="Private Sub Load_Language";
-RDebugUtils.currentLine=6160385;
- //BA.debugLineNum = 6160385;BA.debugLine="translate.SetLanguage(SelectedLanguage)";
-_translate._setlanguage(null,_selectedlanguage);
-RDebugUtils.currentLine=6160386;
- //BA.debugLineNum = 6160386;BA.debugLine="End Sub";
+ //BA.debugLineNum = 44;BA.debugLine="Login.Initialize";
+mostCurrent._login._initialize(mostCurrent.activityBA);
+ //BA.debugLineNum = 45;BA.debugLine="Activity.AddView(Login.asView, 0, 0, 100%x, 100%y";
+mostCurrent._activity.AddView((android.view.View)(mostCurrent._login._asview().getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
+ //BA.debugLineNum = 46;BA.debugLine="Login.build_Screen";
+mostCurrent._login._build_screen();
+ //BA.debugLineNum = 48;BA.debugLine="typeJ.Initialize";
+mostCurrent._typej._initialize(mostCurrent.activityBA);
+ //BA.debugLineNum = 49;BA.debugLine="Activity.AddView(typeJ.asView, 0, 0, 100%x, 100%y";
+mostCurrent._activity.AddView((android.view.View)(mostCurrent._typej._asview().getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
+ //BA.debugLineNum = 50;BA.debugLine="typeJ.asView.Visible = False";
+mostCurrent._typej._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 51;BA.debugLine="typeJ.asView.Enabled = False";
+mostCurrent._typej._asview().setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 53;BA.debugLine="avJ.Initialize";
+mostCurrent._avj._initialize(mostCurrent.activityBA);
+ //BA.debugLineNum = 54;BA.debugLine="Activity.AddView(avJ.asView, 0, 0, 100%x, 100%y)";
+mostCurrent._activity.AddView((android.view.View)(mostCurrent._avj._asview().getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
+ //BA.debugLineNum = 55;BA.debugLine="avJ.asView.Visible = False";
+mostCurrent._avj._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 56;BA.debugLine="avJ.asView.Enabled = False";
+mostCurrent._avj._asview().setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 57;BA.debugLine="avJ.BuildUi";
+mostCurrent._avj._buildui();
+ //BA.debugLineNum = 59;BA.debugLine="tvJ.Initialize";
+mostCurrent._tvj._initialize(mostCurrent.activityBA);
+ //BA.debugLineNum = 60;BA.debugLine="Activity.AddView(tvJ.asView, 0, 0, 100%x, 100%y)";
+mostCurrent._activity.AddView((android.view.View)(mostCurrent._tvj._asview().getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
+ //BA.debugLineNum = 61;BA.debugLine="tvJ.asView.Visible = False";
+mostCurrent._tvj._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 62;BA.debugLine="tvJ.asView.Enabled = False";
+mostCurrent._tvj._asview().setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 63;BA.debugLine="tvJ.BuildUi";
+mostCurrent._tvj._buildui();
+ //BA.debugLineNum = 65;BA.debugLine="exeJ.Initialize";
+mostCurrent._exej._initialize(mostCurrent.activityBA);
+ //BA.debugLineNum = 66;BA.debugLine="Activity.AddView(exeJ.asView, 0, 0, 100%x, 100%y)";
+mostCurrent._activity.AddView((android.view.View)(mostCurrent._exej._asview().getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
+ //BA.debugLineNum = 67;BA.debugLine="exeJ.asView.Visible = False";
+mostCurrent._exej._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 68;BA.debugLine="exeJ.asView.Enabled = False";
+mostCurrent._exej._asview().setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 69;BA.debugLine="exeJ.BuildUi";
+mostCurrent._exej._buildui();
+ //BA.debugLineNum = 71;BA.debugLine="final.Initialize";
+mostCurrent._final._initialize(mostCurrent.activityBA);
+ //BA.debugLineNum = 72;BA.debugLine="Activity.AddView(final.asView, 0, 0, 100%x, 100%y";
+mostCurrent._activity.AddView((android.view.View)(mostCurrent._final._asview().getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
+ //BA.debugLineNum = 73;BA.debugLine="final.asView.Visible = False";
+mostCurrent._final._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 74;BA.debugLine="final.asView.Enabled = False";
+mostCurrent._final._asview().setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 76;BA.debugLine="conn.Initialize";
+mostCurrent._conn._initialize(processBA);
+ //BA.debugLineNum = 78;BA.debugLine="DataBaseSQL.Initialize";
+_databasesql._initialize(processBA);
+ //BA.debugLineNum = 79;BA.debugLine="DataBaseSQL.setDatabase(\"localhost\", \"Results\", \"";
+_databasesql._setdatabase("localhost","Results","root","root");
+ //BA.debugLineNum = 81;BA.debugLine="End Sub";
 return "";
 }
 public static boolean  _activity_keypress(int _keycode) throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_keypress"))
-	return (Boolean) Debug.delegate(mostCurrent.activityBA, "activity_keypress", new Object[] {_keycode});
-RDebugUtils.currentLine=1114112;
- //BA.debugLineNum = 1114112;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
-RDebugUtils.currentLine=1114113;
- //BA.debugLineNum = 1114113;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+ //BA.debugLineNum = 156;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+ //BA.debugLineNum = 157;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
 if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
-RDebugUtils.currentLine=1114114;
- //BA.debugLineNum = 1114114;BA.debugLine="If avJ.asView.Visible = True Then";
-if (mostCurrent._avj._asview(null).getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
-RDebugUtils.currentLine=1114115;
- //BA.debugLineNum = 1114115;BA.debugLine="typeJ.asView.Visible = True";
-mostCurrent._typej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=1114116;
- //BA.debugLineNum = 1114116;BA.debugLine="avJ.asView.Visible = False";
-mostCurrent._avj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
- }else 
-{RDebugUtils.currentLine=1114117;
- //BA.debugLineNum = 1114117;BA.debugLine="Else If tvJ.asView.Visible = True Then";
-if (mostCurrent._tvj._asview(null).getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
-RDebugUtils.currentLine=1114118;
- //BA.debugLineNum = 1114118;BA.debugLine="tvJ.asView.Visible = False";
-mostCurrent._tvj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=1114119;
- //BA.debugLineNum = 1114119;BA.debugLine="typeJ.asView.Visible = True";
-mostCurrent._typej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
- }else 
-{RDebugUtils.currentLine=1114120;
- //BA.debugLineNum = 1114120;BA.debugLine="Else If exeJ.asView.Visible = True Then";
-if (mostCurrent._exej._asview(null).getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
-RDebugUtils.currentLine=1114121;
- //BA.debugLineNum = 1114121;BA.debugLine="exeJ.asView.Visible = False";
-mostCurrent._exej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=1114122;
- //BA.debugLineNum = 1114122;BA.debugLine="typeJ.asView.Visible = True";
-mostCurrent._typej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
- }else 
-{RDebugUtils.currentLine=1114123;
- //BA.debugLineNum = 1114123;BA.debugLine="Else If typeJ.asView.Visible = True Then";
-if (mostCurrent._typej._asview(null).getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
-RDebugUtils.currentLine=1114124;
- //BA.debugLineNum = 1114124;BA.debugLine="typeJ.asView.Visible = False";
-mostCurrent._typej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=1114125;
- //BA.debugLineNum = 1114125;BA.debugLine="Login.asView.Visible = True";
-mostCurrent._login._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=1114126;
- //BA.debugLineNum = 1114126;BA.debugLine="Login.btnloginPanel.Enabled = True";
+ //BA.debugLineNum = 158;BA.debugLine="If avJ.asView.Visible = True Then";
+if (mostCurrent._avj._asview().getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
+ //BA.debugLineNum = 159;BA.debugLine="typeJ.asView.Visible = True";
+mostCurrent._typej._asview().setVisible(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 160;BA.debugLine="avJ.asView.Visible = False";
+mostCurrent._avj._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ }else if(mostCurrent._tvj._asview().getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
+ //BA.debugLineNum = 162;BA.debugLine="tvJ.asView.Visible = False";
+mostCurrent._tvj._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 163;BA.debugLine="typeJ.asView.Visible = True";
+mostCurrent._typej._asview().setVisible(anywheresoftware.b4a.keywords.Common.True);
+ }else if(mostCurrent._exej._asview().getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
+ //BA.debugLineNum = 165;BA.debugLine="exeJ.asView.Visible = False";
+mostCurrent._exej._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 166;BA.debugLine="typeJ.asView.Visible = True";
+mostCurrent._typej._asview().setVisible(anywheresoftware.b4a.keywords.Common.True);
+ }else if(mostCurrent._typej._asview().getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
+ //BA.debugLineNum = 168;BA.debugLine="typeJ.asView.Visible = False";
+mostCurrent._typej._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 169;BA.debugLine="Login.asView.Visible = True";
+mostCurrent._login._asview().setVisible(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 170;BA.debugLine="Login.btnloginPanel.Enabled = True";
 mostCurrent._login._btnloginpanel.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- }else 
-{RDebugUtils.currentLine=1114127;
- //BA.debugLineNum = 1114127;BA.debugLine="Else If final.asView.Visible = True Then";
-if (mostCurrent._final._asview(null).getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
-RDebugUtils.currentLine=1114128;
- //BA.debugLineNum = 1114128;BA.debugLine="Select scActive";
+ }else if(mostCurrent._final._asview().getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
+ //BA.debugLineNum = 172;BA.debugLine="Select scActive";
 switch (_scactive) {
 case 1: {
-RDebugUtils.currentLine=1114130;
- //BA.debugLineNum = 1114130;BA.debugLine="avJ.asView.Visible = True";
-mostCurrent._avj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=1114131;
- //BA.debugLineNum = 1114131;BA.debugLine="final.asView.Visible = False";
-mostCurrent._final._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 174;BA.debugLine="avJ.asView.Visible = True";
+mostCurrent._avj._asview().setVisible(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 175;BA.debugLine="final.asView.Visible = False";
+mostCurrent._final._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
  break; }
 case 2: {
-RDebugUtils.currentLine=1114133;
- //BA.debugLineNum = 1114133;BA.debugLine="tvJ.asView.Visible = True";
-mostCurrent._tvj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=1114134;
- //BA.debugLineNum = 1114134;BA.debugLine="final.asView.Visible = False";
-mostCurrent._final._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 177;BA.debugLine="tvJ.asView.Visible = True";
+mostCurrent._tvj._asview().setVisible(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 178;BA.debugLine="final.asView.Visible = False";
+mostCurrent._final._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
  break; }
 case 3: {
-RDebugUtils.currentLine=1114136;
- //BA.debugLineNum = 1114136;BA.debugLine="exeJ.asView.Visible = True";
-mostCurrent._exej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=1114137;
- //BA.debugLineNum = 1114137;BA.debugLine="final.asView.Visible = False";
-mostCurrent._final._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 180;BA.debugLine="exeJ.asView.Visible = True";
+mostCurrent._exej._asview().setVisible(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 181;BA.debugLine="final.asView.Visible = False";
+mostCurrent._final._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
  break; }
 }
 ;
- }}}}}
-;
-RDebugUtils.currentLine=1114140;
- //BA.debugLineNum = 1114140;BA.debugLine="Return True";
+ };
+ //BA.debugLineNum = 184;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
  }else {
-RDebugUtils.currentLine=1114142;
- //BA.debugLineNum = 1114142;BA.debugLine="Return False";
+ //BA.debugLineNum = 186;BA.debugLine="Return False";
 if (true) return anywheresoftware.b4a.keywords.Common.False;
  };
-RDebugUtils.currentLine=1114144;
- //BA.debugLineNum = 1114144;BA.debugLine="End Sub";
+ //BA.debugLineNum = 188;BA.debugLine="End Sub";
 return false;
 }
 public static String  _av_click() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "av_click"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "av_click", null);
-RDebugUtils.currentLine=851968;
- //BA.debugLineNum = 851968;BA.debugLine="Public Sub AV_Click";
-RDebugUtils.currentLine=851969;
- //BA.debugLineNum = 851969;BA.debugLine="typeJ.asView.Visible = False";
-mostCurrent._typej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=851970;
- //BA.debugLineNum = 851970;BA.debugLine="typeJ.asView.Enabled = False";
-mostCurrent._typej._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=851972;
- //BA.debugLineNum = 851972;BA.debugLine="avJ.asView.Visible = True";
-mostCurrent._avj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=851973;
- //BA.debugLineNum = 851973;BA.debugLine="avJ.asView.Enabled = True";
-mostCurrent._avj._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=851974;
- //BA.debugLineNum = 851974;BA.debugLine="scActive = 1";
+ //BA.debugLineNum = 108;BA.debugLine="Public Sub AV_Click";
+ //BA.debugLineNum = 109;BA.debugLine="typeJ.asView.Visible = False";
+mostCurrent._typej._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 110;BA.debugLine="typeJ.asView.Enabled = False";
+mostCurrent._typej._asview().setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 112;BA.debugLine="avJ.asView.Visible = True";
+mostCurrent._avj._asview().setVisible(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 113;BA.debugLine="avJ.asView.Enabled = True";
+mostCurrent._avj._asview().setEnabled(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 114;BA.debugLine="scActive = 1";
 _scactive = (int) (1);
-RDebugUtils.currentLine=851975;
- //BA.debugLineNum = 851975;BA.debugLine="End Sub";
+ //BA.debugLineNum = 115;BA.debugLine="End Sub";
+return "";
+}
+public static String  _connect() throws Exception{
+ //BA.debugLineNum = 152;BA.debugLine="Public Sub connect";
+ //BA.debugLineNum = 153;BA.debugLine="conn.SendToDatabase";
+mostCurrent._conn._sendtodatabase();
+ //BA.debugLineNum = 154;BA.debugLine="End Sub";
 return "";
 }
 public static String  _exe_click() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "exe_click"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "exe_click", null);
-RDebugUtils.currentLine=983040;
- //BA.debugLineNum = 983040;BA.debugLine="Public Sub EXE_Click";
-RDebugUtils.currentLine=983041;
- //BA.debugLineNum = 983041;BA.debugLine="typeJ.asView.Visible = False";
-mostCurrent._typej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=983042;
- //BA.debugLineNum = 983042;BA.debugLine="typeJ.asView.Enabled = False";
-mostCurrent._typej._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=983044;
- //BA.debugLineNum = 983044;BA.debugLine="exeJ.asView.Visible = True";
-mostCurrent._exej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=983045;
- //BA.debugLineNum = 983045;BA.debugLine="exeJ.asView.Enabled = True";
-mostCurrent._exej._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=983046;
- //BA.debugLineNum = 983046;BA.debugLine="scActive = 3";
+ //BA.debugLineNum = 126;BA.debugLine="Public Sub EXE_Click";
+ //BA.debugLineNum = 127;BA.debugLine="typeJ.asView.Visible = False";
+mostCurrent._typej._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 128;BA.debugLine="typeJ.asView.Enabled = False";
+mostCurrent._typej._asview().setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 130;BA.debugLine="exeJ.asView.Visible = True";
+mostCurrent._exej._asview().setVisible(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 131;BA.debugLine="exeJ.asView.Enabled = True";
+mostCurrent._exej._asview().setEnabled(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 132;BA.debugLine="scActive = 3";
 _scactive = (int) (3);
-RDebugUtils.currentLine=983047;
- //BA.debugLineNum = 983047;BA.debugLine="End Sub";
+ //BA.debugLineNum = 133;BA.debugLine="End Sub";
 return "";
 }
 public static String  _finalclick() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "finalclick"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "finalclick", null);
-RDebugUtils.currentLine=1048576;
- //BA.debugLineNum = 1048576;BA.debugLine="Public Sub FinalClick";
-RDebugUtils.currentLine=1048577;
- //BA.debugLineNum = 1048577;BA.debugLine="If avJ.asView.Visible = True Then";
-if (mostCurrent._avj._asview(null).getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
-RDebugUtils.currentLine=1048578;
- //BA.debugLineNum = 1048578;BA.debugLine="avJ.asView.Visible = False";
-mostCurrent._avj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=1048579;
- //BA.debugLineNum = 1048579;BA.debugLine="avJ.asView.Enabled = False";
-mostCurrent._avj._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.False);
- }else 
-{RDebugUtils.currentLine=1048580;
- //BA.debugLineNum = 1048580;BA.debugLine="Else If tvJ.asView.Visible = True Then";
-if (mostCurrent._tvj._asview(null).getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
-RDebugUtils.currentLine=1048581;
- //BA.debugLineNum = 1048581;BA.debugLine="tvJ.asView.Visible = False";
-mostCurrent._tvj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=1048582;
- //BA.debugLineNum = 1048582;BA.debugLine="tvJ.asView.Enabled = False";
-mostCurrent._tvj._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.False);
- }else 
-{RDebugUtils.currentLine=1048583;
- //BA.debugLineNum = 1048583;BA.debugLine="Else If exeJ.asView.Visible = True Then";
-if (mostCurrent._exej._asview(null).getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
-RDebugUtils.currentLine=1048584;
- //BA.debugLineNum = 1048584;BA.debugLine="exeJ.asView.Visible = False";
-mostCurrent._exej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=1048585;
- //BA.debugLineNum = 1048585;BA.debugLine="exeJ.asView.Enabled = False";
-mostCurrent._exej._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.False);
- }}}
-;
-RDebugUtils.currentLine=1048588;
- //BA.debugLineNum = 1048588;BA.debugLine="final.asView.Visible = True";
-mostCurrent._final._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=1048589;
- //BA.debugLineNum = 1048589;BA.debugLine="final.asView.Enabled = True";
-mostCurrent._final._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=1048590;
- //BA.debugLineNum = 1048590;BA.debugLine="final.finalScore";
-mostCurrent._final._finalscore(null);
-RDebugUtils.currentLine=1048591;
- //BA.debugLineNum = 1048591;BA.debugLine="End Sub";
+ //BA.debugLineNum = 135;BA.debugLine="Public Sub FinalClick";
+ //BA.debugLineNum = 136;BA.debugLine="If avJ.asView.Visible = True Then";
+if (mostCurrent._avj._asview().getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
+ //BA.debugLineNum = 137;BA.debugLine="avJ.asView.Visible = False";
+mostCurrent._avj._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 138;BA.debugLine="avJ.asView.Enabled = False";
+mostCurrent._avj._asview().setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ }else if(mostCurrent._tvj._asview().getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
+ //BA.debugLineNum = 140;BA.debugLine="tvJ.asView.Visible = False";
+mostCurrent._tvj._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 141;BA.debugLine="tvJ.asView.Enabled = False";
+mostCurrent._tvj._asview().setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ }else if(mostCurrent._exej._asview().getVisible()==anywheresoftware.b4a.keywords.Common.True) { 
+ //BA.debugLineNum = 143;BA.debugLine="exeJ.asView.Visible = False";
+mostCurrent._exej._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 144;BA.debugLine="exeJ.asView.Enabled = False";
+mostCurrent._exej._asview().setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ };
+ //BA.debugLineNum = 147;BA.debugLine="final.asView.Visible = True";
+mostCurrent._final._asview().setVisible(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 148;BA.debugLine="final.asView.Enabled = True";
+mostCurrent._final._asview().setEnabled(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 149;BA.debugLine="final.finalScore";
+mostCurrent._final._finalscore();
+ //BA.debugLineNum = 150;BA.debugLine="End Sub";
 return "";
 }
 public static double  _finalscore() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "finalscore"))
-	return (Double) Debug.delegate(mostCurrent.activityBA, "finalscore", null);
-RDebugUtils.currentLine=720896;
- //BA.debugLineNum = 720896;BA.debugLine="Public Sub finalScore As Double";
-RDebugUtils.currentLine=720897;
- //BA.debugLineNum = 720897;BA.debugLine="Select scActive";
+ //BA.debugLineNum = 88;BA.debugLine="Public Sub finalScore As Double";
+ //BA.debugLineNum = 89;BA.debugLine="Select scActive";
 switch (_scactive) {
 case 1: {
-RDebugUtils.currentLine=720899;
- //BA.debugLineNum = 720899;BA.debugLine="score = avJ.finalAVscore";
-_score = mostCurrent._avj._finalavscore(null);
+ //BA.debugLineNum = 91;BA.debugLine="score = avJ.finalAVscore";
+_score = mostCurrent._avj._finalavscore();
  break; }
 case 2: {
-RDebugUtils.currentLine=720901;
- //BA.debugLineNum = 720901;BA.debugLine="score = tvJ.finalTVscore";
-_score = mostCurrent._tvj._finaltvscore(null);
+ //BA.debugLineNum = 93;BA.debugLine="score = tvJ.finalTVscore";
+_score = mostCurrent._tvj._finaltvscore();
  break; }
 case 3: {
-RDebugUtils.currentLine=720903;
- //BA.debugLineNum = 720903;BA.debugLine="score = exeJ.finalEXEscore";
-_score = mostCurrent._exej._finalexescore(null);
+ //BA.debugLineNum = 95;BA.debugLine="score = exeJ.finalEXEscore";
+_score = mostCurrent._exej._finalexescore();
  break; }
 }
 ;
-RDebugUtils.currentLine=720905;
- //BA.debugLineNum = 720905;BA.debugLine="Return score";
+ //BA.debugLineNum = 97;BA.debugLine="Return score";
 if (true) return _score;
-RDebugUtils.currentLine=720906;
- //BA.debugLineNum = 720906;BA.debugLine="End Sub";
+ //BA.debugLineNum = 98;BA.debugLine="End Sub";
 return 0;
 }
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 26;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 27;BA.debugLine="Private Login As LoginScreen";
+mostCurrent._login = new agg.agg.loginscreen();
+ //BA.debugLineNum = 28;BA.debugLine="Private typeJ As typeJudge";
+mostCurrent._typej = new agg.agg.typejudge();
+ //BA.debugLineNum = 29;BA.debugLine="Private avJ As AV_judge";
+mostCurrent._avj = new agg.agg.av_judge();
+ //BA.debugLineNum = 30;BA.debugLine="Private tvJ As TV_Judge";
+mostCurrent._tvj = new agg.agg.tv_judge();
+ //BA.debugLineNum = 31;BA.debugLine="Private exeJ As EXE_Judging";
+mostCurrent._exej = new agg.agg.exe_judging();
+ //BA.debugLineNum = 32;BA.debugLine="Private conn As Connector";
+mostCurrent._conn = new agg.agg.connector();
+ //BA.debugLineNum = 33;BA.debugLine="Private final As SendScore";
+mostCurrent._final = new agg.agg.sendscore();
+ //BA.debugLineNum = 34;BA.debugLine="Public score As Double";
+_score = 0;
+ //BA.debugLineNum = 35;BA.debugLine="Private scActive As Int";
+_scactive = 0;
+ //BA.debugLineNum = 36;BA.debugLine="End Sub";
+return "";
+}
+public static String  _load_language() throws Exception{
+ //BA.debugLineNum = 83;BA.debugLine="Private Sub Load_Language";
+ //BA.debugLineNum = 84;BA.debugLine="translate.SetLanguage(SelectedLanguage)";
+_translate._setlanguage(_selectedlanguage);
+ //BA.debugLineNum = 85;BA.debugLine="End Sub";
+return "";
+}
 public static String  _loginscreen_loginclick() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "loginscreen_loginclick"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "loginscreen_loginclick", null);
-RDebugUtils.currentLine=786432;
- //BA.debugLineNum = 786432;BA.debugLine="Public Sub LoginScreen_LoginClick";
-RDebugUtils.currentLine=786433;
- //BA.debugLineNum = 786433;BA.debugLine="Login.asView.Visible = False";
-mostCurrent._login._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=786434;
- //BA.debugLineNum = 786434;BA.debugLine="Login.asView.Enabled = False";
-mostCurrent._login._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=786436;
- //BA.debugLineNum = 786436;BA.debugLine="typeJ.asView.Visible = True";
-mostCurrent._typej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=786437;
- //BA.debugLineNum = 786437;BA.debugLine="typeJ.asView.Enabled = True";
-mostCurrent._typej._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=786438;
- //BA.debugLineNum = 786438;BA.debugLine="End Sub";
+ //BA.debugLineNum = 100;BA.debugLine="Public Sub LoginScreen_LoginClick";
+ //BA.debugLineNum = 101;BA.debugLine="Login.asView.Visible = False";
+mostCurrent._login._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 102;BA.debugLine="Login.asView.Enabled = False";
+mostCurrent._login._asview().setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 104;BA.debugLine="typeJ.asView.Visible = True";
+mostCurrent._typej._asview().setVisible(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 105;BA.debugLine="typeJ.asView.Enabled = True";
+mostCurrent._typej._asview().setEnabled(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 106;BA.debugLine="End Sub";
+return "";
+}
+
+public static void initializeProcessGlobals() {
+    
+    if (main.processGlobalsRun == false) {
+	    main.processGlobalsRun = true;
+		try {
+		        main._process_globals();
+helperfunctions._process_globals();
+programdata._process_globals();
+uisizes._process_globals();
+version._process_globals();
+		
+        } catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+    }
+}public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 15;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 16;BA.debugLine="Public translate As Translator";
+_translate = new agg.agg.translator();
+ //BA.debugLineNum = 17;BA.debugLine="Public SelectedLanguage As String = \"BG\"";
+_selectedlanguage = "BG";
+ //BA.debugLineNum = 18;BA.debugLine="Public intFontTransfer As Int";
+_intfonttransfer = 0;
+ //BA.debugLineNum = 19;BA.debugLine="Type Report(ChartType As String,Title As String,X";
+;
+ //BA.debugLineNum = 20;BA.debugLine="Public BaseNotAccessible As Boolean";
+_basenotaccessible = false;
+ //BA.debugLineNum = 21;BA.debugLine="Public PrimeCurrency As String";
+_primecurrency = "";
+ //BA.debugLineNum = 22;BA.debugLine="Public DataBaseSQL As DBSQLconn";
+_databasesql = new agg.agg.dbsqlconn();
+ //BA.debugLineNum = 24;BA.debugLine="End Sub";
 return "";
 }
 public static String  _tv_click() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "tv_click"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "tv_click", null);
-RDebugUtils.currentLine=917504;
- //BA.debugLineNum = 917504;BA.debugLine="Public Sub TV_Click";
-RDebugUtils.currentLine=917505;
- //BA.debugLineNum = 917505;BA.debugLine="typeJ.asView.Visible = False";
-mostCurrent._typej._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=917506;
- //BA.debugLineNum = 917506;BA.debugLine="typeJ.asView.Enabled = False";
-mostCurrent._typej._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=917508;
- //BA.debugLineNum = 917508;BA.debugLine="tvJ.asView.Visible = True";
-mostCurrent._tvj._asview(null).setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=917509;
- //BA.debugLineNum = 917509;BA.debugLine="tvJ.asView.Enabled = True";
-mostCurrent._tvj._asview(null).setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=917510;
- //BA.debugLineNum = 917510;BA.debugLine="scActive = 2";
+ //BA.debugLineNum = 117;BA.debugLine="Public Sub TV_Click";
+ //BA.debugLineNum = 118;BA.debugLine="typeJ.asView.Visible = False";
+mostCurrent._typej._asview().setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 119;BA.debugLine="typeJ.asView.Enabled = False";
+mostCurrent._typej._asview().setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 121;BA.debugLine="tvJ.asView.Visible = True";
+mostCurrent._tvj._asview().setVisible(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 122;BA.debugLine="tvJ.asView.Enabled = True";
+mostCurrent._tvj._asview().setEnabled(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 123;BA.debugLine="scActive = 2";
 _scactive = (int) (2);
-RDebugUtils.currentLine=917511;
- //BA.debugLineNum = 917511;BA.debugLine="End Sub";
+ //BA.debugLineNum = 124;BA.debugLine="End Sub";
 return "";
 }
 }

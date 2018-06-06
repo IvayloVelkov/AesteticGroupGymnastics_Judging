@@ -10,7 +10,7 @@ public class sendscore extends B4AClass.ImplB4AClass implements BA.SubDelegator{
     private static java.util.HashMap<String, java.lang.reflect.Method> htSubs;
     private void innerInitialize(BA _ba) throws Exception {
         if (ba == null) {
-            ba = new anywheresoftware.b4a.ShellBA(_ba, this, htSubs, "agg.agg.sendscore");
+            ba = new BA(_ba, this, htSubs, "agg.agg.sendscore");
             if (htSubs == null) {
                 ba.loadHtSubs(this.getClass());
                 htSubs = ba.htSubs;
@@ -23,146 +23,103 @@ public class sendscore extends B4AClass.ImplB4AClass implements BA.SubDelegator{
             ba.raiseEvent2(null, true, "class_globals", false);
     }
 
- 
-    public void  innerInitializeHelper(anywheresoftware.b4a.BA _ba) throws Exception{
-        innerInitialize(_ba);
-    }
-    public Object callSub(String sub, Object sender, Object[] args) throws Exception {
-        return BA.SubDelegator.SubNotFound;
-    }
-public anywheresoftware.b4a.keywords.Common __c = null;
+ public anywheresoftware.b4a.keywords.Common __c = null;
 public anywheresoftware.b4a.objects.PanelWrapper _finalpanel = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _teamname = null;
 public anywheresoftware.b4a.objects.LabelWrapper _teamscore = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _sendbtn = null;
 public agg.agg.main _main = null;
-public agg.agg.starter _starter = null;
+public agg.agg.helperfunctions _helperfunctions = null;
 public agg.agg.programdata _programdata = null;
 public agg.agg.uisizes _uisizes = null;
 public agg.agg.version _version = null;
-public agg.agg.helperfunctions _helperfunctions = null;
-public String  _initialize(agg.agg.sendscore __ref,anywheresoftware.b4a.BA _ba) throws Exception{
-__ref = this;
-innerInitialize(_ba);
-RDebugUtils.currentModule="sendscore";
-if (Debug.shouldDelegate(ba, "initialize"))
-	return (String) Debug.delegate(ba, "initialize", new Object[] {_ba});
-RDebugUtils.currentLine=2359296;
- //BA.debugLineNum = 2359296;BA.debugLine="Public Sub Initialize";
-RDebugUtils.currentLine=2359297;
- //BA.debugLineNum = 2359297;BA.debugLine="finalPanel.Initialize(\"\")";
-__ref._finalpanel.Initialize(ba,"");
-RDebugUtils.currentLine=2359298;
- //BA.debugLineNum = 2359298;BA.debugLine="teamname.Initialize(\"\")";
-__ref._teamname.Initialize(ba,"");
-RDebugUtils.currentLine=2359299;
- //BA.debugLineNum = 2359299;BA.debugLine="teamscore.Initialize(\"\")";
-__ref._teamscore.Initialize(ba,"");
-RDebugUtils.currentLine=2359300;
- //BA.debugLineNum = 2359300;BA.debugLine="SendBtn.Initialize(\"send\")";
-__ref._sendbtn.Initialize(ba,"send");
-RDebugUtils.currentLine=2359302;
- //BA.debugLineNum = 2359302;BA.debugLine="finalPanel.AddView(teamname, 20%x, 10%y, 60%x, 10";
-__ref._finalpanel.AddView((android.view.View)(__ref._teamname.getObject()),__c.PerXToCurrent((float) (20),ba),__c.PerYToCurrent((float) (10),ba),__c.PerXToCurrent((float) (60),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=2359303;
- //BA.debugLineNum = 2359303;BA.debugLine="teamname.Hint = Main.translate.GetString(\"TeamNam";
-__ref._teamname.setHint(_main._translate._getstring(null,"TeamName"));
-RDebugUtils.currentLine=2359304;
- //BA.debugLineNum = 2359304;BA.debugLine="teamname.SingleLine = True";
-__ref._teamname.setSingleLine(__c.True);
-RDebugUtils.currentLine=2359306;
- //BA.debugLineNum = 2359306;BA.debugLine="finalPanel.AddView(teamscore, 20%x, 35%y, 60%x, 1";
-__ref._finalpanel.AddView((android.view.View)(__ref._teamscore.getObject()),__c.PerXToCurrent((float) (20),ba),__c.PerYToCurrent((float) (35),ba),__c.PerXToCurrent((float) (60),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=2359307;
- //BA.debugLineNum = 2359307;BA.debugLine="teamscore.Gravity = Gravity.CENTER";
-__ref._teamscore.setGravity(__c.Gravity.CENTER);
-RDebugUtils.currentLine=2359309;
- //BA.debugLineNum = 2359309;BA.debugLine="finalPanel.AddView(SendBtn, 20%x, 55%y, 60%x, 10%";
-__ref._finalpanel.AddView((android.view.View)(__ref._sendbtn.getObject()),__c.PerXToCurrent((float) (20),ba),__c.PerYToCurrent((float) (55),ba),__c.PerXToCurrent((float) (60),ba),__c.PerYToCurrent((float) (10),ba));
-RDebugUtils.currentLine=2359310;
- //BA.debugLineNum = 2359310;BA.debugLine="SendBtn.Text = Main.translate.GetString(\"SendBtn\"";
-__ref._sendbtn.setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"SendBtn")));
-RDebugUtils.currentLine=2359311;
- //BA.debugLineNum = 2359311;BA.debugLine="HelperFunctions.Apply_ViewStyle(SendBtn,Colors.Wh";
-_helperfunctions._apply_viewstyle(ba,(anywheresoftware.b4a.objects.ConcreteViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.ConcreteViewWrapper(), (android.view.View)(__ref._sendbtn.getObject())),__c.Colors.White,(int) (0xff4ac2ff),(int) (0xff149be0),(int) (0xff2cb7ff),(int) (0xff2cb7ff),(int) (0x66040509),(int) (0x66040509),(int) (60));
-RDebugUtils.currentLine=2359312;
- //BA.debugLineNum = 2359312;BA.debugLine="SendBtn.Padding = Array As Int(15,0,0,0)";
-__ref._sendbtn.setPadding(new int[]{(int) (15),(int) (0),(int) (0),(int) (0)});
-RDebugUtils.currentLine=2359313;
- //BA.debugLineNum = 2359313;BA.debugLine="SendBtn.SingleLine = True";
-__ref._sendbtn.setSingleLine(__c.True);
-RDebugUtils.currentLine=2359314;
- //BA.debugLineNum = 2359314;BA.debugLine="End Sub";
-return "";
-}
-public anywheresoftware.b4a.objects.PanelWrapper  _asview(agg.agg.sendscore __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="sendscore";
-if (Debug.shouldDelegate(ba, "asview"))
-	return (anywheresoftware.b4a.objects.PanelWrapper) Debug.delegate(ba, "asview", null);
-RDebugUtils.currentLine=2490368;
- //BA.debugLineNum = 2490368;BA.debugLine="Public Sub asView As Panel";
-RDebugUtils.currentLine=2490369;
- //BA.debugLineNum = 2490369;BA.debugLine="Return finalPanel";
-if (true) return __ref._finalpanel;
-RDebugUtils.currentLine=2490370;
- //BA.debugLineNum = 2490370;BA.debugLine="End Sub";
+public anywheresoftware.b4a.objects.PanelWrapper  _asview() throws Exception{
+ //BA.debugLineNum = 35;BA.debugLine="Public Sub asView As Panel";
+ //BA.debugLineNum = 36;BA.debugLine="Return finalPanel";
+if (true) return _finalpanel;
+ //BA.debugLineNum = 37;BA.debugLine="End Sub";
 return null;
 }
-public String  _finalscore(agg.agg.sendscore __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="sendscore";
-if (Debug.shouldDelegate(ba, "finalscore"))
-	return (String) Debug.delegate(ba, "finalscore", null);
-RDebugUtils.currentLine=2424832;
- //BA.debugLineNum = 2424832;BA.debugLine="Public Sub finalScore";
-RDebugUtils.currentLine=2424833;
- //BA.debugLineNum = 2424833;BA.debugLine="teamscore.Text = Main.translate.GetString(\"Score\"";
-__ref._teamscore.setText(BA.ObjectToCharSequence(_main._translate._getstring(null,"Score")+": "+BA.ObjectToString(__c.CallSubDebug(ba,(Object)(_main.getObject()),"finalScore"))));
-RDebugUtils.currentLine=2424835;
- //BA.debugLineNum = 2424835;BA.debugLine="Log(\"FINAL\"&teamscore.Text)";
-__c.Log("FINAL"+__ref._teamscore.getText());
-RDebugUtils.currentLine=2424836;
- //BA.debugLineNum = 2424836;BA.debugLine="End Sub";
-return "";
-}
-public String  _class_globals(agg.agg.sendscore __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="sendscore";
-RDebugUtils.currentLine=2293760;
- //BA.debugLineNum = 2293760;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=2293761;
- //BA.debugLineNum = 2293761;BA.debugLine="Public finalPanel As Panel";
+public String  _class_globals() throws Exception{
+ //BA.debugLineNum = 1;BA.debugLine="Sub Class_Globals";
+ //BA.debugLineNum = 2;BA.debugLine="Public finalPanel As Panel";
 _finalpanel = new anywheresoftware.b4a.objects.PanelWrapper();
-RDebugUtils.currentLine=2293762;
- //BA.debugLineNum = 2293762;BA.debugLine="Private teamname As EditText";
+ //BA.debugLineNum = 3;BA.debugLine="Public teamname As EditText";
 _teamname = new anywheresoftware.b4a.objects.EditTextWrapper();
-RDebugUtils.currentLine=2293763;
- //BA.debugLineNum = 2293763;BA.debugLine="Private teamscore As Label";
+ //BA.debugLineNum = 4;BA.debugLine="Public teamscore As Label";
 _teamscore = new anywheresoftware.b4a.objects.LabelWrapper();
-RDebugUtils.currentLine=2293764;
- //BA.debugLineNum = 2293764;BA.debugLine="Private SendBtn As Button";
+ //BA.debugLineNum = 5;BA.debugLine="Public SendBtn As Button";
 _sendbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
-RDebugUtils.currentLine=2293765;
- //BA.debugLineNum = 2293765;BA.debugLine="End Sub";
+ //BA.debugLineNum = 6;BA.debugLine="End Sub";
 return "";
 }
-public String  _send_click(agg.agg.sendscore __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="sendscore";
-if (Debug.shouldDelegate(ba, "send_click"))
-	return (String) Debug.delegate(ba, "send_click", null);
-RDebugUtils.currentLine=2555904;
- //BA.debugLineNum = 2555904;BA.debugLine="Private Sub send_Click";
-RDebugUtils.currentLine=2555905;
- //BA.debugLineNum = 2555905;BA.debugLine="If teamname.Text = \"\" Then";
-if ((__ref._teamname.getText()).equals("")) { 
-RDebugUtils.currentLine=2555906;
- //BA.debugLineNum = 2555906;BA.debugLine="Msgbox(\"Добавате име на отбора.\",\"Липсва име.\")";
-__c.Msgbox(BA.ObjectToCharSequence("Добавате име на отбора."),BA.ObjectToCharSequence("Липсва име."),ba);
- };
-RDebugUtils.currentLine=2555909;
- //BA.debugLineNum = 2555909;BA.debugLine="End Sub";
+public String  _finalscore() throws Exception{
+ //BA.debugLineNum = 29;BA.debugLine="Public Sub finalScore";
+ //BA.debugLineNum = 30;BA.debugLine="teamscore.Text = Main.translate.GetString(\"Score\"";
+_teamscore.setText(BA.ObjectToCharSequence(_main._translate._getstring("Score")+": "+BA.ObjectToString(__c.CallSubNew(ba,(Object)(_main.getObject()),"finalScore"))));
+ //BA.debugLineNum = 32;BA.debugLine="Log(\"FINAL\"&teamscore.Text)";
+__c.Log("FINAL"+_teamscore.getText());
+ //BA.debugLineNum = 33;BA.debugLine="End Sub";
 return "";
+}
+public String  _getteamname() throws Exception{
+ //BA.debugLineNum = 47;BA.debugLine="Public Sub getTeamname";
+ //BA.debugLineNum = 48;BA.debugLine="HelperFunctions.TeamName = teamname.Text";
+_helperfunctions._teamname = _teamname.getText();
+ //BA.debugLineNum = 49;BA.debugLine="End Sub";
+return "";
+}
+public String  _initialize(anywheresoftware.b4a.BA _ba) throws Exception{
+innerInitialize(_ba);
+ //BA.debugLineNum = 9;BA.debugLine="Public Sub Initialize";
+ //BA.debugLineNum = 10;BA.debugLine="finalPanel.Initialize(\"\")";
+_finalpanel.Initialize(ba,"");
+ //BA.debugLineNum = 11;BA.debugLine="teamname.Initialize(\"\")";
+_teamname.Initialize(ba,"");
+ //BA.debugLineNum = 12;BA.debugLine="teamscore.Initialize(\"\")";
+_teamscore.Initialize(ba,"");
+ //BA.debugLineNum = 13;BA.debugLine="SendBtn.Initialize(\"send\")";
+_sendbtn.Initialize(ba,"send");
+ //BA.debugLineNum = 15;BA.debugLine="finalPanel.AddView(teamname, 20%x, 10%y, 60%x, 10";
+_finalpanel.AddView((android.view.View)(_teamname.getObject()),__c.PerXToCurrent((float) (20),ba),__c.PerYToCurrent((float) (10),ba),__c.PerXToCurrent((float) (60),ba),__c.PerYToCurrent((float) (10),ba));
+ //BA.debugLineNum = 16;BA.debugLine="teamname.Hint = Main.translate.GetString(\"TeamNam";
+_teamname.setHint(_main._translate._getstring("TeamName"));
+ //BA.debugLineNum = 17;BA.debugLine="teamname.SingleLine = True";
+_teamname.setSingleLine(__c.True);
+ //BA.debugLineNum = 19;BA.debugLine="finalPanel.AddView(teamscore, 20%x, 35%y, 60%x, 1";
+_finalpanel.AddView((android.view.View)(_teamscore.getObject()),__c.PerXToCurrent((float) (20),ba),__c.PerYToCurrent((float) (35),ba),__c.PerXToCurrent((float) (60),ba),__c.PerYToCurrent((float) (10),ba));
+ //BA.debugLineNum = 20;BA.debugLine="teamscore.Gravity = Gravity.CENTER";
+_teamscore.setGravity(__c.Gravity.CENTER);
+ //BA.debugLineNum = 22;BA.debugLine="finalPanel.AddView(SendBtn, 20%x, 55%y, 60%x, 10%";
+_finalpanel.AddView((android.view.View)(_sendbtn.getObject()),__c.PerXToCurrent((float) (20),ba),__c.PerYToCurrent((float) (55),ba),__c.PerXToCurrent((float) (60),ba),__c.PerYToCurrent((float) (10),ba));
+ //BA.debugLineNum = 23;BA.debugLine="SendBtn.Text = Main.translate.GetString(\"SendBtn\"";
+_sendbtn.setText(BA.ObjectToCharSequence(_main._translate._getstring("SendBtn")));
+ //BA.debugLineNum = 24;BA.debugLine="HelperFunctions.Apply_ViewStyle(SendBtn,Colors.Wh";
+_helperfunctions._apply_viewstyle(ba,(anywheresoftware.b4a.objects.ConcreteViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.ConcreteViewWrapper(), (android.view.View)(_sendbtn.getObject())),__c.Colors.White,(int) (0xff4ac2ff),(int) (0xff149be0),(int) (0xff2cb7ff),(int) (0xff2cb7ff),(int) (0x66040509),(int) (0x66040509),(int) (60));
+ //BA.debugLineNum = 25;BA.debugLine="SendBtn.Padding = Array As Int(15,0,0,0)";
+_sendbtn.setPadding(new int[]{(int) (15),(int) (0),(int) (0),(int) (0)});
+ //BA.debugLineNum = 26;BA.debugLine="SendBtn.SingleLine = True";
+_sendbtn.setSingleLine(__c.True);
+ //BA.debugLineNum = 27;BA.debugLine="End Sub";
+return "";
+}
+public String  _send_click() throws Exception{
+ //BA.debugLineNum = 39;BA.debugLine="Private Sub send_Click";
+ //BA.debugLineNum = 40;BA.debugLine="If teamname.Text = \"\" Then";
+if ((_teamname.getText()).equals("")) { 
+ //BA.debugLineNum = 41;BA.debugLine="Msgbox(\"Добавате име на отбора.\",\"Липсва име.\")";
+__c.Msgbox(BA.ObjectToCharSequence("Добавате име на отбора."),BA.ObjectToCharSequence("Липсва име."),ba);
+ }else {
+ //BA.debugLineNum = 43;BA.debugLine="CallSub(Main, \"connect\")";
+__c.CallSubNew(ba,(Object)(_main.getObject()),"connect");
+ };
+ //BA.debugLineNum = 45;BA.debugLine="End Sub";
+return "";
+}
+public Object callSub(String sub, Object sender, Object[] args) throws Exception {
+BA.senderHolder.set(sender);
+if (BA.fastSubCompare(sub, "FINALSCORE"))
+	return _finalscore();
+return BA.SubDelegator.SubNotFound;
 }
 }

@@ -1,11 +1,10 @@
-﻿B4A=true
-Group=Default Group
+﻿Type=Class
+Version=7.3
 ModulesStructureVersion=1
-Type=Class
-Version=8
+B4A=true
 @EndOfDesignText@
 Sub Class_Globals
-	Private ServerUrl As String = "http://localhost:8080/results"
+
 End Sub
 
 'Initializes the object. You can add parameters to this method if needed.
@@ -30,7 +29,9 @@ Private Sub SendOrdersToDatabase
 			s = s & ",exeResult"
 			s = s & " VALUES"
 			s = s & "('" & HelperFunctions.TeamName & "'"
-			s = s & ",'" & CallSub(Main, "finalScore") & "')"
+			s = s & ",'" & HelperFunctions.avResult & "'"
+			s = s & ",'" & HelperFunctions.tvResult & "'"
+			s = s & ",'" & HelperFunctions.exeResult & "')"
 			
 			SQL = SQL & s
 			

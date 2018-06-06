@@ -1,39 +1,33 @@
-﻿Build1=Default,agg.agg
+﻿Version=7.3
+NumberOfModules=13
+Module1=SendScore
+Module2=Connector
+Module3=DBSQLconn
+Module4=HelperFunctions
+Module5=TV_Judge
+Module6=EXE_Judging
+Module7=AV_judge
+Module8=LoginScreen
+Module9=typeJudge
+Module10=Translator
+Module11=ProgramData
+Module12=UISizes
+Module13=Version
+Build1=Default,agg.agg
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
+IconFile=
+NumberOfFiles=2
 File1=dictionary.xml
 File2=login_background.jpg
-FileGroup1=Default Group
-FileGroup2=Default Group
-Group=Default Group
-IconFile=
+NumberOfLibraries=8
 Library1=core
-Library10=json
-Library11=mysql2
 Library2=randomaccessfile
 Library3=reflection
 Library4=customalertdialog
 Library5=xmlsax
 Library6=ahviewpager
 Library7=javaobject
-Library8=connector
-Library9=okhttputils2
-ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
-Module1=TV_Judge
-Module10=UISizes
-Module11=Version
-Module12=Connector
-Module13=DBSQLconn
-Module2=EXE_Judging
-Module3=SendScore
-Module4=AV_judge
-Module5=HelperFunctions
-Module6=LoginScreen
-Module7=typeJudge
-Module8=Translator
-Module9=ProgramData
-NumberOfFiles=2
-NumberOfLibraries=11
-NumberOfModules=13
-Version=8
+Library8=mysql2
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: AGG
@@ -41,7 +35,6 @@ Version=8
 	#VersionName: AGG
 	#SupportedOrientations: portrait
 	#CanInstallToExternalStorage: False
-	#AdditionalJar: mysql-connector-java-5.1.34-bin
 	#BridgeLogger: true
 #End Region
 
@@ -111,8 +104,10 @@ Sub Activity_Create(FirstTime As Boolean)
 	final.asView.Visible = False
 	final.asView.Enabled = False
 	
+	conn.Initialize
+	
 	DataBaseSQL.Initialize
-	DataBaseSQL.setDatabase("localhost:8080/results", "Results", "root", "root")	
+	DataBaseSQL.setDatabase("localhost", "Results", "root", "root")	
 
 End Sub
 
@@ -125,10 +120,13 @@ Public Sub finalScore As Double
 	Select scActive
 		Case 1
 			score = avJ.finalAVscore
+			HelperFunctions.avResult = score
 		Case 2
 			score = tvJ.finalTVscore
+			HelperFunctions.tvResult = score
 		Case 3
 			score = exeJ.finalEXEscore
+			HelperFunctions.exeResult = score
 	End Select
 	Return score
 End Sub

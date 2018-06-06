@@ -1,8 +1,7 @@
-﻿B4A=true
-Group=Default Group
+﻿Type=Class
+Version=7.3
 ModulesStructureVersion=1
-Type=Class
-Version=8
+B4A=true
 @EndOfDesignText@
 Sub Class_Globals
 	Dim IP, Databases As String
