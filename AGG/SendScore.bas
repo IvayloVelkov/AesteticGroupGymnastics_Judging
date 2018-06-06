@@ -6,9 +6,9 @@ Version=7.3
 @EndOfDesignText@
 Sub Class_Globals
 	Public finalPanel As Panel
-	Private teamname As EditText
-	Private teamscore As Label
-	Private SendBtn As Button
+	Public teamname As EditText
+	Public teamscore As Label
+	Public SendBtn As Button
 End Sub
 
 'Initializes the object. You can add parameters to this method if needed.
@@ -45,6 +45,11 @@ End Sub
 Private Sub send_Click
 	If teamname.Text = "" Then
 		Msgbox("Добавате име на отбора.","Липсва име.")
+	Else
+		CallSub(Main, "connect")
 	End If
-	
+End Sub
+
+Public Sub getTeamname
+	HelperFunctions.TeamName = teamname.Text
 End Sub

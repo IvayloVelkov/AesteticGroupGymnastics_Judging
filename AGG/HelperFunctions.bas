@@ -10,6 +10,7 @@ Sub Process_Globals
 	Public TvScore3 As String = "0.30"
 	Public TvScore4 As String = "0.40"
 	Public TvScore5 As String = "0.50"
+	Public TeamName As String
 End Sub
 
 Public Sub Apply_ViewStyle (Control As View, TextColor As Int, ColorA As Int, ColorB As Int, ColorPressedA As Int, ColorPressedB As Int, ColorDisabledA As Int, ColorDisabledB As Int, CornerRound As Int)

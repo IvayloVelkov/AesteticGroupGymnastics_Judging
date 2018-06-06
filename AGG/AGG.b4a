@@ -6,6 +6,8 @@ FileGroup2=Default Group
 Group=Default Group
 IconFile=
 Library1=core
+Library10=json
+Library11=mysql2
 Library2=randomaccessfile
 Library3=reflection
 Library4=customalertdialog
@@ -13,23 +15,24 @@ Library5=xmlsax
 Library6=ahviewpager
 Library7=javaobject
 Library8=connector
-Library9=jdbcsql
+Library9=okhttputils2
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
 Module1=TV_Judge
 Module10=UISizes
 Module11=Version
-Module12=HelperFunctions
+Module12=Connector
+Module13=DBSQLconn
 Module2=EXE_Judging
 Module3=SendScore
-Module4=Starter
-Module5=AV_judge
+Module4=AV_judge
+Module5=HelperFunctions
 Module6=LoginScreen
 Module7=typeJudge
 Module8=Translator
 Module9=ProgramData
 NumberOfFiles=2
-NumberOfLibraries=9
-NumberOfModules=12
+NumberOfLibraries=11
+NumberOfModules=13
 Version=8
 @EndOfDesignText@
 #Region  Project Attributes 
@@ -54,6 +57,8 @@ Sub Process_Globals
 	Type Report(ChartType As String,Title As String,X As String,Y As String,Limit As Int,curveType As String,sliceText As String,Query As String, Data As List)
 	Public BaseNotAccessible As Boolean
 	Public PrimeCurrency As String
+	Public DataBaseSQL As DBSQLconn
+
 End Sub
 
 Sub Globals
@@ -62,6 +67,7 @@ Sub Globals
 	Private avJ As AV_judge
 	Private tvJ As TV_Judge
 	Private exeJ As EXE_Judging
+	Private conn As Connector
 	Private final As SendScore	
 	Public score As Double
 	Private scActive As Int
@@ -105,7 +111,9 @@ Sub Activity_Create(FirstTime As Boolean)
 	final.asView.Visible = False
 	final.asView.Enabled = False
 	
-'	ConnectToDatabase
+	DataBaseSQL.Initialize
+	DataBaseSQL.setDatabase("localhost:8080/results", "Results", "root", "root")	
+
 End Sub
 
 Private Sub Load_Language
@@ -175,6 +183,10 @@ Public Sub FinalClick
 	final.asView.Visible = True
 	final.asView.Enabled = True
 	final.finalScore
+End Sub
+
+Public Sub connect
+	conn.SendToDatabase
 End Sub
 
 Sub Activity_KeyPress (KeyCode As Int) As Boolean
