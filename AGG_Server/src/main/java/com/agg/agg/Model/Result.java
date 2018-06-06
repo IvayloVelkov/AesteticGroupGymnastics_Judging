@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.LinkedList;
 
 import java.util.List;
-
+import java.util.Objects;
 
 
 @Entity
@@ -51,6 +51,8 @@ public class Result {
 
     private Double sensorResult;
 
+    public Result() {    }
+
     public int getId() {
         return id;
     }
@@ -59,20 +61,44 @@ public class Result {
         this.id = id;
     }
 
+    public String getTeamname() {
+        return teamname;
+    }
+
+    public void setTeamname(String teamname) {
+        this.teamname = teamname;
+    }
+
     public Double getAvReuslt() {
         return avReuslt;
     }
 
-    public Double getExeReuslt() {
-        return exeReuslt;
+    public void setAvReuslt(Double avReuslt) {
+        this.avReuslt = avReuslt;
     }
 
     public Double getTvReuslt() {
         return tvReuslt;
     }
 
-    public String getTeamname() {
-        return teamname;
+    public void setTvReuslt(Double tvReuslt) {
+        this.tvReuslt = tvReuslt;
+    }
+
+    public Double getExeReuslt() {
+        return exeReuslt;
+    }
+
+    public void setExeReuslt(Double exeReuslt) {
+        this.exeReuslt = exeReuslt;
+    }
+
+    public Double getFinalResult() {
+        return finalResult;
+    }
+
+    public void setFinalResult(Double finalResult) {
+        this.finalResult = finalResult;
     }
 
     public Double getSensorResult() {
@@ -83,37 +109,23 @@ public class Result {
         this.sensorResult = sensorResult;
     }
 
-    public Double getFinalResult() {
-        return finalResult;
-    }
-
-    public void setAvReuslt(Double avReuslt) {
-        this.avReuslt = avReuslt;
-    }
-
-    public void setTvReuslt(Double tvReuslt) {
-        this.tvReuslt = tvReuslt;
-    }
-
-    public void setExeReuslt(Double exeReuslt) {
-        this.exeReuslt = exeReuslt;
-    }
-
-    public void setTeamname(String teamname) {
-        this.teamname = teamname;
-    }
-
-    public void setFinalResult(Double finalResult) {
-        this.finalResult = finalResult;
-    }
-
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Result result = (Result) o;
+        return id == result.id &&
+                Objects.equals(teamname, result.teamname) &&
+                Objects.equals(avReuslt, result.avReuslt) &&
+                Objects.equals(tvReuslt, result.tvReuslt) &&
+                Objects.equals(exeReuslt, result.exeReuslt) &&
+                Objects.equals(finalResult, result.finalResult) &&
+                Objects.equals(sensorResult, result.sensorResult);
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+
+        return Objects.hash(id, teamname, avReuslt, tvReuslt, exeReuslt, finalResult, sensorResult);
     }
 }
