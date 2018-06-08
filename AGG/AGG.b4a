@@ -1,24 +1,10 @@
-﻿Version=7.3
-NumberOfModules=12
-Module1=SendScore
-Module2=Connector
-Module3=HelperFunctions
-Module4=TV_Judge
-Module5=EXE_Judging
-Module6=AV_judge
-Module7=LoginScreen
-Module8=typeJudge
-Module9=Translator
-Module10=ProgramData
-Module11=UISizes
-Module12=Version
-Build1=Default,agg.agg
-ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~AddReplacement(<uses-permission android:name="android.permission.INTERNET"/>,)~\n~
-IconFile=
-NumberOfFiles=2
+﻿Build1=Default,agg.agg
 File1=dictionary.xml
 File2=login_background.jpg
-NumberOfLibraries=9
+FileGroup1=Default Group
+FileGroup2=Default Group
+Group=Default Group
+IconFile=
 Library1=core
 Library2=randomaccessfile
 Library3=reflection
@@ -28,6 +14,23 @@ Library6=ahviewpager
 Library7=json
 Library8=okhttputils2
 Library9=network
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~AddPermission(android.permission.INTERNET)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
+Module1=SendScore
+Module10=ProgramData
+Module11=UISizes
+Module12=Version
+Module2=Connector
+Module3=HelperFunctions
+Module4=TV_Judge
+Module5=EXE_Judging
+Module6=AV_judge
+Module7=LoginScreen
+Module8=typeJudge
+Module9=Translator
+NumberOfFiles=2
+NumberOfLibraries=9
+NumberOfModules=12
+Version=8
 @EndOfDesignText@
 
 #Region  Project Attributes 

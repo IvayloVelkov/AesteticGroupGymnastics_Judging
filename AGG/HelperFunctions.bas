@@ -1,7 +1,8 @@
-﻿Type=StaticCode
-Version=7.3
+﻿B4A=true
+Group=Default Group
 ModulesStructureVersion=1
-B4A=true
+Type=StaticCode
+Version=7.3
 @EndOfDesignText@
 Sub Process_Globals
 	Public TvScore1 As String = "0.10"

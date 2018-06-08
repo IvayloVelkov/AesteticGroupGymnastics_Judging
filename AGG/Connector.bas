@@ -1,13 +1,16 @@
-﻿Type=Class
-Version=7.3
+﻿B4A=true
+Group=Default Group
 ModulesStructureVersion=1
-B4A=true
+Type=Class
+Version=7.3
 @EndOfDesignText@
 Sub Class_Globals
+	
 End Sub
 
 'Initializes the object. You can add parameters to this method if needed.
 Public Sub Initialize
+	
 End Sub
 
 Sub PerformUpload ()
@@ -30,8 +33,9 @@ Sub PerformUpload ()
 	Log(j.ToPrettyString(5))
    
 	Dim job As HttpJob
-	job.Initialize("SendResults", Me)
-	job.PostString("https://localhost:8080/results", j.ToString)
+		job.Initialize("SendResults", Me)
+	job.PostString("https://192.168.8.100:8080/results", j.ToString)
+'	job.PostString("https://aggserver.herokuapp.com/results", j.ToString)
    
 	ToastMessageShow("Sending...", True)
 End Sub

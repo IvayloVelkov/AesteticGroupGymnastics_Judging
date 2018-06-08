@@ -31,7 +31,8 @@ public class main extends Activity implements B4AActivity{
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if (isFirst) {
+        mostCurrent = this;
+		if (processBA == null) {
 			processBA = new BA(this.getApplicationContext(), null, null, "agg.agg", "agg.agg.main");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
@@ -45,6 +46,7 @@ public class main extends Activity implements B4AActivity{
 				p.finish();
 			}
 		}
+        processBA.setActivityPaused(true);
         processBA.runHook("oncreate", this, null);
 		if (!includeTitle) {
         	this.getWindow().requestFeature(android.view.Window.FEATURE_NO_TITLE);
@@ -53,7 +55,7 @@ public class main extends Activity implements B4AActivity{
         	getWindow().setFlags(android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN,   
         			android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
-		mostCurrent = this;
+		
         processBA.sharedProcessBA.activityBA = null;
 		layout = new BALayout(this);
 		setContentView(layout);
@@ -259,11 +261,14 @@ public class main extends Activity implements B4AActivity{
     @Override 
 	public void onPause() {
 		super.onPause();
-        if (_activity == null) //workaround for emulator bug (Issue 2423)
+        if (_activity == null)
             return;
+        if (this != mostCurrent)
+			return;
 		anywheresoftware.b4a.Msgbox.dismiss(true);
         BA.LogInfo("** Activity (main) Pause, UserClosed = " + activityBA.activity.isFinishing() + " **");
-        processBA.raiseEvent2(_activity, true, "activity_pause", false, activityBA.activity.isFinishing());		
+        if (mostCurrent != null)
+            processBA.raiseEvent2(_activity, true, "activity_pause", false, activityBA.activity.isFinishing());		
         processBA.setActivityPaused(true);
         mostCurrent = null;
         if (!activityBA.activity.isFinishing())
