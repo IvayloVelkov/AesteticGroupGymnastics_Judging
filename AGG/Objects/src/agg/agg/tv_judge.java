@@ -38,6 +38,7 @@ public anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper[] _che
 public anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper[] _chekpointbox2 = null;
 public anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper[] _chekpointbox3 = null;
 public double _tvscore = 0;
+public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public agg.agg.main _main = null;
 public agg.agg.helperfunctions _helperfunctions = null;
 public agg.agg.programdata _programdata = null;

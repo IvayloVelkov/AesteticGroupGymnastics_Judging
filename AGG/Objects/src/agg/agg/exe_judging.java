@@ -38,6 +38,7 @@ public anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _chekp
 public anywheresoftware.b4a.objects.ButtonWrapper[] _btnpoints = null;
 public double _maxvalue = 0;
 public double _exescore = 0;
+public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public agg.agg.main _main = null;
 public agg.agg.helperfunctions _helperfunctions = null;
 public agg.agg.programdata _programdata = null;

@@ -1,34 +1,35 @@
 ﻿Version=7.3
-NumberOfModules=13
+NumberOfModules=12
 Module1=SendScore
 Module2=Connector
-Module3=DBSQLconn
-Module4=HelperFunctions
-Module5=TV_Judge
-Module6=EXE_Judging
-Module7=AV_judge
-Module8=LoginScreen
-Module9=typeJudge
-Module10=Translator
-Module11=ProgramData
-Module12=UISizes
-Module13=Version
+Module3=HelperFunctions
+Module4=TV_Judge
+Module5=EXE_Judging
+Module6=AV_judge
+Module7=LoginScreen
+Module8=typeJudge
+Module9=Translator
+Module10=ProgramData
+Module11=UISizes
+Module12=Version
 Build1=Default,agg.agg
-ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~AddReplacement(<uses-permission android:name="android.permission.INTERNET"/>,)~\n~
 IconFile=
 NumberOfFiles=2
 File1=dictionary.xml
 File2=login_background.jpg
-NumberOfLibraries=8
+NumberOfLibraries=9
 Library1=core
 Library2=randomaccessfile
 Library3=reflection
 Library4=customalertdialog
 Library5=xmlsax
 Library6=ahviewpager
-Library7=javaobject
-Library8=mysql2
+Library7=json
+Library8=okhttputils2
+Library9=network
 @EndOfDesignText@
+
 #Region  Project Attributes 
 	#ApplicationLabel: AGG
 	#VersionCode: 1
@@ -50,8 +51,6 @@ Sub Process_Globals
 	Type Report(ChartType As String,Title As String,X As String,Y As String,Limit As Int,curveType As String,sliceText As String,Query As String, Data As List)
 	Public BaseNotAccessible As Boolean
 	Public PrimeCurrency As String
-	Public DataBaseSQL As DBSQLconn
-
 End Sub
 
 Sub Globals
@@ -105,10 +104,6 @@ Sub Activity_Create(FirstTime As Boolean)
 	final.asView.Enabled = False
 	
 	conn.Initialize
-	
-	DataBaseSQL.Initialize
-	DataBaseSQL.setDatabase("localhost", "Results", "root", "root")	
-
 End Sub
 
 Private Sub Load_Language
@@ -183,8 +178,8 @@ Public Sub FinalClick
 	final.finalScore
 End Sub
 
-Public Sub connect
-	conn.SendToDatabase
+Public Sub Connect
+	conn.PerformUpload()
 End Sub
 
 Sub Activity_KeyPress (KeyCode As Int) As Boolean

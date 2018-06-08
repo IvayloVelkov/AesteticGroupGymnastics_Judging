@@ -14,6 +14,7 @@ public static Object getObject() {
 public static int _productid = 0;
 public static String _programname = "";
 public static String _productindictionary = "";
+public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public agg.agg.main _main = null;
 public agg.agg.helperfunctions _helperfunctions = null;
 public agg.agg.programdata _programdata = null;

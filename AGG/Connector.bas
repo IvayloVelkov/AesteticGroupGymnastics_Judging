@@ -4,39 +4,47 @@ ModulesStructureVersion=1
 B4A=true
 @EndOfDesignText@
 Sub Class_Globals
-
 End Sub
 
 'Initializes the object. You can add parameters to this method if needed.
 Public Sub Initialize
-	
 End Sub
 
+Sub PerformUpload ()
+	Dim mylist As List
+	Dim m As Map
 
-Public Sub SendToDatabase
-	SendOrdersToDatabase	
+	mylist.Initialize
+   
+		m.Initialize
+		m.Put("teamname", HelperFunctions.TeamName)
+		m.Put("avResult", HelperFunctions.avResult)
+		m.Put("tvResult", HelperFunctions.tvResult)
+		m.Put("exeResult", HelperFunctions.exeResult)
+   
+	Log(m)
+   		mylist.Add(m)
+	Log(mylist)
+	Dim j As JSONGenerator
+	j.Initialize2(mylist)
+	Log(j.ToPrettyString(5))
+   
+	Dim job As HttpJob
+	job.Initialize("SendResults", Me)
+	job.PostString("https://localhost:8080/results", j.ToString)
+   
+	ToastMessageShow("Sending...", True)
 End Sub
 
-Private Sub SendOrdersToDatabase
-	Dim s As String
-	Dim SQL As String
-		
-	SQL = ""
-			s = "INSERT INTO Results "
-			s = s & "(teamname"
-			s = s & ",avResult"
-			s = s & ",tvResult"
-			s = s & ",exeResult"
-			s = s & " VALUES"
-			s = s & "('" & HelperFunctions.TeamName & "'"
-			s = s & ",'" & HelperFunctions.avResult & "'"
-			s = s & ",'" & HelperFunctions.tvResult & "'"
-			s = s & ",'" & HelperFunctions.exeResult & "')"
-			
-			SQL = SQL & s
-			
-	If SQL.Length > 0 Then
-			Main.DataBaseSQL.ExecuteNonQuery(SQL)
+Sub JobDone (Job As HttpJob)
+	Dim res As String
+	Log("JobName = " & Job.JobName & ", Success = " & Job.Success)
+	If Job.Success = True Then
+		res = Job.GetString
+        Log(res)
+	Else
+		Log("Error: " & Job.ErrorMessage)
+		ToastMessageShow("Error: " & Job.ErrorMessage, True)
 	End If
-	
+	Job.Release
 End Sub

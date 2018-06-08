@@ -33,6 +33,7 @@ public def.CustomAlertDialog _cad = null;
 public anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _checkloginpanel = null;
 public String _usrstring = "";
 public String _passstring = "";
+public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public agg.agg.main _main = null;
 public agg.agg.helperfunctions _helperfunctions = null;
 public agg.agg.programdata _programdata = null;

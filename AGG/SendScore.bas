@@ -45,6 +45,7 @@ Private Sub send_Click
 	If teamname.Text = "" Then
 		Msgbox("Добавате име на отбора.","Липсва име.")
 	Else
+		getTeamname
 		CallSub(Main, "connect")
 	End If
 End Sub

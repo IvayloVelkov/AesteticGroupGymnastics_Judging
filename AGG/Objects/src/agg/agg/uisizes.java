@@ -27,6 +27,7 @@ public static int _defaultpadding = 0;
 public static int _pressedtextcolor = 0;
 public static String _groupcolor_normal = "";
 public static String _groupcolor_pressed = "";
+public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public agg.agg.main _main = null;
 public agg.agg.helperfunctions _helperfunctions = null;
 public agg.agg.programdata _programdata = null;

@@ -36,6 +36,7 @@ public anywheresoftware.b4a.objects.PanelWrapper _line2 = null;
 public anywheresoftware.b4a.objects.PanelWrapper _downpanel = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _btnready = null;
 public double _avscore = 0;
+public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public agg.agg.main _main = null;
 public agg.agg.helperfunctions _helperfunctions = null;
 public agg.agg.programdata _programdata = null;

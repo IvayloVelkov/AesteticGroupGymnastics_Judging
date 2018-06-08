@@ -28,6 +28,7 @@ public anywheresoftware.b4a.objects.PanelWrapper _finalpanel = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _teamname = null;
 public anywheresoftware.b4a.objects.LabelWrapper _teamscore = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _sendbtn = null;
+public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public agg.agg.main _main = null;
 public agg.agg.helperfunctions _helperfunctions = null;
 public agg.agg.programdata _programdata = null;
@@ -63,10 +64,10 @@ __c.Log("FINAL"+_teamscore.getText());
 return "";
 }
 public String  _getteamname() throws Exception{
- //BA.debugLineNum = 47;BA.debugLine="Public Sub getTeamname";
- //BA.debugLineNum = 48;BA.debugLine="HelperFunctions.TeamName = teamname.Text";
+ //BA.debugLineNum = 48;BA.debugLine="Public Sub getTeamname";
+ //BA.debugLineNum = 49;BA.debugLine="HelperFunctions.TeamName = teamname.Text";
 _helperfunctions._teamname = _teamname.getText();
- //BA.debugLineNum = 49;BA.debugLine="End Sub";
+ //BA.debugLineNum = 50;BA.debugLine="End Sub";
 return "";
 }
 public String  _initialize(anywheresoftware.b4a.BA _ba) throws Exception{
@@ -110,10 +111,12 @@ if ((_teamname.getText()).equals("")) {
  //BA.debugLineNum = 41;BA.debugLine="Msgbox(\"Добавате име на отбора.\",\"Липсва име.\")";
 __c.Msgbox(BA.ObjectToCharSequence("Добавате име на отбора."),BA.ObjectToCharSequence("Липсва име."),ba);
  }else {
- //BA.debugLineNum = 43;BA.debugLine="CallSub(Main, \"connect\")";
+ //BA.debugLineNum = 43;BA.debugLine="getTeamname";
+_getteamname();
+ //BA.debugLineNum = 44;BA.debugLine="CallSub(Main, \"connect\")";
 __c.CallSubNew(ba,(Object)(_main.getObject()),"connect");
  };
- //BA.debugLineNum = 45;BA.debugLine="End Sub";
+ //BA.debugLineNum = 46;BA.debugLine="End Sub";
 return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {

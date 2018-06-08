@@ -29,6 +29,7 @@ public anywheresoftware.b4a.objects.ButtonWrapper _btnav = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _btntv = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _btnexe = null;
 public int _padding = 0;
+public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public agg.agg.main _main = null;
 public agg.agg.helperfunctions _helperfunctions = null;
 public agg.agg.programdata _programdata = null;

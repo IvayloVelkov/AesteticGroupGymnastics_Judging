@@ -17,6 +17,7 @@ public static int _rafencpass = 0;
 public static boolean _sameuser = false;
 public static int _defaultfont = 0;
 public static double _finalscore = 0;
+public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public agg.agg.main _main = null;
 public agg.agg.helperfunctions _helperfunctions = null;
 public agg.agg.uisizes _uisizes = null;
