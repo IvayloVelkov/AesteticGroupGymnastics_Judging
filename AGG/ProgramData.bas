@@ -1,8 +1,7 @@
-﻿B4A=true
-Group=Default Group
-ModulesStructureVersion=1
-Type=StaticCode
+﻿Type=StaticCode
 Version=7.3
+ModulesStructureVersion=1
+B4A=true
 @EndOfDesignText@
 'Code module Program Data
 Private Sub Process_Globals

@@ -43,26 +43,26 @@ return "";
 }
 public String  _jobdone(anywheresoftware.b4a.samples.httputils2.httpjob _job) throws Exception{
 String _res = "";
- //BA.debugLineNum = 37;BA.debugLine="Sub JobDone (Job As HttpJob)";
- //BA.debugLineNum = 38;BA.debugLine="Dim res As String";
+ //BA.debugLineNum = 39;BA.debugLine="Sub JobDone (Job As HttpJob)";
+ //BA.debugLineNum = 40;BA.debugLine="Dim res As String";
 _res = "";
- //BA.debugLineNum = 39;BA.debugLine="Log(\"JobName = \" & Job.JobName & \", Success = \" &";
+ //BA.debugLineNum = 41;BA.debugLine="Log(\"JobName = \" & Job.JobName & \", Success = \" &";
 __c.Log("JobName = "+_job._jobname+", Success = "+BA.ObjectToString(_job._success));
- //BA.debugLineNum = 40;BA.debugLine="If Job.Success = True Then";
+ //BA.debugLineNum = 42;BA.debugLine="If Job.Success = True Then";
 if (_job._success==__c.True) { 
- //BA.debugLineNum = 41;BA.debugLine="res = Job.GetString";
+ //BA.debugLineNum = 43;BA.debugLine="res = Job.GetString";
 _res = _job._getstring();
- //BA.debugLineNum = 42;BA.debugLine="Log(res)";
+ //BA.debugLineNum = 44;BA.debugLine="Log(res)";
 __c.Log(_res);
  }else {
- //BA.debugLineNum = 44;BA.debugLine="Log(\"Error: \" & Job.ErrorMessage)";
+ //BA.debugLineNum = 46;BA.debugLine="Log(\"Error: \" & Job.ErrorMessage)";
 __c.Log("Error: "+_job._errormessage);
- //BA.debugLineNum = 45;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
+ //BA.debugLineNum = 47;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 __c.ToastMessageShow(BA.ObjectToCharSequence("Error: "+_job._errormessage),__c.True);
  };
- //BA.debugLineNum = 47;BA.debugLine="Job.Release";
+ //BA.debugLineNum = 49;BA.debugLine="Job.Release";
 _job._release();
- //BA.debugLineNum = 48;BA.debugLine="End Sub";
+ //BA.debugLineNum = 50;BA.debugLine="End Sub";
 return "";
 }
 public String  _performupload() throws Exception{
@@ -95,19 +95,21 @@ _mylist.Add((Object)(_m.getObject()));
 __c.Log(BA.ObjectToString(_mylist));
  //BA.debugLineNum = 25;BA.debugLine="Dim j As JSONGenerator";
 _j = new anywheresoftware.b4a.objects.collections.JSONParser.JSONGenerator();
- //BA.debugLineNum = 26;BA.debugLine="j.Initialize2(mylist)";
-_j.Initialize2(_mylist);
- //BA.debugLineNum = 27;BA.debugLine="Log(j.ToPrettyString(5))";
-__c.Log(_j.ToPrettyString((int) (5)));
- //BA.debugLineNum = 29;BA.debugLine="Dim job As HttpJob";
+ //BA.debugLineNum = 27;BA.debugLine="j.Initialize(m)";
+_j.Initialize(_m);
+ //BA.debugLineNum = 28;BA.debugLine="Log(j.ToPrettyString(1))";
+__c.Log(_j.ToPrettyString((int) (1)));
+ //BA.debugLineNum = 30;BA.debugLine="Dim job As HttpJob";
 _job = new anywheresoftware.b4a.samples.httputils2.httpjob();
- //BA.debugLineNum = 30;BA.debugLine="job.Initialize(\"SendResults\", Me)";
+ //BA.debugLineNum = 31;BA.debugLine="job.Initialize(\"SendResults\", Me)";
 _job._initialize(ba,"SendResults",this);
- //BA.debugLineNum = 31;BA.debugLine="job.PostString(\"https://192.168.8.100:8080/result";
-_job._poststring("https://192.168.8.100:8080/results",_j.ToString());
- //BA.debugLineNum = 34;BA.debugLine="ToastMessageShow(\"Sending...\", True)";
+ //BA.debugLineNum = 32;BA.debugLine="job.PostString(\"http://192.168.1.101:8080/results";
+_job._poststring("http://192.168.1.101:8080/results",_j.ToString());
+ //BA.debugLineNum = 33;BA.debugLine="job.GetRequest.SetContentType(\"application/json\")";
+_job._getrequest().SetContentType("application/json");
+ //BA.debugLineNum = 36;BA.debugLine="ToastMessageShow(\"Sending...\", True)";
 __c.ToastMessageShow(BA.ObjectToCharSequence("Sending..."),__c.True);
- //BA.debugLineNum = 35;BA.debugLine="End Sub";
+ //BA.debugLineNum = 37;BA.debugLine="End Sub";
 return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {

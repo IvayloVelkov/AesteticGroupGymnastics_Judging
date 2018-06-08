@@ -1,8 +1,7 @@
-﻿B4A=true
-Group=Default Group
-ModulesStructureVersion=1
-Type=Class
+﻿Type=Class
 Version=7.3
+ModulesStructureVersion=1
+B4A=true
 @EndOfDesignText@
 Sub Class_Globals
 	
@@ -29,12 +28,14 @@ Sub PerformUpload ()
    		mylist.Add(m)
 	Log(mylist)
 	Dim j As JSONGenerator
-	j.Initialize2(mylist)
-	Log(j.ToPrettyString(5))
+'	j.Initialize2(mylist)
+	j.Initialize(m)
+	Log(j.ToPrettyString(1))
    
 	Dim job As HttpJob
 		job.Initialize("SendResults", Me)
-	job.PostString("https://192.168.8.100:8080/results", j.ToString)
+	job.PostString("http://192.168.1.101:8080/results", j.ToString)
+	job.GetRequest.SetContentType("application/json")
 '	job.PostString("https://aggserver.herokuapp.com/results", j.ToString)
    
 	ToastMessageShow("Sending...", True)
