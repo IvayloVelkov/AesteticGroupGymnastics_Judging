@@ -111,7 +111,7 @@ _label[(int) (0)].setText(BA.ObjectToCharSequence(_main._translate._getstring("A
  //BA.debugLineNum = 75;BA.debugLine="label(0).TextColor = Colors.White";
 _label[(int) (0)].setTextColor(__c.Colors.White);
  //BA.debugLineNum = 77;BA.debugLine="page(0).AddView(chekpointbox(0), label(0).left +";
-_page[(int) (0)].AddView((android.view.View)(_chekpointbox[(int) (0)].getObject()),(int) (_label[(int) (0)].getLeft()+_label[(int) (0)].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[(int) (0)].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (5),ba));
+_page[(int) (0)].AddView((android.view.View)(_chekpointbox[(int) (0)].getObject()),(int) (_label[(int) (0)].getLeft()+_label[(int) (0)].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[(int) (0)].getTop(),__c.PerXToCurrent((float) (20),ba),__c.PerYToCurrent((float) (5),ba));
  //BA.debugLineNum = 78;BA.debugLine="chekpointbox(0).Text = HelperFunctions.TvScore1";
 _chekpointbox[(int) (0)].setText(BA.ObjectToCharSequence(_helperfunctions._tvscore1));
  //BA.debugLineNum = 81;BA.debugLine="For i = 1 To 3";
@@ -121,25 +121,25 @@ final int limit31 = (int) (3);
 _i = (int) (1) ;
 for (;(step31 > 0 && _i <= limit31) || (step31 < 0 && _i >= limit31) ;_i = ((int)(0 + _i + step31))  ) {
  //BA.debugLineNum = 82;BA.debugLine="page(0).AddView(label(i), 2%x, label(i - 1).Top";
-_page[(int) (0)].AddView((android.view.View)(_label[_i].getObject()),__c.PerXToCurrent((float) (2),ba),(int) (_label[(int) (_i-1)].getTop()+_label[(int) (_i-1)].getHeight()+__c.DipToCurrent((int) (3))),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (10),ba));
+_page[(int) (0)].AddView((android.view.View)(_label[_i].getObject()),__c.PerXToCurrent((float) (2),ba),(int) (_label[(int) (_i-1)].getTop()+_label[(int) (_i-1)].getHeight()+__c.DipToCurrent((int) (3))),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (100),ba));
  //BA.debugLineNum = 83;BA.debugLine="label(i).Text = Main.translate.GetString(\"AVlaba";
 _label[_i].setText(BA.ObjectToCharSequence(_main._translate._getstring("AVlabal"+BA.NumberToString(_i))));
  //BA.debugLineNum = 84;BA.debugLine="label(i).TextColor = Colors.White";
 _label[_i].setTextColor(__c.Colors.White);
  //BA.debugLineNum = 85;BA.debugLine="page(0).AddView(chekpointbox(i), label(i).left +";
-_page[(int) (0)].AddView((android.view.View)(_chekpointbox[_i].getObject()),(int) (_label[_i].getLeft()+_label[_i].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[_i].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (5),ba));
+_page[(int) (0)].AddView((android.view.View)(_chekpointbox[_i].getObject()),(int) (_label[_i].getLeft()+_label[_i].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[_i].getTop(),__c.PerXToCurrent((float) (20),ba),__c.PerYToCurrent((float) (5),ba));
  //BA.debugLineNum = 86;BA.debugLine="chekpointbox(i).Text = HelperFunctions.TvScore1";
 _chekpointbox[_i].setText(BA.ObjectToCharSequence(_helperfunctions._tvscore1));
  }
 };
- //BA.debugLineNum = 90;BA.debugLine="page(1).AddView(label(4), 2%x, 5%y, 50%x, 7%y)";
-_page[(int) (1)].AddView((android.view.View)(_label[(int) (4)].getObject()),__c.PerXToCurrent((float) (2),ba),__c.PerYToCurrent((float) (5),ba),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (7),ba));
+ //BA.debugLineNum = 90;BA.debugLine="page(1).AddView(label(4), 2%x, 5%y, 50%x, 6%y)";
+_page[(int) (1)].AddView((android.view.View)(_label[(int) (4)].getObject()),__c.PerXToCurrent((float) (2),ba),__c.PerYToCurrent((float) (5),ba),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (6),ba));
  //BA.debugLineNum = 91;BA.debugLine="label(4).Text = Main.translate.GetString(\"AVlabal";
 _label[(int) (4)].setText(BA.ObjectToCharSequence(_main._translate._getstring("AVlabal4")));
  //BA.debugLineNum = 92;BA.debugLine="label(4).TextColor = Colors.White";
 _label[(int) (4)].setTextColor(__c.Colors.White);
  //BA.debugLineNum = 94;BA.debugLine="page(1).AddView(chekpointbox(4), label(4).left +";
-_page[(int) (1)].AddView((android.view.View)(_chekpointbox[(int) (4)].getObject()),(int) (_label[(int) (4)].getLeft()+_label[(int) (4)].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[(int) (4)].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (7),ba));
+_page[(int) (1)].AddView((android.view.View)(_chekpointbox[(int) (4)].getObject()),(int) (_label[(int) (4)].getLeft()+_label[(int) (4)].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[(int) (4)].getTop(),__c.PerXToCurrent((float) (20),ba),__c.PerYToCurrent((float) (7),ba));
  //BA.debugLineNum = 95;BA.debugLine="chekpointbox(4).Text = HelperFunctions.TvScore1";
 _chekpointbox[(int) (4)].setText(BA.ObjectToCharSequence(_helperfunctions._tvscore1));
  //BA.debugLineNum = 97;BA.debugLine="For i = 5 To 15";
@@ -149,25 +149,25 @@ final int limit43 = (int) (15);
 _i = (int) (5) ;
 for (;(step43 > 0 && _i <= limit43) || (step43 < 0 && _i >= limit43) ;_i = ((int)(0 + _i + step43))  ) {
  //BA.debugLineNum = 98;BA.debugLine="page(1).AddView(label(i), 2%x, label(i - 1).Top";
-_page[(int) (1)].AddView((android.view.View)(_label[_i].getObject()),__c.PerXToCurrent((float) (2),ba),(int) (_label[(int) (_i-1)].getTop()+_label[(int) (_i-1)].getHeight()+__c.DipToCurrent((int) (3))),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (7),ba));
+_page[(int) (1)].AddView((android.view.View)(_label[_i].getObject()),__c.PerXToCurrent((float) (2),ba),(int) (_label[(int) (_i-1)].getTop()+_label[(int) (_i-1)].getHeight()+__c.DipToCurrent((int) (3))),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (6),ba));
  //BA.debugLineNum = 99;BA.debugLine="label(i).Text = Main.translate.GetString(\"AVlaba";
 _label[_i].setText(BA.ObjectToCharSequence(_main._translate._getstring("AVlabal"+BA.NumberToString(_i))));
  //BA.debugLineNum = 100;BA.debugLine="label(i).TextColor = Colors.White";
 _label[_i].setTextColor(__c.Colors.White);
  //BA.debugLineNum = 101;BA.debugLine="page(1).AddView(chekpointbox(i), label(i).left +";
-_page[(int) (1)].AddView((android.view.View)(_chekpointbox[_i].getObject()),(int) (_label[_i].getLeft()+_label[_i].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[_i].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (5),ba));
+_page[(int) (1)].AddView((android.view.View)(_chekpointbox[_i].getObject()),(int) (_label[_i].getLeft()+_label[_i].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[_i].getTop(),__c.PerXToCurrent((float) (20),ba),__c.PerYToCurrent((float) (5),ba));
  //BA.debugLineNum = 102;BA.debugLine="chekpointbox(i).Text = HelperFunctions.TvScore1";
 _chekpointbox[_i].setText(BA.ObjectToCharSequence(_helperfunctions._tvscore1));
  }
 };
- //BA.debugLineNum = 106;BA.debugLine="page(2).AddView(label(16),2%x, 5%y, 50%x, 7%y)";
-_page[(int) (2)].AddView((android.view.View)(_label[(int) (16)].getObject()),__c.PerXToCurrent((float) (2),ba),__c.PerYToCurrent((float) (5),ba),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (7),ba));
+ //BA.debugLineNum = 106;BA.debugLine="page(2).AddView(label(16),2%x, 5%y, 50%x, 6%y)";
+_page[(int) (2)].AddView((android.view.View)(_label[(int) (16)].getObject()),__c.PerXToCurrent((float) (2),ba),__c.PerYToCurrent((float) (5),ba),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (6),ba));
  //BA.debugLineNum = 107;BA.debugLine="label(16).Text = Main.translate.GetString(\"AVlaba";
 _label[(int) (16)].setText(BA.ObjectToCharSequence(_main._translate._getstring("AVlabal16")));
  //BA.debugLineNum = 108;BA.debugLine="label(16).TextColor = Colors.White";
 _label[(int) (16)].setTextColor(__c.Colors.White);
  //BA.debugLineNum = 109;BA.debugLine="page(2).AddView(chekpointbox(16), label(16).left";
-_page[(int) (2)].AddView((android.view.View)(_chekpointbox[(int) (16)].getObject()),(int) (_label[(int) (16)].getLeft()+_label[(int) (16)].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[(int) (16)].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (5),ba));
+_page[(int) (2)].AddView((android.view.View)(_chekpointbox[(int) (16)].getObject()),(int) (_label[(int) (16)].getLeft()+_label[(int) (16)].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[(int) (16)].getTop(),__c.PerXToCurrent((float) (20),ba),__c.PerYToCurrent((float) (6),ba));
  //BA.debugLineNum = 110;BA.debugLine="chekpointbox(16).Text = HelperFunctions.TvScore1";
 _chekpointbox[(int) (16)].setText(BA.ObjectToCharSequence(_helperfunctions._tvscore1));
  //BA.debugLineNum = 113;BA.debugLine="For i = 17 To 27";
@@ -177,13 +177,13 @@ final int limit55 = (int) (27);
 _i = (int) (17) ;
 for (;(step55 > 0 && _i <= limit55) || (step55 < 0 && _i >= limit55) ;_i = ((int)(0 + _i + step55))  ) {
  //BA.debugLineNum = 114;BA.debugLine="page(2).AddView(label(i), 2%x, label(i - 1).Top";
-_page[(int) (2)].AddView((android.view.View)(_label[_i].getObject()),__c.PerXToCurrent((float) (2),ba),(int) (_label[(int) (_i-1)].getTop()+_label[(int) (_i-1)].getHeight()+__c.DipToCurrent((int) (3))),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (7),ba));
+_page[(int) (2)].AddView((android.view.View)(_label[_i].getObject()),__c.PerXToCurrent((float) (2),ba),(int) (_label[(int) (_i-1)].getTop()+_label[(int) (_i-1)].getHeight()+__c.DipToCurrent((int) (3))),__c.PerXToCurrent((float) (50),ba),__c.PerYToCurrent((float) (6),ba));
  //BA.debugLineNum = 115;BA.debugLine="label(i).Text = Main.translate.GetString(\"AVlaba";
 _label[_i].setText(BA.ObjectToCharSequence(_main._translate._getstring("AVlabal"+BA.NumberToString(_i))));
  //BA.debugLineNum = 116;BA.debugLine="label(i).TextColor = Colors.White";
 _label[_i].setTextColor(__c.Colors.White);
  //BA.debugLineNum = 117;BA.debugLine="page(2).AddView(chekpointbox(i), label(i).left +";
-_page[(int) (2)].AddView((android.view.View)(_chekpointbox[_i].getObject()),(int) (_label[_i].getLeft()+_label[_i].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[_i].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (5),ba));
+_page[(int) (2)].AddView((android.view.View)(_chekpointbox[_i].getObject()),(int) (_label[_i].getLeft()+_label[_i].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[_i].getTop(),__c.PerXToCurrent((float) (20),ba),__c.PerYToCurrent((float) (5),ba));
  //BA.debugLineNum = 118;BA.debugLine="chekpointbox(i).Text = HelperFunctions.TvScore1";
 _chekpointbox[_i].setText(BA.ObjectToCharSequence(_helperfunctions._tvscore1));
  }
@@ -195,7 +195,7 @@ _label[(int) (28)].setText(BA.ObjectToCharSequence(_main._translate._getstring("
  //BA.debugLineNum = 124;BA.debugLine="label(28).TextColor = Colors.White";
 _label[(int) (28)].setTextColor(__c.Colors.White);
  //BA.debugLineNum = 125;BA.debugLine="page(3).AddView(chekpointbox(28), label(28).left";
-_page[(int) (3)].AddView((android.view.View)(_chekpointbox[(int) (28)].getObject()),(int) (_label[(int) (28)].getLeft()+_label[(int) (28)].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[(int) (28)].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (10),ba));
+_page[(int) (3)].AddView((android.view.View)(_chekpointbox[(int) (28)].getObject()),(int) (_label[(int) (28)].getLeft()+_label[(int) (28)].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[(int) (28)].getTop(),__c.PerXToCurrent((float) (20),ba),__c.PerYToCurrent((float) (10),ba));
  //BA.debugLineNum = 126;BA.debugLine="chekpointbox(28).Text = HelperFunctions.TvScore1";
 _chekpointbox[(int) (28)].setText(BA.ObjectToCharSequence(_helperfunctions._tvscore1));
  //BA.debugLineNum = 128;BA.debugLine="For i = 29 To 33";
@@ -211,7 +211,7 @@ _label[_i].setText(BA.ObjectToCharSequence(_main._translate._getstring("AVlabal"
  //BA.debugLineNum = 131;BA.debugLine="label(i).TextColor = Colors.White";
 _label[_i].setTextColor(__c.Colors.White);
  //BA.debugLineNum = 132;BA.debugLine="page(3).AddView(chekpointbox(i), label(i).left +";
-_page[(int) (3)].AddView((android.view.View)(_chekpointbox[_i].getObject()),(int) (_label[_i].getLeft()+_label[_i].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[_i].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (5),ba));
+_page[(int) (3)].AddView((android.view.View)(_chekpointbox[_i].getObject()),(int) (_label[_i].getLeft()+_label[_i].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[_i].getTop(),__c.PerXToCurrent((float) (20),ba),__c.PerYToCurrent((float) (5),ba));
  //BA.debugLineNum = 133;BA.debugLine="chekpointbox(i).Text = HelperFunctions.TvScore1";
 _chekpointbox[_i].setText(BA.ObjectToCharSequence(_helperfunctions._tvscore1));
  }

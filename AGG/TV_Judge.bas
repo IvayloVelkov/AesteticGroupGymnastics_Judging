@@ -16,7 +16,7 @@ Sub Class_Globals
 	Dim btnready As Button
 	Private chekpointbox1(12) As CheckBox
 	Private chekpointbox2(12) As CheckBox
-	Private chekpointbox3(12) As CheckBox
+'	Private chekpointbox3(12) As CheckBox
 	Public tvScore As Double
 End Sub
 
@@ -35,9 +35,9 @@ Public Sub Initialize
 	For i = 0 To 11
 		chekpointbox2(i).Initialize("check2")
 	Next
-	For i = 0 To 11
-		chekpointbox3(i).Initialize("check3")
-	Next
+'	For i = 0 To 11
+'		chekpointbox3(i).Initialize("check3")
+'	Next
 
 	downPanel.Initialize("")
 	btnready.Initialize("ready")
@@ -81,30 +81,30 @@ Public Sub BuildUi
 	downPanel.AddView(btnready, downPanel.Width - 12%x, 0, 10%x, 33dip)
 	
 	
-	page(0).AddView(label(0), 2%x, 5%y, 50%x, 10%y)
+	page(0).AddView(label(0), 2%x, 5%y, 50%x, 7%y)
 	label(0).Text = Main.translate.GetString("TVlabel0")
 	label(0).TextColor = Colors.White
 	
-	page(0).AddView(chekpointbox1(0), label(0).left + label(0).Width, label(0).Top, 30%x, 10%y)
+	page(0).AddView(chekpointbox1(0), label(0).left + label(0).Width, label(0).Top, 35%x, 7%y)
 '	chekpointbox(0).Text = Main.translate.GetString("Check0")
 	chekpointbox1(0).Text = HelperFunctions.TvScore1
 	chekpointbox1(0).Tag = 0 
-	page(0).AddView(chekpointbox2(0), chekpointbox1(0).left + chekpointbox1(0).Width, chekpointbox1(0).Top, 30%x, 10%y)
+	page(0).AddView(chekpointbox2(0), chekpointbox1(0).left + chekpointbox1(0).Width - 5%x, chekpointbox1(0).Top, 35%x, 7%y)
 '	chekpointbox(13).Text = Main.translate.GetString("Check14")
 	chekpointbox2(0).Tag = 0
 	chekpointbox2(0).Text = HelperFunctions.TvScore2
 
 	For i = 1 To 5
-		page(0).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
+		page(0).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 7%y)
 		label(i).Text = Main.translate.GetString("TVlabel" & i)
 		label(i).TextColor = Colors.White
 		
-		page(0).AddView(chekpointbox1(i), label(i).left + label(i).Width, label(i).Top, 30%x, 10%y)
+		page(0).AddView(chekpointbox1(i), label(i).left + label(i).Width, label(i).Top, 35%x, 7%y)
 '		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
 		chekpointbox1(i).Text = HelperFunctions.TvScore1
 		chekpointbox1(i).Tag = i
 
-		page(0).AddView(chekpointbox2(i), chekpointbox1(i).left + chekpointbox1(i).Width, chekpointbox1(i).Top, 30%x, 10%y)
+		page(0).AddView(chekpointbox2(i), chekpointbox1(i).left + chekpointbox1(i).Width - 5%x, chekpointbox1(i).Top, 35%x, 7%y)
 '		chekpointbox(i).Text = Main.translate.GetString("Check" & i)
 		chekpointbox2(i).Text = HelperFunctions.TvScore2
 		chekpointbox2(i).Tag = i
@@ -112,48 +112,48 @@ Public Sub BuildUi
 
 	Next
 	
-	page(1).AddView(label(6), 2%x, 5%y, 50%x, 10%y)
+	page(1).AddView(label(6), 2%x, 5%y, 50%x, 7%y)
 	label(6).Text = Main.translate.GetString("TVlabel6")
 	label(6).TextColor = Colors.White
 	
-	page(1).AddView(chekpointbox1(6), label(6).left + label(6).Width, label(6).Top, 15%x, 10%y)
+	page(1).AddView(chekpointbox1(6), label(6).left + label(6).Width, label(6).Top, 20%x, 7%y)
 '	chekpointbox(0).Text = Main.translate.GetString("Check0")
 	chekpointbox1(6).Text = HelperFunctions.TvScore2
 	chekpointbox1(6).Tag = 6
 
-	page(1).AddView(chekpointbox2(6), chekpointbox1(6).left + chekpointbox1(6).Width, chekpointbox1(6).Top, 15%x, 10%y)
+	page(1).AddView(chekpointbox2(6), chekpointbox1(6).left + chekpointbox1(6).Width, chekpointbox1(6).Top, 20%x, 7%y)
 '	chekpointbox(13).Text = Main.translate.GetString("Check14")
 	chekpointbox2(6).Text = HelperFunctions.TvScore3
 	chekpointbox2(6).Tag = 6
 
 	
-	page(1).AddView(chekpointbox3(6), chekpointbox2(6).left + chekpointbox2(6).Width, chekpointbox2(6).Top, 15%x, 10%y)
-'	chekpointbox(13).Text = Main.translate.GetString("Check14")
-	chekpointbox3(6).Text = HelperFunctions.TvScore5
-	chekpointbox3(6).Tag = 6
+'	page(1).AddView(chekpointbox3(6), chekpointbox2(6).left + chekpointbox2(6).Width, chekpointbox2(6).Top, 15%x, 7%y)
+''	chekpointbox(13).Text = Main.translate.GetString("Check14")
+'	chekpointbox3(6).Text = HelperFunctions.TvScore5
+'	chekpointbox3(6).Tag = 6
 
 	
 	For i = 7 To 11
-		page(1).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
+		page(1).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 7%y)
 		label(i).Text = Main.translate.GetString("TVlabel" & i)
 		label(i).TextColor = Colors.White
 	Next
 	
 	For i = 7 To 11
-		page(1).AddView(chekpointbox1(i),label(i).left + label(i).Width, label(i).Top, 15%x, 10%y)
+		page(1).AddView(chekpointbox1(i),label(i).left + label(i).Width, label(i).Top, 20%x, 7%y)
 		'chekpointbox(i).Text = Main.translate.GetString("Check" & i)
 		chekpointbox1(i).Text = HelperFunctions.TvScore2
 		chekpointbox1(i).Tag = i
 
-		page(1).AddView(chekpointbox2(i),chekpointbox1(i).left + chekpointbox1(i).Width, chekpointbox1(i).Top, 15%x, 10%y)
+		page(1).AddView(chekpointbox2(i),chekpointbox1(i).left + chekpointbox1(i).Width, chekpointbox1(i).Top, 20%x, 7%y)
 		'chekpointbox(i).Text = Main.translate.GetString("Check" & i)
 		chekpointbox2(i).Text = HelperFunctions.TvScore3
 		chekpointbox2(i).Tag = i
-
-		page(1).AddView(chekpointbox3(i), chekpointbox2(i).left + chekpointbox2(i).Width, chekpointbox2(i).Top, 15%x, 10%y)
-		'chekpointbox(i).Text = Main.translate.GetString("Check" & i)
-		chekpointbox3(i).Text = HelperFunctions.TvScore5
-		chekpointbox3(i).Tag = i
+'
+'		page(1).AddView(chekpointbox3(i), chekpointbox2(i).left + chekpointbox2(i).Width, chekpointbox2(i).Top, 15%x, 7%y)
+'		'chekpointbox(i).Text = Main.translate.GetString("Check" & i)
+'		chekpointbox3(i).Text = HelperFunctions.TvScore5
+'		chekpointbox3(i).Tag = i
 
 	Next
 
@@ -178,16 +178,16 @@ Private Sub check2_CheckedChange(Checked As Boolean)
 		tvScore = tvScore - 0.2
 	End If
 End Sub
-
-Private Sub check3_CheckedChange(Checked As Boolean)
-	Private chek3 As CheckBox = Sender
-	chek3 = Sender
-	 If chek3.Checked = True Then
-		tvScore = tvScore + 0.3
-	Else
-		tvScore = tvScore - 0.3
-	End If
-End Sub
+'
+'Private Sub check3_CheckedChange(Checked As Boolean)
+'	Private chek3 As CheckBox = Sender
+'	chek3 = Sender
+'	 If chek3.Checked = True Then
+'		tvScore = tvScore + 0.3
+'	Else
+'		tvScore = tvScore - 0.3
+'	End If
+'End Sub
 Public Sub finalTVscore As Double
 	Log("AVSCORE:"&tvScore)
 	Return tvScore

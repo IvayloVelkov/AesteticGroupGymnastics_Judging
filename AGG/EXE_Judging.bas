@@ -96,7 +96,7 @@ Public Sub BuildUi
 		btnPoints(i).SingleLine = True
 	Next
 	
-	page(0).AddView(chekpointbox, label(7).left + label(7).Width + 10%x, label(7).Top, 15%x, 10%y)
+	page(0).AddView(chekpointbox, label(7).left + label(7).Width + 10%x, label(7).Top, 25%x, 10%y)
 	chekpointbox.Text = "-" & HelperFunctions.TvScore3
 End Sub
 
@@ -107,10 +107,10 @@ End Sub
 
 Private Sub check_CheckedChange(Checked As Boolean)
 	If Checked = True Then
-		exeScore = exeScore + 0.1
+		exeScore = exeScore + 0.3
 		Log(exeScore)
 	Else
-		exeScore = exeScore - 0.1
+		exeScore = exeScore - 0.3
 	End If
 End Sub
 

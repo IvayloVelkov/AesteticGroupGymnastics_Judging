@@ -153,7 +153,7 @@ _btnpoints[_i].setSingleLine(__c.True);
  }
 };
  //BA.debugLineNum = 94;BA.debugLine="page(0).AddView(chekpointbox, label(7).left + lab";
-_page[(int) (0)].AddView((android.view.View)(_chekpointbox.getObject()),(int) (_label[(int) (7)].getLeft()+_label[(int) (7)].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[(int) (7)].getTop(),__c.PerXToCurrent((float) (15),ba),__c.PerYToCurrent((float) (10),ba));
+_page[(int) (0)].AddView((android.view.View)(_chekpointbox.getObject()),(int) (_label[(int) (7)].getLeft()+_label[(int) (7)].getWidth()+__c.PerXToCurrent((float) (10),ba)),_label[(int) (7)].getTop(),__c.PerXToCurrent((float) (25),ba),__c.PerYToCurrent((float) (10),ba));
  //BA.debugLineNum = 95;BA.debugLine="chekpointbox.Text = \"-\" & HelperFunctions.TvScore";
 _chekpointbox.setText(BA.ObjectToCharSequence("-"+_helperfunctions._tvscore3));
  //BA.debugLineNum = 96;BA.debugLine="End Sub";
@@ -163,13 +163,13 @@ public String  _check_checkedchange(boolean _checked) throws Exception{
  //BA.debugLineNum = 103;BA.debugLine="Private Sub check_CheckedChange(Checked As Boolean";
  //BA.debugLineNum = 104;BA.debugLine="If Checked = True Then";
 if (_checked==__c.True) { 
- //BA.debugLineNum = 105;BA.debugLine="exeScore = exeScore + 0.1";
-_exescore = _exescore+0.1;
+ //BA.debugLineNum = 105;BA.debugLine="exeScore = exeScore + 0.3";
+_exescore = _exescore+0.3;
  //BA.debugLineNum = 106;BA.debugLine="Log(exeScore)";
 __c.Log(BA.NumberToString(_exescore));
  }else {
- //BA.debugLineNum = 108;BA.debugLine="exeScore = exeScore - 0.1";
-_exescore = _exescore-0.1;
+ //BA.debugLineNum = 108;BA.debugLine="exeScore = exeScore - 0.3";
+_exescore = _exescore-0.3;
  };
  //BA.debugLineNum = 110;BA.debugLine="End Sub";
 return "";

@@ -163,9 +163,12 @@ End Sub
 'Проверя, чрез Regex дали е въведен e-mail / Regex check if email is used
 Private Sub check_User(text As String) As Boolean
 	Private m As Matcher
-	m = Regex.Matcher("[a-z0-9]+[_a-z0-9\.-]*[a-z0-9]+@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})", text)
-			If m.Find Then Return True
+	m = Regex.Matcher("(\w\s*)+", text)
+	If m.Find Then
+		 Return True
+	Else 
 		Return False
+	End If
 End Sub
 
 'Проверява паролата / Checks the pass

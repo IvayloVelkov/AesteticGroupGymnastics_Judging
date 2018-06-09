@@ -34,7 +34,7 @@ Sub PerformUpload ()
    
 	Dim job As HttpJob
 		job.Initialize("SendResults", Me)
-	job.PostString("http://192.168.1.101:8080/results", j.ToString)
+	job.PostString("http://192.168.97.33:8080/results", j.ToString)
 	job.GetRequest.SetContentType("application/json")
 '	job.PostString("https://aggserver.herokuapp.com/results", j.ToString)
    

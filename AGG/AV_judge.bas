@@ -79,47 +79,47 @@ Public Sub BuildUi
 	label(0).Text = Main.translate.GetString("AVlabal0")
 	label(0).TextColor = Colors.White
 	
-	page(0).AddView(chekpointbox(0), label(0).left + label(0).Width + 10%x, label(0).Top, 15%x, 5%y)
+	page(0).AddView(chekpointbox(0), label(0).left + label(0).Width + 10%x, label(0).Top, 20%x, 5%y)
 	chekpointbox(0).Text = HelperFunctions.TvScore1
 
 	
 	For i = 1 To 3
-		page(0).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
+		page(0).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 100%y)
 		label(i).Text = Main.translate.GetString("AVlabal" & i)
 		label(i).TextColor = Colors.White
-		page(0).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 15%x, 5%y)
+		page(0).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 20%x, 5%y)
 		chekpointbox(i).Text = HelperFunctions.TvScore1
 
 	Next
 	
-	page(1).AddView(label(4), 2%x, 5%y, 50%x, 7%y)
+	page(1).AddView(label(4), 2%x, 5%y, 50%x, 6%y)
 	label(4).Text = Main.translate.GetString("AVlabal4")
 	label(4).TextColor = Colors.White
 	
-	page(1).AddView(chekpointbox(4), label(4).left + label(4).Width + 10%x, label(4).Top, 15%x, 7%y)
+	page(1).AddView(chekpointbox(4), label(4).left + label(4).Width + 10%x, label(4).Top, 20%x, 7%y)
 	chekpointbox(4).Text = HelperFunctions.TvScore1
 	
 	For i = 5 To 15
-		page(1).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 7%y)
+		page(1).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 6%y)
 		label(i).Text = Main.translate.GetString("AVlabal" & i)
 		label(i).TextColor = Colors.White
-		page(1).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 15%x, 5%y)
+		page(1).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 20%x, 5%y)
 		chekpointbox(i).Text = HelperFunctions.TvScore1
 
 	Next
 	
-	page(2).AddView(label(16),2%x, 5%y, 50%x, 7%y)
+	page(2).AddView(label(16),2%x, 5%y, 50%x, 6%y)
 	label(16).Text = Main.translate.GetString("AVlabal16")
 	label(16).TextColor = Colors.White
-	page(2).AddView(chekpointbox(16), label(16).left + label(16).Width + 10%x, label(16).Top, 15%x, 5%y)
+	page(2).AddView(chekpointbox(16), label(16).left + label(16).Width + 10%x, label(16).Top, 20%x, 6%y)
 	chekpointbox(16).Text = HelperFunctions.TvScore1
 	
 	
 	For i = 17 To 27
-		page(2).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 7%y)
+		page(2).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 6%y)
 		label(i).Text = Main.translate.GetString("AVlabal" & i)
 		label(i).TextColor = Colors.White
-		page(2).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 15%x, 5%y)
+		page(2).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 20%x, 5%y)
 		chekpointbox(i).Text = HelperFunctions.TvScore1
 
 	Next
@@ -127,14 +127,14 @@ Public Sub BuildUi
 	page(3).AddView(label(28), 2%x, 5%y, 50%x, 10%y)
 	label(28).Text = Main.translate.GetString("AVlabal28")
 	label(28).TextColor = Colors.White
-	page(3).AddView(chekpointbox(28), label(28).left + label(28).Width + 10%x, label(28).Top, 15%x, 10%y)
+	page(3).AddView(chekpointbox(28), label(28).left + label(28).Width + 10%x, label(28).Top, 20%x, 10%y)
 	chekpointbox(28).Text = HelperFunctions.TvScore1
 	
 	For i = 29 To 33
 		page(3).AddView(label(i), 2%x, label(i - 1).Top + label(i - 1).Height + 3dip, 50%x, 10%y)
 		label(i).Text = Main.translate.GetString("AVlabal" & i)
 		label(i).TextColor = Colors.White
-		page(3).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 15%x, 5%y)
+		page(3).AddView(chekpointbox(i), label(i).left + label(i).Width + 10%x, label(i).Top, 20%x, 5%y)
 		chekpointbox(i).Text = HelperFunctions.TvScore1
 	Next
 	
