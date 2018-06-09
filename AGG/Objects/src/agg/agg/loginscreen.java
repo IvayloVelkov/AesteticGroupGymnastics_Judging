@@ -40,10 +40,10 @@ public agg.agg.programdata _programdata = null;
 public agg.agg.uisizes _uisizes = null;
 public agg.agg.version _version = null;
 public anywheresoftware.b4a.objects.PanelWrapper  _asview() throws Exception{
- //BA.debugLineNum = 171;BA.debugLine="Public Sub asView As Panel";
- //BA.debugLineNum = 172;BA.debugLine="Return loginPanel";
+ //BA.debugLineNum = 174;BA.debugLine="Public Sub asView As Panel";
+ //BA.debugLineNum = 175;BA.debugLine="Return loginPanel";
 if (true) return _loginpanel;
- //BA.debugLineNum = 173;BA.debugLine="End Sub";
+ //BA.debugLineNum = 176;BA.debugLine="End Sub";
 return null;
 }
 public String  _build_screen() throws Exception{
@@ -132,10 +132,10 @@ __c.CallSubNew(ba,(Object)(_main.getObject()),"LoginScreen_LoginClick");
 return "";
 }
 public boolean  _check_pass(String _text) throws Exception{
- //BA.debugLineNum = 167;BA.debugLine="Private Sub check_Pass(text As String) As Boolean";
- //BA.debugLineNum = 168;BA.debugLine="Return True";
+ //BA.debugLineNum = 170;BA.debugLine="Private Sub check_Pass(text As String) As Boolean";
+ //BA.debugLineNum = 171;BA.debugLine="Return True";
 if (true) return __c.True;
- //BA.debugLineNum = 169;BA.debugLine="End Sub";
+ //BA.debugLineNum = 172;BA.debugLine="End Sub";
 return false;
 }
 public boolean  _check_user(String _text) throws Exception{
@@ -143,14 +143,17 @@ anywheresoftware.b4a.keywords.Regex.MatcherWrapper _m = null;
  //BA.debugLineNum = 159;BA.debugLine="Private Sub check_User(text As String) As Boolean";
  //BA.debugLineNum = 160;BA.debugLine="Private m As Matcher";
 _m = new anywheresoftware.b4a.keywords.Regex.MatcherWrapper();
- //BA.debugLineNum = 161;BA.debugLine="m = Regex.Matcher(\"[a-z0-9]+[_a-z0-9\\.-]*[a-z0-9]";
-_m = __c.Regex.Matcher("[a-z0-9]+[_a-z0-9\\.-]*[a-z0-9]+@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,4})",_text);
- //BA.debugLineNum = 162;BA.debugLine="If m.Find Then Return True";
+ //BA.debugLineNum = 161;BA.debugLine="m = Regex.Matcher(\"(\\w\\s*)+\", text)";
+_m = __c.Regex.Matcher("(\\w\\s*)+",_text);
+ //BA.debugLineNum = 162;BA.debugLine="If m.Find Then";
 if (_m.Find()) { 
-if (true) return __c.True;};
- //BA.debugLineNum = 163;BA.debugLine="Return False";
+ //BA.debugLineNum = 163;BA.debugLine="Return True";
+if (true) return __c.True;
+ }else {
+ //BA.debugLineNum = 165;BA.debugLine="Return False";
 if (true) return __c.False;
- //BA.debugLineNum = 164;BA.debugLine="End Sub";
+ };
+ //BA.debugLineNum = 167;BA.debugLine="End Sub";
 return false;
 }
 public String  _class_globals() throws Exception{
