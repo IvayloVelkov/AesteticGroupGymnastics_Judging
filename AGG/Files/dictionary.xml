@@ -1021,6 +1021,20 @@
 					<Value Lang="FI"></Value>
 				</Values>							
 			</Data>	
+			<Data Key="readyBtn">
+				<Values>
+					<Value Lang="EN">Ready</Value>
+					<Value Lang="RU"></Value>
+					<Value Lang="BG">Готово</Value>
+					<Value Lang="RO"></Value>
+					<Value Lang="ES"></Value>
+					<Value Lang="KA"></Value>
+					<Value Lang="DE"></Value>
+					<Value Lang="KK"></Value>
+					<Value Lang="EL"></Value>
+					<Value Lang="FI"></Value>
+				</Values>							
+			</Data>	
 
 			
 			

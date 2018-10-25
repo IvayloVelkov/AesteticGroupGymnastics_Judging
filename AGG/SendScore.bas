@@ -1,7 +1,8 @@
-﻿Type=Class
-Version=7.3
+﻿B4A=true
+Group=Default Group
 ModulesStructureVersion=1
-B4A=true
+Type=Class
+Version=7.3
 @EndOfDesignText@
 Sub Class_Globals
 	Public finalPanel As Panel
@@ -33,7 +34,6 @@ End Sub
 
 Public Sub finalScore
 	teamscore.Text = Main.translate.GetString("Score") & ": " & CallSub(Main, "finalScore")
-
 	Log("FINAL"&teamscore.Text)
 End Sub
 

@@ -1,13 +1,14 @@
-﻿Type=Class
-Version=7.3
+﻿B4A=true
+Group=Default Group
 ModulesStructureVersion=1
-B4A=true
+Type=Class
+Version=7.3
 @EndOfDesignText@
 Private Sub Class_Globals
 	Private raf As RandomAccessFile
 	Private loginPanel As Panel
 	Private user, pass As EditText
-	Public btnloginPanel As Button
+	Public btnloginPanel, btnSettings As Button
 	Public CAD As CustomAlertDialog
 	Private checkloginPanel As CheckBox
 	Private usrString, passString As String
@@ -36,6 +37,7 @@ Public Sub Initialize
 	pass.Initialize("Pass")
 	checkloginPanel.Initialize("Remember")
 	btnloginPanel.Initialize("ButtonloginPanel")
+	btnSettings.Initialize("SettingsScr")
 End Sub
 
 ' Построяване на екрана / Builds the UI of the screen
@@ -60,6 +62,8 @@ Public Sub build_Screen
 		
 	loginPanel.AddView(checkloginPanel, left + Padding, pass.Top + edtHeight * 1.5, btnWidth, btnHeight)
 	loginPanel.AddView(btnloginPanel, checkloginPanel.Left + checkloginPanel.Width + Padding, checkloginPanel.Top, btnWidth, btnHeight)
+	
+	loginPanel.AddView(btnSettings, 0, 0, 9%x, 7%y)
 
 
 	
@@ -160,15 +164,16 @@ Private Sub ButtonloginPanel_Click
 			
 End Sub
 
+Private Sub SettingsScr_Click
+	CallSub(Main, "SetSettingsScreen")
+End Sub
+
 'Проверя, чрез Regex дали е въведен e-mail / Regex check if email is used
 Private Sub check_User(text As String) As Boolean
 	Private m As Matcher
-	m = Regex.Matcher("(\w\s*)+", text)
-	If m.Find Then
-		 Return True
-	Else 
+	m = Regex.Matcher("[a-z0-9]+[_a-z0-9\.-]*[a-z0-9]+@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})", text)
+			If m.Find Then Return True
 		Return False
-	End If
 End Sub
 
 'Проверява паролата / Checks the pass

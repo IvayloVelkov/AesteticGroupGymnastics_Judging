@@ -1,24 +1,12 @@
-﻿Version=7.3
-NumberOfModules=12
-Module1=TV_Judge
-Module2=AV_judge
-Module3=EXE_Judging
-Module4=SendScore
-Module5=Connector
-Module6=LoginScreen
-Module7=HelperFunctions
-Module8=typeJudge
-Module9=Translator
-Module10=ProgramData
-Module11=UISizes
-Module12=Version
-Build1=Default,agg.agg
-ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~AddPermission(android.permission.INTERNET)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
-IconFile=
-NumberOfFiles=2
+﻿Build1=Default,agg.agg
 File1=dictionary.xml
 File2=login_background.jpg
-NumberOfLibraries=10
+File3=settingsp.jpg
+FileGroup1=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+Group=Default Group
+IconFile=
 Library1=core
 Library2=randomaccessfile
 Library3=reflection
@@ -27,10 +15,26 @@ Library5=xmlsax
 Library6=ahviewpager
 Library7=json
 Library8=okhttputils2
-Library9=network
-Library10=okhttp
+Library9=mysql2
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~AddPermission(android.permission.INTERNET)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
+Module1=TV_Judge
+Module10=ProgramData
+Module11=UISizes
+Module12=Version
+Module13=SettingsScreen
+Module2=HelperFunctions
+Module3=SendScore
+Module4=Connector
+Module5=EXE_Judging
+Module6=AV_judge
+Module7=LoginScreen
+Module8=typeJudge
+Module9=Translator
+NumberOfFiles=3
+NumberOfLibraries=9
+NumberOfModules=13
+Version=8.5
 @EndOfDesignText@
-
 #Region  Project Attributes 
 	#ApplicationLabel: AGG
 	#VersionCode: 1
@@ -48,7 +52,6 @@ Library10=okhttp
 Sub Process_Globals
 	Public translate As Translator
 	Public SelectedLanguage As String = "BG"
-	Public intFontTransfer As Int
 	Type Report(ChartType As String,Title As String,X As String,Y As String,Limit As Int,curveType As String,sliceText As String,Query As String, Data As List)
 	Public BaseNotAccessible As Boolean
 	Public PrimeCurrency As String
@@ -62,14 +65,14 @@ Sub Globals
 	Private exeJ As EXE_Judging
 	Private conn As Connector
 	Private final As SendScore	
+	Private SettingsScr As SettingsScreen	
 	Public score As Double
 	Private scActive As Int
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	translate.Initialize
-	intFontTransfer = UISizes.DefaultFont
-
+	UISizes.Initialize
 	Load_Language
 
 	Login.Initialize
@@ -103,6 +106,12 @@ Sub Activity_Create(FirstTime As Boolean)
 	Activity.AddView(final.asView, 0, 0, 100%x, 100%y)
 	final.asView.Visible = False
 	final.asView.Enabled = False
+	
+	SettingsScr.Initialize
+	Activity.AddView(SettingsScr.asView, 0, 0, 100%x, 100%y)
+	SettingsScr.asView.Visible = False
+	SettingsScr.asView.Enabled = False
+
 	
 	conn.Initialize
 End Sub
@@ -142,6 +151,7 @@ Public Sub AV_Click
 	avJ.asView.Visible = True
 	avJ.asView.Enabled = True
 	scActive = 1
+	ProgramData.activeJ = scActive
 End Sub
 
 Public Sub TV_Click
@@ -151,6 +161,7 @@ Public Sub TV_Click
 	tvJ.asView.Visible = True
 	tvJ.asView.Enabled = True
 	scActive = 2
+	ProgramData.activeJ = scActive
 End Sub
 
 Public Sub EXE_Click
@@ -160,6 +171,8 @@ Public Sub EXE_Click
 	exeJ.asView.Visible = True
 	exeJ.asView.Enabled = True
 	scActive = 3
+	ProgramData.activeJ = scActive
+
 End Sub
 
 Public Sub FinalClick
@@ -179,9 +192,23 @@ Public Sub FinalClick
 	final.finalScore
 End Sub
 
+Public Sub SetSettingsScreen
+	Login.asView.Visible = False
+	Login.asView.Enabled = False
+
+	SettingsScr.asView.Visible = True
+	SettingsScr.asView.Enabled = True
+
+End Sub
+
 Public Sub Connect
 	conn.PerformUpload()
 End Sub
+
+Public Sub ConnectToDatabase
+	conn.setDatabase(ProgramData.dbServerAddress, ProgramData.dbBaseName, ProgramData.dbUserName, ProgramData.dbPassword)
+End Sub
+
 
 Sub Activity_KeyPress (KeyCode As Int) As Boolean
 	If KeyCode = KeyCodes.KEYCODE_BACK Then
@@ -210,6 +237,10 @@ Sub Activity_KeyPress (KeyCode As Int) As Boolean
 					exeJ.asView.Visible = True
 					final.asView.Visible = False
 			End Select
+		Else If SettingsScr.asView.Visible = True Then
+			SettingsScr.asView.Visible = False
+			Login.asView.Visible = True
+			Login.btnloginPanel.Enabled = True
 		End If
 		Return True
 	Else

@@ -15,6 +15,12 @@ public static String _struser = "";
 public static String _strpass = "";
 public static int _rafencpass = 0;
 public static boolean _sameuser = false;
+public static int _activej = 0;
+public static String _dbip = "";
+public static String _dbserveraddress = "";
+public static String _dbbasename = "";
+public static String _dbusername = "";
+public static String _dbpassword = "";
 public static int _defaultfont = 0;
 public static double _finalscore = 0;
 public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
@@ -23,8 +29,8 @@ public agg.agg.helperfunctions _helperfunctions = null;
 public agg.agg.uisizes _uisizes = null;
 public agg.agg.version _version = null;
 public static String  _initialize(anywheresoftware.b4a.BA _ba) throws Exception{
- //BA.debugLineNum = 16;BA.debugLine="Public Sub Initialize";
- //BA.debugLineNum = 17;BA.debugLine="End Sub";
+ //BA.debugLineNum = 21;BA.debugLine="Public Sub Initialize";
+ //BA.debugLineNum = 23;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
@@ -37,11 +43,23 @@ _strpass = "";
 _rafencpass = (int) (6380);
  //BA.debugLineNum = 6;BA.debugLine="Public sameUser As Boolean";
 _sameuser = false;
- //BA.debugLineNum = 10;BA.debugLine="Public DefaultFont As Int = 14";
+ //BA.debugLineNum = 7;BA.debugLine="Public activeJ As Int";
+_activej = 0;
+ //BA.debugLineNum = 8;BA.debugLine="Public dbIP As String";
+_dbip = "";
+ //BA.debugLineNum = 9;BA.debugLine="Public dbServerAddress As String";
+_dbserveraddress = "";
+ //BA.debugLineNum = 10;BA.debugLine="Public dbBaseName As String";
+_dbbasename = "";
+ //BA.debugLineNum = 11;BA.debugLine="Public dbUserName As String";
+_dbusername = "";
+ //BA.debugLineNum = 12;BA.debugLine="Public dbPassword As String";
+_dbpassword = "";
+ //BA.debugLineNum = 15;BA.debugLine="Public DefaultFont As Int = 14";
 _defaultfont = (int) (14);
- //BA.debugLineNum = 12;BA.debugLine="Public finalScore as Double";
+ //BA.debugLineNum = 17;BA.debugLine="Public finalScore As Double";
 _finalscore = 0;
- //BA.debugLineNum = 13;BA.debugLine="End Sub";
+ //BA.debugLineNum = 18;BA.debugLine="End Sub";
 return "";
 }
 }

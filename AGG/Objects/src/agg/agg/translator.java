@@ -563,7 +563,7 @@ _productversion = 0;
 final int step4 = 1;
 final int limit4 = (int) (_attributes.getSize()-1);
 _i = (int) (0) ;
-for (;(step4 > 0 && _i <= limit4) || (step4 < 0 && _i >= limit4) ;_i = ((int)(0 + _i + step4))  ) {
+for (;_i <= limit4 ;_i = _i + step4 ) {
  //BA.debugLineNum = 79;BA.debugLine="If Attributes.GetName(i) = \"Version\" Then produc";
 if ((_attributes.GetName(_i)).equals("Version")) { 
 _productversion = (int)(Double.parseDouble(_attributes.GetValue(_i)));};

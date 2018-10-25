@@ -1,10 +1,14 @@
-﻿Type=Class
-Version=7.3
+﻿B4A=true
+Group=Default Group
 ModulesStructureVersion=1
-B4A=true
+Type=Class
+Version=7.3
 @EndOfDesignText@
 Sub Class_Globals
-	
+	Private IP, Database, UserName, Password As String
+	Private DBMySQL As MYSQL
+	Private DatabaseTimeout As Int = 10000	'10 seconds timeout
+
 End Sub
 
 'Initializes the object. You can add parameters to this method if needed.
@@ -23,23 +27,37 @@ Sub PerformUpload ()
 		m.Put("avResult", HelperFunctions.avResult)
 		m.Put("tvResult", HelperFunctions.tvResult)
 		m.Put("exeResult", HelperFunctions.exeResult)
+		m.Put("JudgeName", ProgramData.strUser)
+		m.Put("JudgeTType", ProgramData.activeJ)
    
 	Log(m)
    		mylist.Add(m)
 	Log(mylist)
 	Dim j As JSONGenerator
-'	j.Initialize2(mylist)
-	j.Initialize(m)
-	Log(j.ToPrettyString(1))
-   
+	j.Initialize2(mylist)
+	Log(j.ToPrettyString(5))
+   Try
 	Dim job As HttpJob
-		job.Initialize("SendResults", Me)
-	job.PostString("http://192.168.97.33:8080/results", j.ToString)
-	job.GetRequest.SetContentType("application/json")
-'	job.PostString("https://aggserver.herokuapp.com/results", j.ToString)
+	job.Initialize("SendResults", Me)
+	job.PostString("https://" & ProgramData.dbIP & ":8080/results", j.ToString)
    
 	ToastMessageShow("Sending...", True)
+	Catch
+		ToastMessageShow("No conection to DataBase", True)
+
+	End Try
 End Sub
+
+Public Sub SetDatabase(address As String, base As String, user As String, pass As String)
+
+	IP = address
+	Database = base
+	UserName = user
+	Password = pass
+	DBMySQL.setDatabase(IP, Database, UserName, Password, DatabaseTimeout)
+	
+End Sub
+
 
 Sub JobDone (Job As HttpJob)
 	Dim res As String

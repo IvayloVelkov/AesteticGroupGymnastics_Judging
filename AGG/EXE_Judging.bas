@@ -1,7 +1,8 @@
-﻿Type=Class
-Version=7.3
+﻿B4A=true
+Group=Default Group
 ModulesStructureVersion=1
-B4A=true
+Type=Class
+Version=7.3
 @EndOfDesignText@
 Sub Class_Globals
 	Public exePanel As Panel
@@ -33,6 +34,9 @@ Public Sub Initialize
 	Next
 	downPanel.Initialize("")
 	btnready.Initialize("ready")
+	HelperFunctions.Apply_ViewStyle(btnready,Colors.White,0xff4ac2ff,0xff149be0,0xff2cb7ff,0xff2cb7ff,0x66040509,0x66040509,20)
+	btnready.Text = Main.translate.GetString("readyBtn")
+
 End Sub
 
 Public Sub BuildUi
@@ -53,7 +57,7 @@ Public Sub BuildUi
 	'We add a line below the tab page indicator because it looks good
 	Dim Col As ColorDrawable
 	
-	Col.Initialize(Colors.Green, 0)
+	Col.Initialize(0xff149be0, 0)
 	
 	Line.Initialize("")
 	Line.Background = Col
@@ -96,7 +100,7 @@ Public Sub BuildUi
 		btnPoints(i).SingleLine = True
 	Next
 	
-	page(0).AddView(chekpointbox, label(7).left + label(7).Width + 10%x, label(7).Top, 25%x, 10%y)
+	page(0).AddView(chekpointbox, label(7).left + label(7).Width + 10%x, label(7).Top, 15%x, 10%y)
 	chekpointbox.Text = "-" & HelperFunctions.TvScore3
 End Sub
 
@@ -107,10 +111,10 @@ End Sub
 
 Private Sub check_CheckedChange(Checked As Boolean)
 	If Checked = True Then
-		exeScore = exeScore + 0.3
+		exeScore = exeScore + 0.1
 		Log(exeScore)
 	Else
-		exeScore = exeScore - 0.3
+		exeScore = exeScore - 0.1
 	End If
 End Sub
 

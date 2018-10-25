@@ -35,10 +35,10 @@ public agg.agg.programdata _programdata = null;
 public agg.agg.uisizes _uisizes = null;
 public agg.agg.version _version = null;
 public anywheresoftware.b4a.objects.PanelWrapper  _asview() throws Exception{
- //BA.debugLineNum = 35;BA.debugLine="Public Sub asView As Panel";
- //BA.debugLineNum = 36;BA.debugLine="Return finalPanel";
+ //BA.debugLineNum = 34;BA.debugLine="Public Sub asView As Panel";
+ //BA.debugLineNum = 35;BA.debugLine="Return finalPanel";
 if (true) return _finalpanel;
- //BA.debugLineNum = 37;BA.debugLine="End Sub";
+ //BA.debugLineNum = 36;BA.debugLine="End Sub";
 return null;
 }
 public String  _class_globals() throws Exception{
@@ -58,16 +58,16 @@ public String  _finalscore() throws Exception{
  //BA.debugLineNum = 29;BA.debugLine="Public Sub finalScore";
  //BA.debugLineNum = 30;BA.debugLine="teamscore.Text = Main.translate.GetString(\"Score\"";
 _teamscore.setText(BA.ObjectToCharSequence(_main._translate._getstring("Score")+": "+BA.ObjectToString(__c.CallSubNew(ba,(Object)(_main.getObject()),"finalScore"))));
- //BA.debugLineNum = 32;BA.debugLine="Log(\"FINAL\"&teamscore.Text)";
+ //BA.debugLineNum = 31;BA.debugLine="Log(\"FINAL\"&teamscore.Text)";
 __c.Log("FINAL"+_teamscore.getText());
- //BA.debugLineNum = 33;BA.debugLine="End Sub";
+ //BA.debugLineNum = 32;BA.debugLine="End Sub";
 return "";
 }
 public String  _getteamname() throws Exception{
- //BA.debugLineNum = 48;BA.debugLine="Public Sub getTeamname";
- //BA.debugLineNum = 49;BA.debugLine="HelperFunctions.TeamName = teamname.Text";
+ //BA.debugLineNum = 47;BA.debugLine="Public Sub getTeamname";
+ //BA.debugLineNum = 48;BA.debugLine="HelperFunctions.TeamName = teamname.Text";
 _helperfunctions._teamname = _teamname.getText();
- //BA.debugLineNum = 50;BA.debugLine="End Sub";
+ //BA.debugLineNum = 49;BA.debugLine="End Sub";
 return "";
 }
 public String  _initialize(anywheresoftware.b4a.BA _ba) throws Exception{
@@ -105,18 +105,18 @@ _sendbtn.setSingleLine(__c.True);
 return "";
 }
 public String  _send_click() throws Exception{
- //BA.debugLineNum = 39;BA.debugLine="Private Sub send_Click";
- //BA.debugLineNum = 40;BA.debugLine="If teamname.Text = \"\" Then";
+ //BA.debugLineNum = 38;BA.debugLine="Private Sub send_Click";
+ //BA.debugLineNum = 39;BA.debugLine="If teamname.Text = \"\" Then";
 if ((_teamname.getText()).equals("")) { 
- //BA.debugLineNum = 41;BA.debugLine="Msgbox(\"Добавате име на отбора.\",\"Липсва име.\")";
+ //BA.debugLineNum = 40;BA.debugLine="Msgbox(\"Добавате име на отбора.\",\"Липсва име.\")";
 __c.Msgbox(BA.ObjectToCharSequence("Добавате име на отбора."),BA.ObjectToCharSequence("Липсва име."),ba);
  }else {
- //BA.debugLineNum = 43;BA.debugLine="getTeamname";
+ //BA.debugLineNum = 42;BA.debugLine="getTeamname";
 _getteamname();
- //BA.debugLineNum = 44;BA.debugLine="CallSub(Main, \"connect\")";
+ //BA.debugLineNum = 43;BA.debugLine="CallSub(Main, \"connect\")";
 __c.CallSubNew(ba,(Object)(_main.getObject()),"connect");
  };
- //BA.debugLineNum = 46;BA.debugLine="End Sub";
+ //BA.debugLineNum = 45;BA.debugLine="End Sub";
 return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {
